@@ -1,11 +1,11 @@
 {
-  "name": "foo",
-  "short_name": "foo",
+  "name": "qclock",
+  "short_name": "qclock",
   "start_url": "/",
   "display": "standalone",
   "orientation": "portrait",
-  "background_color": "#fff",
-  "theme_color": "#673ab8",
+  "background_color": "#222",
+  "theme_color": "#222",
   "icons": [
     {
       "src": "/assets/icons/android-chrome-192x192.png",

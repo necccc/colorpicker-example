@@ -5136,6 +5136,14 @@ module.exports = require("assert");
 
 /***/ }),
 
+/***/ "HU6w":
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+module.exports = {"dial_test":"dial_test__GWkAx","dial_test-in":"dial_test-in__kd8LK"};
+
+/***/ }),
+
 /***/ "Hd19":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -7702,8 +7710,8 @@ var reducers__extends = Object.assign || function (target) { for (var i = 1; i <
 
 
 var reducers_initialState = {
-    outerColor: 'hsl(270, 100%, 50%)',
-    innerColor: 'hsl(180, 100%, 50%)',
+    outerColor: [245, 100, 50],
+    innerColor: [291, 100, 50],
     time: new Date()
 };
 
@@ -7734,6 +7742,15 @@ var reducers_app = function app() {
 };
 
 /* harmony default export */ var reducers_0 = (reducers_app);
+// CONCATENATED MODULE: ./lib/hsl.js
+var hslToCss = function hslToCss(hslArray) {
+    var hue = hslArray[0],
+        sat = hslArray[1],
+        lum = hslArray[2];
+
+
+    return "hsl(" + hue + ", " + sat + "%, " + lum + "%)";
+};
 // CONCATENATED MODULE: ./components/Header/index.js
 
 
@@ -7742,6 +7759,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
 
 
 
@@ -7771,12 +7790,12 @@ var Header__ref = Object(preact_min["h"])(
     Object(preact_min["h"])(
         preact_router_match["Link"],
         { href: '/' },
-        'Time'
+        'time'
     ),
     Object(preact_min["h"])(
         preact_router_match["Link"],
         { href: '/design' },
-        'Design'
+        'design'
     )
 );
 
@@ -7790,7 +7809,7 @@ var Header_BaseHeader = function (_Component) {
     }
 
     BaseHeader.prototype.render = function render() {
-        var headerStyle = '\n            background-image:\n            radial-gradient(ellipse at center bottom, hsla(0,0%,13%,0) 0%, hsla(0,0%,13%,.5) 54%, hsla(0,0%,13%,.9)),\n            linear-gradient(to right, ' + this.props.outerColor + ', ' + this.props.innerColor + ')';
+        var headerStyle = '\n            background-image:\n            radial-gradient(ellipse at center bottom, hsla(0,0%,13%,0) 0%, hsla(0,0%,13%,.5) 54%, hsla(0,0%,13%,.9)),\n            linear-gradient(to right, ' + hslToCss(this.props.outerColor) + ', ' + hslToCss(this.props.innerColor) + ')';
 
         return Object(preact_min["h"])(
             'header',
@@ -7863,7 +7882,8 @@ var calculateTouchAngle = function calculateTouchAngle(_ref) {
         angle = 360 + angle;
     }
 
-    console.log('calculateTouchAngle', angle);
+    //console.log('calculateTouchAngle', angle);
+
 
     return angle;
 };
@@ -7885,6 +7905,9 @@ var getTouchAngle = function getTouchAngle(event, callback) {
         width = _currentTarget$getBou.width,
         height = _currentTarget$getBou.height;
 
+    var offsetTop = top + window.scrollY;
+    var offsetLeft = left + window.scrollX;
+
     if (isTouchEvent(event)) {
         for (var _iterator = event.changedTouches, _isArray = Array.isArray(_iterator), _i = 0, _iterator = _isArray ? _iterator : _iterator[Symbol.iterator]();;) {
             var _ref2;
@@ -7903,14 +7926,14 @@ var getTouchAngle = function getTouchAngle(event, callback) {
                 _pageY = touch.pageY;
 
             var angle = calculateTouchAngle({
-                top: top, left: left, width: width, height: height, pageX: _pageX, pageY: _pageY
+                top: offsetTop, left: offsetLeft, width: width, height: height, pageX: _pageX, pageY: _pageY
             });
 
             callback(angle);
         }
     } else {
         var _angle = calculateTouchAngle({
-            top: top, left: left, width: width, height: height, pageX: pageX, pageY: pageY
+            top: offsetTop, left: offsetLeft, width: width, height: height, pageX: pageX, pageY: pageY
         });
 
         callback(_angle);
@@ -7924,7 +7947,6 @@ var getTouchAngle = function getTouchAngle(event, callback) {
  * @returns {Number}
  */
 var rotateAngle90 = function rotateAngle90(angle) {
-    console.log('rotateAngle90 in', angle);
 
     if (angle < 0) {
         angle = 360 + angle;
@@ -7938,8 +7960,6 @@ var rotateAngle90 = function rotateAngle90(angle) {
     if (rotated < 0) {
         rotated = 360 + rotated;
     }
-
-    console.log('rotateAngle90 out', rotated);
 
     return Math.floor(rotated);
 };
@@ -7963,8 +7983,6 @@ var rotateAngle90Back = function rotateAngle90Back(angle) {
     if (rotated < 0) {
         rotated = 360 + rotated;
     }
-
-    console.log('rotateAngle90 out', rotated);
 
     return Math.floor(rotated);
 };
@@ -7996,22 +8014,35 @@ var Dial_Dial = function (_Component) {
     }
 
     Dial.prototype.componentWillMount = function componentWillMount() {
-        this.setState({
-            startAngle: 0,
-            setAngle: 0
-        });
+        var _setState;
+
+        var value = this.props.value;
+
+
+        var startAngle = 0;
+        var setAngle = 0;
+        var angle = 0;
+
+        if (typeof value === 'number') {
+            angle = rotateAngle90Back(value);
+        }
+
+        this.setState((_setState = {
+            startAngle: startAngle,
+            setAngle: setAngle,
+            angle: angle
+        }, _setState['setAngle'] = -1 * angle, _setState.debug = this.props.test, _setState));
     };
 
     Dial.prototype.componentDidMount = function componentDidMount() {
-        this.container.style.setProperty('--dialRotation', '0deg');
+        this.container.style.setProperty('--dialRotation', this.state.angle + 'deg');
     };
 
     Dial.prototype.shouldComponentUpdate = function shouldComponentUpdate(_ref, nextState) {
         var value = _ref.value,
             preventSelect = _ref.preventSelect;
 
-
-        if (this.state.selecting) return;
+        if (this.state.selecting) return false;
 
         var oldValue = this.props.value;
 
@@ -8027,9 +8058,6 @@ var Dial_Dial = function (_Component) {
         var _this2 = this;
 
         getTouchAngle(event, function (touchAngle) {
-
-            console.log('getTouchAngle', touchAngle);
-
             var _state = _this2.state,
                 grabAngle = _state.grabAngle,
                 setAngle = _state.setAngle;
@@ -8289,6 +8317,7 @@ function TimePicker__inherits(subClass, superClass) { if (typeof superClass !== 
 
 
 
+
 var degreesToMinutes = function degreesToMinutes(deg) {
     return Math.floor(deg / (360 / 60));
 };
@@ -8359,9 +8388,8 @@ var TimePicker_TimePicker = function (_Component) {
         var minuteSelecting = _ref2.minuteSelecting,
             hourSelecting = _ref2.hourSelecting;
 
-        var minuteColor = 'background-image: radial-gradient(' + outerColor + ' 10%, transparent 70%);';
-        var hourColor = 'background-image: radial-gradient(' + innerColor + ' 10%, transparent 70%);';
-
+        var minuteColor = 'background-image: radial-gradient(' + hslToCss(outerColor) + ' 10%, transparent 70%);';
+        var hourColor = 'background-image: radial-gradient(' + hslToCss(innerColor) + ' 10%, transparent 70%);';
         var minuteDial = minutesToDegrees(time.getMinutes());
         var hourDial = hoursToDegrees(time.getHours());
 
@@ -8473,193 +8501,6 @@ var ColorPicker_style_default = /*#__PURE__*/__webpack_require__.n(ColorPicker_s
 var external__timers_ = __webpack_require__("KrYd");
 var external__timers__default = /*#__PURE__*/__webpack_require__.n(external__timers_);
 
-// CONCATENATED MODULE: ./components/ColorPicker/tools.js
-/**
- *
- *
- * @param {DOMEvent} event
- * @returns
- */
-var getVerticalSliderLevel = function getVerticalSliderLevel(event, callback) {
-    var currentTarget = event.currentTarget,
-        pageX = event.pageX,
-        pageY = event.pageY;
-
-    var _currentTarget$getBou = currentTarget.getBoundingClientRect(),
-        top = _currentTarget$getBou.top,
-        left = _currentTarget$getBou.left,
-        width = _currentTarget$getBou.width,
-        height = _currentTarget$getBou.height;
-
-    var getValue = function getValue(_ref) {
-        var top = _ref.top,
-            left = _ref.left,
-            width = _ref.width,
-            height = _ref.height,
-            pageX = _ref.pageX,
-            pageY = _ref.pageY;
-
-        var value = pageY - top;
-
-        if (value < 0) return 0;
-
-        if (pageY > top + height) return height;
-        return value;
-    };
-
-    if (tools_isTouchEvent(event)) {
-
-        for (var _iterator = event.changedTouches, _isArray = Array.isArray(_iterator), _i = 0, _iterator = _isArray ? _iterator : _iterator[Symbol.iterator]();;) {
-            var _ref2;
-
-            if (_isArray) {
-                if (_i >= _iterator.length) break;
-                _ref2 = _iterator[_i++];
-            } else {
-                _i = _iterator.next();
-                if (_i.done) break;
-                _ref2 = _i.value;
-            }
-
-            var touch = _ref2;
-            var _pageX = touch.pageX,
-                _pageY = touch.pageY;
-
-            var value = getValue({
-                top: top, left: left, width: width, height: height, pageX: _pageX, pageY: _pageY
-            });
-
-            callback(value);
-        }
-    } else {
-        var _value = getValue({ top: top, left: left, width: width, height: height, pageX: pageX, pageY: pageY });
-        callback(_value);
-    }
-};
-
-var tools_isTouchEvent = function isTouchEvent(event) {
-    var type = event.type;
-
-    return type === 'touchmove' || type === 'touchstart' || type === 'touchend';
-};
-
-/**
- *
- *
- * @param {any} radians
- * @returns
- */
-var tools_deg = function deg(radians) {
-    return radians * 180 / Math.PI;
-};
-
-/**
- *
- * 
- * @param {Number} angle
- * @returns {Number}
- */
-var getHue = function getHue(angle) {
-    var hue = 360 + (angle + 90);
-
-    if (hue > 360) {
-        hue = 360 - hue;
-    }
-    if (hue < 0) {
-        hue = -1 * hue;
-    }
-    hue = 360 - hue;
-
-    return Math.floor(hue);
-};
-
-/**
- *
- * 
- * @param {Object} {left, top, width, height, pageX, pageY}
- * @returns {Number}
- */
-var tools_calculateTouchAngle = function calculateTouchAngle(_ref3) {
-    var left = _ref3.left,
-        top = _ref3.top,
-        width = _ref3.width,
-        height = _ref3.height,
-        pageX = _ref3.pageX,
-        pageY = _ref3.pageY;
-
-    var X = pageX - left;
-    var Y = pageY - top;
-    var centerX = Math.round(left + width / 2);
-    var centerY = Math.round(top + height / 2);
-    var A = pageX - centerX;
-    var B = centerY - pageY;
-    var C = Math.sqrt(Math.pow(A, 2) + Math.pow(B, 2));
-
-    var angle = 0;
-
-    if (A > 0) {
-        angle = tools_deg(Math.asin(B * 1 / C));
-    } else {
-        angle = 180 - tools_deg(Math.acos(A * -1 / C));
-    }
-
-    if (B < 0 && A < 0) {
-        angle = 360 - angle;
-    } else if (B < 0) {
-        angle = 360 + angle;
-    }
-
-    return angle;
-};
-
-/**
- *
- * 
- * @param {DOMEvent} event
- * @param {Function} callback
- */
-var tools_getTouchAngle = function getTouchAngle(event, callback) {
-    var currentTarget = event.currentTarget,
-        pageX = event.pageX,
-        pageY = event.pageY;
-
-    var _currentTarget$getBou2 = currentTarget.getBoundingClientRect(),
-        top = _currentTarget$getBou2.top,
-        left = _currentTarget$getBou2.left,
-        width = _currentTarget$getBou2.width,
-        height = _currentTarget$getBou2.height;
-
-    if (tools_isTouchEvent(event)) {
-        for (var _iterator2 = event.changedTouches, _isArray2 = Array.isArray(_iterator2), _i2 = 0, _iterator2 = _isArray2 ? _iterator2 : _iterator2[Symbol.iterator]();;) {
-            var _ref4;
-
-            if (_isArray2) {
-                if (_i2 >= _iterator2.length) break;
-                _ref4 = _iterator2[_i2++];
-            } else {
-                _i2 = _iterator2.next();
-                if (_i2.done) break;
-                _ref4 = _i2.value;
-            }
-
-            var touch = _ref4;
-            var _pageX2 = touch.pageX,
-                _pageY2 = touch.pageY;
-
-            var angle = tools_calculateTouchAngle({
-                top: top, left: left, width: width, height: height, pageX: _pageX2, pageY: _pageY2
-            });
-
-            callback(angle);
-        }
-    } else {
-        var _angle = tools_calculateTouchAngle({
-            top: top, left: left, width: width, height: height, pageX: pageX, pageY: pageY
-        });
-
-        callback(_angle);
-    }
-};
 // CONCATENATED MODULE: ./components/ColorPicker/Color.js
 
 
@@ -8734,15 +8575,15 @@ var SpectrumDecoration_SpectrumDecoration = function (_Component) {
 
         return Object(preact_min["h"])(
             'div',
-            { 'class': ColorPicker_style_default.a['spectrum-selector__decoration'] },
+            { 'class': ColorPicker_style_default.a['spectrum-circle__decoration'] },
             stops.map(function (angle, index, stops) {
 
-                var className = 'spectrum-selector__decoration--mark';
+                var className = 'spectrum-circle__decoration--mark';
 
                 if (index % 4 === 0) {
-                    className = 'spectrum-selector__decoration--primary';
+                    className = 'spectrum-circle__decoration--primary';
                 } else if (index % 2 === 0) {
-                    className = 'spectrum-selector__decoration--secondary';
+                    className = 'spectrum-circle__decoration--secondary';
                 }
 
                 var rotate = index * (45 / 2);
@@ -8774,7 +8615,7 @@ function Spectrum__inherits(subClass, superClass) { if (typeof superClass !== "f
 
 var colors = new Array(64).fill(0);
 
-var Spectrum__ref2 = Object(preact_min["h"])(SpectrumDecoration_SpectrumDecoration, null);
+var _ref3 = Object(preact_min["h"])(SpectrumDecoration_SpectrumDecoration, null);
 
 var Spectrum_Spectrum = function (_Component) {
     Spectrum__inherits(Spectrum, _Component);
@@ -8791,109 +8632,50 @@ var Spectrum_Spectrum = function (_Component) {
         });
 
         this.setState({
-            startAngle: 0,
-            setAngle: 0,
             angles: angles
         });
     };
 
-    Spectrum.prototype.updateAngle = function updateAngle(event, callback) {
+    Spectrum.prototype.onHue = function onHue(deg) {
+        var hue = 360 - deg;
+        this.props.onChange(hue);
+    };
+
+    Spectrum.prototype.render = function render(_ref, _ref2) {
         var _this2 = this;
 
-        tools_getTouchAngle(event, function (touchAngle) {
-            var _state = _this2.state,
-                grabAngle = _state.grabAngle,
-                setAngle = _state.setAngle;
+        var hue = _ref.hue;
+        var angles = _ref2.angles;
 
-            var angleDiff = touchAngle - grabAngle;
-            var angle = -1 * (setAngle + angleDiff);
-
-            _this2.props.onChange(getHue(angle));
-
-            callback(angle);
-        });
-    };
-
-    Spectrum.prototype.selecting = function selecting(event) {
-        var _this3 = this;
-
-        event.preventDefault();
-
-        if (!this.state.selecting) return;
-
-        this.updateAngle(event, function (angle) {
-            _this3.setState({
-                angle: angle
-            });
-            _this3.container.style.setProperty('--wheelRotation', angle + 'deg');
-        });
-    };
-
-    Spectrum.prototype.selectStart = function selectStart(e) {
-        var _this4 = this;
-
-        e.preventDefault();
-        tools_getTouchAngle(e, function (grabAngle) {
-            _this4.setState({
-                grabAngle: grabAngle,
-                selecting: true
-            });
-        });
-    };
-
-    Spectrum.prototype.selectEnd = function selectEnd(e) {
-        var _this5 = this;
-
-        e.preventDefault();
-        this.updateAngle(event, function (angle) {
-            var setAngle = -1 * angle;
-            _this5.setState({
-                setAngle: setAngle,
-                selecting: false
-            });
-        });
-    };
-
-    Spectrum.prototype.render = function render(props, _ref) {
-        var _this6 = this;
-
-        var angles = _ref.angles;
+        var dialValue = 360 - hue;
 
         return Object(preact_min["h"])(
             'div',
             {
                 ref: function ref(element) {
-                    _this6.container = element;
+                    _this2.container = element;
                 },
-                'class': ColorPicker_style_default.a['spectrum-container'],
-                onMouseDown: function onMouseDown(e) {
-                    return _this6.selectStart(e);
-                },
-                onTouchStart: function onTouchStart(e) {
-                    return _this6.selectStart(e);
-                },
-                onMouseMove: function onMouseMove(e) {
-                    return _this6.selecting(e);
-                },
-                onTouchMove: function onTouchMove(e) {
-                    return _this6.selecting(e);
-                },
-                onMouseUp: function onMouseUp(e) {
-                    return _this6.selectEnd(e);
-                },
-                onTouchEnd: function onTouchEnd(e) {
-                    return _this6.selectEnd(e);
-                }
+                'class': ColorPicker_style_default.a['spectrum']
             },
-            Object(preact_min["h"])('div', { 'class': ColorPicker_style_default.a['spectrum-selector__color'] }),
+            Object(preact_min["h"])('div', { 'class': ColorPicker_style_default.a['spectrum__selector'] }),
             Object(preact_min["h"])(
-                'div',
-                { 'class': ColorPicker_style_default.a['spectrum-circle'] },
-                angles.map(function (angle, index, angles) {
-                    return Object(preact_min["h"])(Color_Color, { angle: angle, index: index, size: angles.length });
-                })
-            ),
-            Spectrum__ref2
+                Dial_Dial,
+                {
+                    className: ColorPicker_style_default.a['spectrum-circle'],
+                    value: dialValue,
+                    onChange: function onChange(e) {
+                        return _this2.onHue(e);
+                    }
+                },
+                Object(preact_min["h"])(
+                    'div',
+                    { 'class': ColorPicker_style_default.a['spectrum-circle__inner'] },
+                    angles.map(function (angle, index, angles) {
+                        return Object(preact_min["h"])(Color_Color, { angle: angle, index: index, size: angles.length });
+                    })
+                ),
+                _ref3
+            )
         );
     };
 
@@ -8901,6 +8683,75 @@ var Spectrum_Spectrum = function (_Component) {
 }(preact_min["Component"]);
 
 
+// CONCATENATED MODULE: ./components/ColorPicker/tools.js
+/**
+ *
+ *
+ * @param {DOMEvent} event
+ * @returns
+ */
+var getVerticalSliderLevel = function getVerticalSliderLevel(event, callback) {
+    var currentTarget = event.currentTarget,
+        pageX = event.pageX,
+        pageY = event.pageY;
+
+    var _currentTarget$getBou = currentTarget.getBoundingClientRect(),
+        top = _currentTarget$getBou.top,
+        left = _currentTarget$getBou.left,
+        width = _currentTarget$getBou.width,
+        height = _currentTarget$getBou.height;
+
+    var getValue = function getValue(_ref) {
+        var top = _ref.top,
+            left = _ref.left,
+            width = _ref.width,
+            height = _ref.height,
+            pageX = _ref.pageX,
+            pageY = _ref.pageY;
+
+        var value = pageY - top;
+
+        if (value < 0) return 0;
+
+        if (pageY > top + height) return height;
+        return value;
+    };
+
+    if (tools_isTouchEvent(event)) {
+
+        for (var _iterator = event.changedTouches, _isArray = Array.isArray(_iterator), _i = 0, _iterator = _isArray ? _iterator : _iterator[Symbol.iterator]();;) {
+            var _ref2;
+
+            if (_isArray) {
+                if (_i >= _iterator.length) break;
+                _ref2 = _iterator[_i++];
+            } else {
+                _i = _iterator.next();
+                if (_i.done) break;
+                _ref2 = _i.value;
+            }
+
+            var touch = _ref2;
+            var _pageX = touch.pageX,
+                _pageY = touch.pageY;
+
+            var value = getValue({
+                top: top, left: left, width: width, height: height, pageX: _pageX, pageY: _pageY
+            });
+
+            callback(value);
+        }
+    } else {
+        var _value = getValue({ top: top, left: left, width: width, height: height, pageX: pageX, pageY: pageY });
+        callback(_value);
+    }
+};
+
+var tools_isTouchEvent = function isTouchEvent(event) {
+    var type = event.type;
+
+    return type === 'touchmove' || type === 'touchstart' || type === 'touchend';
+};
 // CONCATENATED MODULE: ./components/ColorPicker/Saturation.js
 
 
@@ -8993,7 +8844,7 @@ var Saturation_Saturation = function (_Component) {
         return Object(preact_min["h"])(
             'div',
             {
-                'class': ColorPicker_style_default.a['spectrum-selector__saturation'],
+                'class': ColorPicker_style_default.a['colorpicker__saturation'],
                 style: gradient,
                 onClick: function onClick(e) {
                     return _this5.clicked(e);
@@ -9017,7 +8868,7 @@ var Saturation_Saturation = function (_Component) {
                     return _this5.selectEnd(e);
                 }
             },
-            Object(preact_min["h"])('div', { 'class': ColorPicker_style_default.a['spectrum-selector__saturation-level'], style: level })
+            Object(preact_min["h"])('div', { 'class': ColorPicker_style_default.a['colorpicker__saturation-level'], style: level })
         );
     };
 
@@ -9117,7 +8968,7 @@ var Luminosity_Luminosity = function (_Component) {
         return Object(preact_min["h"])(
             'div',
             {
-                'class': ColorPicker_style_default.a['spectrum-selector__luminosity'],
+                'class': ColorPicker_style_default.a['colorpicker__luminosity'],
                 style: gradient,
                 onClick: function onClick(e) {
                     return _this5.clicked(e);
@@ -9141,7 +8992,7 @@ var Luminosity_Luminosity = function (_Component) {
                     return _this5.selectEnd(e);
                 }
             },
-            Object(preact_min["h"])('div', { 'class': ColorPicker_style_default.a['spectrum-selector__luminosity-level'], style: level })
+            Object(preact_min["h"])('div', { 'class': ColorPicker_style_default.a['colorpicker__luminosity-level'], style: level })
         );
     };
 
@@ -9178,10 +9029,16 @@ var ColorPicker_ColorPicker = function (_Component) {
     }
 
     ColorPicker.prototype.componentWillMount = function componentWillMount() {
+        var _props$value = this.props.value,
+            hue = _props$value[0],
+            saturation = _props$value[1],
+            luminosity = _props$value[2];
+
+
         this.setState({
-            hue: -90,
-            saturation: 100,
-            luminosity: 50
+            hue: hue,
+            saturation: saturation,
+            luminosity: luminosity
         });
     };
 
@@ -9191,7 +9048,7 @@ var ColorPicker_ColorPicker = function (_Component) {
             saturation = _state.saturation,
             luminosity = _state.luminosity;
 
-        this.props.onChange('hsl(' + hue + ', ' + saturation + '%, ' + luminosity + '%)');
+        this.props.onChange([hue, saturation, luminosity]);
     };
 
     ColorPicker.prototype.onHueChange = function onHueChange(hue) {
@@ -9222,8 +9079,8 @@ var ColorPicker_ColorPicker = function (_Component) {
 
         return Object(preact_min["h"])(
             'div',
-            { 'class': ColorPicker_style_default.a['spectrum-selector'] },
-            Object(preact_min["h"])(Spectrum_Spectrum, { onChange: function onChange(e) {
+            { 'class': ColorPicker_style_default.a['colorpicker'] },
+            Object(preact_min["h"])(Spectrum_Spectrum, { hue: hue, onChange: function onChange(e) {
                     return _this2.onHueChange(e);
                 } }),
             Object(preact_min["h"])(Saturation_Saturation, { hue: hue, onChange: function onChange(e) {
@@ -9257,44 +9114,133 @@ function design__inherits(subClass, superClass) { if (typeof superClass !== "fun
 
 
 
-var design_Design = (design__dec = connect(reducers_0, actions_namespaceObject), design__dec(design__class = function (_Component) {
-    design__inherits(Design, _Component);
+var design_mapStateToProps = function mapStateToProps(state, ownProps) {
+    var outerColor = state.outerColor;
+    var innerColor = state.innerColor;
 
-    function Design() {
-        design__classCallCheck(this, Design);
+    return {
+        outerColor: outerColor,
+        innerColor: innerColor
+    };
+};
+
+var design_D = (design__dec = connect(reducers_0, actions_namespaceObject), design__dec(design__class = function (_Component) {
+    design__inherits(D, _Component);
+
+    function D() {
+        design__classCallCheck(this, D);
 
         return design__possibleConstructorReturn(this, _Component.apply(this, arguments));
     }
 
-    Design.prototype.setOuterColor = function setOuterColor(color) {
+    D.prototype.setOuterColor = function setOuterColor(color) {
         this.props.setOuterColor(color);
     };
 
-    Design.prototype.setInnerColor = function setInnerColor(color) {
+    D.prototype.setInnerColor = function setInnerColor(color) {
         this.props.setInnerColor(color);
     };
 
-    Design.prototype.render = function render(_ref, state) {
+    D.prototype.render = function render(_ref, state) {
         var _this2 = this;
 
         var outerColor = _ref.outerColor,
-            time = _ref.time;
-
+            innerColor = _ref.innerColor;
 
         return Object(preact_min["h"])(
             'div',
             { 'class': 'page' },
             Object(preact_min["h"])(ColorPicker_ColorPicker, { text: 'Outer color', onChange: function onChange(e) {
                     return _this2.setOuterColor(e);
-                } }),
+                }, value: outerColor }),
             Object(preact_min["h"])(ColorPicker_ColorPicker, { text: 'Inner color', onChange: function onChange(e) {
                     return _this2.setInnerColor(e);
-                } })
+                }, value: innerColor })
         );
     };
 
-    return Design;
+    return D;
 }(preact_min["Component"])) || design__class);
+
+
+var Design = connect(design_mapStateToProps)(design_D);
+/* harmony default export */ var design = (Design);
+// EXTERNAL MODULE: ./routes/dial/style.scss
+var dial_style = __webpack_require__("HU6w");
+var dial_style_default = /*#__PURE__*/__webpack_require__.n(dial_style);
+
+// CONCATENATED MODULE: ./routes/dial/index.js
+
+
+function dial__classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function dial__possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function dial__inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+
+
+
+
+
+
+var dial_DialPage = function (_Component) {
+    dial__inherits(DialPage, _Component);
+
+    function DialPage() {
+        dial__classCallCheck(this, DialPage);
+
+        return dial__possibleConstructorReturn(this, _Component.apply(this, arguments));
+    }
+
+    DialPage.prototype.setDial = function setDial(e) {
+        //console.log(e);
+
+    };
+
+    DialPage.prototype.render = function render(_ref, state) {
+        var _this2 = this;
+
+        var outerColor = _ref.outerColor,
+            innerColor = _ref.innerColor,
+            time = _ref.time;
+
+
+        var test = 'foo';
+        return Object(preact_min["h"])(
+            'div',
+            { 'class': 'page' },
+            Object(preact_min["h"])(
+                'div',
+                { 'class': dial_style_default.a['dial_test'] },
+                Object(preact_min["h"])(
+                    Dial_Dial,
+                    { onChange: function onChange(e) {
+                            return _this2.setDial(e);
+                        }, value: 0 },
+                    Object(preact_min["h"])('div', { 'class': dial_style_default.a['dial_test-in'] })
+                )
+            ),
+            Object(preact_min["h"])(
+                'div',
+                { 'class': dial_style_default.a['dial_test'] },
+                Object(preact_min["h"])(
+                    Dial_Dial,
+                    { onChange: function onChange(e) {
+                            return _this2.setDial(e);
+                        }, value: 0, test: test },
+                    Object(preact_min["h"])('div', { 'class': dial_style_default.a['dial_test-in'] })
+                )
+            )
+        );
+    };
+
+    return DialPage;
+}(preact_min["Component"]);
+
 
 // CONCATENATED MODULE: ./components/app.js
 
@@ -9312,6 +9258,7 @@ function app__inherits(subClass, superClass) { if (typeof superClass !== "functi
 
 
 
+
 // import Home from 'async!../routes/home';
 // import Profile from 'async!../routes/profile';
 
@@ -9319,7 +9266,9 @@ var app__ref = Object(preact_min["h"])(components_Header, { bgColor: '#673AB7' }
 
 var app__ref2 = Object(preact_min["h"])(routes_time, { path: '/' });
 
-var _ref3 = Object(preact_min["h"])(design_Design, { path: '/design' });
+var app__ref3 = Object(preact_min["h"])(design, { path: '/design' });
+
+var _ref4 = Object(preact_min["h"])(dial_DialPage, { path: '/dial' });
 
 var app_App = function (_Component) {
     app__inherits(App, _Component);
@@ -9352,7 +9301,8 @@ var app_App = function (_Component) {
                 preact_router_es["Router"],
                 { onChange: this.handleRoute },
                 app__ref2,
-                _ref3
+                app__ref3,
+                _ref4
             )
         );
     };
@@ -10923,7 +10873,7 @@ module.exports = require("timers");
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
-module.exports = {"spectrum-selector":"spectrum-selector__20vv-","spectrum-container":"spectrum-container__2a0EW","spectrum-circle":"spectrum-circle__3qLt4","spectrum-circle__color":"spectrum-circle__color__3ivUd","spectrum-selector__color":"spectrum-selector__color__1_u-h","spectrum-selector__decoration":"spectrum-selector__decoration__2zNxW","spectrum-selector__decoration--mark":"spectrum-selector__decoration--mark__jTIPg","spectrum-selector__decoration--secondary":"spectrum-selector__decoration--secondary__mvSwa","spectrum-selector__decoration--primary":"spectrum-selector__decoration--primary__1X-bM","spectrum-selector__luminosity":"spectrum-selector__luminosity__2rcHL","spectrum-selector__saturation":"spectrum-selector__saturation__oqHnB","spectrum-selector__luminosity-level":"spectrum-selector__luminosity-level__2AH8_","spectrum-selector__saturation-level":"spectrum-selector__saturation-level__1tfbs","dot":"dot__3KQTL","dot2":"dot2__2OL3a"};
+module.exports = {"colorpicker":"colorpicker__qUf75","spectrum":"spectrum__IohIt","spectrum__selector":"spectrum__selector__3xKOt","spectrum-circle":"spectrum-circle__3qLt4","spectrum-circle__inner":"spectrum-circle__inner__17rq6","spectrum-circle__color":"spectrum-circle__color__3ivUd","spectrum-circle__decoration":"spectrum-circle__decoration__EzAQn","spectrum-circle__decoration--mark":"spectrum-circle__decoration--mark__py6ik","spectrum-circle__decoration--secondary":"spectrum-circle__decoration--secondary__2ZQou","spectrum-circle__decoration--primary":"spectrum-circle__decoration--primary__1XPW1","colorpicker__luminosity":"colorpicker__luminosity__1tf6l","colorpicker__saturation":"colorpicker__saturation__R3PX8","colorpicker__luminosity-level":"colorpicker__luminosity-level__2euTD","colorpicker__saturation-level":"colorpicker__saturation-level__1EspR","dot":"dot__3KQTL","dot2":"dot2__2OL3a"};
 
 /***/ }),
 
