@@ -5140,7 +5140,7 @@ module.exports = require("assert");
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
-module.exports = {"dial_test":"dial_test__GWkAx","dial_test-in":"dial_test-in__kd8LK"};
+module.exports = {"dial_test":"dial_test__GWkAx","dial_test-in":"dial_test-in__kd8LK","vertical-slider-test":"vertical-slider-test__2dIq0","vertical-slider-test__in":"vertical-slider-test__in__telv0","horizontal-slider-test":"horizontal-slider-test__2bEuU","horizontal-slider-test__in":"horizontal-slider-test__in__Un726"};
 
 /***/ }),
 
@@ -8039,8 +8039,7 @@ var Dial_Dial = function (_Component) {
     };
 
     Dial.prototype.shouldComponentUpdate = function shouldComponentUpdate(_ref, nextState) {
-        var value = _ref.value,
-            preventSelect = _ref.preventSelect;
+        var value = _ref.value;
 
         if (this.state.selecting) return false;
 
@@ -8683,7 +8682,11 @@ var Spectrum_Spectrum = function (_Component) {
 }(preact_min["Component"]);
 
 
-// CONCATENATED MODULE: ./components/ColorPicker/tools.js
+// EXTERNAL MODULE: ./components/VerticalSlider/style.scss
+var VerticalSlider_style = __webpack_require__("igvm");
+var VerticalSlider_style_default = /*#__PURE__*/__webpack_require__.n(VerticalSlider_style);
+
+// CONCATENATED MODULE: ./components/VerticalSlider/tools.js
 /**
  *
  *
@@ -8692,28 +8695,25 @@ var Spectrum_Spectrum = function (_Component) {
  */
 var getVerticalSliderLevel = function getVerticalSliderLevel(event, callback) {
     var currentTarget = event.currentTarget,
-        pageX = event.pageX,
         pageY = event.pageY;
 
     var _currentTarget$getBou = currentTarget.getBoundingClientRect(),
         top = _currentTarget$getBou.top,
-        left = _currentTarget$getBou.left,
-        width = _currentTarget$getBou.width,
         height = _currentTarget$getBou.height;
 
+    var offsetTop = top + window.scrollY;
+
     var getValue = function getValue(_ref) {
-        var top = _ref.top,
-            left = _ref.left,
-            width = _ref.width,
+        var offsetTop = _ref.offsetTop,
             height = _ref.height,
-            pageX = _ref.pageX,
             pageY = _ref.pageY;
 
-        var value = pageY - top;
+        var value = pageY - offsetTop;
 
         if (value < 0) return 0;
 
-        if (pageY > top + height) return height;
+        if (pageY > offsetTop + height) return height;
+
         return value;
     };
 
@@ -8732,17 +8732,16 @@ var getVerticalSliderLevel = function getVerticalSliderLevel(event, callback) {
             }
 
             var touch = _ref2;
-            var _pageX = touch.pageX,
-                _pageY = touch.pageY;
+            var _pageY = touch.pageY;
 
             var value = getValue({
-                top: top, left: left, width: width, height: height, pageX: _pageX, pageY: _pageY
+                offsetTop: offsetTop, height: height, pageY: _pageY
             });
 
             callback(value);
         }
     } else {
-        var _value = getValue({ top: top, left: left, width: width, height: height, pageX: pageX, pageY: pageY });
+        var _value = getValue({ offsetTop: offsetTop, height: height, pageY: pageY });
         callback(_value);
     }
 };
@@ -8752,6 +8751,173 @@ var tools_isTouchEvent = function isTouchEvent(event) {
 
     return type === 'touchmove' || type === 'touchstart' || type === 'touchend';
 };
+// CONCATENATED MODULE: ./components/VerticalSlider/index.js
+
+
+function VerticalSlider__classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function VerticalSlider__possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function VerticalSlider__inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+
+
+var VerticalSlider_VerticalSlider = function (_Component) {
+    VerticalSlider__inherits(VerticalSlider, _Component);
+
+    function VerticalSlider() {
+        VerticalSlider__classCallCheck(this, VerticalSlider);
+
+        return VerticalSlider__possibleConstructorReturn(this, _Component.apply(this, arguments));
+    }
+
+    VerticalSlider.prototype.componentDidMount = function componentDidMount() {
+        this.setLevel(this.percentToLevel(this.props.value));
+    };
+
+    VerticalSlider.prototype.shouldComponentUpdate = function shouldComponentUpdate(_ref, nextState) {
+        var value = _ref.value;
+
+        if (this.state.selecting) return false;
+
+        var oldValue = this.props.value;
+
+        if (oldValue !== value) {
+            this.setLevel(this.percentToLevel(value));
+            return false;
+        }
+
+        return true;
+    };
+
+    VerticalSlider.prototype.percentToLevel = function percentToLevel(percent) {
+        var _container$getBoundin = this.container.getBoundingClientRect(),
+            height = _container$getBoundin.height;
+
+        return height - percent / 100 * height;
+    };
+
+    VerticalSlider.prototype.updateValue = function updateValue(value, height) {
+        var percentage = 100 - Math.floor(value / height * 100);
+        this.props.onChange(percentage);
+    };
+
+    VerticalSlider.prototype.updateLevel = function updateLevel(event, callback) {
+        var _this2 = this;
+
+        var _event$currentTarget$ = event.currentTarget.getBoundingClientRect(),
+            height = _event$currentTarget$.height;
+
+        getVerticalSliderLevel(event, function (value) {
+            _this2.updateValue(value, height);
+            callback(value);
+        });
+    };
+
+    VerticalSlider.prototype.setLevel = function setLevel(level) {
+        if (level === this.state.level) return;
+
+        if (this.props.customLevel) {
+            this.container.querySelector('.' + this.props.customLevel).style.setProperty('--slideLevel', level + 'px');
+        } else {
+            this.container.style.setProperty('--slideLevel', level + 'px');
+        }
+
+        // TODO onresize
+
+        this.setState({
+            level: level
+        });
+    };
+
+    VerticalSlider.prototype.selectStart = function selectStart(e) {
+        var _this3 = this;
+
+        e.preventDefault();
+        this.setState({
+            selecting: true
+        });
+        this.updateLevel(event, function (level) {
+            return _this3.setLevel(level);
+        });
+    };
+
+    VerticalSlider.prototype.selecting = function selecting(event) {
+        var _this4 = this;
+
+        event.preventDefault();
+
+        if (!this.state.selecting) return;
+
+        this.updateLevel(event, function (level) {
+            return _this4.setLevel(level);
+        });
+    };
+
+    VerticalSlider.prototype.clicked = function clicked(event) {
+        var _this5 = this;
+
+        event.preventDefault();
+        this.updateLevel(event, function (level) {
+            return _this5.setLevel(level);
+        });
+    };
+
+    VerticalSlider.prototype.selectEnd = function selectEnd(e) {
+        e.preventDefault();
+        this.setState({
+            selecting: false
+        });
+    };
+
+    VerticalSlider.prototype.render = function render(props, state) {
+        var _this6 = this;
+
+        var className = [props.className, VerticalSlider_style_default.a['vertical-slider']];
+
+        if (props.customLevel) className.push(VerticalSlider_style_default.a['vertical-slider--custom-level']);
+
+        return Object(preact_min["h"])(
+            'div',
+            {
+                ref: function ref(element) {
+                    _this6.container = element;
+                },
+                'class': className.join(' '),
+                style: props.style,
+                onClick: function onClick(e) {
+                    return _this6.clicked(e);
+                },
+                onMouseDown: function onMouseDown(e) {
+                    return _this6.selectStart(e);
+                },
+                onTouchStart: function onTouchStart(e) {
+                    return _this6.selectStart(e);
+                },
+                onMouseMove: function onMouseMove(e) {
+                    return _this6.selecting(e);
+                },
+                onTouchMove: function onTouchMove(e) {
+                    return _this6.selecting(e);
+                },
+                onMouseUp: function onMouseUp(e) {
+                    return _this6.selectEnd(e);
+                },
+                onTouchEnd: function onTouchEnd(e) {
+                    return _this6.selectEnd(e);
+                }
+            },
+            props.children
+        );
+    };
+
+    return VerticalSlider;
+}(preact_min["Component"]);
+
+
 // CONCATENATED MODULE: ./components/ColorPicker/Saturation.js
 
 
@@ -8760,7 +8926,6 @@ function Saturation__classCallCheck(instance, Constructor) { if (!(instance inst
 function Saturation__possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function Saturation__inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
 
 
 
@@ -8775,100 +8940,32 @@ var Saturation_Saturation = function (_Component) {
         return Saturation__possibleConstructorReturn(this, _Component.apply(this, arguments));
     }
 
-    Saturation.prototype.componentWillMount = function componentWillMount() {
-        this.setState({
-            saturation: 0
-        });
+    Saturation.prototype.updateSaturation = function updateSaturation(saturation) {
+        this.props.onChange(saturation);
     };
 
-    Saturation.prototype.updateSaturation = function updateSaturation(event, callback) {
+    Saturation.prototype.render = function render(_ref, state) {
         var _this2 = this;
 
-        var _event$currentTarget$ = event.currentTarget.getBoundingClientRect(),
-            height = _event$currentTarget$.height;
-
-        getVerticalSliderLevel(event, function (value) {
-            var saturation = 100 - Math.floor(value / height * 100);
-            _this2.props.onChange(saturation);
-            callback(value);
-        });
-    };
-
-    Saturation.prototype.selectStart = function selectStart(e) {
-        e.preventDefault();
-        this.setState({
-            selecting: true
-        });
-    };
-
-    Saturation.prototype.selecting = function selecting(event) {
-        var _this3 = this;
-
-        event.preventDefault();
-
-        if (!this.state.selecting) return;
-
-        this.updateSaturation(event, function (saturation) {
-            _this3.setState({
-                saturation: saturation
-            });
-        });
-    };
-
-    Saturation.prototype.clicked = function clicked(event) {
-        var _this4 = this;
-
-        event.preventDefault();
-        this.updateSaturation(event, function (saturation) {
-            _this4.setState({
-                saturation: saturation
-            });
-        });
-    };
-
-    Saturation.prototype.selectEnd = function selectEnd(e) {
-        e.preventDefault();
-        this.setState({
-            selecting: false
-        });
-    };
-
-    Saturation.prototype.render = function render(_ref, _ref2) {
-        var _this5 = this;
-
-        var hue = _ref.hue;
-        var saturation = _ref2.saturation;
+        var hue = _ref.hue,
+            value = _ref.value;
 
         var gradient = 'background-image: linear-gradient(hsl(' + hue + ', 100%, 50%), hsl(' + hue + ', 0%, 50%));';
-        var level = 'transform: translateY(' + saturation + 'px);';
+
         return Object(preact_min["h"])(
             'div',
-            {
-                'class': ColorPicker_style_default.a['colorpicker__saturation'],
-                style: gradient,
-                onClick: function onClick(e) {
-                    return _this5.clicked(e);
+            { 'class': ColorPicker_style_default.a['colorpicker__saturation'], style: gradient },
+            Object(preact_min["h"])(
+                VerticalSlider_VerticalSlider,
+                {
+                    onChange: function onChange(e) {
+                        return _this2.updateSaturation(e);
+                    },
+                    value: value,
+                    customLevel: ColorPicker_style_default.a['colorpicker__saturation-level']
                 },
-                onMouseDown: function onMouseDown(e) {
-                    return _this5.selectStart(e);
-                },
-                onTouchStart: function onTouchStart(e) {
-                    return _this5.selectStart(e);
-                },
-                onMouseMove: function onMouseMove(e) {
-                    return _this5.selecting(e);
-                },
-                onTouchMove: function onTouchMove(e) {
-                    return _this5.selecting(e);
-                },
-                onMouseUp: function onMouseUp(e) {
-                    return _this5.selectEnd(e);
-                },
-                onTouchEnd: function onTouchEnd(e) {
-                    return _this5.selectEnd(e);
-                }
-            },
-            Object(preact_min["h"])('div', { 'class': ColorPicker_style_default.a['colorpicker__saturation-level'], style: level })
+                Object(preact_min["h"])('div', { 'class': ColorPicker_style_default.a['colorpicker__saturation-level'] })
+            )
         );
     };
 
@@ -8889,7 +8986,6 @@ function Luminosity__inherits(subClass, superClass) { if (typeof superClass !== 
 
 
 
-
 var Luminosity_Luminosity = function (_Component) {
     Luminosity__inherits(Luminosity, _Component);
 
@@ -8899,100 +8995,32 @@ var Luminosity_Luminosity = function (_Component) {
         return Luminosity__possibleConstructorReturn(this, _Component.apply(this, arguments));
     }
 
-    Luminosity.prototype.componentWillMount = function componentWillMount() {
-        this.setState({
-            luminosity: 100
-        });
+    Luminosity.prototype.updateLuminosity = function updateLuminosity(luminosity) {
+        this.props.onChange(luminosity);
     };
 
-    Luminosity.prototype.updateLuminosity = function updateLuminosity(event, callback) {
+    Luminosity.prototype.render = function render(_ref, state) {
         var _this2 = this;
 
-        var _event$currentTarget$ = event.currentTarget.getBoundingClientRect(),
-            height = _event$currentTarget$.height;
-
-        getVerticalSliderLevel(event, function (value) {
-            var luminosity = 100 - Math.floor(value / height * 100);
-            _this2.props.onChange(luminosity);
-            callback(value);
-        });
-    };
-
-    Luminosity.prototype.selectStart = function selectStart(e) {
-        e.preventDefault();
-        this.setState({
-            selecting: true
-        });
-    };
-
-    Luminosity.prototype.selecting = function selecting(event) {
-        var _this3 = this;
-
-        event.preventDefault();
-
-        if (!this.state.selecting) return;
-
-        this.updateLuminosity(event, function (luminosity) {
-            _this3.setState({
-                luminosity: luminosity
-            });
-        });
-    };
-
-    Luminosity.prototype.clicked = function clicked(event) {
-        var _this4 = this;
-
-        event.preventDefault();
-        this.updateLuminosity(event, function (luminosity) {
-            _this4.setState({
-                luminosity: luminosity
-            });
-        });
-    };
-
-    Luminosity.prototype.selectEnd = function selectEnd(e) {
-        e.preventDefault();
-        this.setState({
-            selecting: false
-        });
-    };
-
-    Luminosity.prototype.render = function render(_ref, _ref2) {
-        var _this5 = this;
-
-        var hue = _ref.hue;
-        var luminosity = _ref2.luminosity;
+        var hue = _ref.hue,
+            value = _ref.value;
 
         var gradient = 'background-image: linear-gradient(hsl(' + hue + ', 100%, 100%), hsl(' + hue + ', 100%, 0%));';
-        var level = 'transform: translateY(' + luminosity + 'px);';
+
         return Object(preact_min["h"])(
             'div',
-            {
-                'class': ColorPicker_style_default.a['colorpicker__luminosity'],
-                style: gradient,
-                onClick: function onClick(e) {
-                    return _this5.clicked(e);
+            { 'class': ColorPicker_style_default.a['colorpicker__luminosity'], style: gradient },
+            Object(preact_min["h"])(
+                VerticalSlider_VerticalSlider,
+                {
+                    onChange: function onChange(e) {
+                        return _this2.updateLuminosity(e);
+                    },
+                    value: value,
+                    customLevel: ColorPicker_style_default.a['colorpicker__luminosity-level']
                 },
-                onMouseDown: function onMouseDown(e) {
-                    return _this5.selectStart(e);
-                },
-                onTouchStart: function onTouchStart(e) {
-                    return _this5.selectStart(e);
-                },
-                onMouseMove: function onMouseMove(e) {
-                    return _this5.selecting(e);
-                },
-                onTouchMove: function onTouchMove(e) {
-                    return _this5.selecting(e);
-                },
-                onMouseUp: function onMouseUp(e) {
-                    return _this5.selectEnd(e);
-                },
-                onTouchEnd: function onTouchEnd(e) {
-                    return _this5.selectEnd(e);
-                }
-            },
-            Object(preact_min["h"])('div', { 'class': ColorPicker_style_default.a['colorpicker__luminosity-level'], style: level })
+                Object(preact_min["h"])('div', { 'class': ColorPicker_style_default.a['colorpicker__luminosity-level'] })
+            )
         );
     };
 
@@ -9075,7 +9103,9 @@ var ColorPicker_ColorPicker = function (_Component) {
     ColorPicker.prototype.render = function render(props, _ref) {
         var _this2 = this;
 
-        var hue = _ref.hue;
+        var hue = _ref.hue,
+            saturation = _ref.saturation,
+            luminosity = _ref.luminosity;
 
         return Object(preact_min["h"])(
             'div',
@@ -9083,10 +9113,10 @@ var ColorPicker_ColorPicker = function (_Component) {
             Object(preact_min["h"])(Spectrum_Spectrum, { hue: hue, onChange: function onChange(e) {
                     return _this2.onHueChange(e);
                 } }),
-            Object(preact_min["h"])(Saturation_Saturation, { hue: hue, onChange: function onChange(e) {
+            Object(preact_min["h"])(Saturation_Saturation, { hue: hue, value: saturation, onChange: function onChange(e) {
                     return _this2.onSaturationChange(e);
                 } }),
-            Object(preact_min["h"])(Luminosity_Luminosity, { hue: hue, onChange: function onChange(e) {
+            Object(preact_min["h"])(Luminosity_Luminosity, { hue: hue, value: luminosity, onChange: function onChange(e) {
                     return _this2.onLuminosityChange(e);
                 } })
         );
@@ -9169,6 +9199,239 @@ var Design = connect(design_mapStateToProps)(design_D);
 var dial_style = __webpack_require__("HU6w");
 var dial_style_default = /*#__PURE__*/__webpack_require__.n(dial_style);
 
+// EXTERNAL MODULE: ./components/HorizontalSlider/style.scss
+var HorizontalSlider_style = __webpack_require__("nZg4");
+var HorizontalSlider_style_default = /*#__PURE__*/__webpack_require__.n(HorizontalSlider_style);
+
+// CONCATENATED MODULE: ./components/HorizontalSlider/tools.js
+/**
+ *
+ *
+ * @param {DOMEvent} event
+ * @returns
+ */
+var getHorizontalSliderLevel = function getHorizontalSliderLevel(event, callback) {
+    var currentTarget = event.currentTarget,
+        pageX = event.pageX;
+
+    var _currentTarget$getBou = currentTarget.getBoundingClientRect(),
+        left = _currentTarget$getBou.left,
+        width = _currentTarget$getBou.width;
+
+    var offsetLeft = left + window.scrollX;
+
+    var getValue = function getValue(_ref) {
+        var offsetLeft = _ref.offsetLeft,
+            width = _ref.width,
+            pageX = _ref.pageX;
+
+        var value = pageX - offsetLeft;
+
+        if (value < 0) return 0;
+
+        if (pageX > offsetLeft + width) return width;
+
+        return value;
+    };
+
+    if (HorizontalSlider_tools_isTouchEvent(event)) {
+
+        for (var _iterator = event.changedTouches, _isArray = Array.isArray(_iterator), _i = 0, _iterator = _isArray ? _iterator : _iterator[Symbol.iterator]();;) {
+            var _ref2;
+
+            if (_isArray) {
+                if (_i >= _iterator.length) break;
+                _ref2 = _iterator[_i++];
+            } else {
+                _i = _iterator.next();
+                if (_i.done) break;
+                _ref2 = _i.value;
+            }
+
+            var touch = _ref2;
+            var _pageX = touch.pageX;
+
+            var value = getValue({ offsetLeft: offsetLeft, width: width, pageX: _pageX });
+
+            callback(value);
+        }
+    } else {
+        var _value = getValue({ offsetLeft: offsetLeft, width: width, pageX: pageX });
+        callback(_value);
+    }
+};
+
+var HorizontalSlider_tools_isTouchEvent = function isTouchEvent(event) {
+    var type = event.type;
+
+    return type === 'touchmove' || type === 'touchstart' || type === 'touchend';
+};
+// CONCATENATED MODULE: ./components/HorizontalSlider/index.js
+
+
+function HorizontalSlider__classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function HorizontalSlider__possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function HorizontalSlider__inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+
+
+var HorizontalSlider_VerticalSlider = function (_Component) {
+    HorizontalSlider__inherits(VerticalSlider, _Component);
+
+    function VerticalSlider() {
+        HorizontalSlider__classCallCheck(this, VerticalSlider);
+
+        return HorizontalSlider__possibleConstructorReturn(this, _Component.apply(this, arguments));
+    }
+
+    VerticalSlider.prototype.componentDidMount = function componentDidMount() {
+        this.setLevel(this.percentToLevel(this.props.value));
+    };
+
+    VerticalSlider.prototype.shouldComponentUpdate = function shouldComponentUpdate(_ref, nextState) {
+        var value = _ref.value;
+
+        if (this.state.selecting) return false;
+
+        var oldValue = this.props.value;
+
+        if (oldValue !== value) {
+            this.setLevel(this.percentToLevel(value));
+            return false;
+        }
+
+        return true;
+    };
+
+    VerticalSlider.prototype.percentToLevel = function percentToLevel(percent) {
+        var _container$getBoundin = this.container.getBoundingClientRect(),
+            width = _container$getBoundin.width;
+
+        return percent / 100 * width;
+    };
+
+    VerticalSlider.prototype.updateValue = function updateValue(value, width) {
+        var percentage = Math.floor(value / width * 100);
+        this.props.onChange(percentage);
+    };
+
+    VerticalSlider.prototype.updateLevel = function updateLevel(event, callback) {
+        var _this2 = this;
+
+        var _event$currentTarget$ = event.currentTarget.getBoundingClientRect(),
+            width = _event$currentTarget$.width;
+
+        getHorizontalSliderLevel(event, function (value) {
+            _this2.updateValue(value, width);
+            callback(value);
+        });
+    };
+
+    VerticalSlider.prototype.setLevel = function setLevel(level) {
+        if (level === this.state.level) return;
+
+        if (this.props.customLevel) {
+            this.container.querySelector('.' + this.props.customLevel).style.setProperty('--slideLevel', level + 'px');
+        } else {
+            this.container.style.setProperty('--slideLevel', level + 'px');
+        }
+
+        // TODO onresize
+
+        this.setState({
+            level: level
+        });
+    };
+
+    VerticalSlider.prototype.selectStart = function selectStart(e) {
+        var _this3 = this;
+
+        e.preventDefault();
+        this.setState({
+            selecting: true
+        });
+        this.updateLevel(event, function (level) {
+            return _this3.setLevel(level);
+        });
+    };
+
+    VerticalSlider.prototype.selecting = function selecting(event) {
+        var _this4 = this;
+
+        event.preventDefault();
+
+        if (!this.state.selecting) return;
+
+        this.updateLevel(event, function (level) {
+            return _this4.setLevel(level);
+        });
+    };
+
+    VerticalSlider.prototype.clicked = function clicked(event) {
+        var _this5 = this;
+
+        event.preventDefault();
+        this.updateLevel(event, function (level) {
+            return _this5.setLevel(level);
+        });
+    };
+
+    VerticalSlider.prototype.selectEnd = function selectEnd(e) {
+        e.preventDefault();
+        this.setState({
+            selecting: false
+        });
+    };
+
+    VerticalSlider.prototype.render = function render(props, state) {
+        var _this6 = this;
+
+        var className = [props.className, HorizontalSlider_style_default.a['horizontal-slider']];
+
+        if (props.customLevel) className.push(HorizontalSlider_style_default.a['horizontal-slider--custom-level']);
+
+        return Object(preact_min["h"])(
+            'div',
+            {
+                ref: function ref(element) {
+                    _this6.container = element;
+                },
+                'class': className.join(' '),
+                onClick: function onClick(e) {
+                    return _this6.clicked(e);
+                },
+                onMouseDown: function onMouseDown(e) {
+                    return _this6.selectStart(e);
+                },
+                onTouchStart: function onTouchStart(e) {
+                    return _this6.selectStart(e);
+                },
+                onMouseMove: function onMouseMove(e) {
+                    return _this6.selecting(e);
+                },
+                onTouchMove: function onTouchMove(e) {
+                    return _this6.selecting(e);
+                },
+                onMouseUp: function onMouseUp(e) {
+                    return _this6.selectEnd(e);
+                },
+                onTouchEnd: function onTouchEnd(e) {
+                    return _this6.selectEnd(e);
+                }
+            },
+            children
+        );
+    };
+
+    return VerticalSlider;
+}(preact_min["Component"]);
+
+
 // CONCATENATED MODULE: ./routes/dial/index.js
 
 
@@ -9177,6 +9440,8 @@ function dial__classCallCheck(instance, Constructor) { if (!(instance instanceof
 function dial__possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function dial__inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
 
 
 
@@ -9196,18 +9461,32 @@ var dial_DialPage = function (_Component) {
         return dial__possibleConstructorReturn(this, _Component.apply(this, arguments));
     }
 
-    DialPage.prototype.setDial = function setDial(e) {
-        //console.log(e);
-
+    DialPage.prototype.componentWillMount = function componentWillMount() {
+        this.setState({
+            val: 25
+        });
     };
 
-    DialPage.prototype.render = function render(_ref, state) {
+    DialPage.prototype.setVertical = function setVertical(e) {
+        this.setState({
+            val: e,
+            vertical: e
+        });
+    };
+
+    DialPage.prototype.setHorizontal = function setHorizontal(e) {
+        this.setState({
+            val: e,
+            horizontal: e
+        });
+    };
+
+    DialPage.prototype.render = function render(props, _ref) {
         var _this2 = this;
 
-        var outerColor = _ref.outerColor,
-            innerColor = _ref.innerColor,
-            time = _ref.time;
-
+        var vertical = _ref.vertical,
+            horizontal = _ref.horizontal,
+            val = _ref.val;
 
         var test = 'foo';
         return Object(preact_min["h"])(
@@ -9215,24 +9494,26 @@ var dial_DialPage = function (_Component) {
             { 'class': 'page' },
             Object(preact_min["h"])(
                 'div',
-                { 'class': dial_style_default.a['dial_test'] },
+                { 'class': dial_style_default.a['vertical-slider-test'] },
+                vertical,
                 Object(preact_min["h"])(
-                    Dial_Dial,
+                    VerticalSlider_VerticalSlider,
                     { onChange: function onChange(e) {
-                            return _this2.setDial(e);
-                        }, value: 0 },
-                    Object(preact_min["h"])('div', { 'class': dial_style_default.a['dial_test-in'] })
+                            return _this2.setVertical(e);
+                        }, value: val },
+                    Object(preact_min["h"])('div', { 'class': dial_style_default.a['vertical-slider-test__in'] })
                 )
             ),
             Object(preact_min["h"])(
                 'div',
-                { 'class': dial_style_default.a['dial_test'] },
+                { 'class': dial_style_default.a['horizontal-slider-test'] },
+                horizontal,
                 Object(preact_min["h"])(
-                    Dial_Dial,
+                    HorizontalSlider_VerticalSlider,
                     { onChange: function onChange(e) {
-                            return _this2.setDial(e);
-                        }, value: 0, test: test },
-                    Object(preact_min["h"])('div', { 'class': dial_style_default.a['dial_test-in'] })
+                            return _this2.setHorizontal(e);
+                        }, value: val },
+                    Object(preact_min["h"])('div', { 'class': dial_style_default.a['horizontal-slider-test__in'] })
                 )
             )
         );
@@ -17759,6 +18040,14 @@ webpackContext.id = "gh3w";
 
 /***/ }),
 
+/***/ "igvm":
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+module.exports = {"vertical-slider":"vertical-slider__1ZfFM","vertical-slider--custom-level":"vertical-slider--custom-level__16J72"};
+
+/***/ }),
+
 /***/ "j+tz":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18279,6 +18568,14 @@ module.exports = function (module) {
 
     return el;
 });
+
+/***/ }),
+
+/***/ "nZg4":
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+module.exports = {"horizontal-slider":"horizontal-slider__2vYoy","horizontal-slider--custom-level":"horizontal-slider--custom-level__3nv6m"};
 
 /***/ }),
 
