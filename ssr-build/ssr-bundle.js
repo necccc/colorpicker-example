@@ -2144,13 +2144,6 @@ Router.Link = Link;
 
 /***/ }),
 
-/***/ "5E5G":
-/***/ (function(module, exports) {
-
-module.exports = require("assert");
-
-/***/ }),
-
 /***/ "6Ie+":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -5136,14 +5129,6 @@ module.exports = require("assert");
 
 /***/ }),
 
-/***/ "HU6w":
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-module.exports = {"dial_test":"dial_test__GWkAx","dial_test-in":"dial_test-in__kd8LK","vertical-slider-test":"vertical-slider-test__2dIq0","vertical-slider-test__in":"vertical-slider-test__in__telv0","horizontal-slider-test":"horizontal-slider-test__2bEuU","horizontal-slider-test__in":"horizontal-slider-test__in__Un726"};
-
-/***/ }),
-
 /***/ "Hd19":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -7669,10 +7654,6 @@ var preact_router_es = __webpack_require__("/QC5");
 var preact_router_match = __webpack_require__("sw5u");
 var match_default = /*#__PURE__*/__webpack_require__.n(preact_router_match);
 
-// EXTERNAL MODULE: ../node_modules/moment/moment.js
-var moment = __webpack_require__("a2/B");
-var moment_default = /*#__PURE__*/__webpack_require__.n(moment);
-
 // EXTERNAL MODULE: ./components/Header/style.scss
 var Header_style = __webpack_require__("xrtm");
 var Header_style_default = /*#__PURE__*/__webpack_require__.n(Header_style);
@@ -7685,24 +7666,24 @@ var SET_INNER_COLOR = 'SET_INNER_COLOR';
 var SET_TIME = 'SET_TIME';
 
 function setInnerColor(color) {
-    return {
-        type: SET_INNER_COLOR,
-        color: color
-    };
+	return {
+		type: SET_INNER_COLOR,
+		color: color
+	};
 }
 
 function setOuterColor(color) {
-    return {
-        type: SET_OUTER_COLOR,
-        color: color
-    };
+	return {
+		type: SET_OUTER_COLOR,
+		color: color
+	};
 }
 
 function setTime(time) {
-    return {
-        type: SET_TIME,
-        time: time
-    };
+	return {
+		type: SET_TIME,
+		time: time
+	};
 }
 // CONCATENATED MODULE: ./reducers.js
 var reducers__extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
@@ -7710,47 +7691,47 @@ var reducers__extends = Object.assign || function (target) { for (var i = 1; i <
 
 
 var reducers_initialState = {
-    outerColor: [245, 100, 50],
-    innerColor: [291, 100, 50],
-    time: new Date()
+	outerColor: [245, 100, 50],
+	innerColor: [291, 100, 50],
+	time: new Date()
 };
 
-var reducers_app = function app() {
-    var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : reducers_initialState;
-    var action = arguments[1];
+function app() {
+	var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : reducers_initialState;
+	var action = arguments[1];
 
-    switch (action.type) {
+	switch (action.type) {
 
-        case SET_INNER_COLOR:
-            return reducers__extends({}, state, {
-                innerColor: action.color
-            });
+		case SET_INNER_COLOR:
+			return reducers__extends({}, state, {
+				innerColor: action.color
+			});
 
-        case SET_OUTER_COLOR:
-            return reducers__extends({}, state, {
-                outerColor: action.color
-            });
+		case SET_OUTER_COLOR:
+			return reducers__extends({}, state, {
+				outerColor: action.color
+			});
 
-        case SET_TIME:
-            return reducers__extends({}, state, {
-                time: action.time
-            });
+		case SET_TIME:
+			return reducers__extends({}, state, {
+				time: action.time
+			});
 
-        default:
-            return state;
-    }
-};
+		default:
+			return state;
+	}
+}
 
-/* harmony default export */ var reducers_0 = (reducers_app);
+/* harmony default export */ var reducers_0 = (app);
 // CONCATENATED MODULE: ./lib/hsl.js
-var hslToCss = function hslToCss(hslArray) {
-    var hue = hslArray[0],
-        sat = hslArray[1],
-        lum = hslArray[2];
+function hslToCss(hslArray) {
+	var hue = hslArray[0],
+	    sat = hslArray[1],
+	    lum = hslArray[2];
 
 
-    return "hsl(" + hue + ", " + sat + "%, " + lum + "%)";
-};
+	return "hsl(" + hue + ", " + sat + "%, " + lum + "%)";
+}
 // CONCATENATED MODULE: ./components/Header/index.js
 var _dec, _class;
 
@@ -7772,42 +7753,41 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 
 
-
 var Header__ref = Object(preact_min["h"])(
-    'nav',
-    null,
-    Object(preact_min["h"])(
-        preact_router_match["Link"],
-        { href: '/' },
-        'time'
-    ),
-    Object(preact_min["h"])(
-        preact_router_match["Link"],
-        { href: '/design' },
-        'design'
-    )
+	'nav',
+	null,
+	Object(preact_min["h"])(
+		preact_router_match["Link"],
+		{ href: '/' },
+		'time'
+	),
+	Object(preact_min["h"])(
+		preact_router_match["Link"],
+		{ href: '/design' },
+		'design'
+	)
 );
 
 var Header_Header = (_dec = connect(reducers_0, actions_namespaceObject), _dec(_class = function (_Component) {
-    _inherits(Header, _Component);
+	_inherits(Header, _Component);
 
-    function Header() {
-        _classCallCheck(this, Header);
+	function Header() {
+		_classCallCheck(this, Header);
 
-        return _possibleConstructorReturn(this, _Component.apply(this, arguments));
-    }
+		return _possibleConstructorReturn(this, _Component.apply(this, arguments));
+	}
 
-    Header.prototype.render = function render(props) {
-        var headerStyle = '\n            background-image:\n            radial-gradient(ellipse at center bottom, hsla(0,0%,13%,0) 0%, hsla(0,0%,13%,.5) 54%, hsla(0,0%,13%,.9)),\n            linear-gradient(to right, ' + hslToCss(this.props.outerColor) + ', ' + hslToCss(this.props.innerColor) + ')';
+	Header.prototype.render = function render(props) {
+		var headerStyle = '\n            background-image:\n            radial-gradient(ellipse at center bottom, hsla(0,0%,13%,0) 0%, hsla(0,0%,13%,.5) 54%, hsla(0,0%,13%,.9)),\n            linear-gradient(to right, ' + hslToCss(this.props.outerColor) + ', ' + hslToCss(this.props.innerColor) + ')';
 
-        return Object(preact_min["h"])(
-            'header',
-            { 'class': Header_style_default.a.header, style: headerStyle },
-            Header__ref
-        );
-    };
+		return Object(preact_min["h"])(
+			'header',
+			{ 'class': Header_style_default.a.header, style: headerStyle },
+			Header__ref
+		);
+	};
 
-    return Header;
+	return Header;
 }(preact_min["Component"])) || _class);
 
 // EXTERNAL MODULE: ./components/Dial/style.scss
@@ -7816,11 +7796,11 @@ var Dial_style_default = /*#__PURE__*/__webpack_require__.n(Dial_style);
 
 // CONCATENATED MODULE: ./components/Dial/tools.js
 
-var isTouchEvent = function isTouchEvent(event) {
-    var type = event.type;
+function isTouchEvent(event) {
+	var type = event.type;
 
-    return type === 'touchmove' || type === 'touchstart' || type === 'touchend';
-};
+	return type === 'touchmove' || type === 'touchstart' || type === 'touchend';
+}
 
 /**
  *
@@ -7828,103 +7808,101 @@ var isTouchEvent = function isTouchEvent(event) {
  * @param {any} radians
  * @returns
  */
-var deg = function deg(radians) {
-    return radians * 180 / Math.PI;
-};
+function deg(radians) {
+	return radians * 180 / Math.PI;
+}
 
 /**
  *
- * 
+ *
  * @param {Object} {left, top, width, height, pageX, pageY}
  * @returns {Number}
  */
-var calculateTouchAngle = function calculateTouchAngle(_ref) {
-    var left = _ref.left,
-        top = _ref.top,
-        width = _ref.width,
-        height = _ref.height,
-        pageX = _ref.pageX,
-        pageY = _ref.pageY;
+function calculateTouchAngle(_ref) {
+	var left = _ref.left,
+	    top = _ref.top,
+	    width = _ref.width,
+	    height = _ref.height,
+	    pageX = _ref.pageX,
+	    pageY = _ref.pageY;
 
-    var X = pageX - left;
-    var Y = pageY - top;
-    var centerX = Math.round(left + width / 2);
-    var centerY = Math.round(top + height / 2);
-    var A = pageX - centerX;
-    var B = centerY - pageY;
-    var C = Math.sqrt(Math.pow(A, 2) + Math.pow(B, 2));
+	var centerX = Math.round(left + width / 2);
+	var centerY = Math.round(top + height / 2);
+	var A = pageX - centerX;
+	var B = centerY - pageY;
+	var C = Math.sqrt(Math.pow(A, 2) + Math.pow(B, 2));
 
-    var angle = 0;
+	var angle = 0;
 
-    if (A > 0) {
-        angle = deg(Math.asin(B * 1 / C));
-    } else {
-        angle = 180 - deg(Math.acos(A * -1 / C));
-    }
+	if (A > 0) {
+		angle = deg(Math.asin(B * 1 / C));
+	} else {
+		angle = 180 - deg(Math.acos(A * -1 / C));
+	}
 
-    if (B < 0 && A < 0) {
-        angle = 360 - angle;
-    } else if (B < 0) {
-        angle = 360 + angle;
-    }
+	if (B < 0 && A < 0) {
+		angle = 360 - angle;
+	} else if (B < 0) {
+		angle = 360 + angle;
+	}
 
-    //console.log('calculateTouchAngle', angle);
+	//console.log('calculateTouchAngle', angle);
 
 
-    return angle;
-};
+	return angle;
+}
 
 /**
  *
- * 
+ *
  * @param {DOMEvent} event
  * @param {Function} callback
  */
-var getTouchAngle = function getTouchAngle(event, callback) {
-    var currentTarget = event.currentTarget,
-        pageX = event.pageX,
-        pageY = event.pageY;
+function getTouchAngle(event, callback) {
+	var currentTarget = event.currentTarget,
+	    pageX = event.pageX,
+	    pageY = event.pageY;
 
-    var _currentTarget$getBou = currentTarget.getBoundingClientRect(),
-        top = _currentTarget$getBou.top,
-        left = _currentTarget$getBou.left,
-        width = _currentTarget$getBou.width,
-        height = _currentTarget$getBou.height;
+	var _currentTarget$getBou = currentTarget.getBoundingClientRect(),
+	    top = _currentTarget$getBou.top,
+	    left = _currentTarget$getBou.left,
+	    width = _currentTarget$getBou.width,
+	    height = _currentTarget$getBou.height;
 
-    var offsetTop = top + window.scrollY;
-    var offsetLeft = left + window.scrollX;
+	var offsetTop = top + window.scrollY;
+	var offsetLeft = left + window.scrollX;
 
-    if (isTouchEvent(event)) {
-        for (var _iterator = event.changedTouches, _isArray = Array.isArray(_iterator), _i = 0, _iterator = _isArray ? _iterator : _iterator[Symbol.iterator]();;) {
-            var _ref2;
+	if (isTouchEvent(event)) {
+		for (var _iterator = event.changedTouches, _isArray = Array.isArray(_iterator), _i = 0, _iterator = _isArray ? _iterator : _iterator[Symbol.iterator]();;) {
+			var _ref2;
 
-            if (_isArray) {
-                if (_i >= _iterator.length) break;
-                _ref2 = _iterator[_i++];
-            } else {
-                _i = _iterator.next();
-                if (_i.done) break;
-                _ref2 = _i.value;
-            }
+			if (_isArray) {
+				if (_i >= _iterator.length) break;
+				_ref2 = _iterator[_i++];
+			} else {
+				_i = _iterator.next();
+				if (_i.done) break;
+				_ref2 = _i.value;
+			}
 
-            var touch = _ref2;
-            var _pageX = touch.pageX,
-                _pageY = touch.pageY;
+			var touch = _ref2;
+			var _pageX = touch.pageX,
+			    _pageY = touch.pageY;
 
-            var angle = calculateTouchAngle({
-                top: offsetTop, left: offsetLeft, width: width, height: height, pageX: _pageX, pageY: _pageY
-            });
+			var angle = calculateTouchAngle({
+				top: offsetTop, left: offsetLeft, width: width, height: height, pageX: _pageX, pageY: _pageY
+			});
 
-            callback(angle);
-        }
-    } else {
-        var _angle = calculateTouchAngle({
-            top: offsetTop, left: offsetLeft, width: width, height: height, pageX: pageX, pageY: pageY
-        });
+			callback(angle);
+		}
+	} else {
+		var _angle = calculateTouchAngle({
+			top: offsetTop, left: offsetLeft, width: width, height: height, pageX: pageX, pageY: pageY
+		});
 
-        callback(_angle);
-    }
-};
+		callback(_angle);
+	}
+}
 
 /**
  *
@@ -7932,50 +7910,46 @@ var getTouchAngle = function getTouchAngle(event, callback) {
  * @param {Number} angle
  * @returns {Number}
  */
-var rotateAngle90 = function rotateAngle90(angle) {
+function rotateAngle90(angle) {
 
-    if (angle < 0) {
-        angle = 360 + angle;
-    }
+	if (angle < 0) {
+		angle = 360 + angle;
+	}
 
-    var rotated = angle + 90;
+	var rotated = angle + 90;
 
-    if (rotated > 360) {
-        rotated = rotated - 360;
-    }
-    if (rotated < 0) {
-        rotated = 360 + rotated;
-    }
+	if (rotated > 360) {
+		rotated = rotated - 360;
+	}
+	if (rotated < 0) {
+		rotated = 360 + rotated;
+	}
 
-    return Math.floor(rotated);
-};
+	return Math.floor(rotated);
+}
 
 /**
  *
- * 
+ *
  * @param {any} angle
- * @returns 
+ * @returns
  */
-var rotateAngle90Back = function rotateAngle90Back(angle) {
-    if (angle < 0) {
-        angle = 360 + angle;
-    }
+function rotateAngle90Back(angle) {
+	if (angle < 0) {
+		angle = 360 + angle;
+	}
 
-    var rotated = angle - 90;
+	var rotated = angle - 90;
 
-    if (rotated > 360) {
-        rotated = rotated - 360;
-    }
-    if (rotated < 0) {
-        rotated = 360 + rotated;
-    }
+	if (rotated > 360) {
+		rotated = rotated - 360;
+	}
+	if (rotated < 0) {
+		rotated = 360 + rotated;
+	}
 
-    return Math.floor(rotated);
-};
-// EXTERNAL MODULE: external "assert"
-var external__assert_ = __webpack_require__("5E5G");
-var external__assert__default = /*#__PURE__*/__webpack_require__.n(external__assert_);
-
+	return Math.floor(rotated);
+}
 // CONCATENATED MODULE: ./components/Dial/index.js
 
 
@@ -7989,163 +7963,164 @@ function Dial__inherits(subClass, superClass) { if (typeof superClass !== "funct
 
 
 
-
 var Dial_Dial = function (_Component) {
-    Dial__inherits(Dial, _Component);
+	Dial__inherits(Dial, _Component);
 
-    function Dial() {
-        Dial__classCallCheck(this, Dial);
+	function Dial() {
+		Dial__classCallCheck(this, Dial);
 
-        return Dial__possibleConstructorReturn(this, _Component.apply(this, arguments));
-    }
+		return Dial__possibleConstructorReturn(this, _Component.apply(this, arguments));
+	}
 
-    Dial.prototype.componentWillMount = function componentWillMount() {
-        var _setState;
-
-        var value = this.props.value;
+	Dial.prototype.componentWillMount = function componentWillMount() {
+		var value = this.props.value;
 
 
-        var startAngle = 0;
-        var setAngle = 0;
-        var angle = 0;
+		var startAngle = 0;
+		var angle = 0;
 
-        if (typeof value === 'number') {
-            angle = rotateAngle90Back(value);
-        }
+		if (typeof value === 'number') {
+			angle = rotateAngle90Back(value);
+		}
 
-        this.setState((_setState = {
-            startAngle: startAngle,
-            setAngle: setAngle,
-            angle: angle
-        }, _setState['setAngle'] = -1 * angle, _setState.debug = this.props.test, _setState));
-    };
+		this.setState({
+			startAngle: startAngle,
+			angle: angle,
+			setAngle: -1 * angle,
+			debug: this.props.test
+		});
+	};
 
-    Dial.prototype.componentDidMount = function componentDidMount() {
-        this.container.style.setProperty('--dialRotation', this.state.angle + 'deg');
-    };
+	Dial.prototype.componentDidMount = function componentDidMount() {
+		this.container.style.setProperty('--dialRotation', this.state.angle + 'deg');
+	};
 
-    Dial.prototype.shouldComponentUpdate = function shouldComponentUpdate(_ref, nextState) {
-        var value = _ref.value;
+	Dial.prototype.shouldComponentUpdate = function shouldComponentUpdate(_ref, nextState) {
+		var value = _ref.value;
 
-        if (this.state.selecting) return false;
+		if (this.state.selecting) return false;
 
-        var oldValue = this.props.value;
+		var oldValue = this.props.value;
 
-        if (oldValue !== value) {
-            this.setAngle(rotateAngle90Back(value));
-            return false;
-        }
+		if (oldValue !== value) {
+			this.setAngle(rotateAngle90Back(value));
+			return false;
+		}
 
-        return true;
-    };
+		return true;
+	};
 
-    Dial.prototype.getNewAngle = function getNewAngle(event, callback) {
-        var _this2 = this;
+	Dial.prototype.getNewAngle = function getNewAngle(event, callback) {
+		var _this2 = this;
 
-        getTouchAngle(event, function (touchAngle) {
-            var _state = _this2.state,
-                grabAngle = _state.grabAngle,
-                setAngle = _state.setAngle;
+		getTouchAngle(event, function (touchAngle) {
+			var _state = _this2.state,
+			    grabAngle = _state.grabAngle,
+			    setAngle = _state.setAngle;
 
-            var angleDiff = touchAngle - grabAngle;
-            var angle = -1 * (setAngle + angleDiff);
+			var angleDiff = touchAngle - grabAngle;
+			var angle = -1 * (setAngle + angleDiff);
 
-            _this2.props.onChange(rotateAngle90(angle));
+			_this2.props.onChange(rotateAngle90(angle));
 
-            callback(angle);
-        });
-    };
+			callback(angle);
+		});
+	};
 
-    Dial.prototype.setAngle = function setAngle(angle) {
-        if (angle === this.state.angle) return;
+	Dial.prototype.setAngle = function setAngle(angle) {
+		if (angle === this.state.angle) return;
 
-        this.setState({
-            angle: angle
-        });
+		this.setState({
+			angle: angle
+		});
 
-        this.container.style.setProperty('--dialRotation', angle + 'deg');
-    };
+		this.container.style.setProperty('--dialRotation', angle + 'deg');
+	};
 
-    Dial.prototype.selecting = function selecting(event) {
-        var _this3 = this;
+	Dial.prototype.selecting = function selecting(event) {
+		var _this3 = this;
 
-        event.preventDefault();
+		event.preventDefault();
 
-        if (!this.state.selecting) return;
+		if (!this.state.selecting) return;
 
-        this.getNewAngle(event, function (angle) {
-            return _this3.setAngle(angle);
-        });
-    };
+		this.getNewAngle(event, function (angle) {
+			return _this3.setAngle(angle);
+		});
+	};
 
-    Dial.prototype.selectStart = function selectStart(e) {
-        var _this4 = this;
+	Dial.prototype.selectStart = function selectStart(e) {
+		var _this4 = this;
 
-        e.preventDefault();
-        getTouchAngle(e, function (grabAngle) {
-            _this4.setState({
-                grabAngle: grabAngle,
-                selecting: true
-            });
-        });
-    };
+		e.preventDefault();
+		getTouchAngle(e, function (grabAngle) {
+			_this4.setState({
+				grabAngle: grabAngle,
+				selecting: true
+			});
+		});
+	};
 
-    Dial.prototype.selectEnd = function selectEnd(e) {
-        var _this5 = this;
+	Dial.prototype.selectEnd = function selectEnd(e) {
+		var _this5 = this;
 
-        e.preventDefault();
-        this.getNewAngle(event, function (angle) {
-            var setAngle = -1 * angle;
+		e.preventDefault();
+		this.getNewAngle(event, function (angle) {
+			var setAngle = -1 * angle;
 
-            _this5.setState({
-                setAngle: setAngle,
-                selecting: false
-            });
-        });
-    };
+			_this5.setState({
+				setAngle: setAngle,
+				selecting: false
+			});
+		});
+	};
 
-    Dial.prototype.render = function render(props) {
-        var _this6 = this;
+	Dial.prototype.render = function render(props) {
+		var _this6 = this;
 
-        var className = [props.className, Dial_style_default.a['dial']].join(' ');
+		var className = [props.className, Dial_style_default.a.dial].join(' ');
 
-        return Object(preact_min["h"])(
-            'div',
-            {
-                ref: function ref(element) {
-                    _this6.container = element;
-                },
-                'class': className,
-                onMouseDown: function onMouseDown(e) {
-                    return _this6.selectStart(e);
-                },
-                onTouchStart: function onTouchStart(e) {
-                    return _this6.selectStart(e);
-                },
-                onMouseMove: function onMouseMove(e) {
-                    return _this6.selecting(e);
-                },
-                onTouchMove: function onTouchMove(e) {
-                    return _this6.selecting(e);
-                },
-                onMouseUp: function onMouseUp(e) {
-                    return _this6.selectEnd(e);
-                },
-                onTouchEnd: function onTouchEnd(e) {
-                    return _this6.selectEnd(e);
-                }
-            },
-            props.children
-        );
-    };
+		return Object(preact_min["h"])(
+			'div',
+			{
+				ref: function ref(element) {
+					_this6.container = element;
+				},
+				'class': className,
+				onMouseDown: function onMouseDown(e) {
+					return _this6.selectStart(e);
+				},
+				onTouchStart: function onTouchStart(e) {
+					return _this6.selectStart(e);
+				},
+				onMouseMove: function onMouseMove(e) {
+					return _this6.selecting(e);
+				},
+				onTouchMove: function onTouchMove(e) {
+					return _this6.selecting(e);
+				},
+				onMouseUp: function onMouseUp(e) {
+					return _this6.selectEnd(e);
+				},
+				onTouchEnd: function onTouchEnd(e) {
+					return _this6.selectEnd(e);
+				}
+			},
+			props.children
+		);
+	};
 
-    return Dial;
+	return Dial;
 }(preact_min["Component"]);
 
 
 // EXTERNAL MODULE: ./components/TimePicker/style.scss
 var TimePicker_style = __webpack_require__("v+8J");
 var TimePicker_style_default = /*#__PURE__*/__webpack_require__.n(TimePicker_style);
+
+// EXTERNAL MODULE: ../node_modules/moment/moment.js
+var moment = __webpack_require__("a2/B");
+var moment_default = /*#__PURE__*/__webpack_require__.n(moment);
 
 // CONCATENATED MODULE: ./components/TimePicker/TimeInput.js
 
@@ -8160,126 +8135,122 @@ function TimeInput__inherits(subClass, superClass) { if (typeof superClass !== "
 
 
 
-
-
-
-
 var isArrowDown = function isArrowDown(e) {
-    var type = e.type,
-        key = e.key;
+	var type = e.type,
+	    key = e.key;
 
-    return type === 'keydown' && key === 'ArrowDown';
+	return type === 'keydown' && key === 'ArrowDown';
 };
 
 var isArrowUp = function isArrowUp(e) {
-    var type = e.type,
-        key = e.key;
+	var type = e.type,
+	    key = e.key;
 
-    return type === 'keydown' && key === 'ArrowUp';
+	return type === 'keydown' && key === 'ArrowUp';
 };
 
 var isChange = function isChange(e) {
-    var type = e.type;
+	var type = e.type;
 
-    return type === 'change';
+	return type === 'change';
 };
 
 var TimeInput__ref2 = Object(preact_min["h"])(
-    'span',
-    null,
-    ':'
+	'span',
+	null,
+	':'
 );
 
 var TimeInput_TimeInput = function (_Component) {
-    TimeInput__inherits(TimeInput, _Component);
+	TimeInput__inherits(TimeInput, _Component);
 
-    function TimeInput() {
-        TimeInput__classCallCheck(this, TimeInput);
+	function TimeInput() {
+		TimeInput__classCallCheck(this, TimeInput);
 
-        return TimeInput__possibleConstructorReturn(this, _Component.apply(this, arguments));
-    }
+		return TimeInput__possibleConstructorReturn(this, _Component.apply(this, arguments));
+	}
 
-    TimeInput.prototype.updateTime = function updateTime(time) {
-        this.props.onChange(time);
-    };
+	TimeInput.prototype.updateTime = function updateTime(time) {
+		this.props.onChange(time);
+	};
 
-    TimeInput.prototype.onMinuteUpdate = function onMinuteUpdate(e) {
+	TimeInput.prototype.onMinuteUpdate = function onMinuteUpdate(e) {
 
-        var value = parseInt(e.target.value, 10);
+		var value = parseInt(e.target.value, 10);
 
-        if (isArrowUp(e) && value + 1 < 60) {
-            this.updateTime(this.props.time.setMinutes(value + 1));
-        } else if (isArrowUp(e)) {
-            this.updateTime(this.props.time.setMinutes(0));
-        }
+		if (isArrowUp(e) && value + 1 < 60) {
+			this.updateTime(this.props.time.setMinutes(value + 1));
+		} else if (isArrowUp(e)) {
+			this.updateTime(this.props.time.setMinutes(0));
+		}
 
-        if (isArrowDown(e) && value - 1 >= 0) {
-            this.updateTime(this.props.time.setMinutes(value - 1));
-        } else if (isArrowDown(e)) {
-            this.updateTime(this.props.time.setMinutes(59));
-        }
+		if (isArrowDown(e) && value - 1 >= 0) {
+			this.updateTime(this.props.time.setMinutes(value - 1));
+		} else if (isArrowDown(e)) {
+			this.updateTime(this.props.time.setMinutes(59));
+		}
 
-        if (isChange(e) && (value < 60 || value > 0)) {
-            this.updateTime(this.props.time.setMinutes(value));
-        }
-    };
+		if (isChange(e) && (value < 60 || value > 0)) {
+			this.updateTime(this.props.time.setMinutes(value));
+		}
+	};
 
-    TimeInput.prototype.onHourUpdate = function onHourUpdate(e) {
+	TimeInput.prototype.onHourUpdate = function onHourUpdate(e) {
 
-        var value = parseInt(e.target.value, 10);
+		var value = parseInt(e.target.value, 10);
 
-        if (isArrowUp(e) && value + 1 < 12) {
-            this.updateTime(this.props.time.setHours(value + 1));
-        } else if (isArrowUp(e)) {
-            this.updateTime(this.props.time.setHours(0));
-        }
+		if (isArrowUp(e) && value + 1 < 12) {
+			this.updateTime(this.props.time.setHours(value + 1));
+		} else if (isArrowUp(e)) {
+			this.updateTime(this.props.time.setHours(0));
+		}
 
-        if (isArrowDown(e) && value - 1 >= 0) {
-            this.updateTime(this.props.time.setHours(value - 1));
-        } else if (isArrowDown(e)) {
-            this.updateTime(this.props.time.setHours(11));
-        }
+		if (isArrowDown(e) && value - 1 >= 0) {
+			this.updateTime(this.props.time.setHours(value - 1));
+		} else if (isArrowDown(e)) {
+			this.updateTime(this.props.time.setHours(11));
+		}
 
-        if (isChange(e) && (value < 12 || value > 0)) {
-            this.updateTime(this.props.time.setHours(value));
-        }
-    };
+		if (isChange(e) && (value < 12 || value > 0)) {
+			this.updateTime(this.props.time.setHours(value));
+		}
+	};
 
-    TimeInput.prototype.render = function render(_ref, state) {
-        var _this2 = this;
+	TimeInput.prototype.render = function render(_ref, state) {
+		var _this2 = this;
 
-        var time = _ref.time;
+		var time = _ref.time;
 
 
-        var hour = moment_default()(time).format('HH');
-        var minute = moment_default()(time).format('mm');
+		var hour = moment_default()(time).format('HH');
+		var minute = moment_default()(time).format('mm');
 
-        return Object(preact_min["h"])(
-            'div',
-            { 'class': TimePicker_style_default.a['time-selector__input'] },
-            Object(preact_min["h"])('input', {
-                type: 'text', min: '1', max: '12', steps: '1', value: hour,
-                onChange: function onChange(e) {
-                    return _this2.onHourUpdate(e);
-                },
-                onKeyDown: function onKeyDown(e) {
-                    return _this2.onHourUpdate(e);
-                }
-            }),
-            TimeInput__ref2,
-            Object(preact_min["h"])('input', {
-                type: 'text', min: '0', max: '59', steps: '1', value: minute,
-                onChange: function onChange(e) {
-                    return _this2.onMinuteUpdate(e);
-                },
-                onKeyDown: function onKeyDown(e) {
-                    return _this2.onMinuteUpdate(e);
-                }
-            })
-        );
-    };
+		return Object(preact_min["h"])(
+			'div',
+			{ 'class': TimePicker_style_default.a['time-selector__input'] },
+			Object(preact_min["h"])('input', {
+				type: 'text', min: '1', max: '12', steps: '1', value: hour,
+				onChange: function onChange(e) {
+					return _this2.onHourUpdate(e);
+				},
+				onKeyDown: function onKeyDown(e) {
+					return _this2.onHourUpdate(e);
+				}
+			}),
+			TimeInput__ref2,
+			Object(preact_min["h"])('input', {
+				type: 'text', min: '0', max: '59', steps: '1', value: minute,
+				onChange: function onChange(e) {
+					return _this2.onMinuteUpdate(e);
+				},
+				onKeyDown: function onKeyDown(e) {
+					return _this2.onMinuteUpdate(e);
+				}
+			})
+		);
+	};
 
-    return TimeInput;
+	return TimeInput;
 }(preact_min["Component"]);
 
 
@@ -8298,118 +8269,113 @@ function TimePicker__inherits(subClass, superClass) { if (typeof superClass !== 
 
 
 
-
-
-
-
-
 var degreesToMinutes = function degreesToMinutes(deg) {
-    return Math.floor(deg / (360 / 60));
+	return Math.floor(deg / (360 / 60));
 };
 
 var degreesToHours = function degreesToHours(deg) {
-    return Math.floor(deg / (360 / 12));
+	return Math.floor(deg / (360 / 12));
 };
 
 var minutesToDegrees = function minutesToDegrees(minutes) {
-    return minutes * (360 / 60);
+	return minutes * (360 / 60);
 };
 
 var hoursToDegrees = function hoursToDegrees(hours) {
-    return hours * (360 / 12);
+	return hours * (360 / 12);
 };
 
 var TimePicker_TimePicker = function (_Component) {
-    TimePicker__inherits(TimePicker, _Component);
+	TimePicker__inherits(TimePicker, _Component);
 
-    function TimePicker() {
-        TimePicker__classCallCheck(this, TimePicker);
+	function TimePicker() {
+		TimePicker__classCallCheck(this, TimePicker);
 
-        return TimePicker__possibleConstructorReturn(this, _Component.apply(this, arguments));
-    }
+		return TimePicker__possibleConstructorReturn(this, _Component.apply(this, arguments));
+	}
 
-    TimePicker.prototype.componentWillMount = function componentWillMount() {
-        this.setState({
-            time: this.props.time
-        });
-    };
+	TimePicker.prototype.componentWillMount = function componentWillMount() {
+		this.setState({
+			time: this.props.time
+		});
+	};
 
-    TimePicker.prototype.onMinuteDial = function onMinuteDial(deg) {
-        var minutes = degreesToMinutes(deg);
-        var time = new Date(this.state.time);
+	TimePicker.prototype.onMinuteDial = function onMinuteDial(deg) {
+		var minutes = degreesToMinutes(deg);
+		var time = new Date(this.state.time);
 
-        time.setMinutes(minutes);
+		time.setMinutes(minutes);
 
-        this.setState({
-            time: time
-        });
+		this.setState({
+			time: time
+		});
 
-        this.props.onChange(time);
-    };
+		this.props.onChange(time);
+	};
 
-    TimePicker.prototype.onHourDial = function onHourDial(deg) {
-        var hours = degreesToHours(deg);
-        var time = new Date(this.state.time);
+	TimePicker.prototype.onHourDial = function onHourDial(deg) {
+		var hours = degreesToHours(deg);
+		var time = new Date(this.state.time);
 
-        time.setHours(hours);
+		time.setHours(hours);
 
-        this.setState({
-            time: time
-        });
+		this.setState({
+			time: time
+		});
 
-        this.props.onChange(time);
-    };
+		this.props.onChange(time);
+	};
 
-    TimePicker.prototype.onTimeChange = function onTimeChange(time) {
-        this.props.onChange(time);
-    };
+	TimePicker.prototype.onTimeChange = function onTimeChange(time) {
+		this.props.onChange(time);
+	};
 
-    TimePicker.prototype.render = function render(_ref, _ref2) {
-        var _this2 = this;
+	TimePicker.prototype.render = function render(_ref, _ref2) {
+		var _this2 = this;
 
-        var outerColor = _ref.outerColor,
-            innerColor = _ref.innerColor,
-            time = _ref.time;
-        var minuteSelecting = _ref2.minuteSelecting,
-            hourSelecting = _ref2.hourSelecting;
+		var outerColor = _ref.outerColor,
+		    innerColor = _ref.innerColor,
+		    time = _ref.time;
+		var minuteSelecting = _ref2.minuteSelecting,
+		    hourSelecting = _ref2.hourSelecting;
 
-        var minuteColor = 'background-image: radial-gradient(' + hslToCss(outerColor) + ' 10%, transparent 70%);';
-        var hourColor = 'background-image: radial-gradient(' + hslToCss(innerColor) + ' 10%, transparent 70%);';
-        var minuteDial = minutesToDegrees(time.getMinutes());
-        var hourDial = hoursToDegrees(time.getHours());
+		var minuteColor = 'background-image: radial-gradient(' + hslToCss(outerColor) + ' 10%, transparent 70%);';
+		var hourColor = 'background-image: radial-gradient(' + hslToCss(innerColor) + ' 10%, transparent 70%);';
+		var minuteDial = minutesToDegrees(time.getMinutes());
+		var hourDial = hoursToDegrees(time.getHours());
 
-        return Object(preact_min["h"])(
-            'div',
-            { 'class': TimePicker_style_default.a['time-selector'] },
-            Object(preact_min["h"])(TimeInput_TimeInput, { time: time, onChange: function onChange(e) {
-                    return _this2.onTimeChange(e);
-                } }),
-            Object(preact_min["h"])(
-                Dial_Dial,
-                {
-                    className: TimePicker_style_default.a['time-selector__minute'],
-                    value: minuteDial,
-                    onChange: function onChange(e) {
-                        return _this2.onMinuteDial(e);
-                    }
-                },
-                Object(preact_min["h"])('div', { style: minuteColor })
-            ),
-            Object(preact_min["h"])(
-                Dial_Dial,
-                {
-                    className: TimePicker_style_default.a['time-selector__hour'],
-                    value: hourDial,
-                    onChange: function onChange(e) {
-                        return _this2.onHourDial(e);
-                    }
-                },
-                Object(preact_min["h"])('div', { style: hourColor })
-            )
-        );
-    };
+		return Object(preact_min["h"])(
+			'div',
+			{ 'class': TimePicker_style_default.a['time-selector'] },
+			Object(preact_min["h"])(TimeInput_TimeInput, { time: time, onChange: function onChange(e) {
+					return _this2.onTimeChange(e);
+				} }),
+			Object(preact_min["h"])(
+				Dial_Dial,
+				{
+					className: TimePicker_style_default.a['time-selector__minute'],
+					value: minuteDial,
+					onChange: function onChange(e) {
+						return _this2.onMinuteDial(e);
+					}
+				},
+				Object(preact_min["h"])('div', { style: minuteColor })
+			),
+			Object(preact_min["h"])(
+				Dial_Dial,
+				{
+					className: TimePicker_style_default.a['time-selector__hour'],
+					value: hourDial,
+					onChange: function onChange(e) {
+						return _this2.onHourDial(e);
+					}
+				},
+				Object(preact_min["h"])('div', { style: hourColor })
+			)
+		);
+	};
 
-    return TimePicker;
+	return TimePicker;
 }(preact_min["Component"]);
 
 
@@ -8432,85 +8398,61 @@ function time__inherits(subClass, superClass) { if (typeof superClass !== "funct
 
 
 var time_Time = (time__dec = connect(reducers_0, actions_namespaceObject), time__dec(time__class = function (_Component) {
-    time__inherits(Time, _Component);
+	time__inherits(Time, _Component);
 
-    function Time() {
-        time__classCallCheck(this, Time);
+	function Time() {
+		time__classCallCheck(this, Time);
 
-        return time__possibleConstructorReturn(this, _Component.apply(this, arguments));
-    }
+		return time__possibleConstructorReturn(this, _Component.apply(this, arguments));
+	}
 
-    Time.prototype.setTime = function setTime(time) {
-        this.props.setTime(new Date(time));
-    };
+	Time.prototype.setTime = function setTime(time) {
+		this.props.setTime(new Date(time));
+	};
 
-    Time.prototype.render = function render(_ref, state) {
-        var _this2 = this;
+	Time.prototype.render = function render(_ref, state) {
+		var _this2 = this;
 
-        var outerColor = _ref.outerColor,
-            innerColor = _ref.innerColor,
-            time = _ref.time;
+		var outerColor = _ref.outerColor,
+		    innerColor = _ref.innerColor,
+		    time = _ref.time;
 
-        return Object(preact_min["h"])(
-            'div',
-            { 'class': 'page' },
-            Object(preact_min["h"])(TimePicker_TimePicker, { onChange: function onChange(e) {
-                    return _this2.setTime(e);
-                }, time: time, outerColor: outerColor, innerColor: innerColor })
-        );
-    };
+		return Object(preact_min["h"])(
+			'div',
+			{ 'class': 'page' },
+			Object(preact_min["h"])(TimePicker_TimePicker, { onChange: function onChange(e) {
+					return _this2.setTime(e);
+				}, time: time, outerColor: outerColor, innerColor: innerColor })
+		);
+	};
 
-    return Time;
+	return Time;
 }(preact_min["Component"])) || time__class);
 
 // EXTERNAL MODULE: ./components/ColorPicker/style.scss
 var ColorPicker_style = __webpack_require__("SlX7");
 var ColorPicker_style_default = /*#__PURE__*/__webpack_require__.n(ColorPicker_style);
 
-// EXTERNAL MODULE: external "timers"
-var external__timers_ = __webpack_require__("KrYd");
-var external__timers__default = /*#__PURE__*/__webpack_require__.n(external__timers_);
-
 // CONCATENATED MODULE: ./components/ColorPicker/Color.js
-
-
-function Color__classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function Color__possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function Color__inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 
 
 
 var hsla = function hsla(index, a, size) {
-    return 'hsla(' + index * (360 / size) + ' ,100%, 50%, ' + a + ')';
+	return 'hsla(' + index * (360 / size) + ' ,100%, 50%, ' + a + ')';
 };
 
-var Color_Color = function (_Component) {
-    Color__inherits(Color, _Component);
-
-    function Color() {
-        Color__classCallCheck(this, Color);
-
-        return Color__possibleConstructorReturn(this, _Component.apply(this, arguments));
-    }
-
-    Color.prototype.render = function render(_ref) {
-        var index = _ref.index,
-            angle = _ref.angle,
-            size = _ref.size;
-
-        var componentStyle = 'transform: translateY(-50%) rotate(' + angle + 'deg); ';
-        componentStyle += 'background-image: linear-gradient(180deg, ' + hsla(index, 0, size) + ', ' + hsla(index, 1, size) + ' 50%, ' + hsla(index, 0, size) + ');';
-
-        return Object(preact_min["h"])('div', { 'class': ColorPicker_style_default.a['spectrum-circle__color'], style: componentStyle });
-    };
-
-    return Color;
-}(preact_min["Component"]);
+function Color(_ref) {
+	var index = _ref.index,
+	    angle = _ref.angle,
+	    size = _ref.size;
 
 
+	var componentStyle = 'transform: translateY(-50%) rotate(' + angle + 'deg); ';
+	componentStyle += 'background-image: linear-gradient(180deg, ' + hsla(index, 0, size) + ', ' + hsla(index, 1, size) + ' 50%, ' + hsla(index, 0, size) + ');';
+
+	return Object(preact_min["h"])('div', { 'class': ColorPicker_style_default.a['spectrum-circle__color'], style: componentStyle });
+}
 // CONCATENATED MODULE: ./components/ColorPicker/SpectrumDecoration.js
 
 
@@ -8526,45 +8468,45 @@ function SpectrumDecoration__inherits(subClass, superClass) { if (typeof superCl
 var SpectrumDecoration_stops = new Array(8).fill(0);
 
 var SpectrumDecoration_SpectrumDecoration = function (_Component) {
-    SpectrumDecoration__inherits(SpectrumDecoration, _Component);
+	SpectrumDecoration__inherits(SpectrumDecoration, _Component);
 
-    function SpectrumDecoration() {
-        SpectrumDecoration__classCallCheck(this, SpectrumDecoration);
+	function SpectrumDecoration() {
+		SpectrumDecoration__classCallCheck(this, SpectrumDecoration);
 
-        return SpectrumDecoration__possibleConstructorReturn(this, _Component.apply(this, arguments));
-    }
+		return SpectrumDecoration__possibleConstructorReturn(this, _Component.apply(this, arguments));
+	}
 
-    SpectrumDecoration.prototype.componentWillMount = function componentWillMount() {
-        this.setState({
-            stops: SpectrumDecoration_stops
-        });
-    };
+	SpectrumDecoration.prototype.componentWillMount = function componentWillMount() {
+		this.setState({
+			stops: SpectrumDecoration_stops
+		});
+	};
 
-    SpectrumDecoration.prototype.render = function render(props, _ref) {
-        var stops = _ref.stops;
+	SpectrumDecoration.prototype.render = function render(props, _ref) {
+		var stops = _ref.stops;
 
-        return Object(preact_min["h"])(
-            'div',
-            { 'class': ColorPicker_style_default.a['spectrum-circle__decoration'] },
-            stops.map(function (angle, index, stops) {
+		return Object(preact_min["h"])(
+			'div',
+			{ 'class': ColorPicker_style_default.a['spectrum-circle__decoration'] },
+			stops.map(function (angle, index, stops) {
 
-                var className = 'spectrum-circle__decoration--mark';
+				var className = 'spectrum-circle__decoration--mark';
 
-                if (index % 4 === 0) {
-                    className = 'spectrum-circle__decoration--primary';
-                } else if (index % 2 === 0) {
-                    className = 'spectrum-circle__decoration--secondary';
-                }
+				if (index % 4 === 0) {
+					className = 'spectrum-circle__decoration--primary';
+				} else if (index % 2 === 0) {
+					className = 'spectrum-circle__decoration--secondary';
+				}
 
-                var rotate = index * (45 / 2);
-                var decorStyle = 'transform: translate(-50%, -50%) rotate(' + rotate + 'deg);';
+				var rotate = index * (45 / 2);
+				var decorStyle = 'transform: translate(-50%, -50%) rotate(' + rotate + 'deg);';
 
-                return Object(preact_min["h"])('div', { 'class': ColorPicker_style_default.a[className], style: decorStyle });
-            })
-        );
-    };
+				return Object(preact_min["h"])('div', { 'class': ColorPicker_style_default.a[className], style: decorStyle });
+			})
+		);
+	};
 
-    return SpectrumDecoration;
+	return SpectrumDecoration;
 }(preact_min["Component"]);
 
 
@@ -8588,68 +8530,68 @@ var colors = new Array(64).fill(0);
 var _ref3 = Object(preact_min["h"])(SpectrumDecoration_SpectrumDecoration, null);
 
 var Spectrum_Spectrum = function (_Component) {
-    Spectrum__inherits(Spectrum, _Component);
+	Spectrum__inherits(Spectrum, _Component);
 
-    function Spectrum() {
-        Spectrum__classCallCheck(this, Spectrum);
+	function Spectrum() {
+		Spectrum__classCallCheck(this, Spectrum);
 
-        return Spectrum__possibleConstructorReturn(this, _Component.apply(this, arguments));
-    }
+		return Spectrum__possibleConstructorReturn(this, _Component.apply(this, arguments));
+	}
 
-    Spectrum.prototype.componentWillMount = function componentWillMount() {
-        var angles = colors.map(function (a, index) {
-            return index * (360 / colors.length);
-        });
+	Spectrum.prototype.componentWillMount = function componentWillMount() {
+		var angles = colors.map(function (a, index) {
+			return index * (360 / colors.length);
+		});
 
-        this.setState({
-            angles: angles
-        });
-    };
+		this.setState({
+			angles: angles
+		});
+	};
 
-    Spectrum.prototype.onHue = function onHue(deg) {
-        var hue = 360 - deg;
-        this.props.onChange(hue);
-    };
+	Spectrum.prototype.onHue = function onHue(deg) {
+		var hue = 360 - deg;
+		this.props.onChange(hue);
+	};
 
-    Spectrum.prototype.render = function render(_ref, _ref2) {
-        var _this2 = this;
+	Spectrum.prototype.render = function render(_ref, _ref2) {
+		var _this2 = this;
 
-        var hue = _ref.hue;
-        var angles = _ref2.angles;
+		var hue = _ref.hue;
+		var angles = _ref2.angles;
 
-        var dialValue = 360 - hue;
+		var dialValue = 360 - hue;
 
-        return Object(preact_min["h"])(
-            'div',
-            {
-                ref: function ref(element) {
-                    _this2.container = element;
-                },
-                'class': ColorPicker_style_default.a['spectrum']
-            },
-            Object(preact_min["h"])('div', { 'class': ColorPicker_style_default.a['spectrum__selector'] }),
-            Object(preact_min["h"])(
-                Dial_Dial,
-                {
-                    className: ColorPicker_style_default.a['spectrum-circle'],
-                    value: dialValue,
-                    onChange: function onChange(e) {
-                        return _this2.onHue(e);
-                    }
-                },
-                Object(preact_min["h"])(
-                    'div',
-                    { 'class': ColorPicker_style_default.a['spectrum-circle__inner'] },
-                    angles.map(function (angle, index, angles) {
-                        return Object(preact_min["h"])(Color_Color, { angle: angle, index: index, size: angles.length });
-                    })
-                ),
-                _ref3
-            )
-        );
-    };
+		return Object(preact_min["h"])(
+			'div',
+			{
+				ref: function ref(element) {
+					_this2.container = element;
+				},
+				'class': ColorPicker_style_default.a.spectrum
+			},
+			Object(preact_min["h"])('div', { 'class': ColorPicker_style_default.a.spectrum__selector }),
+			Object(preact_min["h"])(
+				Dial_Dial,
+				{
+					className: ColorPicker_style_default.a['spectrum-circle'],
+					value: dialValue,
+					onChange: function onChange(e) {
+						return _this2.onHue(e);
+					}
+				},
+				Object(preact_min["h"])(
+					'div',
+					{ 'class': ColorPicker_style_default.a['spectrum-circle__inner'] },
+					angles.map(function (angle, index, angles) {
+						return Object(preact_min["h"])(Color, { angle: angle, index: index, size: angles.length });
+					})
+				),
+				_ref3
+			)
+		);
+	};
 
-    return Spectrum;
+	return Spectrum;
 }(preact_min["Component"]);
 
 
@@ -8658,70 +8600,70 @@ var VerticalSlider_style = __webpack_require__("igvm");
 var VerticalSlider_style_default = /*#__PURE__*/__webpack_require__.n(VerticalSlider_style);
 
 // CONCATENATED MODULE: ./components/VerticalSlider/tools.js
+function tools_isTouchEvent(event) {
+	var type = event.type;
+
+	return type === 'touchmove' || type === 'touchstart' || type === 'touchend';
+}
+
 /**
  *
  *
  * @param {DOMEvent} event
  * @returns
  */
-var getVerticalSliderLevel = function getVerticalSliderLevel(event, callback) {
-    var currentTarget = event.currentTarget,
-        pageY = event.pageY;
+function getVerticalSliderLevel(event, callback) {
+	var currentTarget = event.currentTarget,
+	    pageY = event.pageY;
 
-    var _currentTarget$getBou = currentTarget.getBoundingClientRect(),
-        top = _currentTarget$getBou.top,
-        height = _currentTarget$getBou.height;
+	var _currentTarget$getBou = currentTarget.getBoundingClientRect(),
+	    top = _currentTarget$getBou.top,
+	    height = _currentTarget$getBou.height;
 
-    var offsetTop = top + window.scrollY;
+	var offsetTop = top + window.scrollY;
 
-    var getValue = function getValue(_ref) {
-        var offsetTop = _ref.offsetTop,
-            height = _ref.height,
-            pageY = _ref.pageY;
+	var getValue = function getValue(_ref) {
+		var offsetTop = _ref.offsetTop,
+		    height = _ref.height,
+		    pageY = _ref.pageY;
 
-        var value = pageY - offsetTop;
+		var value = pageY - offsetTop;
 
-        if (value < 0) return 0;
+		if (value < 0) return 0;
 
-        if (pageY > offsetTop + height) return height;
+		if (pageY > offsetTop + height) return height;
 
-        return value;
-    };
+		return value;
+	};
 
-    if (tools_isTouchEvent(event)) {
+	if (tools_isTouchEvent(event)) {
 
-        for (var _iterator = event.changedTouches, _isArray = Array.isArray(_iterator), _i = 0, _iterator = _isArray ? _iterator : _iterator[Symbol.iterator]();;) {
-            var _ref2;
+		for (var _iterator = event.changedTouches, _isArray = Array.isArray(_iterator), _i = 0, _iterator = _isArray ? _iterator : _iterator[Symbol.iterator]();;) {
+			var _ref2;
 
-            if (_isArray) {
-                if (_i >= _iterator.length) break;
-                _ref2 = _iterator[_i++];
-            } else {
-                _i = _iterator.next();
-                if (_i.done) break;
-                _ref2 = _i.value;
-            }
+			if (_isArray) {
+				if (_i >= _iterator.length) break;
+				_ref2 = _iterator[_i++];
+			} else {
+				_i = _iterator.next();
+				if (_i.done) break;
+				_ref2 = _i.value;
+			}
 
-            var touch = _ref2;
-            var _pageY = touch.pageY;
+			var touch = _ref2;
+			var _pageY = touch.pageY;
 
-            var value = getValue({
-                offsetTop: offsetTop, height: height, pageY: _pageY
-            });
+			var value = getValue({
+				offsetTop: offsetTop, height: height, pageY: _pageY
+			});
 
-            callback(value);
-        }
-    } else {
-        var _value = getValue({ offsetTop: offsetTop, height: height, pageY: pageY });
-        callback(_value);
-    }
-};
-
-var tools_isTouchEvent = function isTouchEvent(event) {
-    var type = event.type;
-
-    return type === 'touchmove' || type === 'touchstart' || type === 'touchend';
-};
+			callback(value);
+		}
+	} else {
+		var _value = getValue({ offsetTop: offsetTop, height: height, pageY: pageY });
+		callback(_value);
+	}
+}
 // CONCATENATED MODULE: ./components/VerticalSlider/index.js
 
 
@@ -8737,155 +8679,155 @@ function VerticalSlider__inherits(subClass, superClass) { if (typeof superClass 
 
 
 var VerticalSlider_VerticalSlider = function (_Component) {
-    VerticalSlider__inherits(VerticalSlider, _Component);
+	VerticalSlider__inherits(VerticalSlider, _Component);
 
-    function VerticalSlider() {
-        VerticalSlider__classCallCheck(this, VerticalSlider);
+	function VerticalSlider() {
+		VerticalSlider__classCallCheck(this, VerticalSlider);
 
-        return VerticalSlider__possibleConstructorReturn(this, _Component.apply(this, arguments));
-    }
+		return VerticalSlider__possibleConstructorReturn(this, _Component.apply(this, arguments));
+	}
 
-    VerticalSlider.prototype.componentDidMount = function componentDidMount() {
-        this.setLevel(this.percentToLevel(this.props.value));
-    };
+	VerticalSlider.prototype.componentDidMount = function componentDidMount() {
+		this.setLevel(this.percentToLevel(this.props.value));
+	};
 
-    VerticalSlider.prototype.shouldComponentUpdate = function shouldComponentUpdate(_ref, nextState) {
-        var value = _ref.value;
+	VerticalSlider.prototype.shouldComponentUpdate = function shouldComponentUpdate(_ref, nextState) {
+		var value = _ref.value;
 
-        if (this.state.selecting) return false;
+		if (this.state.selecting) return false;
 
-        var oldValue = this.props.value;
+		var oldValue = this.props.value;
 
-        if (oldValue !== value) {
-            this.setLevel(this.percentToLevel(value));
-            return false;
-        }
+		if (oldValue !== value) {
+			this.setLevel(this.percentToLevel(value));
+			return false;
+		}
 
-        return true;
-    };
+		return true;
+	};
 
-    VerticalSlider.prototype.percentToLevel = function percentToLevel(percent) {
-        var _container$getBoundin = this.container.getBoundingClientRect(),
-            height = _container$getBoundin.height;
+	VerticalSlider.prototype.percentToLevel = function percentToLevel(percent) {
+		var _container$getBoundin = this.container.getBoundingClientRect(),
+		    height = _container$getBoundin.height;
 
-        return height - percent / 100 * height;
-    };
+		return height - percent / 100 * height;
+	};
 
-    VerticalSlider.prototype.updateValue = function updateValue(value, height) {
-        var percentage = 100 - Math.floor(value / height * 100);
-        this.props.onChange(percentage);
-    };
+	VerticalSlider.prototype.updateValue = function updateValue(value, height) {
+		var percentage = 100 - Math.floor(value / height * 100);
+		this.props.onChange(percentage);
+	};
 
-    VerticalSlider.prototype.updateLevel = function updateLevel(event, callback) {
-        var _this2 = this;
+	VerticalSlider.prototype.updateLevel = function updateLevel(event, callback) {
+		var _this2 = this;
 
-        var _event$currentTarget$ = event.currentTarget.getBoundingClientRect(),
-            height = _event$currentTarget$.height;
+		var _event$currentTarget$ = event.currentTarget.getBoundingClientRect(),
+		    height = _event$currentTarget$.height;
 
-        getVerticalSliderLevel(event, function (value) {
-            _this2.updateValue(value, height);
-            callback(value);
-        });
-    };
+		getVerticalSliderLevel(event, function (value) {
+			_this2.updateValue(value, height);
+			callback(value);
+		});
+	};
 
-    VerticalSlider.prototype.setLevel = function setLevel(level) {
-        if (level === this.state.level) return;
+	VerticalSlider.prototype.setLevel = function setLevel(level) {
+		if (level === this.state.level) return;
 
-        if (this.props.customLevel) {
-            this.container.querySelector('.' + this.props.customLevel).style.setProperty('--slideLevel', level + 'px');
-        } else {
-            this.container.style.setProperty('--slideLevel', level + 'px');
-        }
+		if (this.props.customLevel) {
+			this.container.querySelector('.' + this.props.customLevel).style.setProperty('--slideLevel', level + 'px');
+		} else {
+			this.container.style.setProperty('--slideLevel', level + 'px');
+		}
 
-        // TODO onresize
+		// TODO onresize
 
-        this.setState({
-            level: level
-        });
-    };
+		this.setState({
+			level: level
+		});
+	};
 
-    VerticalSlider.prototype.selectStart = function selectStart(e) {
-        var _this3 = this;
+	VerticalSlider.prototype.selectStart = function selectStart(e) {
+		var _this3 = this;
 
-        e.preventDefault();
-        this.setState({
-            selecting: true
-        });
-        this.updateLevel(event, function (level) {
-            return _this3.setLevel(level);
-        });
-    };
+		e.preventDefault();
+		this.setState({
+			selecting: true
+		});
+		this.updateLevel(event, function (level) {
+			return _this3.setLevel(level);
+		});
+	};
 
-    VerticalSlider.prototype.selecting = function selecting(event) {
-        var _this4 = this;
+	VerticalSlider.prototype.selecting = function selecting(event) {
+		var _this4 = this;
 
-        event.preventDefault();
+		event.preventDefault();
 
-        if (!this.state.selecting) return;
+		if (!this.state.selecting) return;
 
-        this.updateLevel(event, function (level) {
-            return _this4.setLevel(level);
-        });
-    };
+		this.updateLevel(event, function (level) {
+			return _this4.setLevel(level);
+		});
+	};
 
-    VerticalSlider.prototype.clicked = function clicked(event) {
-        var _this5 = this;
+	VerticalSlider.prototype.clicked = function clicked(event) {
+		var _this5 = this;
 
-        event.preventDefault();
-        this.updateLevel(event, function (level) {
-            return _this5.setLevel(level);
-        });
-    };
+		event.preventDefault();
+		this.updateLevel(event, function (level) {
+			return _this5.setLevel(level);
+		});
+	};
 
-    VerticalSlider.prototype.selectEnd = function selectEnd(e) {
-        e.preventDefault();
-        this.setState({
-            selecting: false
-        });
-    };
+	VerticalSlider.prototype.selectEnd = function selectEnd(e) {
+		e.preventDefault();
+		this.setState({
+			selecting: false
+		});
+	};
 
-    VerticalSlider.prototype.render = function render(props, state) {
-        var _this6 = this;
+	VerticalSlider.prototype.render = function render(props, state) {
+		var _this6 = this;
 
-        var className = [props.className, VerticalSlider_style_default.a['vertical-slider']];
+		var className = [props.className, VerticalSlider_style_default.a['vertical-slider']];
 
-        if (props.customLevel) className.push(VerticalSlider_style_default.a['vertical-slider--custom-level']);
+		if (props.customLevel) className.push(VerticalSlider_style_default.a['vertical-slider--custom-level']);
 
-        return Object(preact_min["h"])(
-            'div',
-            {
-                ref: function ref(element) {
-                    _this6.container = element;
-                },
-                'class': className.join(' '),
-                style: props.style,
-                onClick: function onClick(e) {
-                    return _this6.clicked(e);
-                },
-                onMouseDown: function onMouseDown(e) {
-                    return _this6.selectStart(e);
-                },
-                onTouchStart: function onTouchStart(e) {
-                    return _this6.selectStart(e);
-                },
-                onMouseMove: function onMouseMove(e) {
-                    return _this6.selecting(e);
-                },
-                onTouchMove: function onTouchMove(e) {
-                    return _this6.selecting(e);
-                },
-                onMouseUp: function onMouseUp(e) {
-                    return _this6.selectEnd(e);
-                },
-                onTouchEnd: function onTouchEnd(e) {
-                    return _this6.selectEnd(e);
-                }
-            },
-            props.children
-        );
-    };
+		return Object(preact_min["h"])(
+			'div',
+			{
+				ref: function ref(element) {
+					_this6.container = element;
+				},
+				'class': className.join(' '),
+				style: props.style,
+				onClick: function onClick(e) {
+					return _this6.clicked(e);
+				},
+				onMouseDown: function onMouseDown(e) {
+					return _this6.selectStart(e);
+				},
+				onTouchStart: function onTouchStart(e) {
+					return _this6.selectStart(e);
+				},
+				onMouseMove: function onMouseMove(e) {
+					return _this6.selecting(e);
+				},
+				onTouchMove: function onTouchMove(e) {
+					return _this6.selecting(e);
+				},
+				onMouseUp: function onMouseUp(e) {
+					return _this6.selectEnd(e);
+				},
+				onTouchEnd: function onTouchEnd(e) {
+					return _this6.selectEnd(e);
+				}
+			},
+			props.children
+		);
+	};
 
-    return VerticalSlider;
+	return VerticalSlider;
 }(preact_min["Component"]);
 
 
@@ -8903,44 +8845,44 @@ function Saturation__inherits(subClass, superClass) { if (typeof superClass !== 
 
 
 var Saturation_Saturation = function (_Component) {
-    Saturation__inherits(Saturation, _Component);
+	Saturation__inherits(Saturation, _Component);
 
-    function Saturation() {
-        Saturation__classCallCheck(this, Saturation);
+	function Saturation() {
+		Saturation__classCallCheck(this, Saturation);
 
-        return Saturation__possibleConstructorReturn(this, _Component.apply(this, arguments));
-    }
+		return Saturation__possibleConstructorReturn(this, _Component.apply(this, arguments));
+	}
 
-    Saturation.prototype.updateSaturation = function updateSaturation(saturation) {
-        this.props.onChange(saturation);
-    };
+	Saturation.prototype.updateSaturation = function updateSaturation(saturation) {
+		this.props.onChange(saturation);
+	};
 
-    Saturation.prototype.render = function render(_ref, state) {
-        var _this2 = this;
+	Saturation.prototype.render = function render(_ref, state) {
+		var _this2 = this;
 
-        var hue = _ref.hue,
-            value = _ref.value;
+		var hue = _ref.hue,
+		    value = _ref.value;
 
-        var gradient = 'background-image: linear-gradient(hsl(' + hue + ', 100%, 50%), hsl(' + hue + ', 0%, 50%));';
+		var gradient = 'background-image: linear-gradient(hsl(' + hue + ', 100%, 50%), hsl(' + hue + ', 0%, 50%));';
 
-        return Object(preact_min["h"])(
-            'div',
-            { 'class': ColorPicker_style_default.a['colorpicker__saturation'], style: gradient },
-            Object(preact_min["h"])(
-                VerticalSlider_VerticalSlider,
-                {
-                    onChange: function onChange(e) {
-                        return _this2.updateSaturation(e);
-                    },
-                    value: value,
-                    customLevel: ColorPicker_style_default.a['colorpicker__saturation-level']
-                },
-                Object(preact_min["h"])('div', { 'class': ColorPicker_style_default.a['colorpicker__saturation-level'] })
-            )
-        );
-    };
+		return Object(preact_min["h"])(
+			'div',
+			{ 'class': ColorPicker_style_default.a.colorpicker__saturation, style: gradient },
+			Object(preact_min["h"])(
+				VerticalSlider_VerticalSlider,
+				{
+					onChange: function onChange(e) {
+						return _this2.updateSaturation(e);
+					},
+					value: value,
+					customLevel: ColorPicker_style_default.a['colorpicker__saturation-level']
+				},
+				Object(preact_min["h"])('div', { 'class': ColorPicker_style_default.a['colorpicker__saturation-level'] })
+			)
+		);
+	};
 
-    return Saturation;
+	return Saturation;
 }(preact_min["Component"]);
 
 
@@ -8958,44 +8900,44 @@ function Luminosity__inherits(subClass, superClass) { if (typeof superClass !== 
 
 
 var Luminosity_Luminosity = function (_Component) {
-    Luminosity__inherits(Luminosity, _Component);
+	Luminosity__inherits(Luminosity, _Component);
 
-    function Luminosity() {
-        Luminosity__classCallCheck(this, Luminosity);
+	function Luminosity() {
+		Luminosity__classCallCheck(this, Luminosity);
 
-        return Luminosity__possibleConstructorReturn(this, _Component.apply(this, arguments));
-    }
+		return Luminosity__possibleConstructorReturn(this, _Component.apply(this, arguments));
+	}
 
-    Luminosity.prototype.updateLuminosity = function updateLuminosity(luminosity) {
-        this.props.onChange(luminosity);
-    };
+	Luminosity.prototype.updateLuminosity = function updateLuminosity(luminosity) {
+		this.props.onChange(luminosity);
+	};
 
-    Luminosity.prototype.render = function render(_ref, state) {
-        var _this2 = this;
+	Luminosity.prototype.render = function render(_ref, state) {
+		var _this2 = this;
 
-        var hue = _ref.hue,
-            value = _ref.value;
+		var hue = _ref.hue,
+		    value = _ref.value;
 
-        var gradient = 'background-image: linear-gradient(hsl(' + hue + ', 100%, 100%), hsl(' + hue + ', 100%, 0%));';
+		var gradient = 'background-image: linear-gradient(hsl(' + hue + ', 100%, 100%), hsl(' + hue + ', 100%, 0%));';
 
-        return Object(preact_min["h"])(
-            'div',
-            { 'class': ColorPicker_style_default.a['colorpicker__luminosity'], style: gradient },
-            Object(preact_min["h"])(
-                VerticalSlider_VerticalSlider,
-                {
-                    onChange: function onChange(e) {
-                        return _this2.updateLuminosity(e);
-                    },
-                    value: value,
-                    customLevel: ColorPicker_style_default.a['colorpicker__luminosity-level']
-                },
-                Object(preact_min["h"])('div', { 'class': ColorPicker_style_default.a['colorpicker__luminosity-level'] })
-            )
-        );
-    };
+		return Object(preact_min["h"])(
+			'div',
+			{ 'class': ColorPicker_style_default.a.colorpicker__luminosity, style: gradient },
+			Object(preact_min["h"])(
+				VerticalSlider_VerticalSlider,
+				{
+					onChange: function onChange(e) {
+						return _this2.updateLuminosity(e);
+					},
+					value: value,
+					customLevel: ColorPicker_style_default.a['colorpicker__luminosity-level']
+				},
+				Object(preact_min["h"])('div', { 'class': ColorPicker_style_default.a['colorpicker__luminosity-level'] })
+			)
+		);
+	};
 
-    return Luminosity;
+	return Luminosity;
 }(preact_min["Component"]);
 
 
@@ -9015,85 +8957,82 @@ function ColorPicker__inherits(subClass, superClass) { if (typeof superClass !==
 
 
 
-
-var ColorPicker_colors = new Array(64).fill(0);
-
 var ColorPicker_ColorPicker = function (_Component) {
-    ColorPicker__inherits(ColorPicker, _Component);
+	ColorPicker__inherits(ColorPicker, _Component);
 
-    function ColorPicker() {
-        ColorPicker__classCallCheck(this, ColorPicker);
+	function ColorPicker() {
+		ColorPicker__classCallCheck(this, ColorPicker);
 
-        return ColorPicker__possibleConstructorReturn(this, _Component.apply(this, arguments));
-    }
+		return ColorPicker__possibleConstructorReturn(this, _Component.apply(this, arguments));
+	}
 
-    ColorPicker.prototype.componentWillMount = function componentWillMount() {
-        var _props$value = this.props.value,
-            hue = _props$value[0],
-            saturation = _props$value[1],
-            luminosity = _props$value[2];
+	ColorPicker.prototype.componentWillMount = function componentWillMount() {
+		var _props$value = this.props.value,
+		    hue = _props$value[0],
+		    saturation = _props$value[1],
+		    luminosity = _props$value[2];
 
 
-        this.setState({
-            hue: hue,
-            saturation: saturation,
-            luminosity: luminosity
-        });
-    };
+		this.setState({
+			hue: hue,
+			saturation: saturation,
+			luminosity: luminosity
+		});
+	};
 
-    ColorPicker.prototype.updateColor = function updateColor() {
-        var _state = this.state,
-            hue = _state.hue,
-            saturation = _state.saturation,
-            luminosity = _state.luminosity;
+	ColorPicker.prototype.updateColor = function updateColor() {
+		var _state = this.state,
+		    hue = _state.hue,
+		    saturation = _state.saturation,
+		    luminosity = _state.luminosity;
 
-        this.props.onChange([hue, saturation, luminosity]);
-    };
+		this.props.onChange([hue, saturation, luminosity]);
+	};
 
-    ColorPicker.prototype.onHueChange = function onHueChange(hue) {
-        this.setState({
-            hue: hue
-        });
-        this.updateColor();
-    };
+	ColorPicker.prototype.onHueChange = function onHueChange(hue) {
+		this.setState({
+			hue: hue
+		});
+		this.updateColor();
+	};
 
-    ColorPicker.prototype.onSaturationChange = function onSaturationChange(saturation) {
-        this.setState({
-            saturation: saturation
-        });
-        this.updateColor();
-    };
+	ColorPicker.prototype.onSaturationChange = function onSaturationChange(saturation) {
+		this.setState({
+			saturation: saturation
+		});
+		this.updateColor();
+	};
 
-    ColorPicker.prototype.onLuminosityChange = function onLuminosityChange(luminosity) {
-        this.setState({
-            luminosity: luminosity
-        });
-        this.updateColor();
-    };
+	ColorPicker.prototype.onLuminosityChange = function onLuminosityChange(luminosity) {
+		this.setState({
+			luminosity: luminosity
+		});
+		this.updateColor();
+	};
 
-    ColorPicker.prototype.render = function render(props, _ref) {
-        var _this2 = this;
+	ColorPicker.prototype.render = function render(props, _ref) {
+		var _this2 = this;
 
-        var hue = _ref.hue,
-            saturation = _ref.saturation,
-            luminosity = _ref.luminosity;
+		var hue = _ref.hue,
+		    saturation = _ref.saturation,
+		    luminosity = _ref.luminosity;
 
-        return Object(preact_min["h"])(
-            'div',
-            { 'class': ColorPicker_style_default.a['colorpicker'] },
-            Object(preact_min["h"])(Spectrum_Spectrum, { hue: hue, onChange: function onChange(e) {
-                    return _this2.onHueChange(e);
-                } }),
-            Object(preact_min["h"])(Saturation_Saturation, { hue: hue, value: saturation, onChange: function onChange(e) {
-                    return _this2.onSaturationChange(e);
-                } }),
-            Object(preact_min["h"])(Luminosity_Luminosity, { hue: hue, value: luminosity, onChange: function onChange(e) {
-                    return _this2.onLuminosityChange(e);
-                } })
-        );
-    };
+		return Object(preact_min["h"])(
+			'div',
+			{ 'class': ColorPicker_style_default.a.colorpicker },
+			Object(preact_min["h"])(Spectrum_Spectrum, { hue: hue, onChange: function onChange(e) {
+					return _this2.onHueChange(e);
+				} }),
+			Object(preact_min["h"])(Saturation_Saturation, { hue: hue, value: saturation, onChange: function onChange(e) {
+					return _this2.onSaturationChange(e);
+				} }),
+			Object(preact_min["h"])(Luminosity_Luminosity, { hue: hue, value: luminosity, onChange: function onChange(e) {
+					return _this2.onLuminosityChange(e);
+				} })
+		);
+	};
 
-    return ColorPicker;
+	return ColorPicker;
 }(preact_min["Component"]);
 
 
@@ -9116,370 +9055,42 @@ function design__inherits(subClass, superClass) { if (typeof superClass !== "fun
 
 
 var design_Design = (design__dec = connect(reducers_0, actions_namespaceObject), design__dec(design__class = function (_Component) {
-    design__inherits(Design, _Component);
+	design__inherits(Design, _Component);
 
-    function Design() {
-        design__classCallCheck(this, Design);
+	function Design() {
+		design__classCallCheck(this, Design);
 
-        return design__possibleConstructorReturn(this, _Component.apply(this, arguments));
-    }
+		return design__possibleConstructorReturn(this, _Component.apply(this, arguments));
+	}
 
-    Design.prototype.setOuterColor = function setOuterColor(color) {
-        this.props.setOuterColor(color);
-    };
+	Design.prototype.setOuterColor = function setOuterColor(color) {
+		this.props.setOuterColor(color);
+	};
 
-    Design.prototype.setInnerColor = function setInnerColor(color) {
-        this.props.setInnerColor(color);
-    };
+	Design.prototype.setInnerColor = function setInnerColor(color) {
+		this.props.setInnerColor(color);
+	};
 
-    Design.prototype.render = function render(_ref, state) {
-        var _this2 = this;
+	Design.prototype.render = function render(_ref, state) {
+		var _this2 = this;
 
-        var outerColor = _ref.outerColor,
-            innerColor = _ref.innerColor;
+		var outerColor = _ref.outerColor,
+		    innerColor = _ref.innerColor;
 
-        return Object(preact_min["h"])(
-            'div',
-            { 'class': 'page' },
-            Object(preact_min["h"])(ColorPicker_ColorPicker, { text: 'Outer color', onChange: function onChange(e) {
-                    return _this2.setOuterColor(e);
-                }, value: outerColor }),
-            Object(preact_min["h"])(ColorPicker_ColorPicker, { text: 'Inner color', onChange: function onChange(e) {
-                    return _this2.setInnerColor(e);
-                }, value: innerColor })
-        );
-    };
+		return Object(preact_min["h"])(
+			'div',
+			{ 'class': 'page' },
+			Object(preact_min["h"])(ColorPicker_ColorPicker, { text: 'Outer color', onChange: function onChange(e) {
+					return _this2.setOuterColor(e);
+				}, value: outerColor }),
+			Object(preact_min["h"])(ColorPicker_ColorPicker, { text: 'Inner color', onChange: function onChange(e) {
+					return _this2.setInnerColor(e);
+				}, value: innerColor })
+		);
+	};
 
-    return Design;
+	return Design;
 }(preact_min["Component"])) || design__class);
-
-// EXTERNAL MODULE: ./routes/dial/style.scss
-var dial_style = __webpack_require__("HU6w");
-var dial_style_default = /*#__PURE__*/__webpack_require__.n(dial_style);
-
-// EXTERNAL MODULE: ./components/HorizontalSlider/style.scss
-var HorizontalSlider_style = __webpack_require__("nZg4");
-var HorizontalSlider_style_default = /*#__PURE__*/__webpack_require__.n(HorizontalSlider_style);
-
-// CONCATENATED MODULE: ./components/HorizontalSlider/tools.js
-/**
- *
- *
- * @param {DOMEvent} event
- * @returns
- */
-var getHorizontalSliderLevel = function getHorizontalSliderLevel(event, callback) {
-    var currentTarget = event.currentTarget,
-        pageX = event.pageX;
-
-    var _currentTarget$getBou = currentTarget.getBoundingClientRect(),
-        left = _currentTarget$getBou.left,
-        width = _currentTarget$getBou.width;
-
-    var offsetLeft = left + window.scrollX;
-
-    var getValue = function getValue(_ref) {
-        var offsetLeft = _ref.offsetLeft,
-            width = _ref.width,
-            pageX = _ref.pageX;
-
-        var value = pageX - offsetLeft;
-
-        if (value < 0) return 0;
-
-        if (pageX > offsetLeft + width) return width;
-
-        return value;
-    };
-
-    if (HorizontalSlider_tools_isTouchEvent(event)) {
-
-        for (var _iterator = event.changedTouches, _isArray = Array.isArray(_iterator), _i = 0, _iterator = _isArray ? _iterator : _iterator[Symbol.iterator]();;) {
-            var _ref2;
-
-            if (_isArray) {
-                if (_i >= _iterator.length) break;
-                _ref2 = _iterator[_i++];
-            } else {
-                _i = _iterator.next();
-                if (_i.done) break;
-                _ref2 = _i.value;
-            }
-
-            var touch = _ref2;
-            var _pageX = touch.pageX;
-
-            var value = getValue({ offsetLeft: offsetLeft, width: width, pageX: _pageX });
-
-            callback(value);
-        }
-    } else {
-        var _value = getValue({ offsetLeft: offsetLeft, width: width, pageX: pageX });
-        callback(_value);
-    }
-};
-
-var HorizontalSlider_tools_isTouchEvent = function isTouchEvent(event) {
-    var type = event.type;
-
-    return type === 'touchmove' || type === 'touchstart' || type === 'touchend';
-};
-// CONCATENATED MODULE: ./components/HorizontalSlider/index.js
-
-
-function HorizontalSlider__classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function HorizontalSlider__possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function HorizontalSlider__inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-
-
-
-
-
-var HorizontalSlider_VerticalSlider = function (_Component) {
-    HorizontalSlider__inherits(VerticalSlider, _Component);
-
-    function VerticalSlider() {
-        HorizontalSlider__classCallCheck(this, VerticalSlider);
-
-        return HorizontalSlider__possibleConstructorReturn(this, _Component.apply(this, arguments));
-    }
-
-    VerticalSlider.prototype.componentDidMount = function componentDidMount() {
-        this.setLevel(this.percentToLevel(this.props.value));
-    };
-
-    VerticalSlider.prototype.shouldComponentUpdate = function shouldComponentUpdate(_ref, nextState) {
-        var value = _ref.value;
-
-        if (this.state.selecting) return false;
-
-        var oldValue = this.props.value;
-
-        if (oldValue !== value) {
-            this.setLevel(this.percentToLevel(value));
-            return false;
-        }
-
-        return true;
-    };
-
-    VerticalSlider.prototype.percentToLevel = function percentToLevel(percent) {
-        var _container$getBoundin = this.container.getBoundingClientRect(),
-            width = _container$getBoundin.width;
-
-        return percent / 100 * width;
-    };
-
-    VerticalSlider.prototype.updateValue = function updateValue(value, width) {
-        var percentage = Math.floor(value / width * 100);
-        this.props.onChange(percentage);
-    };
-
-    VerticalSlider.prototype.updateLevel = function updateLevel(event, callback) {
-        var _this2 = this;
-
-        var _event$currentTarget$ = event.currentTarget.getBoundingClientRect(),
-            width = _event$currentTarget$.width;
-
-        getHorizontalSliderLevel(event, function (value) {
-            _this2.updateValue(value, width);
-            callback(value);
-        });
-    };
-
-    VerticalSlider.prototype.setLevel = function setLevel(level) {
-        if (level === this.state.level) return;
-
-        if (this.props.customLevel) {
-            this.container.querySelector('.' + this.props.customLevel).style.setProperty('--slideLevel', level + 'px');
-        } else {
-            this.container.style.setProperty('--slideLevel', level + 'px');
-        }
-
-        // TODO onresize
-
-        this.setState({
-            level: level
-        });
-    };
-
-    VerticalSlider.prototype.selectStart = function selectStart(e) {
-        var _this3 = this;
-
-        e.preventDefault();
-        this.setState({
-            selecting: true
-        });
-        this.updateLevel(event, function (level) {
-            return _this3.setLevel(level);
-        });
-    };
-
-    VerticalSlider.prototype.selecting = function selecting(event) {
-        var _this4 = this;
-
-        event.preventDefault();
-
-        if (!this.state.selecting) return;
-
-        this.updateLevel(event, function (level) {
-            return _this4.setLevel(level);
-        });
-    };
-
-    VerticalSlider.prototype.clicked = function clicked(event) {
-        var _this5 = this;
-
-        event.preventDefault();
-        this.updateLevel(event, function (level) {
-            return _this5.setLevel(level);
-        });
-    };
-
-    VerticalSlider.prototype.selectEnd = function selectEnd(e) {
-        e.preventDefault();
-        this.setState({
-            selecting: false
-        });
-    };
-
-    VerticalSlider.prototype.render = function render(props, state) {
-        var _this6 = this;
-
-        var className = [props.className, HorizontalSlider_style_default.a['horizontal-slider']];
-
-        if (props.customLevel) className.push(HorizontalSlider_style_default.a['horizontal-slider--custom-level']);
-
-        return Object(preact_min["h"])(
-            'div',
-            {
-                ref: function ref(element) {
-                    _this6.container = element;
-                },
-                'class': className.join(' '),
-                onClick: function onClick(e) {
-                    return _this6.clicked(e);
-                },
-                onMouseDown: function onMouseDown(e) {
-                    return _this6.selectStart(e);
-                },
-                onTouchStart: function onTouchStart(e) {
-                    return _this6.selectStart(e);
-                },
-                onMouseMove: function onMouseMove(e) {
-                    return _this6.selecting(e);
-                },
-                onTouchMove: function onTouchMove(e) {
-                    return _this6.selecting(e);
-                },
-                onMouseUp: function onMouseUp(e) {
-                    return _this6.selectEnd(e);
-                },
-                onTouchEnd: function onTouchEnd(e) {
-                    return _this6.selectEnd(e);
-                }
-            },
-            children
-        );
-    };
-
-    return VerticalSlider;
-}(preact_min["Component"]);
-
-
-// CONCATENATED MODULE: ./routes/dial/index.js
-
-
-function dial__classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function dial__possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function dial__inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-
-
-
-
-
-
-
-
-
-
-
-var dial_DialPage = function (_Component) {
-    dial__inherits(DialPage, _Component);
-
-    function DialPage() {
-        dial__classCallCheck(this, DialPage);
-
-        return dial__possibleConstructorReturn(this, _Component.apply(this, arguments));
-    }
-
-    DialPage.prototype.componentWillMount = function componentWillMount() {
-        this.setState({
-            val: 25
-        });
-    };
-
-    DialPage.prototype.setVertical = function setVertical(e) {
-        this.setState({
-            val: e,
-            vertical: e
-        });
-    };
-
-    DialPage.prototype.setHorizontal = function setHorizontal(e) {
-        this.setState({
-            val: e,
-            horizontal: e
-        });
-    };
-
-    DialPage.prototype.render = function render(props, _ref) {
-        var _this2 = this;
-
-        var vertical = _ref.vertical,
-            horizontal = _ref.horizontal,
-            val = _ref.val;
-
-        var test = 'foo';
-        return Object(preact_min["h"])(
-            'div',
-            { 'class': 'page' },
-            Object(preact_min["h"])(
-                'div',
-                { 'class': dial_style_default.a['vertical-slider-test'] },
-                vertical,
-                Object(preact_min["h"])(
-                    VerticalSlider_VerticalSlider,
-                    { onChange: function onChange(e) {
-                            return _this2.setVertical(e);
-                        }, value: val },
-                    Object(preact_min["h"])('div', { 'class': dial_style_default.a['vertical-slider-test__in'] })
-                )
-            ),
-            Object(preact_min["h"])(
-                'div',
-                { 'class': dial_style_default.a['horizontal-slider-test'] },
-                horizontal,
-                Object(preact_min["h"])(
-                    HorizontalSlider_VerticalSlider,
-                    { onChange: function onChange(e) {
-                            return _this2.setHorizontal(e);
-                        }, value: val },
-                    Object(preact_min["h"])('div', { 'class': dial_style_default.a['horizontal-slider-test__in'] })
-                )
-            )
-        );
-    };
-
-    return DialPage;
-}(preact_min["Component"]);
-
 
 // CONCATENATED MODULE: ./components/app.js
 
@@ -9497,10 +9108,6 @@ function app__inherits(subClass, superClass) { if (typeof superClass !== "functi
 
 
 
-
-// import Home from 'async!../routes/home';
-// import Profile from 'async!../routes/profile';
-
 var app__ref = Object(preact_min["h"])(Header_Header, { bgColor: '#673AB7' });
 
 var app__ref2 = Object(preact_min["h"])(time_Time, { path: '/' });
@@ -9508,46 +9115,48 @@ var app__ref2 = Object(preact_min["h"])(time_Time, { path: '/' });
 var app__ref3 = Object(preact_min["h"])(design_Design, { path: '/design' });
 
 var app_App = function (_Component) {
-    app__inherits(App, _Component);
+  app__inherits(App, _Component);
 
-    function App() {
-        var _temp, _this, _ret;
+  function App() {
+    var _temp, _this, _ret;
 
-        app__classCallCheck(this, App);
+    app__classCallCheck(this, App);
 
-        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-            args[_key] = arguments[_key];
-        }
-
-        return _ret = (_temp = (_this = app__possibleConstructorReturn(this, _Component.call.apply(_Component, [this].concat(args))), _this), _this.handleRoute = function (e) {
-            _this.currentUrl = e.url;
-        }, _temp), app__possibleConstructorReturn(_this, _ret);
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
     }
-    /** Gets fired when the route changes.
-     *    @param {Object} event        "change" event from [preact-router](http://git.io/preact-router)
-     *    @param {string} event.url    The newly routed URL
-     */
+
+    return _ret = (_temp = (_this = app__possibleConstructorReturn(this, _Component.call.apply(_Component, [this].concat(args))), _this), _this.handleRoute = function (e) {
+      _this.currentUrl = e.url;
+    }, _temp), app__possibleConstructorReturn(_this, _ret);
+  }
+
+  /** Gets fired when the route changes.
+   *    @param {Object} event        "change" event from [preact-router](http://git.io/preact-router)
+   *    @param {string} event.url    The newly routed URL
+   */
 
 
-    App.prototype.render = function render() {
-        return Object(preact_min["h"])(
-            'div',
-            { id: 'app' },
-            app__ref,
-            Object(preact_min["h"])(
-                preact_router_es["Router"],
-                { onChange: this.handleRoute },
-                app__ref2,
-                app__ref3
-            )
-        );
-    };
+  App.prototype.render = function render() {
+    return Object(preact_min["h"])(
+      'div',
+      { id: 'app' },
+      app__ref,
+      Object(preact_min["h"])(
+        preact_router_es["Router"],
+        { onChange: this.handleRoute },
+        app__ref2,
+        app__ref3
+      )
+    );
+  };
 
-    return App;
+  return App;
 }(preact_min["Component"]);
 
 
 // CONCATENATED MODULE: ./index.js
+/* harmony export (immutable) */ __webpack_exports__["default"] = Main;
 
 
 
@@ -9560,23 +9169,23 @@ var app_App = function (_Component) {
 var index_store = createStore_createStore(reducers_0);
 
 var index__ref = Object(preact_min["h"])(
-    'div',
-    { id: 'outer' },
-    Object(preact_min["h"])(
-        'h1',
-        { id: 'Q' },
-        'Q'
-    ),
-    Object(preact_min["h"])(
-        preact_redux_esm_Provider,
-        { store: index_store },
-        Object(preact_min["h"])(app_App, null)
-    )
+	'div',
+	{ id: 'outer' },
+	Object(preact_min["h"])(
+		'h1',
+		{ id: 'Q' },
+		'Q'
+	),
+	Object(preact_min["h"])(
+		preact_redux_esm_Provider,
+		{ store: index_store },
+		Object(preact_min["h"])(app_App, null)
+	)
 );
 
-/* harmony default export */ var index_0 = __webpack_exports__["default"] = (function () {
-    return index__ref;
-});
+function Main() {
+	return index__ref;
+}
 
 /***/ }),
 
@@ -9780,13 +9389,6 @@ var index__ref = Object(preact_min["h"])(
     }, render: function render() {} });var $ = { h: t, createElement: t, cloneElement: o, Component: T, render: M, rerender: i, options: S }; true ? module.exports = $ : self.preact = $;
 }();
 //# sourceMappingURL=preact.min.js.map
-
-/***/ }),
-
-/***/ "KrYd":
-/***/ (function(module, exports) {
-
-module.exports = require("timers");
 
 /***/ }),
 
@@ -18523,14 +18125,6 @@ module.exports = function (module) {
 
     return el;
 });
-
-/***/ }),
-
-/***/ "nZg4":
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-module.exports = {"horizontal-slider":"horizontal-slider__2vYoy","horizontal-slider--custom-level":"horizontal-slider--custom-level__3nv6m"};
 
 /***/ }),
 
