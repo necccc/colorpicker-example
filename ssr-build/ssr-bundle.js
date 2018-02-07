@@ -7752,6 +7752,8 @@ var hslToCss = function hslToCss(hslArray) {
     return "hsl(" + hue + ", " + sat + "%, " + lum + "%)";
 };
 // CONCATENATED MODULE: ./components/Header/index.js
+var _dec, _class;
+
 
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -7771,19 +7773,6 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 
 
-var mapStateToProps = function mapStateToProps(state, ownProps) {
-
-    var outerColor = state.outerColor;
-    var innerColor = state.innerColor;
-    var time = state.time;
-
-    return {
-        outerColor: outerColor,
-        innerColor: innerColor,
-        time: time
-    };
-};
-
 var Header__ref = Object(preact_min["h"])(
     'nav',
     null,
@@ -7799,16 +7788,16 @@ var Header__ref = Object(preact_min["h"])(
     )
 );
 
-var Header_BaseHeader = function (_Component) {
-    _inherits(BaseHeader, _Component);
+var Header_Header = (_dec = connect(reducers_0, actions_namespaceObject), _dec(_class = function (_Component) {
+    _inherits(Header, _Component);
 
-    function BaseHeader() {
-        _classCallCheck(this, BaseHeader);
+    function Header() {
+        _classCallCheck(this, Header);
 
         return _possibleConstructorReturn(this, _Component.apply(this, arguments));
     }
 
-    BaseHeader.prototype.render = function render() {
+    Header.prototype.render = function render(props) {
         var headerStyle = '\n            background-image:\n            radial-gradient(ellipse at center bottom, hsla(0,0%,13%,0) 0%, hsla(0,0%,13%,.5) 54%, hsla(0,0%,13%,.9)),\n            linear-gradient(to right, ' + hslToCss(this.props.outerColor) + ', ' + hslToCss(this.props.innerColor) + ')';
 
         return Object(preact_min["h"])(
@@ -7818,12 +7807,9 @@ var Header_BaseHeader = function (_Component) {
         );
     };
 
-    return BaseHeader;
-}(preact_min["Component"]);
+    return Header;
+}(preact_min["Component"])) || _class);
 
-var Header = connect(mapStateToProps)(Header_BaseHeader);
-
-/* harmony default export */ var components_Header = (Header);
 // EXTERNAL MODULE: ./components/Dial/style.scss
 var Dial_style = __webpack_require__("XwqH");
 var Dial_style_default = /*#__PURE__*/__webpack_require__.n(Dial_style);
@@ -8428,7 +8414,7 @@ var TimePicker_TimePicker = function (_Component) {
 
 
 // CONCATENATED MODULE: ./routes/time/index.js
-var _dec, _class;
+var time__dec, time__class;
 
 
 
@@ -8445,32 +8431,20 @@ function time__inherits(subClass, superClass) { if (typeof superClass !== "funct
 
 
 
-var time_mapStateToProps = function mapStateToProps(state, ownProps) {
-    var outerColor = state.outerColor;
-    var innerColor = state.innerColor;
-    var time = state.time;
+var time_Time = (time__dec = connect(reducers_0, actions_namespaceObject), time__dec(time__class = function (_Component) {
+    time__inherits(Time, _Component);
 
-    return {
-        outerColor: outerColor,
-        innerColor: innerColor,
-        time: time
-    };
-};
-
-var time_T = (_dec = connect(reducers_0, actions_namespaceObject), _dec(_class = function (_Component) {
-    time__inherits(T, _Component);
-
-    function T() {
-        time__classCallCheck(this, T);
+    function Time() {
+        time__classCallCheck(this, Time);
 
         return time__possibleConstructorReturn(this, _Component.apply(this, arguments));
     }
 
-    T.prototype.setTime = function setTime(time) {
+    Time.prototype.setTime = function setTime(time) {
         this.props.setTime(new Date(time));
     };
 
-    T.prototype.render = function render(_ref, state) {
+    Time.prototype.render = function render(_ref, state) {
         var _this2 = this;
 
         var outerColor = _ref.outerColor,
@@ -8486,12 +8460,9 @@ var time_T = (_dec = connect(reducers_0, actions_namespaceObject), _dec(_class =
         );
     };
 
-    return T;
-}(preact_min["Component"])) || _class);
+    return Time;
+}(preact_min["Component"])) || time__class);
 
-
-var Time = connect(time_mapStateToProps)(time_T);
-/* harmony default export */ var routes_time = (Time);
 // EXTERNAL MODULE: ./components/ColorPicker/style.scss
 var ColorPicker_style = __webpack_require__("SlX7");
 var ColorPicker_style_default = /*#__PURE__*/__webpack_require__.n(ColorPicker_style);
@@ -9144,34 +9115,24 @@ function design__inherits(subClass, superClass) { if (typeof superClass !== "fun
 
 
 
-var design_mapStateToProps = function mapStateToProps(state, ownProps) {
-    var outerColor = state.outerColor;
-    var innerColor = state.innerColor;
+var design_Design = (design__dec = connect(reducers_0, actions_namespaceObject), design__dec(design__class = function (_Component) {
+    design__inherits(Design, _Component);
 
-    return {
-        outerColor: outerColor,
-        innerColor: innerColor
-    };
-};
-
-var design_D = (design__dec = connect(reducers_0, actions_namespaceObject), design__dec(design__class = function (_Component) {
-    design__inherits(D, _Component);
-
-    function D() {
-        design__classCallCheck(this, D);
+    function Design() {
+        design__classCallCheck(this, Design);
 
         return design__possibleConstructorReturn(this, _Component.apply(this, arguments));
     }
 
-    D.prototype.setOuterColor = function setOuterColor(color) {
+    Design.prototype.setOuterColor = function setOuterColor(color) {
         this.props.setOuterColor(color);
     };
 
-    D.prototype.setInnerColor = function setInnerColor(color) {
+    Design.prototype.setInnerColor = function setInnerColor(color) {
         this.props.setInnerColor(color);
     };
 
-    D.prototype.render = function render(_ref, state) {
+    Design.prototype.render = function render(_ref, state) {
         var _this2 = this;
 
         var outerColor = _ref.outerColor,
@@ -9189,12 +9150,9 @@ var design_D = (design__dec = connect(reducers_0, actions_namespaceObject), desi
         );
     };
 
-    return D;
+    return Design;
 }(preact_min["Component"])) || design__class);
 
-
-var Design = connect(design_mapStateToProps)(design_D);
-/* harmony default export */ var design = (Design);
 // EXTERNAL MODULE: ./routes/dial/style.scss
 var dial_style = __webpack_require__("HU6w");
 var dial_style_default = /*#__PURE__*/__webpack_require__.n(dial_style);
@@ -9543,13 +9501,11 @@ function app__inherits(subClass, superClass) { if (typeof superClass !== "functi
 // import Home from 'async!../routes/home';
 // import Profile from 'async!../routes/profile';
 
-var app__ref = Object(preact_min["h"])(components_Header, { bgColor: '#673AB7' });
+var app__ref = Object(preact_min["h"])(Header_Header, { bgColor: '#673AB7' });
 
-var app__ref2 = Object(preact_min["h"])(routes_time, { path: '/' });
+var app__ref2 = Object(preact_min["h"])(time_Time, { path: '/' });
 
-var app__ref3 = Object(preact_min["h"])(design, { path: '/design' });
-
-var _ref4 = Object(preact_min["h"])(dial_DialPage, { path: '/dial' });
+var app__ref3 = Object(preact_min["h"])(design_Design, { path: '/design' });
 
 var app_App = function (_Component) {
     app__inherits(App, _Component);
@@ -9582,8 +9538,7 @@ var app_App = function (_Component) {
                 preact_router_es["Router"],
                 { onChange: this.handleRoute },
                 app__ref2,
-                app__ref3,
-                _ref4
+                app__ref3
             )
         );
     };
@@ -11154,7 +11109,7 @@ module.exports = require("timers");
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
-module.exports = {"colorpicker":"colorpicker__qUf75","spectrum":"spectrum__IohIt","spectrum__selector":"spectrum__selector__3xKOt","spectrum-circle":"spectrum-circle__3qLt4","spectrum-circle__inner":"spectrum-circle__inner__17rq6","spectrum-circle__color":"spectrum-circle__color__3ivUd","spectrum-circle__decoration":"spectrum-circle__decoration__EzAQn","spectrum-circle__decoration--mark":"spectrum-circle__decoration--mark__py6ik","spectrum-circle__decoration--secondary":"spectrum-circle__decoration--secondary__2ZQou","spectrum-circle__decoration--primary":"spectrum-circle__decoration--primary__1XPW1","colorpicker__luminosity":"colorpicker__luminosity__1tf6l","colorpicker__saturation":"colorpicker__saturation__R3PX8","colorpicker__luminosity-level":"colorpicker__luminosity-level__2euTD","colorpicker__saturation-level":"colorpicker__saturation-level__1EspR","dot":"dot__3KQTL","dot2":"dot2__2OL3a"};
+module.exports = {"colorpicker":"colorpicker__qUf75","spectrum":"spectrum__IohIt","spectrum__selector":"spectrum__selector__3xKOt","spectrum-circle":"spectrum-circle__3qLt4","spectrum-circle__inner":"spectrum-circle__inner__17rq6","spectrum-circle__color":"spectrum-circle__color__3ivUd","spectrum-circle__decoration":"spectrum-circle__decoration__EzAQn","spectrum-circle__decoration--mark":"spectrum-circle__decoration--mark__py6ik","spectrum-circle__decoration--secondary":"spectrum-circle__decoration--secondary__2ZQou","spectrum-circle__decoration--primary":"spectrum-circle__decoration--primary__1XPW1","colorpicker__luminosity":"colorpicker__luminosity__1tf6l","colorpicker__saturation":"colorpicker__saturation__R3PX8","colorpicker__luminosity-level":"colorpicker__luminosity-level__2euTD","colorpicker__saturation-level":"colorpicker__saturation-level__1EspR"};
 
 /***/ }),
 
