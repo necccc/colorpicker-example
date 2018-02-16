@@ -66,8 +66,47 @@ module.exports =
 /************************************************************************/
 /******/ ({
 
+/***/ "+iwg":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+/** Used for built-in method references. */
+var objectProto = Object.prototype;
+
+/**
+ * Used to resolve the
+ * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
+ * of values.
+ */
+var nativeObjectToString = objectProto.toString;
+
+/**
+ * Converts `value` to a string using `Object.prototype.toString`.
+ *
+ * @private
+ * @param {*} value The value to convert.
+ * @returns {string} Returns the converted string.
+ */
+function objectToString(value) {
+  return nativeObjectToString.call(value);
+}
+
+exports.default = objectToString;
+
+/***/ }),
+
 /***/ "/7ul":
 /***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 //! moment.js locale configuration
 //! locale : Welsh [cy]
@@ -75,8 +114,11 @@ module.exports =
 //! author : https://github.com/ryangreaves
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var cy = moment.defineLocale('cy', {
@@ -152,14 +194,22 @@ module.exports =
 /***/ "/DQ9":
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 //! moment.js locale configuration
 //! locale : Marathi [mr]
 //! author : Harshad Kale : https://github.com/kalehv
 //! author : Vivek Athalye : https://github.com/vnathalye
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var symbolMap = {
@@ -338,13 +388,21 @@ module.exports =
 /***/ "/Hq7":
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 //! moment.js locale configuration
 //! locale : Swedish [sv]
 //! author : Jens Alm : https://github.com/ulmus
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var sv = moment.defineLocale('sv', {
@@ -405,19 +463,17 @@ module.exports =
 /***/ }),
 
 /***/ "/QC5":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "subscribers", function() { return subscribers; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getCurrentUrl", function() { return getCurrentUrl; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "route", function() { return route; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Router", function() { return Router; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Route", function() { return Route; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Link", function() { return Link; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_preact__ = __webpack_require__("KM04");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_preact___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_preact__);
 
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+exports.Link = exports.Route = exports.Router = exports.route = exports.getCurrentUrl = exports.subscribers = undefined;
+
+var _preact = __webpack_require__("KM04");
 
 var EMPTY$1 = {};
 
@@ -732,7 +788,7 @@ var Router = function (Component$$1) {
 					assign(newProps, matches);
 					delete newProps.ref;
 					delete newProps.key;
-					return Object(__WEBPACK_IMPORTED_MODULE_0_preact__["cloneElement"])(vnode, newProps);
+					return (0, _preact.cloneElement)(vnode, newProps);
 				}
 				return vnode;
 			}
@@ -767,14 +823,14 @@ var Router = function (Component$$1) {
 	};
 
 	return Router;
-}(__WEBPACK_IMPORTED_MODULE_0_preact__["Component"]);
+}(_preact.Component);
 
 var Link = function Link(props) {
-	return Object(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])('a', assign({ onClick: handleLinkClick }, props));
+	return (0, _preact.h)('a', assign({ onClick: handleLinkClick }, props));
 };
 
 var Route = function Route(props) {
-	return Object(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(props.component, props);
+	return (0, _preact.h)(props.component, props);
 };
 
 Router.subscribers = subscribers;
@@ -784,13 +840,24 @@ Router.Router = Router;
 Router.Route = Route;
 Router.Link = Link;
 
-/* harmony default export */ __webpack_exports__["default"] = (Router);
+exports.subscribers = subscribers;
+exports.getCurrentUrl = getCurrentUrl;
+exports.route = route;
+exports.Router = Router;
+exports.Route = Route;
+exports.Link = Link;
+exports.default = Router;
 //# sourceMappingURL=preact-router.es.js.map
 
 /***/ }),
 
 /***/ "0M7C":
 /***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 //! moment.js locale configuration
 //! locale : Albanian [sq]
@@ -799,8 +866,11 @@ Router.Link = Link;
 //! author : Oerd Cukalla : https://github.com/oerd
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var sq = moment.defineLocale('sq', {
@@ -865,13 +935,21 @@ Router.Link = Link;
 /***/ "0u/o":
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 //! moment.js locale configuration
 //! locale : Cambodian [km]
 //! author : Kruy Vanna : https://github.com/kruyvanna
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var km = moment.defineLocale('km', {
@@ -926,14 +1004,22 @@ Router.Link = Link;
 /***/ "10bh":
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 //! moment.js locale configuration
 //! locale : Chinese (China) [zh-cn]
 //! author : suupic : https://github.com/suupic
 //! author : Zeno Zeng : https://github.com/zenozeng
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var zhCn = moment.defineLocale('zh-cn', {
@@ -1039,14 +1125,22 @@ Router.Link = Link;
 /***/ "120n":
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 //! moment.js locale configuration
 //! locale : Urdu [ur]
 //! author : Sawood Alam : https://github.com/ibnesayeed
 //! author : Zack : https://github.com/ZackVision
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var months = ['جنوری', 'فروری', 'مارچ', 'اپریل', 'مئی', 'جون', 'جولائی', 'اگست', 'ستمبر', 'اکتوبر', 'نومبر', 'دسمبر'];
@@ -1117,16 +1211,116 @@ Router.Link = Link;
 
 /***/ }),
 
+/***/ "14kT":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var API_HOST = 'http://0.0.0.0:9090';
+
+var PUT_RATELIMIT = 30;
+var rateLimit = 0;
+
+var API_GET = exports.API_GET = 'API_GET';
+var API_PUT = exports.API_PUT = 'API_PUT';
+
+var apiCall = function apiCall(request) {
+    return fetch(request).then(function (response) {
+        if (response) return response.json();
+        return {};
+    });
+};
+
+exports.default = function (store) {
+    return function (next) {
+        return function (action) {
+
+            var put = action[API_PUT];
+            var get = action[API_GET];
+
+            if (put) {
+                var endPoint = put.endPoint,
+                    actions = put.actions,
+                    dataKey = put.dataKey;
+
+                var data = _defineProperty({}, dataKey, action[dataKey]);
+
+                var _actions = _slicedToArray(actions, 3),
+                    startRequest = _actions[0],
+                    success = _actions[1],
+                    failure = _actions[2];
+
+                if (startRequest) {
+                    next(startRequest());
+                }
+
+                clearTimeout(rateLimit);
+                rateLimit = setTimeout(function () {
+                    var request = new Request(API_HOST + endPoint, { method: 'PUT', body: JSON.stringify(data) });
+                    apiCall(request).then(function (data) {
+                        return next(success(data));
+                    }).catch(function (error) {
+                        return next(failure(error));
+                    });
+                }, PUT_RATELIMIT);
+            }
+
+            if (get) {
+                var _endPoint = get.endPoint,
+                    _actions2 = get.actions;
+
+                var _actions3 = _slicedToArray(_actions2, 3),
+                    _startRequest = _actions3[0],
+                    _success = _actions3[1],
+                    _failure = _actions3[2];
+
+                if (_startRequest) {
+                    next(_startRequest());
+                }
+
+                var request = new Request(API_HOST + _endPoint, { method: 'GET' });
+
+                return apiCall(request).then(function (data) {
+                    return next(_success(data));
+                }).catch(function (error) {
+                    return next(_failure(error));
+                });
+            }
+
+            return next(action);
+        };
+    };
+};
+
+/***/ }),
+
 /***/ "1PI3":
 /***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 //! moment.js locale configuration
 //! locale : Thai [th]
 //! author : Kridsada Thanabulpong : https://github.com/sirn
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var th = moment.defineLocale('th', {
@@ -1190,13 +1384,21 @@ Router.Link = Link;
 /***/ "1YXd":
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 //! moment.js locale configuration
 //! locale : Croatian [hr]
 //! author : Bojan Marković : https://github.com/bmarkovic
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     function translate(number, withoutSuffix, key) {
@@ -1344,16 +1546,221 @@ Router.Link = Link;
 
 /***/ }),
 
+/***/ "1cxe":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+exports.default = undefined;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _preact = __webpack_require__("KM04");
+
+var _style = __webpack_require__("SlX7");
+
+var _style2 = _interopRequireDefault(_style);
+
+var _VerticalSlider = __webpack_require__("4DzJ");
+
+var _VerticalSlider2 = _interopRequireDefault(_VerticalSlider);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Saturation = function (_Component) {
+	_inherits(Saturation, _Component);
+
+	function Saturation() {
+		_classCallCheck(this, Saturation);
+
+		return _possibleConstructorReturn(this, (Saturation.__proto__ || Object.getPrototypeOf(Saturation)).apply(this, arguments));
+	}
+
+	_createClass(Saturation, [{
+		key: 'updateSaturation',
+		value: function updateSaturation(saturation) {
+			this.props.onChange(saturation);
+		}
+	}, {
+		key: 'render',
+		value: function render(_ref, state) {
+			var _this2 = this;
+
+			var hue = _ref.hue,
+			    value = _ref.value;
+
+			var gradient = 'background-image: linear-gradient(hsl(' + hue + ', 100%, 50%), hsl(' + hue + ', 0%, 50%));';
+
+			return (0, _preact.h)(
+				'div',
+				{ 'class': _style2.default.colorpicker__saturation, style: gradient },
+				(0, _preact.h)(
+					_VerticalSlider2.default,
+					{
+						onChange: function onChange(e) {
+							return _this2.updateSaturation(e);
+						},
+						value: value,
+						customLevel: _style2.default['colorpicker__saturation-level']
+					},
+					(0, _preact.h)('div', { 'class': _style2.default['colorpicker__saturation-level'] })
+				)
+			);
+		}
+	}]);
+
+	return Saturation;
+}(_preact.Component);
+
+exports.default = Saturation;
+
+/***/ }),
+
+/***/ "2+yi":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = undefined;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _preact = __webpack_require__("KM04");
+
+var _style = __webpack_require__("qSHC");
+
+var _style2 = _interopRequireDefault(_style);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Toggle = function (_Component) {
+    _inherits(Toggle, _Component);
+
+    function Toggle() {
+        _classCallCheck(this, Toggle);
+
+        return _possibleConstructorReturn(this, (Toggle.__proto__ || Object.getPrototypeOf(Toggle)).apply(this, arguments));
+    }
+
+    _createClass(Toggle, [{
+        key: 'componentWillMount',
+        value: function componentWillMount() {
+
+            var id = this.props.id || Math.round(Math.random() * 99999).toString(16);
+            var active = this.props.active;
+            this.setState({
+                active: active,
+                id: id
+            });
+        }
+    }, {
+        key: 'toggle',
+        value: function toggle(e) {
+            this.props.onChange(e.currentTarget.checked);
+        }
+    }, {
+        key: 'render',
+        value: function render(props, _ref) {
+            var _this2 = this;
+
+            var id = _ref.id,
+                active = _ref.active;
+
+
+            var className = [props.class, _style2.default['toggle']].join(' ');
+
+            return (0, _preact.h)(
+                'div',
+                { 'class': className },
+                (0, _preact.h)('input', { type: 'checkbox', id: id, onChange: function onChange(e) {
+                        return _this2.toggle(e);
+                    }, checked: active }),
+                (0, _preact.h)('label', { 'for': id })
+            );
+        }
+    }]);
+
+    return Toggle;
+}(_preact.Component);
+
+exports.default = Toggle;
+
+/***/ }),
+
+/***/ "2D3x":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _redux = __webpack_require__("fpuT");
+
+var _colors = __webpack_require__("xdjd");
+
+var _colors2 = _interopRequireDefault(_colors);
+
+var _time = __webpack_require__("EFwr");
+
+var _time2 = _interopRequireDefault(_time);
+
+var _dim = __webpack_require__("Crlo");
+
+var _dim2 = _interopRequireDefault(_dim);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var rootReducer = (0, _redux.combineReducers)({
+    colors: _colors2.default,
+    time: _time2.default,
+    dim: _dim2.default
+});
+
+exports.default = rootReducer;
+
+/***/ }),
+
 /***/ "2HIi":
 /***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 //! moment.js locale configuration
 //! locale : Yoruba Nigeria [yo]
 //! author : Atolagbe Abisoye : https://github.com/andela-batolagbe
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var yo = moment.defineLocale('yo', {
@@ -1410,13 +1817,21 @@ Router.Link = Link;
 /***/ "2OKG":
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 //! moment.js locale configuration
 //! locale : Sinhalese [si]
 //! author : Sampath Sitinamaluwa : https://github.com/sampathsris
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     /*jshint -W100*/
@@ -1485,13 +1900,21 @@ Router.Link = Link;
 /***/ "2fG9":
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 //! moment.js locale configuration
 //! locale : Central Atlas Tamazight Latin [tzm-latn]
 //! author : Abdel Said : https://github.com/abdelsaid
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var tzmLatn = moment.defineLocale('tzm-latn', {
@@ -1546,13 +1969,21 @@ Router.Link = Link;
 /***/ "2i0N":
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 //! moment.js locale configuration
 //! locale : Uzbek [uz]
 //! author : Sardor Muminov : https://github.com/muminoff
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var uz = moment.defineLocale('uz', {
@@ -1607,13 +2038,21 @@ Router.Link = Link;
 /***/ "3IRi":
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 //! moment.js locale configuration
 //! locale : Bengali [bn]
 //! author : Kaushik Gandhi : https://github.com/kaushikgandhi
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var symbolMap = {
@@ -1727,13 +2166,21 @@ Router.Link = Link;
 /***/ "3N6g":
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 //! moment.js locale configuration
 //! locale : French [fr]
 //! author : John Fischer : https://github.com/jfroffice
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var fr = moment.defineLocale('fr', {
@@ -1813,13 +2260,21 @@ Router.Link = Link;
 /***/ "3QCB":
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 //! moment.js locale configuration
 //! locale : Faroese [fo]
 //! author : Ragnar Johannesen : https://github.com/ragnar123
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var fo = moment.defineLocale('fo', {
@@ -1876,6 +2331,11 @@ Router.Link = Link;
 /***/ "3n5M":
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 //! moment.js locale configuration
 //! locale : Esperanto [eo]
 //! author : Colin Dean : https://github.com/colindean
@@ -1883,8 +2343,11 @@ Router.Link = Link;
 //! comment : miestasmia corrected the translation by colindean
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var eo = moment.defineLocale('eo', {
@@ -1952,6 +2415,11 @@ Router.Link = Link;
 /***/ "45iH":
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 //! moment.js locale configuration
 //! locale : Arabic [ar]
 //! author : Abdel Said: https://github.com/abdelsaid
@@ -1959,8 +2427,11 @@ Router.Link = Link;
 //! author : forabi https://github.com/forabi
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var symbolMap = {
@@ -2081,16 +2552,263 @@ Router.Link = Link;
 
 /***/ }),
 
+/***/ "4DzJ":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = undefined;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _preact = __webpack_require__("KM04");
+
+var _style = __webpack_require__("igvm");
+
+var _style2 = _interopRequireDefault(_style);
+
+var _tools = __webpack_require__("sEgX");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var VerticalSlider = function (_Component) {
+    _inherits(VerticalSlider, _Component);
+
+    function VerticalSlider() {
+        _classCallCheck(this, VerticalSlider);
+
+        return _possibleConstructorReturn(this, (VerticalSlider.__proto__ || Object.getPrototypeOf(VerticalSlider)).apply(this, arguments));
+    }
+
+    _createClass(VerticalSlider, [{
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            this.setLevel(this.percentToLevel(this.props.value));
+        }
+    }, {
+        key: 'shouldComponentUpdate',
+        value: function shouldComponentUpdate(_ref, nextState) {
+            var value = _ref.value;
+
+            if (this.state.selecting) return false;
+
+            var oldValue = this.props.value;
+
+            if (oldValue !== value) {
+                this.setLevel(this.percentToLevel(value));
+                return false;
+            }
+
+            return true;
+        }
+    }, {
+        key: 'percentToLevel',
+        value: function percentToLevel(percent) {
+            var _container$getBoundin = this.container.getBoundingClientRect(),
+                height = _container$getBoundin.height;
+
+            return height - percent / 100 * height;
+        }
+    }, {
+        key: 'updateValue',
+        value: function updateValue(value, height) {
+            var percentage = 100 - Math.floor(value / height * 100);
+            this.props.onChange(percentage);
+        }
+    }, {
+        key: 'updateLevel',
+        value: function updateLevel(event, callback) {
+            var _this2 = this;
+
+            var _event$currentTarget$ = event.currentTarget.getBoundingClientRect(),
+                height = _event$currentTarget$.height;
+
+            (0, _tools.getVerticalSliderLevel)(event, function (value) {
+                _this2.updateValue(value, height);
+                callback(value);
+            });
+        }
+    }, {
+        key: 'setLevel',
+        value: function setLevel(level) {
+            if (level === this.state.level) return;
+
+            if (this.props.customLevel) {
+                this.container.querySelector('.' + this.props.customLevel).style.setProperty('--slideLevel', level + 'px');
+            } else {
+                this.container.style.setProperty('--slideLevel', level + 'px');
+            }
+
+            // TODO onresize
+
+            this.setState({
+                level: level
+            });
+        }
+    }, {
+        key: 'selectStart',
+        value: function selectStart(e) {
+            var _this3 = this;
+
+            if (this.props.disabled) return;
+
+            e.preventDefault();
+            this.setState({
+                selecting: true
+            });
+            this.updateLevel(event, function (level) {
+                return _this3.setLevel(level);
+            });
+        }
+    }, {
+        key: 'selecting',
+        value: function selecting(event) {
+            var _this4 = this;
+
+            if (this.props.disabled) return;
+
+            event.preventDefault();
+
+            if (!this.state.selecting) return;
+
+            this.updateLevel(event, function (level) {
+                return _this4.setLevel(level);
+            });
+        }
+    }, {
+        key: 'clicked',
+        value: function clicked(event) {
+            var _this5 = this;
+
+            if (this.props.disabled) return;
+
+            event.preventDefault();
+            this.updateLevel(event, function (level) {
+                return _this5.setLevel(level);
+            });
+        }
+    }, {
+        key: 'selectEnd',
+        value: function selectEnd(e) {
+            if (this.props.disabled) return;
+
+            e.preventDefault();
+            this.setState({
+                selecting: false
+            });
+        }
+    }, {
+        key: 'render',
+        value: function render(props, state) {
+            var _this6 = this;
+
+            var className = [props.className, _style2.default['vertical-slider']];
+
+            if (props.customLevel) className.push(_style2.default['vertical-slider--custom-level']);
+
+            return (0, _preact.h)(
+                'div',
+                {
+                    disabled: props.disabled,
+                    ref: function ref(element) {
+                        _this6.container = element;
+                    },
+                    'class': className.join(' '),
+                    style: props.style,
+                    onClick: function onClick(e) {
+                        return _this6.clicked(e);
+                    },
+                    onMouseDown: function onMouseDown(e) {
+                        return _this6.selectStart(e);
+                    },
+                    onTouchStart: function onTouchStart(e) {
+                        return _this6.selectStart(e);
+                    },
+                    onMouseMove: function onMouseMove(e) {
+                        return _this6.selecting(e);
+                    },
+                    onTouchMove: function onTouchMove(e) {
+                        return _this6.selecting(e);
+                    },
+                    onMouseUp: function onMouseUp(e) {
+                        return _this6.selectEnd(e);
+                    },
+                    onTouchEnd: function onTouchEnd(e) {
+                        return _this6.selectEnd(e);
+                    }
+                },
+                props.children
+            );
+        }
+    }]);
+
+    return VerticalSlider;
+}(_preact.Component);
+
+exports.default = VerticalSlider;
+
+/***/ }),
+
+/***/ "4NOc":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _redux = __webpack_require__("fpuT");
+
+var _reduxThunk = __webpack_require__("i/8a");
+
+var _reduxThunk2 = _interopRequireDefault(_reduxThunk);
+
+var _api = __webpack_require__("14kT");
+
+var _api2 = _interopRequireDefault(_api);
+
+var _reducers = __webpack_require__("2D3x");
+
+var _reducers2 = _interopRequireDefault(_reducers);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var store = (0, _redux.createStore)(_reducers2.default, (0, _redux.applyMiddleware)(_reduxThunk2.default, _api2.default));
+
+exports.default = store;
+
+/***/ }),
+
 /***/ "4X90":
 /***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 //! moment.js locale configuration
 //! locale : English (Canada) [en-ca]
 //! author : Jonathan Abourbih : https://github.com/jonbca
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var enCa = moment.defineLocale('en-ca', {
@@ -2144,16 +2862,183 @@ Router.Link = Link;
 
 /***/ }),
 
+/***/ "4xuc":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+exports.default = undefined;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _preact = __webpack_require__("KM04");
+
+var _moment = __webpack_require__("a2/B");
+
+var _moment2 = _interopRequireDefault(_moment);
+
+var _style = __webpack_require__("v+8J");
+
+var _style2 = _interopRequireDefault(_style);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var isArrowDown = function isArrowDown(e) {
+	var type = e.type,
+	    key = e.key;
+
+	return type === 'keydown' && key === 'ArrowDown';
+};
+
+var isArrowUp = function isArrowUp(e) {
+	var type = e.type,
+	    key = e.key;
+
+	return type === 'keydown' && key === 'ArrowUp';
+};
+
+var isChange = function isChange(e) {
+	var type = e.type;
+
+	return type === 'change';
+};
+
+var _ref2 = (0, _preact.h)(
+	'span',
+	null,
+	':'
+);
+
+var TimeInput = function (_Component) {
+	_inherits(TimeInput, _Component);
+
+	function TimeInput() {
+		_classCallCheck(this, TimeInput);
+
+		return _possibleConstructorReturn(this, (TimeInput.__proto__ || Object.getPrototypeOf(TimeInput)).apply(this, arguments));
+	}
+
+	_createClass(TimeInput, [{
+		key: 'updateTime',
+		value: function updateTime(time) {
+			this.props.onChange(time);
+		}
+	}, {
+		key: 'onMinuteUpdate',
+		value: function onMinuteUpdate(e) {
+
+			var value = parseInt(e.target.value, 10);
+
+			if (isArrowUp(e) && value + 1 < 60) {
+				this.updateTime(this.props.time.setMinutes(value + 1));
+			} else if (isArrowUp(e)) {
+				this.updateTime(this.props.time.setMinutes(0));
+			}
+
+			if (isArrowDown(e) && value - 1 >= 0) {
+				this.updateTime(this.props.time.setMinutes(value - 1));
+			} else if (isArrowDown(e)) {
+				this.updateTime(this.props.time.setMinutes(59));
+			}
+
+			if (isChange(e) && (value < 60 || value > 0)) {
+				this.updateTime(this.props.time.setMinutes(value));
+			}
+		}
+	}, {
+		key: 'onHourUpdate',
+		value: function onHourUpdate(e) {
+
+			var value = parseInt(e.target.value, 10);
+
+			if (isArrowUp(e) && value + 1 < 12) {
+				this.updateTime(this.props.time.setHours(value + 1));
+			} else if (isArrowUp(e)) {
+				this.updateTime(this.props.time.setHours(0));
+			}
+
+			if (isArrowDown(e) && value - 1 >= 0) {
+				this.updateTime(this.props.time.setHours(value - 1));
+			} else if (isArrowDown(e)) {
+				this.updateTime(this.props.time.setHours(11));
+			}
+
+			if (isChange(e) && (value < 12 || value > 0)) {
+				this.updateTime(this.props.time.setHours(value));
+			}
+		}
+	}, {
+		key: 'render',
+		value: function render(_ref, state) {
+			var _this2 = this;
+
+			var time = _ref.time;
+
+
+			var hour = (0, _moment2.default)(time).format('HH');
+			var minute = (0, _moment2.default)(time).format('mm');
+
+			return (0, _preact.h)(
+				'div',
+				{ 'class': _style2.default['time-selector__input'] },
+				(0, _preact.h)('input', {
+					type: 'text', min: '1', max: '12', steps: '1', value: hour,
+					onChange: function onChange(e) {
+						return _this2.onHourUpdate(e);
+					},
+					onKeyDown: function onKeyDown(e) {
+						return _this2.onHourUpdate(e);
+					}
+				}),
+				_ref2,
+				(0, _preact.h)('input', {
+					type: 'text', min: '0', max: '59', steps: '1', value: minute,
+					onChange: function onChange(e) {
+						return _this2.onMinuteUpdate(e);
+					},
+					onKeyDown: function onKeyDown(e) {
+						return _this2.onMinuteUpdate(e);
+					}
+				})
+			);
+		}
+	}]);
+
+	return TimeInput;
+}(_preact.Component);
+
+exports.default = TimeInput;
+
+/***/ }),
+
 /***/ "6Ie+":
 /***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 //! moment.js locale configuration
 //! locale : Arabic (Saudi Arabia) [ar-sa]
 //! author : Suhail Alkowaileet : https://github.com/xsoh
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var symbolMap = {
@@ -2255,14 +3140,22 @@ Router.Link = Link;
 /***/ "6W3o":
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 //! moment.js locale configuration
 //! locale : Dutch [nl]
 //! author : Joris Röling : https://github.com/jorisroling
 //! author : Jacob Middag : https://github.com/middagj
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var monthsShortWithDots = 'jan._feb._mrt._apr._mei_jun._jul._aug._sep._okt._nov._dec.'.split('_');
@@ -2343,16 +3236,121 @@ Router.Link = Link;
 
 /***/ }),
 
+/***/ "6X+5":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.GET_COLORS_FAILURE = exports.GET_COLORS_SUCCESS = exports.GET_COLORS_REQUEST = exports.GET_COLORS = exports.PUT_COLORS_FAILURE = exports.PUT_COLORS_SUCCESS = exports.PUT_COLORS_REQUEST = exports.SET_COLORS = undefined;
+exports.getColorsRequest = getColorsRequest;
+exports.getColorsSuccess = getColorsSuccess;
+exports.getColorsFailure = getColorsFailure;
+exports.getColors = getColors;
+exports.putColorsRequest = putColorsRequest;
+exports.putColorsSuccess = putColorsSuccess;
+exports.putColorsFailure = putColorsFailure;
+exports.setColors = setColors;
+
+var _api = __webpack_require__("14kT");
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var COLORS_API_URL = '/api/colors';
+
+var SET_COLORS = exports.SET_COLORS = 'SET_COLORS';
+var PUT_COLORS_REQUEST = exports.PUT_COLORS_REQUEST = 'PUT_COLORS_REQUEST';
+var PUT_COLORS_SUCCESS = exports.PUT_COLORS_SUCCESS = 'PUT_COLORS_SUCCESS';
+var PUT_COLORS_FAILURE = exports.PUT_COLORS_FAILURE = 'PUT_COLORS_FAILURE';
+var GET_COLORS = exports.GET_COLORS = 'GET_COLORS';
+var GET_COLORS_REQUEST = exports.GET_COLORS_REQUEST = 'GET_COLORS_REQUEST';
+var GET_COLORS_SUCCESS = exports.GET_COLORS_SUCCESS = 'GET_COLORS_SUCCESS';
+var GET_COLORS_FAILURE = exports.GET_COLORS_FAILURE = 'GET_COLORS_FAILURE';
+
+function getColorsRequest() {
+    return {
+        type: GET_COLORS_REQUEST
+    };
+}
+
+function getColorsSuccess(json) {
+    return {
+        type: GET_COLORS_SUCCESS,
+        colors: json.colors,
+        receivedAt: Date.now()
+    };
+}
+
+function getColorsFailure(error) {
+    console.error(error);
+    return {
+        type: GET_COLORS_FAILURE,
+        receivedAt: Date.now()
+    };
+}
+
+function getColors() {
+    return _defineProperty({
+        type: GET_COLORS
+    }, _api.API_GET, {
+        actions: [getColorsRequest, getColorsSuccess, getColorsFailure],
+        endPoint: COLORS_API_URL
+    });
+}
+
+function putColorsRequest() {
+    return {
+        type: PUT_COLORS_REQUEST
+    };
+}
+
+function putColorsSuccess() {
+    return {
+        type: PUT_COLORS_SUCCESS
+    };
+}
+
+function putColorsFailure(error) {
+    console.error(error);
+    return {
+        type: PUT_COLORS_FAILURE
+    };
+}
+
+function setColors(colors) {
+    return _defineProperty({
+        type: SET_COLORS,
+        colors: colors
+    }, _api.API_PUT, {
+        dataKey: 'colors',
+        actions: [putColorsRequest, putColorsSuccess, putColorsFailure],
+        endPoint: COLORS_API_URL
+    });
+}
+
+/***/ }),
+
 /***/ "6Xgp":
 /***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 //! moment.js locale configuration
 //! locale : Hungarian [hu]
 //! author : Adam Brunner : https://github.com/adambrunner
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var weekEndings = 'vasárnap hétfőn kedden szerdán csütörtökön pénteken szombaton'.split(' ');
@@ -2459,13 +3457,21 @@ Router.Link = Link;
 /***/ "6rrj":
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 //! moment.js locale configuration
 //! locale : Nynorsk [nn]
 //! author : https://github.com/mechuwind
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var nn = moment.defineLocale('nn', {
@@ -2522,13 +3528,21 @@ Router.Link = Link;
 /***/ "73tf":
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 //! moment.js locale configuration
 //! locale : siSwati [ss]
 //! author : Nicolai Davies<mail@nicolai.io> : https://github.com/nicolaidavies
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var ss = moment.defineLocale('ss', {
@@ -2613,13 +3627,21 @@ Router.Link = Link;
 /***/ "7DU0":
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 //! moment.js locale configuration
 //! locale : Lithuanian [lt]
 //! author : Mindaugas Mozūras : https://github.com/mmozuras
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var units = {
@@ -2731,16 +3753,48 @@ Router.Link = Link;
 
 /***/ }),
 
+/***/ "7I26":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
+
+exports.hslToCss = hslToCss;
+function hslToCss(hslArray) {
+	var _hslArray = _slicedToArray(hslArray, 3),
+	    hue = _hslArray[0],
+	    sat = _hslArray[1],
+	    lum = _hslArray[2];
+
+	return "hsl(" + hue + ", " + sat + "%, " + lum + "%)";
+}
+
+/***/ }),
+
 /***/ "7Tmb":
 /***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 //! moment.js locale configuration
 //! locale : Scottish Gaelic [gd]
 //! author : Jon Ashdown : https://github.com/jonashdown
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var months = ['Am Faoilleach', 'An Gearran', 'Am Màrt', 'An Giblean', 'An Cèitean', 'An t-Ògmhios', 'An t-Iuchar', 'An Lùnastal', 'An t-Sultain', 'An Dàmhair', 'An t-Samhain', 'An Dùbhlachd'];
@@ -2811,6 +3865,11 @@ Router.Link = Link;
 /***/ "7WWl":
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 //! moment.js locale configuration
 //! locale : Russian [ru]
 //! author : Viktorminator : https://github.com/Viktorminator
@@ -2818,8 +3877,11 @@ Router.Link = Link;
 //! author : Коренберг Марк : https://github.com/socketpair
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     function plural(word, num) {
@@ -2998,13 +4060,21 @@ Router.Link = Link;
 /***/ "83Hi":
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 //! moment.js locale configuration
 //! locale : Malayalam [ml]
 //! author : Floyd Pink : https://github.com/floydpink
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var ml = moment.defineLocale('ml', {
@@ -3080,13 +4150,21 @@ Router.Link = Link;
 /***/ "8Cm+":
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 //! moment.js locale configuration
 //! locale : English (Ireland) [en-ie]
 //! author : Chris Cartlidge : https://github.com/chriscartlidge
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var enIe = moment.defineLocale('en-ie', {
@@ -3147,14 +4225,22 @@ Router.Link = Link;
 /***/ "8SXr":
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 //! moment.js locale configuration
 //! locale : Latvian [lv]
 //! author : Kristaps Karlsons : https://github.com/skakri
 //! author : Jānis Elmeris : https://github.com/JanisE
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var units = {
@@ -3248,14 +4334,22 @@ Router.Link = Link;
 /***/ "9MFc":
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 //! moment.js locale configuration
 //! locale : Turkish [tr]
 //! authors : Erhan Gundogan : https://github.com/erhangundogan,
 //!           Burak Yiğit Kaya: https://github.com/BYK
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var suffixes = {
@@ -3339,16 +4433,108 @@ Router.Link = Link;
 
 /***/ }),
 
+/***/ "9TS5":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _baseGetTag = __webpack_require__("svpX");
+
+var _baseGetTag2 = _interopRequireDefault(_baseGetTag);
+
+var _getPrototype = __webpack_require__("CtKb");
+
+var _getPrototype2 = _interopRequireDefault(_getPrototype);
+
+var _isObjectLike = __webpack_require__("UKR9");
+
+var _isObjectLike2 = _interopRequireDefault(_isObjectLike);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/** `Object#toString` result references. */
+var objectTag = '[object Object]';
+
+/** Used for built-in method references. */
+var funcProto = Function.prototype,
+    objectProto = Object.prototype;
+
+/** Used to resolve the decompiled source of functions. */
+var funcToString = funcProto.toString;
+
+/** Used to check objects for own properties. */
+var hasOwnProperty = objectProto.hasOwnProperty;
+
+/** Used to infer the `Object` constructor. */
+var objectCtorString = funcToString.call(Object);
+
+/**
+ * Checks if `value` is a plain object, that is, an object created by the
+ * `Object` constructor or one with a `[[Prototype]]` of `null`.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.8.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a plain object, else `false`.
+ * @example
+ *
+ * function Foo() {
+ *   this.a = 1;
+ * }
+ *
+ * _.isPlainObject(new Foo);
+ * // => false
+ *
+ * _.isPlainObject([1, 2, 3]);
+ * // => false
+ *
+ * _.isPlainObject({ 'x': 0, 'y': 0 });
+ * // => true
+ *
+ * _.isPlainObject(Object.create(null));
+ * // => true
+ */
+function isPlainObject(value) {
+  if (!(0, _isObjectLike2.default)(value) || (0, _baseGetTag2.default)(value) != objectTag) {
+    return false;
+  }
+  var proto = (0, _getPrototype2.default)(value);
+  if (proto === null) {
+    return true;
+  }
+  var Ctor = hasOwnProperty.call(proto, 'constructor') && proto.constructor;
+  return typeof Ctor == 'function' && Ctor instanceof Ctor && funcToString.call(Ctor) == objectCtorString;
+}
+
+exports.default = isPlainObject;
+
+/***/ }),
+
 /***/ "9qw1":
 /***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 //! moment.js locale configuration
 //! locale : Hindi [hi]
 //! author : Mayank Singhal : https://github.com/mayanksinghal
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var symbolMap = {
@@ -3469,14 +4655,22 @@ Router.Link = Link;
 /***/ "9s6H":
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 //! moment.js locale configuration
 //! locale : Bosnian [bs]
 //! author : Nedim Cholich : https://github.com/frontyard
 //! based on (hr) translation by Bojan Marković
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     function translate(number, withoutSuffix, key) {
@@ -3624,12 +4818,20 @@ Router.Link = Link;
 /***/ "ASJ1":
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 //! moment.js locale configuration
 //! locale : Spanish (Dominican Republic) [es-do]
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var monthsShortDot = 'ene._feb._mar._abr._may._jun._jul._ago._sep._oct._nov._dic.'.split('_');
@@ -3718,13 +4920,21 @@ Router.Link = Link;
 /***/ "Bevg":
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 //! moment.js locale configuration
 //! locale : Pseudo [x-pseudo]
 //! author : Andrew Hood : https://github.com/andrewhood125
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var xPseudo = moment.defineLocale('x-pseudo', {
@@ -3783,16 +4993,204 @@ Router.Link = Link;
 
 /***/ }),
 
+/***/ "CFlp":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+exports.deg = deg;
+exports.calculateTouchAngle = calculateTouchAngle;
+exports.getTouchAngle = getTouchAngle;
+exports.rotateAngle90 = rotateAngle90;
+exports.rotateAngle90Back = rotateAngle90Back;
+
+function isTouchEvent(event) {
+	var type = event.type;
+
+	return type === 'touchmove' || type === 'touchstart' || type === 'touchend';
+}
+
+/**
+ *
+ *
+ * @param {any} radians
+ * @returns
+ */
+function deg(radians) {
+	return radians * 180 / Math.PI;
+}
+
+/**
+ *
+ *
+ * @param {Object} {left, top, width, height, pageX, pageY}
+ * @returns {Number}
+ */
+function calculateTouchAngle(_ref) {
+	var left = _ref.left,
+	    top = _ref.top,
+	    width = _ref.width,
+	    height = _ref.height,
+	    pageX = _ref.pageX,
+	    pageY = _ref.pageY;
+
+	var centerX = Math.round(left + width / 2);
+	var centerY = Math.round(top + height / 2);
+	var A = pageX - centerX;
+	var B = centerY - pageY;
+	var C = Math.sqrt(Math.pow(A, 2) + Math.pow(B, 2));
+
+	var angle = 0;
+
+	if (A > 0) {
+		angle = deg(Math.asin(B * 1 / C));
+	} else {
+		angle = 180 - deg(Math.acos(A * -1 / C));
+	}
+
+	if (B < 0 && A < 0) {
+		angle = 360 - angle;
+	} else if (B < 0) {
+		angle = 360 + angle;
+	}
+
+	//console.log('calculateTouchAngle', angle);
+
+
+	return angle;
+}
+
+/**
+ *
+ *
+ * @param {DOMEvent} event
+ * @param {Function} callback
+ */
+function getTouchAngle(event, callback) {
+	var currentTarget = event.currentTarget,
+	    pageX = event.pageX,
+	    pageY = event.pageY;
+
+	var _currentTarget$getBou = currentTarget.getBoundingClientRect(),
+	    top = _currentTarget$getBou.top,
+	    left = _currentTarget$getBou.left,
+	    width = _currentTarget$getBou.width,
+	    height = _currentTarget$getBou.height;
+
+	var offsetTop = top + window.scrollY;
+	var offsetLeft = left + window.scrollX;
+
+	if (isTouchEvent(event)) {
+		var _iteratorNormalCompletion = true;
+		var _didIteratorError = false;
+		var _iteratorError = undefined;
+
+		try {
+			for (var _iterator = event.changedTouches[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+				var touch = _step.value;
+				var _pageX = touch.pageX,
+				    _pageY = touch.pageY;
+
+				var angle = calculateTouchAngle({
+					top: offsetTop, left: offsetLeft, width: width, height: height, pageX: _pageX, pageY: _pageY
+				});
+
+				callback(angle);
+			}
+		} catch (err) {
+			_didIteratorError = true;
+			_iteratorError = err;
+		} finally {
+			try {
+				if (!_iteratorNormalCompletion && _iterator.return) {
+					_iterator.return();
+				}
+			} finally {
+				if (_didIteratorError) {
+					throw _iteratorError;
+				}
+			}
+		}
+	} else {
+		var _angle = calculateTouchAngle({
+			top: offsetTop, left: offsetLeft, width: width, height: height, pageX: pageX, pageY: pageY
+		});
+
+		callback(_angle);
+	}
+}
+
+/**
+ *
+ *
+ * @param {Number} angle
+ * @returns {Number}
+ */
+function rotateAngle90(angle) {
+
+	if (angle < 0) {
+		angle = 360 + angle;
+	}
+
+	var rotated = angle + 90;
+
+	if (rotated > 360) {
+		rotated = rotated - 360;
+	}
+	if (rotated < 0) {
+		rotated = 360 + rotated;
+	}
+
+	return Math.floor(rotated);
+}
+
+/**
+ *
+ *
+ * @param {any} angle
+ * @returns
+ */
+function rotateAngle90Back(angle) {
+	if (angle < 0) {
+		angle = 360 + angle;
+	}
+
+	var rotated = angle - 90;
+
+	if (rotated > 360) {
+		rotated = rotated - 360;
+	}
+	if (rotated < 0) {
+		rotated = 360 + rotated;
+	}
+
+	return Math.floor(rotated);
+}
+
+/***/ }),
+
 /***/ "CYiM":
 /***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 //! moment.js locale configuration
 //! locale : Spanish (United States) [es-us]
 //! author : bustta : https://github.com/bustta
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var monthsShortDot = 'ene._feb._mar._abr._may._jun._jul._ago._sep._oct._nov._dic.'.split('_');
@@ -3869,16 +5267,104 @@ Router.Link = Link;
 
 /***/ }),
 
+/***/ "Crlo":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _dim = __webpack_require__("azcv");
+
+var initialState = {
+    isFetching: false,
+    from: 21,
+    to: 6,
+    level: 20,
+    active: false
+};
+
+function colors() {
+    var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
+    var action = arguments[1];
+
+
+    switch (action.type) {
+
+        case _dim.SET_DIM:
+            return _extends({}, state, action.dim);
+
+        case _dim.GET_DIM_REQUEST:
+            return _extends({}, state, {
+                isFetching: true
+            });
+
+        case _dim.GET_DIM_SUCCESS:
+            return _extends({}, state, {
+                isFetching: false,
+                lastUpdated: action.receivedAt
+            }, action.dim);
+
+        case _dim.GET_DIM_FAILURE:
+            return _extends({}, state, {
+                isFetching: false
+            });
+
+        default:
+            return state;
+    }
+}
+
+exports.default = colors;
+
+/***/ }),
+
+/***/ "CtKb":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _overArg = __webpack_require__("u9EY");
+
+var _overArg2 = _interopRequireDefault(_overArg);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/** Built-in value references. */
+var getPrototype = (0, _overArg2.default)(Object.getPrototypeOf, Object);
+
+exports.default = getPrototype;
+
+/***/ }),
+
 /***/ "DXXw":
 /***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 //! moment.js locale configuration
 //! locale : Klingon [tlh]
 //! author : Dominika Kruk : https://github.com/amaranthrose
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var numbersNouns = 'pagh_wa’_cha’_wej_loS_vagh_jav_Soch_chorgh_Hut'.split('_');
@@ -3985,13 +5471,21 @@ Router.Link = Link;
 /***/ "DZlt":
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 //! moment.js locale configuration
 //! locale : Vietnamese [vi]
 //! author : Bang Nguyen : https://github.com/bangnk
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var vi = moment.defineLocale('vi', {
@@ -4068,6 +5562,11 @@ Router.Link = Link;
 /***/ "Dnxv":
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 //! moment.js locale configuration
 //! locale : Hebrew [he]
 //! author : Tomer Cohen : https://github.com/tomer
@@ -4075,8 +5574,11 @@ Router.Link = Link;
 //! author : Tal Ater : https://github.com/TalAter
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var he = moment.defineLocale('he', {
@@ -4168,2293 +5670,22 @@ Router.Link = Link;
 
 /***/ }),
 
-/***/ "EBDP":
+/***/ "E/bI":
 /***/ (function(module, exports, __webpack_require__) {
-
-//! moment.js locale configuration
-//! locale : Czech [cs]
-//! author : petrbela : https://github.com/petrbela
-
-;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
-    'use strict';
-
-    var months = 'leden_únor_březen_duben_květen_červen_červenec_srpen_září_říjen_listopad_prosinec'.split('_');
-    var monthsShort = 'led_úno_bře_dub_kvě_čvn_čvc_srp_zář_říj_lis_pro'.split('_');
-    function plural(n) {
-        return n > 1 && n < 5 && ~~(n / 10) !== 1;
-    }
-    function translate(number, withoutSuffix, key, isFuture) {
-        var result = number + ' ';
-        switch (key) {
-            case 's':
-                // a few seconds / in a few seconds / a few seconds ago
-                return withoutSuffix || isFuture ? 'pár sekund' : 'pár sekundami';
-            case 'ss':
-                // 9 seconds / in 9 seconds / 9 seconds ago
-                if (withoutSuffix || isFuture) {
-                    return result + (plural(number) ? 'sekundy' : 'sekund');
-                } else {
-                    return result + 'sekundami';
-                }
-                break;
-            case 'm':
-                // a minute / in a minute / a minute ago
-                return withoutSuffix ? 'minuta' : isFuture ? 'minutu' : 'minutou';
-            case 'mm':
-                // 9 minutes / in 9 minutes / 9 minutes ago
-                if (withoutSuffix || isFuture) {
-                    return result + (plural(number) ? 'minuty' : 'minut');
-                } else {
-                    return result + 'minutami';
-                }
-                break;
-            case 'h':
-                // an hour / in an hour / an hour ago
-                return withoutSuffix ? 'hodina' : isFuture ? 'hodinu' : 'hodinou';
-            case 'hh':
-                // 9 hours / in 9 hours / 9 hours ago
-                if (withoutSuffix || isFuture) {
-                    return result + (plural(number) ? 'hodiny' : 'hodin');
-                } else {
-                    return result + 'hodinami';
-                }
-                break;
-            case 'd':
-                // a day / in a day / a day ago
-                return withoutSuffix || isFuture ? 'den' : 'dnem';
-            case 'dd':
-                // 9 days / in 9 days / 9 days ago
-                if (withoutSuffix || isFuture) {
-                    return result + (plural(number) ? 'dny' : 'dní');
-                } else {
-                    return result + 'dny';
-                }
-                break;
-            case 'M':
-                // a month / in a month / a month ago
-                return withoutSuffix || isFuture ? 'měsíc' : 'měsícem';
-            case 'MM':
-                // 9 months / in 9 months / 9 months ago
-                if (withoutSuffix || isFuture) {
-                    return result + (plural(number) ? 'měsíce' : 'měsíců');
-                } else {
-                    return result + 'měsíci';
-                }
-                break;
-            case 'y':
-                // a year / in a year / a year ago
-                return withoutSuffix || isFuture ? 'rok' : 'rokem';
-            case 'yy':
-                // 9 years / in 9 years / 9 years ago
-                if (withoutSuffix || isFuture) {
-                    return result + (plural(number) ? 'roky' : 'let');
-                } else {
-                    return result + 'lety';
-                }
-                break;
-        }
-    }
-
-    var cs = moment.defineLocale('cs', {
-        months: months,
-        monthsShort: monthsShort,
-        monthsParse: function (months, monthsShort) {
-            var i,
-                _monthsParse = [];
-            for (i = 0; i < 12; i++) {
-                // use custom parser to solve problem with July (červenec)
-                _monthsParse[i] = new RegExp('^' + months[i] + '$|^' + monthsShort[i] + '$', 'i');
-            }
-            return _monthsParse;
-        }(months, monthsShort),
-        shortMonthsParse: function (monthsShort) {
-            var i,
-                _shortMonthsParse = [];
-            for (i = 0; i < 12; i++) {
-                _shortMonthsParse[i] = new RegExp('^' + monthsShort[i] + '$', 'i');
-            }
-            return _shortMonthsParse;
-        }(monthsShort),
-        longMonthsParse: function (months) {
-            var i,
-                _longMonthsParse = [];
-            for (i = 0; i < 12; i++) {
-                _longMonthsParse[i] = new RegExp('^' + months[i] + '$', 'i');
-            }
-            return _longMonthsParse;
-        }(months),
-        weekdays: 'neděle_pondělí_úterý_středa_čtvrtek_pátek_sobota'.split('_'),
-        weekdaysShort: 'ne_po_út_st_čt_pá_so'.split('_'),
-        weekdaysMin: 'ne_po_út_st_čt_pá_so'.split('_'),
-        longDateFormat: {
-            LT: 'H:mm',
-            LTS: 'H:mm:ss',
-            L: 'DD.MM.YYYY',
-            LL: 'D. MMMM YYYY',
-            LLL: 'D. MMMM YYYY H:mm',
-            LLLL: 'dddd D. MMMM YYYY H:mm',
-            l: 'D. M. YYYY'
-        },
-        calendar: {
-            sameDay: '[dnes v] LT',
-            nextDay: '[zítra v] LT',
-            nextWeek: function nextWeek() {
-                switch (this.day()) {
-                    case 0:
-                        return '[v neděli v] LT';
-                    case 1:
-                    case 2:
-                        return '[v] dddd [v] LT';
-                    case 3:
-                        return '[ve středu v] LT';
-                    case 4:
-                        return '[ve čtvrtek v] LT';
-                    case 5:
-                        return '[v pátek v] LT';
-                    case 6:
-                        return '[v sobotu v] LT';
-                }
-            },
-            lastDay: '[včera v] LT',
-            lastWeek: function lastWeek() {
-                switch (this.day()) {
-                    case 0:
-                        return '[minulou neděli v] LT';
-                    case 1:
-                    case 2:
-                        return '[minulé] dddd [v] LT';
-                    case 3:
-                        return '[minulou středu v] LT';
-                    case 4:
-                    case 5:
-                        return '[minulý] dddd [v] LT';
-                    case 6:
-                        return '[minulou sobotu v] LT';
-                }
-            },
-            sameElse: 'L'
-        },
-        relativeTime: {
-            future: 'za %s',
-            past: 'před %s',
-            s: translate,
-            ss: translate,
-            m: translate,
-            mm: translate,
-            h: translate,
-            hh: translate,
-            d: translate,
-            dd: translate,
-            M: translate,
-            MM: translate,
-            y: translate,
-            yy: translate
-        },
-        dayOfMonthOrdinalParse: /\d{1,2}\./,
-        ordinal: '%d.',
-        week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 4 // The week that contains Jan 4th is the first week of the year.
-        }
-    });
-
-    return cs;
-});
-
-/***/ }),
-
-/***/ "EIlw":
-/***/ (function(module, exports, __webpack_require__) {
-
-//! moment.js locale configuration
-//! locale : Arabic (Kuwait) [ar-kw]
-//! author : Nusret Parlak: https://github.com/nusretparlak
-
-;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
-    'use strict';
-
-    var arKw = moment.defineLocale('ar-kw', {
-        months: 'يناير_فبراير_مارس_أبريل_ماي_يونيو_يوليوز_غشت_شتنبر_أكتوبر_نونبر_دجنبر'.split('_'),
-        monthsShort: 'يناير_فبراير_مارس_أبريل_ماي_يونيو_يوليوز_غشت_شتنبر_أكتوبر_نونبر_دجنبر'.split('_'),
-        weekdays: 'الأحد_الإتنين_الثلاثاء_الأربعاء_الخميس_الجمعة_السبت'.split('_'),
-        weekdaysShort: 'احد_اتنين_ثلاثاء_اربعاء_خميس_جمعة_سبت'.split('_'),
-        weekdaysMin: 'ح_ن_ث_ر_خ_ج_س'.split('_'),
-        weekdaysParseExact: true,
-        longDateFormat: {
-            LT: 'HH:mm',
-            LTS: 'HH:mm:ss',
-            L: 'DD/MM/YYYY',
-            LL: 'D MMMM YYYY',
-            LLL: 'D MMMM YYYY HH:mm',
-            LLLL: 'dddd D MMMM YYYY HH:mm'
-        },
-        calendar: {
-            sameDay: '[اليوم على الساعة] LT',
-            nextDay: '[غدا على الساعة] LT',
-            nextWeek: 'dddd [على الساعة] LT',
-            lastDay: '[أمس على الساعة] LT',
-            lastWeek: 'dddd [على الساعة] LT',
-            sameElse: 'L'
-        },
-        relativeTime: {
-            future: 'في %s',
-            past: 'منذ %s',
-            s: 'ثوان',
-            ss: '%d ثانية',
-            m: 'دقيقة',
-            mm: '%d دقائق',
-            h: 'ساعة',
-            hh: '%d ساعات',
-            d: 'يوم',
-            dd: '%d أيام',
-            M: 'شهر',
-            MM: '%d أشهر',
-            y: 'سنة',
-            yy: '%d سنوات'
-        },
-        week: {
-            dow: 0, // Sunday is the first day of the week.
-            doy: 12 // The week that contains Jan 1st is the first week of the year.
-        }
-    });
-
-    return arKw;
-});
-
-/***/ }),
-
-/***/ "EgIa":
-/***/ (function(module, exports, __webpack_require__) {
-
-//! moment.js locale configuration
-//! locale : Slovenian [sl]
-//! author : Robert Sedovšek : https://github.com/sedovsek
-
-;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
-    'use strict';
-
-    function processRelativeTime(number, withoutSuffix, key, isFuture) {
-        var result = number + ' ';
-        switch (key) {
-            case 's':
-                return withoutSuffix || isFuture ? 'nekaj sekund' : 'nekaj sekundami';
-            case 'ss':
-                if (number === 1) {
-                    result += withoutSuffix ? 'sekundo' : 'sekundi';
-                } else if (number === 2) {
-                    result += withoutSuffix || isFuture ? 'sekundi' : 'sekundah';
-                } else if (number < 5) {
-                    result += withoutSuffix || isFuture ? 'sekunde' : 'sekundah';
-                } else {
-                    result += withoutSuffix || isFuture ? 'sekund' : 'sekund';
-                }
-                return result;
-            case 'm':
-                return withoutSuffix ? 'ena minuta' : 'eno minuto';
-            case 'mm':
-                if (number === 1) {
-                    result += withoutSuffix ? 'minuta' : 'minuto';
-                } else if (number === 2) {
-                    result += withoutSuffix || isFuture ? 'minuti' : 'minutama';
-                } else if (number < 5) {
-                    result += withoutSuffix || isFuture ? 'minute' : 'minutami';
-                } else {
-                    result += withoutSuffix || isFuture ? 'minut' : 'minutami';
-                }
-                return result;
-            case 'h':
-                return withoutSuffix ? 'ena ura' : 'eno uro';
-            case 'hh':
-                if (number === 1) {
-                    result += withoutSuffix ? 'ura' : 'uro';
-                } else if (number === 2) {
-                    result += withoutSuffix || isFuture ? 'uri' : 'urama';
-                } else if (number < 5) {
-                    result += withoutSuffix || isFuture ? 'ure' : 'urami';
-                } else {
-                    result += withoutSuffix || isFuture ? 'ur' : 'urami';
-                }
-                return result;
-            case 'd':
-                return withoutSuffix || isFuture ? 'en dan' : 'enim dnem';
-            case 'dd':
-                if (number === 1) {
-                    result += withoutSuffix || isFuture ? 'dan' : 'dnem';
-                } else if (number === 2) {
-                    result += withoutSuffix || isFuture ? 'dni' : 'dnevoma';
-                } else {
-                    result += withoutSuffix || isFuture ? 'dni' : 'dnevi';
-                }
-                return result;
-            case 'M':
-                return withoutSuffix || isFuture ? 'en mesec' : 'enim mesecem';
-            case 'MM':
-                if (number === 1) {
-                    result += withoutSuffix || isFuture ? 'mesec' : 'mesecem';
-                } else if (number === 2) {
-                    result += withoutSuffix || isFuture ? 'meseca' : 'mesecema';
-                } else if (number < 5) {
-                    result += withoutSuffix || isFuture ? 'mesece' : 'meseci';
-                } else {
-                    result += withoutSuffix || isFuture ? 'mesecev' : 'meseci';
-                }
-                return result;
-            case 'y':
-                return withoutSuffix || isFuture ? 'eno leto' : 'enim letom';
-            case 'yy':
-                if (number === 1) {
-                    result += withoutSuffix || isFuture ? 'leto' : 'letom';
-                } else if (number === 2) {
-                    result += withoutSuffix || isFuture ? 'leti' : 'letoma';
-                } else if (number < 5) {
-                    result += withoutSuffix || isFuture ? 'leta' : 'leti';
-                } else {
-                    result += withoutSuffix || isFuture ? 'let' : 'leti';
-                }
-                return result;
-        }
-    }
-
-    var sl = moment.defineLocale('sl', {
-        months: 'januar_februar_marec_april_maj_junij_julij_avgust_september_oktober_november_december'.split('_'),
-        monthsShort: 'jan._feb._mar._apr._maj._jun._jul._avg._sep._okt._nov._dec.'.split('_'),
-        monthsParseExact: true,
-        weekdays: 'nedelja_ponedeljek_torek_sreda_četrtek_petek_sobota'.split('_'),
-        weekdaysShort: 'ned._pon._tor._sre._čet._pet._sob.'.split('_'),
-        weekdaysMin: 'ne_po_to_sr_če_pe_so'.split('_'),
-        weekdaysParseExact: true,
-        longDateFormat: {
-            LT: 'H:mm',
-            LTS: 'H:mm:ss',
-            L: 'DD.MM.YYYY',
-            LL: 'D. MMMM YYYY',
-            LLL: 'D. MMMM YYYY H:mm',
-            LLLL: 'dddd, D. MMMM YYYY H:mm'
-        },
-        calendar: {
-            sameDay: '[danes ob] LT',
-            nextDay: '[jutri ob] LT',
-
-            nextWeek: function nextWeek() {
-                switch (this.day()) {
-                    case 0:
-                        return '[v] [nedeljo] [ob] LT';
-                    case 3:
-                        return '[v] [sredo] [ob] LT';
-                    case 6:
-                        return '[v] [soboto] [ob] LT';
-                    case 1:
-                    case 2:
-                    case 4:
-                    case 5:
-                        return '[v] dddd [ob] LT';
-                }
-            },
-            lastDay: '[včeraj ob] LT',
-            lastWeek: function lastWeek() {
-                switch (this.day()) {
-                    case 0:
-                        return '[prejšnjo] [nedeljo] [ob] LT';
-                    case 3:
-                        return '[prejšnjo] [sredo] [ob] LT';
-                    case 6:
-                        return '[prejšnjo] [soboto] [ob] LT';
-                    case 1:
-                    case 2:
-                    case 4:
-                    case 5:
-                        return '[prejšnji] dddd [ob] LT';
-                }
-            },
-            sameElse: 'L'
-        },
-        relativeTime: {
-            future: 'čez %s',
-            past: 'pred %s',
-            s: processRelativeTime,
-            ss: processRelativeTime,
-            m: processRelativeTime,
-            mm: processRelativeTime,
-            h: processRelativeTime,
-            hh: processRelativeTime,
-            d: processRelativeTime,
-            dd: processRelativeTime,
-            M: processRelativeTime,
-            MM: processRelativeTime,
-            y: processRelativeTime,
-            yy: processRelativeTime
-        },
-        dayOfMonthOrdinalParse: /\d{1,2}\./,
-        ordinal: '%d.',
-        week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 7 // The week that contains Jan 1st is the first week of the year.
-        }
-    });
-
-    return sl;
-});
-
-/***/ }),
-
-/***/ "EhRq":
-/***/ (function(module, exports, __webpack_require__) {
-
-//! moment.js locale configuration
-//! locale : Icelandic [is]
-//! author : Hinrik Örn Sigurðsson : https://github.com/hinrik
-
-;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
-    'use strict';
-
-    function plural(n) {
-        if (n % 100 === 11) {
-            return true;
-        } else if (n % 10 === 1) {
-            return false;
-        }
-        return true;
-    }
-    function translate(number, withoutSuffix, key, isFuture) {
-        var result = number + ' ';
-        switch (key) {
-            case 's':
-                return withoutSuffix || isFuture ? 'nokkrar sekúndur' : 'nokkrum sekúndum';
-            case 'ss':
-                if (plural(number)) {
-                    return result + (withoutSuffix || isFuture ? 'sekúndur' : 'sekúndum');
-                }
-                return result + 'sekúnda';
-            case 'm':
-                return withoutSuffix ? 'mínúta' : 'mínútu';
-            case 'mm':
-                if (plural(number)) {
-                    return result + (withoutSuffix || isFuture ? 'mínútur' : 'mínútum');
-                } else if (withoutSuffix) {
-                    return result + 'mínúta';
-                }
-                return result + 'mínútu';
-            case 'hh':
-                if (plural(number)) {
-                    return result + (withoutSuffix || isFuture ? 'klukkustundir' : 'klukkustundum');
-                }
-                return result + 'klukkustund';
-            case 'd':
-                if (withoutSuffix) {
-                    return 'dagur';
-                }
-                return isFuture ? 'dag' : 'degi';
-            case 'dd':
-                if (plural(number)) {
-                    if (withoutSuffix) {
-                        return result + 'dagar';
-                    }
-                    return result + (isFuture ? 'daga' : 'dögum');
-                } else if (withoutSuffix) {
-                    return result + 'dagur';
-                }
-                return result + (isFuture ? 'dag' : 'degi');
-            case 'M':
-                if (withoutSuffix) {
-                    return 'mánuður';
-                }
-                return isFuture ? 'mánuð' : 'mánuði';
-            case 'MM':
-                if (plural(number)) {
-                    if (withoutSuffix) {
-                        return result + 'mánuðir';
-                    }
-                    return result + (isFuture ? 'mánuði' : 'mánuðum');
-                } else if (withoutSuffix) {
-                    return result + 'mánuður';
-                }
-                return result + (isFuture ? 'mánuð' : 'mánuði');
-            case 'y':
-                return withoutSuffix || isFuture ? 'ár' : 'ári';
-            case 'yy':
-                if (plural(number)) {
-                    return result + (withoutSuffix || isFuture ? 'ár' : 'árum');
-                }
-                return result + (withoutSuffix || isFuture ? 'ár' : 'ári');
-        }
-    }
-
-    var is = moment.defineLocale('is', {
-        months: 'janúar_febrúar_mars_apríl_maí_júní_júlí_ágúst_september_október_nóvember_desember'.split('_'),
-        monthsShort: 'jan_feb_mar_apr_maí_jún_júl_ágú_sep_okt_nóv_des'.split('_'),
-        weekdays: 'sunnudagur_mánudagur_þriðjudagur_miðvikudagur_fimmtudagur_föstudagur_laugardagur'.split('_'),
-        weekdaysShort: 'sun_mán_þri_mið_fim_fös_lau'.split('_'),
-        weekdaysMin: 'Su_Má_Þr_Mi_Fi_Fö_La'.split('_'),
-        longDateFormat: {
-            LT: 'H:mm',
-            LTS: 'H:mm:ss',
-            L: 'DD.MM.YYYY',
-            LL: 'D. MMMM YYYY',
-            LLL: 'D. MMMM YYYY [kl.] H:mm',
-            LLLL: 'dddd, D. MMMM YYYY [kl.] H:mm'
-        },
-        calendar: {
-            sameDay: '[í dag kl.] LT',
-            nextDay: '[á morgun kl.] LT',
-            nextWeek: 'dddd [kl.] LT',
-            lastDay: '[í gær kl.] LT',
-            lastWeek: '[síðasta] dddd [kl.] LT',
-            sameElse: 'L'
-        },
-        relativeTime: {
-            future: 'eftir %s',
-            past: 'fyrir %s síðan',
-            s: translate,
-            ss: translate,
-            m: translate,
-            mm: translate,
-            h: 'klukkustund',
-            hh: translate,
-            d: translate,
-            dd: translate,
-            M: translate,
-            MM: translate,
-            y: translate,
-            yy: translate
-        },
-        dayOfMonthOrdinalParse: /\d{1,2}\./,
-        ordinal: '%d.',
-        week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 4 // The week that contains Jan 4th is the first week of the year.
-        }
-    });
-
-    return is;
-});
-
-/***/ }),
-
-/***/ "G/YP":
-/***/ (function(module, exports, __webpack_require__) {
-
-//! moment.js locale configuration
-//! locale : Arabic (Lybia) [ar-ly]
-//! author : Ali Hmer: https://github.com/kikoanis
-
-;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
-    'use strict';
-
-    var symbolMap = {
-        '1': '1',
-        '2': '2',
-        '3': '3',
-        '4': '4',
-        '5': '5',
-        '6': '6',
-        '7': '7',
-        '8': '8',
-        '9': '9',
-        '0': '0'
-    };
-    var pluralForm = function pluralForm(n) {
-        return n === 0 ? 0 : n === 1 ? 1 : n === 2 ? 2 : n % 100 >= 3 && n % 100 <= 10 ? 3 : n % 100 >= 11 ? 4 : 5;
-    };
-    var plurals = {
-        s: ['أقل من ثانية', 'ثانية واحدة', ['ثانيتان', 'ثانيتين'], '%d ثوان', '%d ثانية', '%d ثانية'],
-        m: ['أقل من دقيقة', 'دقيقة واحدة', ['دقيقتان', 'دقيقتين'], '%d دقائق', '%d دقيقة', '%d دقيقة'],
-        h: ['أقل من ساعة', 'ساعة واحدة', ['ساعتان', 'ساعتين'], '%d ساعات', '%d ساعة', '%d ساعة'],
-        d: ['أقل من يوم', 'يوم واحد', ['يومان', 'يومين'], '%d أيام', '%d يومًا', '%d يوم'],
-        M: ['أقل من شهر', 'شهر واحد', ['شهران', 'شهرين'], '%d أشهر', '%d شهرا', '%d شهر'],
-        y: ['أقل من عام', 'عام واحد', ['عامان', 'عامين'], '%d أعوام', '%d عامًا', '%d عام']
-    };
-    var pluralize = function pluralize(u) {
-        return function (number, withoutSuffix, string, isFuture) {
-            var f = pluralForm(number),
-                str = plurals[u][pluralForm(number)];
-            if (f === 2) {
-                str = str[withoutSuffix ? 0 : 1];
-            }
-            return str.replace(/%d/i, number);
-        };
-    };
-    var months = ['يناير', 'فبراير', 'مارس', 'أبريل', 'مايو', 'يونيو', 'يوليو', 'أغسطس', 'سبتمبر', 'أكتوبر', 'نوفمبر', 'ديسمبر'];
-
-    var arLy = moment.defineLocale('ar-ly', {
-        months: months,
-        monthsShort: months,
-        weekdays: 'الأحد_الإثنين_الثلاثاء_الأربعاء_الخميس_الجمعة_السبت'.split('_'),
-        weekdaysShort: 'أحد_إثنين_ثلاثاء_أربعاء_خميس_جمعة_سبت'.split('_'),
-        weekdaysMin: 'ح_ن_ث_ر_خ_ج_س'.split('_'),
-        weekdaysParseExact: true,
-        longDateFormat: {
-            LT: 'HH:mm',
-            LTS: 'HH:mm:ss',
-            L: 'D/\u200FM/\u200FYYYY',
-            LL: 'D MMMM YYYY',
-            LLL: 'D MMMM YYYY HH:mm',
-            LLLL: 'dddd D MMMM YYYY HH:mm'
-        },
-        meridiemParse: /ص|م/,
-        isPM: function isPM(input) {
-            return 'م' === input;
-        },
-        meridiem: function meridiem(hour, minute, isLower) {
-            if (hour < 12) {
-                return 'ص';
-            } else {
-                return 'م';
-            }
-        },
-        calendar: {
-            sameDay: '[اليوم عند الساعة] LT',
-            nextDay: '[غدًا عند الساعة] LT',
-            nextWeek: 'dddd [عند الساعة] LT',
-            lastDay: '[أمس عند الساعة] LT',
-            lastWeek: 'dddd [عند الساعة] LT',
-            sameElse: 'L'
-        },
-        relativeTime: {
-            future: 'بعد %s',
-            past: 'منذ %s',
-            s: pluralize('s'),
-            ss: pluralize('s'),
-            m: pluralize('m'),
-            mm: pluralize('m'),
-            h: pluralize('h'),
-            hh: pluralize('h'),
-            d: pluralize('d'),
-            dd: pluralize('d'),
-            M: pluralize('M'),
-            MM: pluralize('M'),
-            y: pluralize('y'),
-            yy: pluralize('y')
-        },
-        preparse: function preparse(string) {
-            return string.replace(/،/g, ',');
-        },
-        postformat: function postformat(string) {
-            return string.replace(/\d/g, function (match) {
-                return symbolMap[match];
-            }).replace(/,/g, '،');
-        },
-        week: {
-            dow: 6, // Saturday is the first day of the week.
-            doy: 12 // The week that contains Jan 1st is the first week of the year.
-        }
-    });
-
-    return arLy;
-});
-
-/***/ }),
-
-/***/ "GuU2":
-/***/ (function(module, exports, __webpack_require__) {
-
-//! moment.js locale configuration
-//! locale : Maltese (Malta) [mt]
-//! author : Alessandro Maruccia : https://github.com/alesma
-
-;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
-    'use strict';
-
-    var mt = moment.defineLocale('mt', {
-        months: 'Jannar_Frar_Marzu_April_Mejju_Ġunju_Lulju_Awwissu_Settembru_Ottubru_Novembru_Diċembru'.split('_'),
-        monthsShort: 'Jan_Fra_Mar_Apr_Mej_Ġun_Lul_Aww_Set_Ott_Nov_Diċ'.split('_'),
-        weekdays: 'Il-Ħadd_It-Tnejn_It-Tlieta_L-Erbgħa_Il-Ħamis_Il-Ġimgħa_Is-Sibt'.split('_'),
-        weekdaysShort: 'Ħad_Tne_Tli_Erb_Ħam_Ġim_Sib'.split('_'),
-        weekdaysMin: 'Ħa_Tn_Tl_Er_Ħa_Ġi_Si'.split('_'),
-        longDateFormat: {
-            LT: 'HH:mm',
-            LTS: 'HH:mm:ss',
-            L: 'DD/MM/YYYY',
-            LL: 'D MMMM YYYY',
-            LLL: 'D MMMM YYYY HH:mm',
-            LLLL: 'dddd, D MMMM YYYY HH:mm'
-        },
-        calendar: {
-            sameDay: '[Illum fil-]LT',
-            nextDay: '[Għada fil-]LT',
-            nextWeek: 'dddd [fil-]LT',
-            lastDay: '[Il-bieraħ fil-]LT',
-            lastWeek: 'dddd [li għadda] [fil-]LT',
-            sameElse: 'L'
-        },
-        relativeTime: {
-            future: 'f’ %s',
-            past: '%s ilu',
-            s: 'ftit sekondi',
-            ss: '%d sekondi',
-            m: 'minuta',
-            mm: '%d minuti',
-            h: 'siegħa',
-            hh: '%d siegħat',
-            d: 'ġurnata',
-            dd: '%d ġranet',
-            M: 'xahar',
-            MM: '%d xhur',
-            y: 'sena',
-            yy: '%d sni'
-        },
-        dayOfMonthOrdinalParse: /\d{1,2}º/,
-        ordinal: '%dº',
-        week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 4 // The week that contains Jan 4th is the first week of the year.
-        }
-    });
-
-    return mt;
-});
-
-/***/ }),
-
-/***/ "Gz4Y":
-/***/ (function(module, exports, __webpack_require__) {
-
-//! moment.js locale configuration
-//! locale : Ukrainian [uk]
-//! author : zemlanin : https://github.com/zemlanin
-//! Author : Menelion Elensúle : https://github.com/Oire
-
-;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
-    'use strict';
-
-    function plural(word, num) {
-        var forms = word.split('_');
-        return num % 10 === 1 && num % 100 !== 11 ? forms[0] : num % 10 >= 2 && num % 10 <= 4 && (num % 100 < 10 || num % 100 >= 20) ? forms[1] : forms[2];
-    }
-    function relativeTimeWithPlural(number, withoutSuffix, key) {
-        var format = {
-            'ss': withoutSuffix ? 'секунда_секунди_секунд' : 'секунду_секунди_секунд',
-            'mm': withoutSuffix ? 'хвилина_хвилини_хвилин' : 'хвилину_хвилини_хвилин',
-            'hh': withoutSuffix ? 'година_години_годин' : 'годину_години_годин',
-            'dd': 'день_дні_днів',
-            'MM': 'місяць_місяці_місяців',
-            'yy': 'рік_роки_років'
-        };
-        if (key === 'm') {
-            return withoutSuffix ? 'хвилина' : 'хвилину';
-        } else if (key === 'h') {
-            return withoutSuffix ? 'година' : 'годину';
-        } else {
-            return number + ' ' + plural(format[key], +number);
-        }
-    }
-    function weekdaysCaseReplace(m, format) {
-        var weekdays = {
-            'nominative': 'неділя_понеділок_вівторок_середа_четвер_п’ятниця_субота'.split('_'),
-            'accusative': 'неділю_понеділок_вівторок_середу_четвер_п’ятницю_суботу'.split('_'),
-            'genitive': 'неділі_понеділка_вівторка_середи_четверга_п’ятниці_суботи'.split('_')
-        };
-
-        if (!m) {
-            return weekdays['nominative'];
-        }
-
-        var nounCase = /(\[[ВвУу]\]) ?dddd/.test(format) ? 'accusative' : /\[?(?:минулої|наступної)? ?\] ?dddd/.test(format) ? 'genitive' : 'nominative';
-        return weekdays[nounCase][m.day()];
-    }
-    function processHoursFunction(str) {
-        return function () {
-            return str + 'о' + (this.hours() === 11 ? 'б' : '') + '] LT';
-        };
-    }
-
-    var uk = moment.defineLocale('uk', {
-        months: {
-            'format': 'січня_лютого_березня_квітня_травня_червня_липня_серпня_вересня_жовтня_листопада_грудня'.split('_'),
-            'standalone': 'січень_лютий_березень_квітень_травень_червень_липень_серпень_вересень_жовтень_листопад_грудень'.split('_')
-        },
-        monthsShort: 'січ_лют_бер_квіт_трав_черв_лип_серп_вер_жовт_лист_груд'.split('_'),
-        weekdays: weekdaysCaseReplace,
-        weekdaysShort: 'нд_пн_вт_ср_чт_пт_сб'.split('_'),
-        weekdaysMin: 'нд_пн_вт_ср_чт_пт_сб'.split('_'),
-        longDateFormat: {
-            LT: 'HH:mm',
-            LTS: 'HH:mm:ss',
-            L: 'DD.MM.YYYY',
-            LL: 'D MMMM YYYY р.',
-            LLL: 'D MMMM YYYY р., HH:mm',
-            LLLL: 'dddd, D MMMM YYYY р., HH:mm'
-        },
-        calendar: {
-            sameDay: processHoursFunction('[Сьогодні '),
-            nextDay: processHoursFunction('[Завтра '),
-            lastDay: processHoursFunction('[Вчора '),
-            nextWeek: processHoursFunction('[У] dddd ['),
-            lastWeek: function lastWeek() {
-                switch (this.day()) {
-                    case 0:
-                    case 3:
-                    case 5:
-                    case 6:
-                        return processHoursFunction('[Минулої] dddd [').call(this);
-                    case 1:
-                    case 2:
-                    case 4:
-                        return processHoursFunction('[Минулого] dddd [').call(this);
-                }
-            },
-            sameElse: 'L'
-        },
-        relativeTime: {
-            future: 'за %s',
-            past: '%s тому',
-            s: 'декілька секунд',
-            ss: relativeTimeWithPlural,
-            m: relativeTimeWithPlural,
-            mm: relativeTimeWithPlural,
-            h: 'годину',
-            hh: relativeTimeWithPlural,
-            d: 'день',
-            dd: relativeTimeWithPlural,
-            M: 'місяць',
-            MM: relativeTimeWithPlural,
-            y: 'рік',
-            yy: relativeTimeWithPlural
-        },
-        // M. E.: those two are virtually unused but a user might want to implement them for his/her website for some reason
-        meridiemParse: /ночі|ранку|дня|вечора/,
-        isPM: function isPM(input) {
-            return (/^(дня|вечора)$/.test(input)
-            );
-        },
-        meridiem: function meridiem(hour, minute, isLower) {
-            if (hour < 4) {
-                return 'ночі';
-            } else if (hour < 12) {
-                return 'ранку';
-            } else if (hour < 17) {
-                return 'дня';
-            } else {
-                return 'вечора';
-            }
-        },
-        dayOfMonthOrdinalParse: /\d{1,2}-(й|го)/,
-        ordinal: function ordinal(number, period) {
-            switch (period) {
-                case 'M':
-                case 'd':
-                case 'DDD':
-                case 'w':
-                case 'W':
-                    return number + '-й';
-                case 'D':
-                    return number + '-го';
-                default:
-                    return number;
-            }
-        },
-        week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 7 // The week that contains Jan 1st is the first week of the year.
-        }
-    });
-
-    return uk;
-});
-
-/***/ }),
-
-/***/ "HMIw":
-/***/ (function(module, exports, __webpack_require__) {
-
-//! moment.js locale configuration
-//! locale  :  Arabic (Tunisia) [ar-tn]
-//! author : Nader Toukabri : https://github.com/naderio
-
-;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
-    'use strict';
-
-    var arTn = moment.defineLocale('ar-tn', {
-        months: 'جانفي_فيفري_مارس_أفريل_ماي_جوان_جويلية_أوت_سبتمبر_أكتوبر_نوفمبر_ديسمبر'.split('_'),
-        monthsShort: 'جانفي_فيفري_مارس_أفريل_ماي_جوان_جويلية_أوت_سبتمبر_أكتوبر_نوفمبر_ديسمبر'.split('_'),
-        weekdays: 'الأحد_الإثنين_الثلاثاء_الأربعاء_الخميس_الجمعة_السبت'.split('_'),
-        weekdaysShort: 'أحد_إثنين_ثلاثاء_أربعاء_خميس_جمعة_سبت'.split('_'),
-        weekdaysMin: 'ح_ن_ث_ر_خ_ج_س'.split('_'),
-        weekdaysParseExact: true,
-        longDateFormat: {
-            LT: 'HH:mm',
-            LTS: 'HH:mm:ss',
-            L: 'DD/MM/YYYY',
-            LL: 'D MMMM YYYY',
-            LLL: 'D MMMM YYYY HH:mm',
-            LLLL: 'dddd D MMMM YYYY HH:mm'
-        },
-        calendar: {
-            sameDay: '[اليوم على الساعة] LT',
-            nextDay: '[غدا على الساعة] LT',
-            nextWeek: 'dddd [على الساعة] LT',
-            lastDay: '[أمس على الساعة] LT',
-            lastWeek: 'dddd [على الساعة] LT',
-            sameElse: 'L'
-        },
-        relativeTime: {
-            future: 'في %s',
-            past: 'منذ %s',
-            s: 'ثوان',
-            ss: '%d ثانية',
-            m: 'دقيقة',
-            mm: '%d دقائق',
-            h: 'ساعة',
-            hh: '%d ساعات',
-            d: 'يوم',
-            dd: '%d أيام',
-            M: 'شهر',
-            MM: '%d أشهر',
-            y: 'سنة',
-            yy: '%d سنوات'
-        },
-        week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 4 // The week that contains Jan 4th is the first week of the year.
-        }
-    });
-
-    return arTn;
-});
-
-/***/ }),
-
-/***/ "Hd19":
-/***/ (function(module, exports, __webpack_require__) {
-
-//! moment.js locale configuration
-//! locale : Telugu [te]
-//! author : Krishna Chaitanya Thota : https://github.com/kcthota
-
-;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
-    'use strict';
-
-    var te = moment.defineLocale('te', {
-        months: 'జనవరి_ఫిబ్రవరి_మార్చి_ఏప్రిల్_మే_జూన్_జూలై_ఆగస్టు_సెప్టెంబర్_అక్టోబర్_నవంబర్_డిసెంబర్'.split('_'),
-        monthsShort: 'జన._ఫిబ్ర._మార్చి_ఏప్రి._మే_జూన్_జూలై_ఆగ._సెప్._అక్టో._నవ._డిసె.'.split('_'),
-        monthsParseExact: true,
-        weekdays: 'ఆదివారం_సోమవారం_మంగళవారం_బుధవారం_గురువారం_శుక్రవారం_శనివారం'.split('_'),
-        weekdaysShort: 'ఆది_సోమ_మంగళ_బుధ_గురు_శుక్ర_శని'.split('_'),
-        weekdaysMin: 'ఆ_సో_మం_బు_గు_శు_శ'.split('_'),
-        longDateFormat: {
-            LT: 'A h:mm',
-            LTS: 'A h:mm:ss',
-            L: 'DD/MM/YYYY',
-            LL: 'D MMMM YYYY',
-            LLL: 'D MMMM YYYY, A h:mm',
-            LLLL: 'dddd, D MMMM YYYY, A h:mm'
-        },
-        calendar: {
-            sameDay: '[నేడు] LT',
-            nextDay: '[రేపు] LT',
-            nextWeek: 'dddd, LT',
-            lastDay: '[నిన్న] LT',
-            lastWeek: '[గత] dddd, LT',
-            sameElse: 'L'
-        },
-        relativeTime: {
-            future: '%s లో',
-            past: '%s క్రితం',
-            s: 'కొన్ని క్షణాలు',
-            ss: '%d సెకన్లు',
-            m: 'ఒక నిమిషం',
-            mm: '%d నిమిషాలు',
-            h: 'ఒక గంట',
-            hh: '%d గంటలు',
-            d: 'ఒక రోజు',
-            dd: '%d రోజులు',
-            M: 'ఒక నెల',
-            MM: '%d నెలలు',
-            y: 'ఒక సంవత్సరం',
-            yy: '%d సంవత్సరాలు'
-        },
-        dayOfMonthOrdinalParse: /\d{1,2}వ/,
-        ordinal: '%dవ',
-        meridiemParse: /రాత్రి|ఉదయం|మధ్యాహ్నం|సాయంత్రం/,
-        meridiemHour: function meridiemHour(hour, meridiem) {
-            if (hour === 12) {
-                hour = 0;
-            }
-            if (meridiem === 'రాత్రి') {
-                return hour < 4 ? hour : hour + 12;
-            } else if (meridiem === 'ఉదయం') {
-                return hour;
-            } else if (meridiem === 'మధ్యాహ్నం') {
-                return hour >= 10 ? hour : hour + 12;
-            } else if (meridiem === 'సాయంత్రం') {
-                return hour + 12;
-            }
-        },
-        meridiem: function meridiem(hour, minute, isLower) {
-            if (hour < 4) {
-                return 'రాత్రి';
-            } else if (hour < 10) {
-                return 'ఉదయం';
-            } else if (hour < 17) {
-                return 'మధ్యాహ్నం';
-            } else if (hour < 20) {
-                return 'సాయంత్రం';
-            } else {
-                return 'రాత్రి';
-            }
-        },
-        week: {
-            dow: 0, // Sunday is the first day of the week.
-            doy: 6 // The week that contains Jan 1st is the first week of the year.
-        }
-    });
-
-    return te;
-});
-
-/***/ }),
-
-/***/ "HlNk":
-/***/ (function(module, exports, __webpack_require__) {
-
-//! moment.js locale configuration
-//! locale : Azerbaijani [az]
-//! author : topchiyev : https://github.com/topchiyev
-
-;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
-    'use strict';
-
-    var suffixes = {
-        1: '-inci',
-        5: '-inci',
-        8: '-inci',
-        70: '-inci',
-        80: '-inci',
-        2: '-nci',
-        7: '-nci',
-        20: '-nci',
-        50: '-nci',
-        3: '-üncü',
-        4: '-üncü',
-        100: '-üncü',
-        6: '-ncı',
-        9: '-uncu',
-        10: '-uncu',
-        30: '-uncu',
-        60: '-ıncı',
-        90: '-ıncı'
-    };
-
-    var az = moment.defineLocale('az', {
-        months: 'yanvar_fevral_mart_aprel_may_iyun_iyul_avqust_sentyabr_oktyabr_noyabr_dekabr'.split('_'),
-        monthsShort: 'yan_fev_mar_apr_may_iyn_iyl_avq_sen_okt_noy_dek'.split('_'),
-        weekdays: 'Bazar_Bazar ertəsi_Çərşənbə axşamı_Çərşənbə_Cümə axşamı_Cümə_Şənbə'.split('_'),
-        weekdaysShort: 'Baz_BzE_ÇAx_Çər_CAx_Cüm_Şən'.split('_'),
-        weekdaysMin: 'Bz_BE_ÇA_Çə_CA_Cü_Şə'.split('_'),
-        weekdaysParseExact: true,
-        longDateFormat: {
-            LT: 'HH:mm',
-            LTS: 'HH:mm:ss',
-            L: 'DD.MM.YYYY',
-            LL: 'D MMMM YYYY',
-            LLL: 'D MMMM YYYY HH:mm',
-            LLLL: 'dddd, D MMMM YYYY HH:mm'
-        },
-        calendar: {
-            sameDay: '[bugün saat] LT',
-            nextDay: '[sabah saat] LT',
-            nextWeek: '[gələn həftə] dddd [saat] LT',
-            lastDay: '[dünən] LT',
-            lastWeek: '[keçən həftə] dddd [saat] LT',
-            sameElse: 'L'
-        },
-        relativeTime: {
-            future: '%s sonra',
-            past: '%s əvvəl',
-            s: 'birneçə saniyyə',
-            ss: '%d saniyə',
-            m: 'bir dəqiqə',
-            mm: '%d dəqiqə',
-            h: 'bir saat',
-            hh: '%d saat',
-            d: 'bir gün',
-            dd: '%d gün',
-            M: 'bir ay',
-            MM: '%d ay',
-            y: 'bir il',
-            yy: '%d il'
-        },
-        meridiemParse: /gecə|səhər|gündüz|axşam/,
-        isPM: function isPM(input) {
-            return (/^(gündüz|axşam)$/.test(input)
-            );
-        },
-        meridiem: function meridiem(hour, minute, isLower) {
-            if (hour < 4) {
-                return 'gecə';
-            } else if (hour < 12) {
-                return 'səhər';
-            } else if (hour < 17) {
-                return 'gündüz';
-            } else {
-                return 'axşam';
-            }
-        },
-        dayOfMonthOrdinalParse: /\d{1,2}-(ıncı|inci|nci|üncü|ncı|uncu)/,
-        ordinal: function ordinal(number) {
-            if (number === 0) {
-                // special case for zero
-                return number + '-ıncı';
-            }
-            var a = number % 10,
-                b = number % 100 - a,
-                c = number >= 100 ? 100 : null;
-            return number + (suffixes[a] || suffixes[b] || suffixes[c]);
-        },
-        week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 7 // The week that contains Jan 1st is the first week of the year.
-        }
-    });
-
-    return az;
-});
-
-/***/ }),
-
-/***/ "Iumh":
-/***/ (function(module, exports, __webpack_require__) {
-
-//! moment.js locale configuration
-//! locale : Luxembourgish [lb]
-//! author : mweimerskirch : https://github.com/mweimerskirch
-//! author : David Raison : https://github.com/kwisatz
-
-;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
-    'use strict';
-
-    function processRelativeTime(number, withoutSuffix, key, isFuture) {
-        var format = {
-            'm': ['eng Minutt', 'enger Minutt'],
-            'h': ['eng Stonn', 'enger Stonn'],
-            'd': ['een Dag', 'engem Dag'],
-            'M': ['ee Mount', 'engem Mount'],
-            'y': ['ee Joer', 'engem Joer']
-        };
-        return withoutSuffix ? format[key][0] : format[key][1];
-    }
-    function processFutureTime(string) {
-        var number = string.substr(0, string.indexOf(' '));
-        if (eifelerRegelAppliesToNumber(number)) {
-            return 'a ' + string;
-        }
-        return 'an ' + string;
-    }
-    function processPastTime(string) {
-        var number = string.substr(0, string.indexOf(' '));
-        if (eifelerRegelAppliesToNumber(number)) {
-            return 'viru ' + string;
-        }
-        return 'virun ' + string;
-    }
-    /**
-     * Returns true if the word before the given number loses the '-n' ending.
-     * e.g. 'an 10 Deeg' but 'a 5 Deeg'
-     *
-     * @param number {integer}
-     * @returns {boolean}
-     */
-    function eifelerRegelAppliesToNumber(number) {
-        number = parseInt(number, 10);
-        if (isNaN(number)) {
-            return false;
-        }
-        if (number < 0) {
-            // Negative Number --> always true
-            return true;
-        } else if (number < 10) {
-            // Only 1 digit
-            if (4 <= number && number <= 7) {
-                return true;
-            }
-            return false;
-        } else if (number < 100) {
-            // 2 digits
-            var lastDigit = number % 10,
-                firstDigit = number / 10;
-            if (lastDigit === 0) {
-                return eifelerRegelAppliesToNumber(firstDigit);
-            }
-            return eifelerRegelAppliesToNumber(lastDigit);
-        } else if (number < 10000) {
-            // 3 or 4 digits --> recursively check first digit
-            while (number >= 10) {
-                number = number / 10;
-            }
-            return eifelerRegelAppliesToNumber(number);
-        } else {
-            // Anything larger than 4 digits: recursively check first n-3 digits
-            number = number / 1000;
-            return eifelerRegelAppliesToNumber(number);
-        }
-    }
-
-    var lb = moment.defineLocale('lb', {
-        months: 'Januar_Februar_Mäerz_Abrëll_Mee_Juni_Juli_August_September_Oktober_November_Dezember'.split('_'),
-        monthsShort: 'Jan._Febr._Mrz._Abr._Mee_Jun._Jul._Aug._Sept._Okt._Nov._Dez.'.split('_'),
-        monthsParseExact: true,
-        weekdays: 'Sonndeg_Méindeg_Dënschdeg_Mëttwoch_Donneschdeg_Freideg_Samschdeg'.split('_'),
-        weekdaysShort: 'So._Mé._Dë._Më._Do._Fr._Sa.'.split('_'),
-        weekdaysMin: 'So_Mé_Dë_Më_Do_Fr_Sa'.split('_'),
-        weekdaysParseExact: true,
-        longDateFormat: {
-            LT: 'H:mm [Auer]',
-            LTS: 'H:mm:ss [Auer]',
-            L: 'DD.MM.YYYY',
-            LL: 'D. MMMM YYYY',
-            LLL: 'D. MMMM YYYY H:mm [Auer]',
-            LLLL: 'dddd, D. MMMM YYYY H:mm [Auer]'
-        },
-        calendar: {
-            sameDay: '[Haut um] LT',
-            sameElse: 'L',
-            nextDay: '[Muer um] LT',
-            nextWeek: 'dddd [um] LT',
-            lastDay: '[Gëschter um] LT',
-            lastWeek: function lastWeek() {
-                // Different date string for 'Dënschdeg' (Tuesday) and 'Donneschdeg' (Thursday) due to phonological rule
-                switch (this.day()) {
-                    case 2:
-                    case 4:
-                        return '[Leschten] dddd [um] LT';
-                    default:
-                        return '[Leschte] dddd [um] LT';
-                }
-            }
-        },
-        relativeTime: {
-            future: processFutureTime,
-            past: processPastTime,
-            s: 'e puer Sekonnen',
-            ss: '%d Sekonnen',
-            m: processRelativeTime,
-            mm: '%d Minutten',
-            h: processRelativeTime,
-            hh: '%d Stonnen',
-            d: processRelativeTime,
-            dd: '%d Deeg',
-            M: processRelativeTime,
-            MM: '%d Méint',
-            y: processRelativeTime,
-            yy: '%d Joer'
-        },
-        dayOfMonthOrdinalParse: /\d{1,2}\./,
-        ordinal: '%d.',
-        week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 4 // The week that contains Jan 4th is the first week of the year.
-        }
-    });
-
-    return lb;
-});
-
-/***/ }),
-
-/***/ "J0UG":
-/***/ (function(module, exports, __webpack_require__) {
-
-//! moment.js locale configuration
-//! locale : Afrikaans [af]
-//! author : Werner Mollentze : https://github.com/wernerm
-
-;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
-    'use strict';
-
-    var af = moment.defineLocale('af', {
-        months: 'Januarie_Februarie_Maart_April_Mei_Junie_Julie_Augustus_September_Oktober_November_Desember'.split('_'),
-        monthsShort: 'Jan_Feb_Mrt_Apr_Mei_Jun_Jul_Aug_Sep_Okt_Nov_Des'.split('_'),
-        weekdays: 'Sondag_Maandag_Dinsdag_Woensdag_Donderdag_Vrydag_Saterdag'.split('_'),
-        weekdaysShort: 'Son_Maa_Din_Woe_Don_Vry_Sat'.split('_'),
-        weekdaysMin: 'So_Ma_Di_Wo_Do_Vr_Sa'.split('_'),
-        meridiemParse: /vm|nm/i,
-        isPM: function isPM(input) {
-            return (/^nm$/i.test(input)
-            );
-        },
-        meridiem: function meridiem(hours, minutes, isLower) {
-            if (hours < 12) {
-                return isLower ? 'vm' : 'VM';
-            } else {
-                return isLower ? 'nm' : 'NM';
-            }
-        },
-        longDateFormat: {
-            LT: 'HH:mm',
-            LTS: 'HH:mm:ss',
-            L: 'DD/MM/YYYY',
-            LL: 'D MMMM YYYY',
-            LLL: 'D MMMM YYYY HH:mm',
-            LLLL: 'dddd, D MMMM YYYY HH:mm'
-        },
-        calendar: {
-            sameDay: '[Vandag om] LT',
-            nextDay: '[Môre om] LT',
-            nextWeek: 'dddd [om] LT',
-            lastDay: '[Gister om] LT',
-            lastWeek: '[Laas] dddd [om] LT',
-            sameElse: 'L'
-        },
-        relativeTime: {
-            future: 'oor %s',
-            past: '%s gelede',
-            s: '\'n paar sekondes',
-            ss: '%d sekondes',
-            m: '\'n minuut',
-            mm: '%d minute',
-            h: '\'n uur',
-            hh: '%d ure',
-            d: '\'n dag',
-            dd: '%d dae',
-            M: '\'n maand',
-            MM: '%d maande',
-            y: '\'n jaar',
-            yy: '%d jaar'
-        },
-        dayOfMonthOrdinalParse: /\d{1,2}(ste|de)/,
-        ordinal: function ordinal(number) {
-            return number + (number === 1 || number === 8 || number >= 20 ? 'ste' : 'de'); // Thanks to Joris Röling : https://github.com/jjupiter
-        },
-        week: {
-            dow: 1, // Maandag is die eerste dag van die week.
-            doy: 4 // Die week wat die 4de Januarie bevat is die eerste week van die jaar.
-        }
-    });
-
-    return af;
-});
-
-/***/ }),
-
-/***/ "Jg9m":
-/***/ (function(module, exports, __webpack_require__) {
-
-//! moment.js locale configuration
-//! locale : Malay [ms]
-//! author : Weldan Jamili : https://github.com/weldan
-
-;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
-    'use strict';
-
-    var ms = moment.defineLocale('ms', {
-        months: 'Januari_Februari_Mac_April_Mei_Jun_Julai_Ogos_September_Oktober_November_Disember'.split('_'),
-        monthsShort: 'Jan_Feb_Mac_Apr_Mei_Jun_Jul_Ogs_Sep_Okt_Nov_Dis'.split('_'),
-        weekdays: 'Ahad_Isnin_Selasa_Rabu_Khamis_Jumaat_Sabtu'.split('_'),
-        weekdaysShort: 'Ahd_Isn_Sel_Rab_Kha_Jum_Sab'.split('_'),
-        weekdaysMin: 'Ah_Is_Sl_Rb_Km_Jm_Sb'.split('_'),
-        longDateFormat: {
-            LT: 'HH.mm',
-            LTS: 'HH.mm.ss',
-            L: 'DD/MM/YYYY',
-            LL: 'D MMMM YYYY',
-            LLL: 'D MMMM YYYY [pukul] HH.mm',
-            LLLL: 'dddd, D MMMM YYYY [pukul] HH.mm'
-        },
-        meridiemParse: /pagi|tengahari|petang|malam/,
-        meridiemHour: function meridiemHour(hour, meridiem) {
-            if (hour === 12) {
-                hour = 0;
-            }
-            if (meridiem === 'pagi') {
-                return hour;
-            } else if (meridiem === 'tengahari') {
-                return hour >= 11 ? hour : hour + 12;
-            } else if (meridiem === 'petang' || meridiem === 'malam') {
-                return hour + 12;
-            }
-        },
-        meridiem: function meridiem(hours, minutes, isLower) {
-            if (hours < 11) {
-                return 'pagi';
-            } else if (hours < 15) {
-                return 'tengahari';
-            } else if (hours < 19) {
-                return 'petang';
-            } else {
-                return 'malam';
-            }
-        },
-        calendar: {
-            sameDay: '[Hari ini pukul] LT',
-            nextDay: '[Esok pukul] LT',
-            nextWeek: 'dddd [pukul] LT',
-            lastDay: '[Kelmarin pukul] LT',
-            lastWeek: 'dddd [lepas pukul] LT',
-            sameElse: 'L'
-        },
-        relativeTime: {
-            future: 'dalam %s',
-            past: '%s yang lepas',
-            s: 'beberapa saat',
-            ss: '%d saat',
-            m: 'seminit',
-            mm: '%d minit',
-            h: 'sejam',
-            hh: '%d jam',
-            d: 'sehari',
-            dd: '%d hari',
-            M: 'sebulan',
-            MM: '%d bulan',
-            y: 'setahun',
-            yy: '%d tahun'
-        },
-        week: {
-            dow: 1, // Monday is the first day of the week.
-            doy: 7 // The week that contains Jan 1st is the first week of the year.
-        }
-    });
-
-    return ms;
-});
-
-/***/ }),
-
-/***/ "JkW7":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-var actions_namespaceObject = {};
-__webpack_require__.d(actions_namespaceObject, "SET_OUTER_COLOR", function() { return SET_OUTER_COLOR; });
-__webpack_require__.d(actions_namespaceObject, "SET_INNER_COLOR", function() { return SET_INNER_COLOR; });
-__webpack_require__.d(actions_namespaceObject, "SET_TIME", function() { return SET_TIME; });
-__webpack_require__.d(actions_namespaceObject, "setInnerColor", function() { return setInnerColor; });
-__webpack_require__.d(actions_namespaceObject, "setOuterColor", function() { return setOuterColor; });
-__webpack_require__.d(actions_namespaceObject, "setTime", function() { return setTime; });
 
-// EXTERNAL MODULE: ../node_modules/preact/dist/preact.min.js
-var preact_min = __webpack_require__("KM04");
-var preact_min_default = /*#__PURE__*/__webpack_require__.n(preact_min);
 
-// EXTERNAL MODULE: ./style/index.scss
-var style = __webpack_require__("yY49");
-var style_default = /*#__PURE__*/__webpack_require__.n(style);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.connectAdvanced = exports.connect = exports.Provider = undefined;
 
-// CONCATENATED MODULE: ../node_modules/lodash-es/_freeGlobal.js
-/** Detect free variable `global` from Node.js. */
-var freeGlobal = typeof global == 'object' && global && global.Object === Object && global;
+var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
-/* harmony default export */ var _freeGlobal = (freeGlobal);
-// CONCATENATED MODULE: ../node_modules/lodash-es/_root.js
+var _preact = __webpack_require__("KM04");
 
-
-/** Detect free variable `self`. */
-var freeSelf = typeof self == 'object' && self && self.Object === Object && self;
-
-/** Used as a reference to the global object. */
-var root = _freeGlobal || freeSelf || Function('return this')();
-
-/* harmony default export */ var _root = (root);
-// CONCATENATED MODULE: ../node_modules/lodash-es/_Symbol.js
-
-
-/** Built-in value references. */
-var _Symbol_Symbol = _root.Symbol;
-
-/* harmony default export */ var _Symbol = (_Symbol_Symbol);
-// CONCATENATED MODULE: ../node_modules/lodash-es/_getRawTag.js
-
-
-/** Used for built-in method references. */
-var objectProto = Object.prototype;
-
-/** Used to check objects for own properties. */
-var _getRawTag_hasOwnProperty = objectProto.hasOwnProperty;
-
-/**
- * Used to resolve the
- * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
- * of values.
- */
-var nativeObjectToString = objectProto.toString;
-
-/** Built-in value references. */
-var symToStringTag = _Symbol ? _Symbol.toStringTag : undefined;
-
-/**
- * A specialized version of `baseGetTag` which ignores `Symbol.toStringTag` values.
- *
- * @private
- * @param {*} value The value to query.
- * @returns {string} Returns the raw `toStringTag`.
- */
-function getRawTag(value) {
-  var isOwn = _getRawTag_hasOwnProperty.call(value, symToStringTag),
-      tag = value[symToStringTag];
-
-  try {
-    value[symToStringTag] = undefined;
-    var unmasked = true;
-  } catch (e) {}
-
-  var result = nativeObjectToString.call(value);
-  if (unmasked) {
-    if (isOwn) {
-      value[symToStringTag] = tag;
-    } else {
-      delete value[symToStringTag];
-    }
-  }
-  return result;
-}
-
-/* harmony default export */ var _getRawTag = (getRawTag);
-// CONCATENATED MODULE: ../node_modules/lodash-es/_objectToString.js
-/** Used for built-in method references. */
-var _objectToString_objectProto = Object.prototype;
-
-/**
- * Used to resolve the
- * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
- * of values.
- */
-var _objectToString_nativeObjectToString = _objectToString_objectProto.toString;
-
-/**
- * Converts `value` to a string using `Object.prototype.toString`.
- *
- * @private
- * @param {*} value The value to convert.
- * @returns {string} Returns the converted string.
- */
-function objectToString(value) {
-  return _objectToString_nativeObjectToString.call(value);
-}
-
-/* harmony default export */ var _objectToString = (objectToString);
-// CONCATENATED MODULE: ../node_modules/lodash-es/_baseGetTag.js
-
-
-
-
-/** `Object#toString` result references. */
-var nullTag = '[object Null]',
-    undefinedTag = '[object Undefined]';
-
-/** Built-in value references. */
-var _baseGetTag_symToStringTag = _Symbol ? _Symbol.toStringTag : undefined;
-
-/**
- * The base implementation of `getTag` without fallbacks for buggy environments.
- *
- * @private
- * @param {*} value The value to query.
- * @returns {string} Returns the `toStringTag`.
- */
-function baseGetTag(value) {
-  if (value == null) {
-    return value === undefined ? undefinedTag : nullTag;
-  }
-  return _baseGetTag_symToStringTag && _baseGetTag_symToStringTag in Object(value) ? _getRawTag(value) : _objectToString(value);
-}
-
-/* harmony default export */ var _baseGetTag = (baseGetTag);
-// CONCATENATED MODULE: ../node_modules/lodash-es/_overArg.js
-/**
- * Creates a unary function that invokes `func` with its argument transformed.
- *
- * @private
- * @param {Function} func The function to wrap.
- * @param {Function} transform The argument transform.
- * @returns {Function} Returns the new function.
- */
-function overArg(func, transform) {
-  return function (arg) {
-    return func(transform(arg));
-  };
-}
-
-/* harmony default export */ var _overArg = (overArg);
-// CONCATENATED MODULE: ../node_modules/lodash-es/_getPrototype.js
-
-
-/** Built-in value references. */
-var getPrototype = _overArg(Object.getPrototypeOf, Object);
-
-/* harmony default export */ var _getPrototype = (getPrototype);
-// CONCATENATED MODULE: ../node_modules/lodash-es/isObjectLike.js
-/**
- * Checks if `value` is object-like. A value is object-like if it's not `null`
- * and has a `typeof` result of "object".
- *
- * @static
- * @memberOf _
- * @since 4.0.0
- * @category Lang
- * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` is object-like, else `false`.
- * @example
- *
- * _.isObjectLike({});
- * // => true
- *
- * _.isObjectLike([1, 2, 3]);
- * // => true
- *
- * _.isObjectLike(_.noop);
- * // => false
- *
- * _.isObjectLike(null);
- * // => false
- */
-function isObjectLike(value) {
-  return value != null && typeof value == 'object';
-}
-
-/* harmony default export */ var lodash_es_isObjectLike = (isObjectLike);
-// CONCATENATED MODULE: ../node_modules/lodash-es/isPlainObject.js
-
-
-
-
-/** `Object#toString` result references. */
-var objectTag = '[object Object]';
-
-/** Used for built-in method references. */
-var funcProto = Function.prototype,
-    isPlainObject_objectProto = Object.prototype;
-
-/** Used to resolve the decompiled source of functions. */
-var funcToString = funcProto.toString;
-
-/** Used to check objects for own properties. */
-var isPlainObject_hasOwnProperty = isPlainObject_objectProto.hasOwnProperty;
-
-/** Used to infer the `Object` constructor. */
-var objectCtorString = funcToString.call(Object);
-
-/**
- * Checks if `value` is a plain object, that is, an object created by the
- * `Object` constructor or one with a `[[Prototype]]` of `null`.
- *
- * @static
- * @memberOf _
- * @since 0.8.0
- * @category Lang
- * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` is a plain object, else `false`.
- * @example
- *
- * function Foo() {
- *   this.a = 1;
- * }
- *
- * _.isPlainObject(new Foo);
- * // => false
- *
- * _.isPlainObject([1, 2, 3]);
- * // => false
- *
- * _.isPlainObject({ 'x': 0, 'y': 0 });
- * // => true
- *
- * _.isPlainObject(Object.create(null));
- * // => true
- */
-function isPlainObject(value) {
-  if (!lodash_es_isObjectLike(value) || _baseGetTag(value) != objectTag) {
-    return false;
-  }
-  var proto = _getPrototype(value);
-  if (proto === null) {
-    return true;
-  }
-  var Ctor = isPlainObject_hasOwnProperty.call(proto, 'constructor') && proto.constructor;
-  return typeof Ctor == 'function' && Ctor instanceof Ctor && funcToString.call(Ctor) == objectCtorString;
-}
-
-/* harmony default export */ var lodash_es_isPlainObject = (isPlainObject);
-// EXTERNAL MODULE: ../node_modules/symbol-observable/index.js
-var symbol_observable = __webpack_require__("f6ML");
-var symbol_observable_default = /*#__PURE__*/__webpack_require__.n(symbol_observable);
-
-// CONCATENATED MODULE: ../node_modules/redux/es/createStore.js
-
-
-
-/**
- * These are private action types reserved by Redux.
- * For any unknown actions, you must return the current state.
- * If the current state is undefined, you must return the initial state.
- * Do not reference these action types directly in your code.
- */
-var ActionTypes = {
-  INIT: '@@redux/INIT'
-
-  /**
-   * Creates a Redux store that holds the state tree.
-   * The only way to change the data in the store is to call `dispatch()` on it.
-   *
-   * There should only be a single store in your app. To specify how different
-   * parts of the state tree respond to actions, you may combine several reducers
-   * into a single reducer function by using `combineReducers`.
-   *
-   * @param {Function} reducer A function that returns the next state tree, given
-   * the current state tree and the action to handle.
-   *
-   * @param {any} [preloadedState] The initial state. You may optionally specify it
-   * to hydrate the state from the server in universal apps, or to restore a
-   * previously serialized user session.
-   * If you use `combineReducers` to produce the root reducer function, this must be
-   * an object with the same shape as `combineReducers` keys.
-   *
-   * @param {Function} [enhancer] The store enhancer. You may optionally specify it
-   * to enhance the store with third-party capabilities such as middleware,
-   * time travel, persistence, etc. The only store enhancer that ships with Redux
-   * is `applyMiddleware()`.
-   *
-   * @returns {Store} A Redux store that lets you read the state, dispatch actions
-   * and subscribe to changes.
-   */
-};function createStore_createStore(reducer, preloadedState, enhancer) {
-  var _ref2;
-
-  if (typeof preloadedState === 'function' && typeof enhancer === 'undefined') {
-    enhancer = preloadedState;
-    preloadedState = undefined;
-  }
-
-  if (typeof enhancer !== 'undefined') {
-    if (typeof enhancer !== 'function') {
-      throw new Error('Expected the enhancer to be a function.');
-    }
-
-    return enhancer(createStore_createStore)(reducer, preloadedState);
-  }
-
-  if (typeof reducer !== 'function') {
-    throw new Error('Expected the reducer to be a function.');
-  }
-
-  var currentReducer = reducer;
-  var currentState = preloadedState;
-  var currentListeners = [];
-  var nextListeners = currentListeners;
-  var isDispatching = false;
-
-  function ensureCanMutateNextListeners() {
-    if (nextListeners === currentListeners) {
-      nextListeners = currentListeners.slice();
-    }
-  }
-
-  /**
-   * Reads the state tree managed by the store.
-   *
-   * @returns {any} The current state tree of your application.
-   */
-  function getState() {
-    return currentState;
-  }
-
-  /**
-   * Adds a change listener. It will be called any time an action is dispatched,
-   * and some part of the state tree may potentially have changed. You may then
-   * call `getState()` to read the current state tree inside the callback.
-   *
-   * You may call `dispatch()` from a change listener, with the following
-   * caveats:
-   *
-   * 1. The subscriptions are snapshotted just before every `dispatch()` call.
-   * If you subscribe or unsubscribe while the listeners are being invoked, this
-   * will not have any effect on the `dispatch()` that is currently in progress.
-   * However, the next `dispatch()` call, whether nested or not, will use a more
-   * recent snapshot of the subscription list.
-   *
-   * 2. The listener should not expect to see all state changes, as the state
-   * might have been updated multiple times during a nested `dispatch()` before
-   * the listener is called. It is, however, guaranteed that all subscribers
-   * registered before the `dispatch()` started will be called with the latest
-   * state by the time it exits.
-   *
-   * @param {Function} listener A callback to be invoked on every dispatch.
-   * @returns {Function} A function to remove this change listener.
-   */
-  function subscribe(listener) {
-    if (typeof listener !== 'function') {
-      throw new Error('Expected listener to be a function.');
-    }
-
-    var isSubscribed = true;
-
-    ensureCanMutateNextListeners();
-    nextListeners.push(listener);
-
-    return function unsubscribe() {
-      if (!isSubscribed) {
-        return;
-      }
-
-      isSubscribed = false;
-
-      ensureCanMutateNextListeners();
-      var index = nextListeners.indexOf(listener);
-      nextListeners.splice(index, 1);
-    };
-  }
-
-  /**
-   * Dispatches an action. It is the only way to trigger a state change.
-   *
-   * The `reducer` function, used to create the store, will be called with the
-   * current state tree and the given `action`. Its return value will
-   * be considered the **next** state of the tree, and the change listeners
-   * will be notified.
-   *
-   * The base implementation only supports plain object actions. If you want to
-   * dispatch a Promise, an Observable, a thunk, or something else, you need to
-   * wrap your store creating function into the corresponding middleware. For
-   * example, see the documentation for the `redux-thunk` package. Even the
-   * middleware will eventually dispatch plain object actions using this method.
-   *
-   * @param {Object} action A plain object representing “what changed”. It is
-   * a good idea to keep actions serializable so you can record and replay user
-   * sessions, or use the time travelling `redux-devtools`. An action must have
-   * a `type` property which may not be `undefined`. It is a good idea to use
-   * string constants for action types.
-   *
-   * @returns {Object} For convenience, the same action object you dispatched.
-   *
-   * Note that, if you use a custom middleware, it may wrap `dispatch()` to
-   * return something else (for example, a Promise you can await).
-   */
-  function dispatch(action) {
-    if (!lodash_es_isPlainObject(action)) {
-      throw new Error('Actions must be plain objects. ' + 'Use custom middleware for async actions.');
-    }
-
-    if (typeof action.type === 'undefined') {
-      throw new Error('Actions may not have an undefined "type" property. ' + 'Have you misspelled a constant?');
-    }
-
-    if (isDispatching) {
-      throw new Error('Reducers may not dispatch actions.');
-    }
-
-    try {
-      isDispatching = true;
-      currentState = currentReducer(currentState, action);
-    } finally {
-      isDispatching = false;
-    }
-
-    var listeners = currentListeners = nextListeners;
-    for (var i = 0; i < listeners.length; i++) {
-      var listener = listeners[i];
-      listener();
-    }
-
-    return action;
-  }
-
-  /**
-   * Replaces the reducer currently used by the store to calculate the state.
-   *
-   * You might need this if your app implements code splitting and you want to
-   * load some of the reducers dynamically. You might also need this if you
-   * implement a hot reloading mechanism for Redux.
-   *
-   * @param {Function} nextReducer The reducer for the store to use instead.
-   * @returns {void}
-   */
-  function replaceReducer(nextReducer) {
-    if (typeof nextReducer !== 'function') {
-      throw new Error('Expected the nextReducer to be a function.');
-    }
-
-    currentReducer = nextReducer;
-    dispatch({ type: ActionTypes.INIT });
-  }
-
-  /**
-   * Interoperability point for observable/reactive libraries.
-   * @returns {observable} A minimal observable of state changes.
-   * For more information, see the observable proposal:
-   * https://github.com/tc39/proposal-observable
-   */
-  function observable() {
-    var _ref;
-
-    var outerSubscribe = subscribe;
-    return _ref = {
-      /**
-       * The minimal observable subscription method.
-       * @param {Object} observer Any object that can be used as an observer.
-       * The observer object should have a `next` method.
-       * @returns {subscription} An object with an `unsubscribe` method that can
-       * be used to unsubscribe the observable from the store, and prevent further
-       * emission of values from the observable.
-       */
-      subscribe: function subscribe(observer) {
-        if (typeof observer !== 'object') {
-          throw new TypeError('Expected the observer to be an object.');
-        }
-
-        function observeState() {
-          if (observer.next) {
-            observer.next(getState());
-          }
-        }
-
-        observeState();
-        var unsubscribe = outerSubscribe(observeState);
-        return { unsubscribe: unsubscribe };
-      }
-    }, _ref[symbol_observable_default.a] = function () {
-      return this;
-    }, _ref;
-  }
-
-  // When a store is created, an "INIT" action is dispatched so that every
-  // reducer returns their initial state. This effectively populates
-  // the initial state tree.
-  dispatch({ type: ActionTypes.INIT });
-
-  return _ref2 = {
-    dispatch: dispatch,
-    subscribe: subscribe,
-    getState: getState,
-    replaceReducer: replaceReducer
-  }, _ref2[symbol_observable_default.a] = observable, _ref2;
-}
-// CONCATENATED MODULE: ../node_modules/redux/es/utils/warning.js
-/**
- * Prints a warning in the console if it exists.
- *
- * @param {String} message The warning message.
- * @returns {void}
- */
-function warning_warning(message) {
-  /* eslint-disable no-console */
-  if (typeof console !== 'undefined' && typeof console.error === 'function') {
-    console.error(message);
-  }
-  /* eslint-enable no-console */
-  try {
-    // This error was thrown as a convenience so that if you enable
-    // "break on all exceptions" in your console,
-    // it would pause the execution at this line.
-    throw new Error(message);
-    /* eslint-disable no-empty */
-  } catch (e) {}
-  /* eslint-enable no-empty */
-}
-// CONCATENATED MODULE: ../node_modules/redux/es/combineReducers.js
-
-
-
-
-function getUndefinedStateErrorMessage(key, action) {
-  var actionType = action && action.type;
-  var actionName = actionType && '"' + actionType.toString() + '"' || 'an action';
-
-  return 'Given action ' + actionName + ', reducer "' + key + '" returned undefined. ' + 'To ignore an action, you must explicitly return the previous state. ' + 'If you want this reducer to hold no value, you can return null instead of undefined.';
-}
-
-function getUnexpectedStateShapeWarningMessage(inputState, reducers, action, unexpectedKeyCache) {
-  var reducerKeys = Object.keys(reducers);
-  var argumentName = action && action.type === ActionTypes.INIT ? 'preloadedState argument passed to createStore' : 'previous state received by the reducer';
-
-  if (reducerKeys.length === 0) {
-    return 'Store does not have a valid reducer. Make sure the argument passed ' + 'to combineReducers is an object whose values are reducers.';
-  }
-
-  if (!lodash_es_isPlainObject(inputState)) {
-    return 'The ' + argumentName + ' has unexpected type of "' + {}.toString.call(inputState).match(/\s([a-z|A-Z]+)/)[1] + '". Expected argument to be an object with the following ' + ('keys: "' + reducerKeys.join('", "') + '"');
-  }
-
-  var unexpectedKeys = Object.keys(inputState).filter(function (key) {
-    return !reducers.hasOwnProperty(key) && !unexpectedKeyCache[key];
-  });
-
-  unexpectedKeys.forEach(function (key) {
-    unexpectedKeyCache[key] = true;
-  });
-
-  if (unexpectedKeys.length > 0) {
-    return 'Unexpected ' + (unexpectedKeys.length > 1 ? 'keys' : 'key') + ' ' + ('"' + unexpectedKeys.join('", "') + '" found in ' + argumentName + '. ') + 'Expected to find one of the known reducer keys instead: ' + ('"' + reducerKeys.join('", "') + '". Unexpected keys will be ignored.');
-  }
-}
-
-function assertReducerShape(reducers) {
-  Object.keys(reducers).forEach(function (key) {
-    var reducer = reducers[key];
-    var initialState = reducer(undefined, { type: ActionTypes.INIT });
-
-    if (typeof initialState === 'undefined') {
-      throw new Error('Reducer "' + key + '" returned undefined during initialization. ' + 'If the state passed to the reducer is undefined, you must ' + 'explicitly return the initial state. The initial state may ' + 'not be undefined. If you don\'t want to set a value for this reducer, ' + 'you can use null instead of undefined.');
-    }
-
-    var type = '@@redux/PROBE_UNKNOWN_ACTION_' + Math.random().toString(36).substring(7).split('').join('.');
-    if (typeof reducer(undefined, { type: type }) === 'undefined') {
-      throw new Error('Reducer "' + key + '" returned undefined when probed with a random type. ' + ('Don\'t try to handle ' + ActionTypes.INIT + ' or other actions in "redux/*" ') + 'namespace. They are considered private. Instead, you must return the ' + 'current state for any unknown actions, unless it is undefined, ' + 'in which case you must return the initial state, regardless of the ' + 'action type. The initial state may not be undefined, but can be null.');
-    }
-  });
-}
-
-/**
- * Turns an object whose values are different reducer functions, into a single
- * reducer function. It will call every child reducer, and gather their results
- * into a single state object, whose keys correspond to the keys of the passed
- * reducer functions.
- *
- * @param {Object} reducers An object whose values correspond to different
- * reducer functions that need to be combined into one. One handy way to obtain
- * it is to use ES6 `import * as reducers` syntax. The reducers may never return
- * undefined for any action. Instead, they should return their initial state
- * if the state passed to them was undefined, and the current state for any
- * unrecognized action.
- *
- * @returns {Function} A reducer function that invokes every reducer inside the
- * passed object, and builds a state object with the same shape.
- */
-function combineReducers(reducers) {
-  var reducerKeys = Object.keys(reducers);
-  var finalReducers = {};
-  for (var i = 0; i < reducerKeys.length; i++) {
-    var key = reducerKeys[i];
-
-    if (false) {
-      if (typeof reducers[key] === 'undefined') {
-        warning('No reducer provided for key "' + key + '"');
-      }
-    }
-
-    if (typeof reducers[key] === 'function') {
-      finalReducers[key] = reducers[key];
-    }
-  }
-  var finalReducerKeys = Object.keys(finalReducers);
-
-  var unexpectedKeyCache = void 0;
-  if (false) {
-    unexpectedKeyCache = {};
-  }
-
-  var shapeAssertionError = void 0;
-  try {
-    assertReducerShape(finalReducers);
-  } catch (e) {
-    shapeAssertionError = e;
-  }
-
-  return function combination() {
-    var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-    var action = arguments[1];
-
-    if (shapeAssertionError) {
-      throw shapeAssertionError;
-    }
-
-    if (false) {
-      var warningMessage = getUnexpectedStateShapeWarningMessage(state, finalReducers, action, unexpectedKeyCache);
-      if (warningMessage) {
-        warning(warningMessage);
-      }
-    }
-
-    var hasChanged = false;
-    var nextState = {};
-    for (var _i = 0; _i < finalReducerKeys.length; _i++) {
-      var _key = finalReducerKeys[_i];
-      var reducer = finalReducers[_key];
-      var previousStateForKey = state[_key];
-      var nextStateForKey = reducer(previousStateForKey, action);
-      if (typeof nextStateForKey === 'undefined') {
-        var errorMessage = getUndefinedStateErrorMessage(_key, action);
-        throw new Error(errorMessage);
-      }
-      nextState[_key] = nextStateForKey;
-      hasChanged = hasChanged || nextStateForKey !== previousStateForKey;
-    }
-    return hasChanged ? nextState : state;
-  };
-}
-// CONCATENATED MODULE: ../node_modules/redux/es/bindActionCreators.js
-function bindActionCreator(actionCreator, dispatch) {
-  return function () {
-    return dispatch(actionCreator.apply(undefined, arguments));
-  };
-}
-
-/**
- * Turns an object whose values are action creators, into an object with the
- * same keys, but with every function wrapped into a `dispatch` call so they
- * may be invoked directly. This is just a convenience method, as you can call
- * `store.dispatch(MyActionCreators.doSomething())` yourself just fine.
- *
- * For convenience, you can also pass a single function as the first argument,
- * and get a function in return.
- *
- * @param {Function|Object} actionCreators An object whose values are action
- * creator functions. One handy way to obtain it is to use ES6 `import * as`
- * syntax. You may also pass a single function.
- *
- * @param {Function} dispatch The `dispatch` function available on your Redux
- * store.
- *
- * @returns {Function|Object} The object mimicking the original object, but with
- * every action creator wrapped into the `dispatch` call. If you passed a
- * function as `actionCreators`, the return value will also be a single
- * function.
- */
-function bindActionCreators(actionCreators, dispatch) {
-  if (typeof actionCreators === 'function') {
-    return bindActionCreator(actionCreators, dispatch);
-  }
-
-  if (typeof actionCreators !== 'object' || actionCreators === null) {
-    throw new Error('bindActionCreators expected an object or a function, instead received ' + (actionCreators === null ? 'null' : typeof actionCreators) + '. ' + 'Did you write "import ActionCreators from" instead of "import * as ActionCreators from"?');
-  }
-
-  var keys = Object.keys(actionCreators);
-  var boundActionCreators = {};
-  for (var i = 0; i < keys.length; i++) {
-    var key = keys[i];
-    var actionCreator = actionCreators[key];
-    if (typeof actionCreator === 'function') {
-      boundActionCreators[key] = bindActionCreator(actionCreator, dispatch);
-    }
-  }
-  return boundActionCreators;
-}
-// CONCATENATED MODULE: ../node_modules/redux/es/compose.js
-/**
- * Composes single-argument functions from right to left. The rightmost
- * function can take multiple arguments as it provides the signature for
- * the resulting composite function.
- *
- * @param {...Function} funcs The functions to compose.
- * @returns {Function} A function obtained by composing the argument functions
- * from right to left. For example, compose(f, g, h) is identical to doing
- * (...args) => f(g(h(...args))).
- */
-
-function compose() {
-  for (var _len = arguments.length, funcs = Array(_len), _key = 0; _key < _len; _key++) {
-    funcs[_key] = arguments[_key];
-  }
-
-  if (funcs.length === 0) {
-    return function (arg) {
-      return arg;
-    };
-  }
-
-  if (funcs.length === 1) {
-    return funcs[0];
-  }
-
-  return funcs.reduce(function (a, b) {
-    return function () {
-      return a(b.apply(undefined, arguments));
-    };
-  });
-}
-// CONCATENATED MODULE: ../node_modules/redux/es/applyMiddleware.js
-var _extends = Object.assign || function (target) {
-  for (var i = 1; i < arguments.length; i++) {
-    var source = arguments[i];for (var key in source) {
-      if (Object.prototype.hasOwnProperty.call(source, key)) {
-        target[key] = source[key];
-      }
-    }
-  }return target;
-};
-
-
-
-/**
- * Creates a store enhancer that applies middleware to the dispatch method
- * of the Redux store. This is handy for a variety of tasks, such as expressing
- * asynchronous actions in a concise manner, or logging every action payload.
- *
- * See `redux-thunk` package as an example of the Redux middleware.
- *
- * Because middleware is potentially asynchronous, this should be the first
- * store enhancer in the composition chain.
- *
- * Note that each middleware will be given the `dispatch` and `getState` functions
- * as named arguments.
- *
- * @param {...Function} middlewares The middleware chain to be applied.
- * @returns {Function} A store enhancer applying the middleware.
- */
-function applyMiddleware() {
-  for (var _len = arguments.length, middlewares = Array(_len), _key = 0; _key < _len; _key++) {
-    middlewares[_key] = arguments[_key];
-  }
-
-  return function (createStore) {
-    return function (reducer, preloadedState, enhancer) {
-      var store = createStore(reducer, preloadedState, enhancer);
-      var _dispatch = store.dispatch;
-      var chain = [];
-
-      var middlewareAPI = {
-        getState: store.getState,
-        dispatch: function dispatch(action) {
-          return _dispatch(action);
-        }
-      };
-      chain = middlewares.map(function (middleware) {
-        return middleware(middlewareAPI);
-      });
-      _dispatch = compose.apply(undefined, chain)(store.dispatch);
-
-      return _extends({}, store, {
-        dispatch: _dispatch
-      });
-    };
-  };
-}
-// CONCATENATED MODULE: ../node_modules/redux/es/index.js
-
-
-
-
-
-
-
-/*
-* This is a dummy function to check if the function name has been altered by minification.
-* If the function has been minified and NODE_ENV !== 'production', warn the user.
-*/
-function isCrushed() {}
-
-if (false) {
-  warning('You are currently using minified code outside of NODE_ENV === \'production\'. ' + 'This means that you are running a slower development build of Redux. ' + 'You can use loose-envify (https://github.com/zertosh/loose-envify) for browserify ' + 'or DefinePlugin for webpack (http://stackoverflow.com/questions/30030031) ' + 'to ensure you have the correct code for your production build.');
-}
-
-
-// CONCATENATED MODULE: ../node_modules/preact-redux/dist/preact-redux.esm.js
-
-
+var _redux = __webpack_require__("fpuT");
 
 var Children = {
   only: function only(children) {
@@ -6495,7 +5726,7 @@ var storeShape = PropTypes.shape({
  * @param {String} message The warning message.
  * @returns {void}
  */
-function preact_redux_esm_warning(message) {
+function warning(message) {
   /* eslint-disable no-console */
   if (typeof console !== 'undefined' && typeof console.error === 'function') {
     console.error(message);
@@ -6511,10 +5742,10 @@ function preact_redux_esm_warning(message) {
   /* eslint-enable no-empty */
 }
 
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) {
-  return typeof obj;
+var _typeof = typeof Symbol === "function" && _typeof2(Symbol.iterator) === "symbol" ? function (obj) {
+  return typeof obj === 'undefined' ? 'undefined' : _typeof2(obj);
 } : function (obj) {
-  return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+  return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj === 'undefined' ? 'undefined' : _typeof2(obj);
 };
 
 var classCallCheck = function classCallCheck(instance, Constructor) {
@@ -6523,7 +5754,7 @@ var classCallCheck = function classCallCheck(instance, Constructor) {
   }
 };
 
-var preact_redux_esm__extends = Object.assign || function (target) {
+var _extends = Object.assign || function (target) {
   for (var i = 1; i < arguments.length; i++) {
     var source = arguments[i];
 
@@ -6539,7 +5770,7 @@ var preact_redux_esm__extends = Object.assign || function (target) {
 
 var inherits = function inherits(subClass, superClass) {
   if (typeof superClass !== "function" && superClass !== null) {
-    throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
+    throw new TypeError("Super expression must either be null or a function, not " + (typeof superClass === 'undefined' ? 'undefined' : _typeof2(superClass)));
   }
 
   subClass.prototype = Object.create(superClass && superClass.prototype, {
@@ -6570,7 +5801,7 @@ var possibleConstructorReturn = function possibleConstructorReturn(self, call) {
     throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
   }
 
-  return call && (typeof call === "object" || typeof call === "function") ? call : self;
+  return call && ((typeof call === 'undefined' ? 'undefined' : _typeof2(call)) === "object" || typeof call === "function") ? call : self;
 };
 
 var didWarnAboutReceivingStore = false;
@@ -6580,7 +5811,7 @@ function warnAboutReceivingStore() {
   }
   didWarnAboutReceivingStore = true;
 
-  preact_redux_esm_warning('<Provider> does not support changing `store` on the fly. ' + 'It is most likely that you see this error because you updated to ' + 'Redux 2.x and React Redux 2.x which no longer hot reload reducers ' + 'automatically. See https://github.com/reactjs/react-redux/releases/' + 'tag/v2.0.0 for the migration instructions.');
+  warning('<Provider> does not support changing `store` on the fly. ' + 'It is most likely that you see this error because you updated to ' + 'Redux 2.x and React Redux 2.x which no longer hot reload reducers ' + 'automatically. See https://github.com/reactjs/react-redux/releases/' + 'tag/v2.0.0 for the migration instructions.');
 }
 
 function createProvider() {
@@ -6614,7 +5845,7 @@ function createProvider() {
     };
 
     return Provider;
-  }(preact_min["Component"]);
+  }(_preact.Component);
 
   {
     Provider.prototype.componentWillReceiveProps = function (nextProps) {
@@ -6629,7 +5860,7 @@ function createProvider() {
   return Provider;
 }
 
-var preact_redux_esm_Provider = createProvider();
+var Provider = createProvider();
 
 /**
  * Copyright 2015, Yahoo! Inc.
@@ -6861,7 +6092,7 @@ selectorFactory) {
 
     var displayName = getDisplayName(wrappedComponentName);
 
-    var selectorFactoryOptions = preact_redux_esm__extends({}, connectOptions, {
+    var selectorFactoryOptions = _extends({}, connectOptions, {
       getDisplayName: getDisplayName,
       methodName: methodName,
       renderCountProp: renderCountProp,
@@ -7000,7 +6231,7 @@ selectorFactory) {
         // this is especially important for 'ref' since that's a reference back to the component
         // instance. a singleton memoized selector would then be holding a reference to the
         // instance, preventing the instance from being garbage collected, and that would be bad
-        var withExtras = preact_redux_esm__extends({}, props);
+        var withExtras = _extends({}, props);
         if (withRef) withExtras.ref = this.setWrappedInstance;
         if (renderCountProp) withExtras[renderCountProp] = this.renderCount++;
         if (this.propsMode && this.subscription) withExtras[subscriptionKey] = this.subscription;
@@ -7014,12 +6245,12 @@ selectorFactory) {
         if (selector.error) {
           throw selector.error;
         } else {
-          return Object(preact_min["h"])(WrappedComponent, this.addExtraProps(selector.props));
+          return (0, _preact.h)(WrappedComponent, this.addExtraProps(selector.props));
         }
       };
 
       return Connect;
-    }(preact_min["Component"]);
+    }(_preact.Component);
 
     Connect.WrappedComponent = WrappedComponent;
     Connect.displayName = displayName;
@@ -7093,16 +6324,16 @@ function shallowEqual(objA, objB) {
 }
 
 /** Detect free variable `global` from Node.js. */
-var preact_redux_esm_freeGlobal = (typeof global === 'undefined' ? 'undefined' : _typeof(global)) == 'object' && global && global.Object === Object && global;
+var freeGlobal = (typeof global === 'undefined' ? 'undefined' : _typeof(global)) == 'object' && global && global.Object === Object && global;
 
 /** Detect free variable `self`. */
-var preact_redux_esm_freeSelf = (typeof self === 'undefined' ? 'undefined' : _typeof(self)) == 'object' && self && self.Object === Object && self;
+var freeSelf = (typeof self === 'undefined' ? 'undefined' : _typeof(self)) == 'object' && self && self.Object === Object && self;
 
 /** Used as a reference to the global object. */
-var preact_redux_esm_root = preact_redux_esm_freeGlobal || preact_redux_esm_freeSelf || Function('return this')();
+var root = freeGlobal || freeSelf || Function('return this')();
 
 /** Built-in value references. */
-var preact_redux_esm__Symbol = preact_redux_esm_root.Symbol;
+var _Symbol = root.Symbol;
 
 /** Used for built-in method references. */
 var objectProto$1 = Object.prototype;
@@ -7115,10 +6346,10 @@ var hasOwnProperty$1 = objectProto$1.hasOwnProperty;
  * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
  * of values.
  */
-var preact_redux_esm_nativeObjectToString = objectProto$1.toString;
+var nativeObjectToString = objectProto$1.toString;
 
 /** Built-in value references. */
-var symToStringTag$1 = preact_redux_esm__Symbol ? preact_redux_esm__Symbol.toStringTag : undefined;
+var symToStringTag$1 = _Symbol ? _Symbol.toStringTag : undefined;
 
 /**
  * A specialized version of `baseGetTag` which ignores `Symbol.toStringTag` values.
@@ -7127,7 +6358,7 @@ var symToStringTag$1 = preact_redux_esm__Symbol ? preact_redux_esm__Symbol.toStr
  * @param {*} value The value to query.
  * @returns {string} Returns the raw `toStringTag`.
  */
-function preact_redux_esm_getRawTag(value) {
+function getRawTag(value) {
   var isOwn = hasOwnProperty$1.call(value, symToStringTag$1),
       tag = value[symToStringTag$1];
 
@@ -7136,7 +6367,7 @@ function preact_redux_esm_getRawTag(value) {
     var unmasked = true;
   } catch (e) {}
 
-  var result = preact_redux_esm_nativeObjectToString.call(value);
+  var result = nativeObjectToString.call(value);
   if (unmasked) {
     if (isOwn) {
       value[symToStringTag$1] = tag;
@@ -7164,16 +6395,16 @@ var nativeObjectToString$1 = objectProto$2.toString;
  * @param {*} value The value to convert.
  * @returns {string} Returns the converted string.
  */
-function preact_redux_esm_objectToString(value) {
+function objectToString(value) {
   return nativeObjectToString$1.call(value);
 }
 
 /** `Object#toString` result references. */
-var preact_redux_esm_nullTag = '[object Null]';
-var preact_redux_esm_undefinedTag = '[object Undefined]';
+var nullTag = '[object Null]';
+var undefinedTag = '[object Undefined]';
 
 /** Built-in value references. */
-var preact_redux_esm_symToStringTag = preact_redux_esm__Symbol ? preact_redux_esm__Symbol.toStringTag : undefined;
+var symToStringTag = _Symbol ? _Symbol.toStringTag : undefined;
 
 /**
  * The base implementation of `getTag` without fallbacks for buggy environments.
@@ -7182,11 +6413,11 @@ var preact_redux_esm_symToStringTag = preact_redux_esm__Symbol ? preact_redux_es
  * @param {*} value The value to query.
  * @returns {string} Returns the `toStringTag`.
  */
-function preact_redux_esm_baseGetTag(value) {
+function baseGetTag(value) {
   if (value == null) {
-    return value === undefined ? preact_redux_esm_undefinedTag : preact_redux_esm_nullTag;
+    return value === undefined ? undefinedTag : nullTag;
   }
-  return preact_redux_esm_symToStringTag && preact_redux_esm_symToStringTag in Object(value) ? preact_redux_esm_getRawTag(value) : preact_redux_esm_objectToString(value);
+  return symToStringTag && symToStringTag in Object(value) ? getRawTag(value) : objectToString(value);
 }
 
 /**
@@ -7197,14 +6428,14 @@ function preact_redux_esm_baseGetTag(value) {
  * @param {Function} transform The argument transform.
  * @returns {Function} Returns the new function.
  */
-function preact_redux_esm_overArg(func, transform) {
+function overArg(func, transform) {
   return function (arg) {
     return func(transform(arg));
   };
 }
 
 /** Built-in value references. */
-var preact_redux_esm_getPrototype = preact_redux_esm_overArg(Object.getPrototypeOf, Object);
+var getPrototype = overArg(Object.getPrototypeOf, Object);
 
 /**
  * Checks if `value` is object-like. A value is object-like if it's not `null`
@@ -7230,25 +6461,25 @@ var preact_redux_esm_getPrototype = preact_redux_esm_overArg(Object.getPrototype
  * _.isObjectLike(null);
  * // => false
  */
-function preact_redux_esm_isObjectLike(value) {
+function isObjectLike(value) {
   return value != null && (typeof value === 'undefined' ? 'undefined' : _typeof(value)) == 'object';
 }
 
 /** `Object#toString` result references. */
-var preact_redux_esm_objectTag = '[object Object]';
+var objectTag = '[object Object]';
 
 /** Used for built-in method references. */
-var preact_redux_esm_funcProto = Function.prototype;
-var preact_redux_esm_objectProto = Object.prototype;
+var funcProto = Function.prototype;
+var objectProto = Object.prototype;
 
 /** Used to resolve the decompiled source of functions. */
-var preact_redux_esm_funcToString = preact_redux_esm_funcProto.toString;
+var funcToString = funcProto.toString;
 
 /** Used to check objects for own properties. */
-var preact_redux_esm_hasOwnProperty = preact_redux_esm_objectProto.hasOwnProperty;
+var hasOwnProperty = objectProto.hasOwnProperty;
 
 /** Used to infer the `Object` constructor. */
-var preact_redux_esm_objectCtorString = preact_redux_esm_funcToString.call(Object);
+var objectCtorString = funcToString.call(Object);
 
 /**
  * Checks if `value` is a plain object, that is, an object created by the
@@ -7278,21 +6509,21 @@ var preact_redux_esm_objectCtorString = preact_redux_esm_funcToString.call(Objec
  * _.isPlainObject(Object.create(null));
  * // => true
  */
-function preact_redux_esm_isPlainObject(value) {
-  if (!preact_redux_esm_isObjectLike(value) || preact_redux_esm_baseGetTag(value) != preact_redux_esm_objectTag) {
+function isPlainObject(value) {
+  if (!isObjectLike(value) || baseGetTag(value) != objectTag) {
     return false;
   }
-  var proto = preact_redux_esm_getPrototype(value);
+  var proto = getPrototype(value);
   if (proto === null) {
     return true;
   }
-  var Ctor = preact_redux_esm_hasOwnProperty.call(proto, 'constructor') && proto.constructor;
-  return typeof Ctor == 'function' && Ctor instanceof Ctor && preact_redux_esm_funcToString.call(Ctor) == preact_redux_esm_objectCtorString;
+  var Ctor = hasOwnProperty.call(proto, 'constructor') && proto.constructor;
+  return typeof Ctor == 'function' && Ctor instanceof Ctor && funcToString.call(Ctor) == objectCtorString;
 }
 
 function verifyPlainObject(value, displayName, methodName) {
-  if (!preact_redux_esm_isPlainObject(value)) {
-    preact_redux_esm_warning(methodName + '() in ' + displayName + ' must return a plain object. Instead received ' + value + '.');
+  if (!isPlainObject(value)) {
+    warning(methodName + '() in ' + displayName + ' must return a plain object. Instead received ' + value + '.');
   }
 }
 
@@ -7374,7 +6605,7 @@ function whenMapDispatchToPropsIsMissing(mapDispatchToProps) {
 
 function whenMapDispatchToPropsIsObject(mapDispatchToProps) {
   return mapDispatchToProps && (typeof mapDispatchToProps === 'undefined' ? 'undefined' : _typeof(mapDispatchToProps)) === 'object' ? wrapMapToPropsConstant(function (dispatch) {
-    return bindActionCreators(mapDispatchToProps, dispatch);
+    return (0, _redux.bindActionCreators)(mapDispatchToProps, dispatch);
   }) : undefined;
 }
 
@@ -7393,7 +6624,7 @@ function whenMapStateToPropsIsMissing(mapStateToProps) {
 var defaultMapStateToPropsFactories = [whenMapStateToPropsIsFunction, whenMapStateToPropsIsMissing];
 
 function defaultMergeProps(stateProps, dispatchProps, ownProps) {
-  return preact_redux_esm__extends({}, ownProps, stateProps, dispatchProps);
+  return _extends({}, ownProps, stateProps, dispatchProps);
 }
 
 function wrapMergePropsFunc(mergeProps) {
@@ -7439,7 +6670,7 @@ function verify(selector, methodName, displayName) {
     throw new Error('Unexpected value for ' + methodName + ' in ' + displayName + '.');
   } else if (methodName === 'mapStateToProps' || methodName === 'mapDispatchToProps') {
     if (!selector.hasOwnProperty('dependsOnOwnProps')) {
-      preact_redux_esm_warning('The selector for ' + methodName + ' of ' + displayName + ' did not specify a value for dependsOnOwnProps.');
+      warning('The selector for ' + methodName + ' of ' + displayName + ' did not specify a value for dependsOnOwnProps.');
     }
   }
 }
@@ -7615,7 +6846,7 @@ function createConnect() {
     var initMapDispatchToProps = match(mapDispatchToProps, mapDispatchToPropsFactories, 'mapDispatchToProps');
     var initMergeProps = match(mergeProps, mergePropsFactories, 'mergeProps');
 
-    return connectHOC(selectorFactory, preact_redux_esm__extends({
+    return connectHOC(selectorFactory, _extends({
       // used in error messages
       methodName: 'connect',
 
@@ -7643,99 +6874,1114 @@ function createConnect() {
 
 var connect = createConnect();
 
-var preact_redux_esm_index = { Provider: preact_redux_esm_Provider, connect: connect, connectAdvanced: connectAdvanced };
+var index = { Provider: Provider, connect: connect, connectAdvanced: connectAdvanced };
 
-/* harmony default export */ var preact_redux_esm = (preact_redux_esm_index);
+exports.Provider = Provider;
+exports.connect = connect;
+exports.connectAdvanced = connectAdvanced;
+exports.default = index;
 //# sourceMappingURL=preact-redux.esm.js.map
-// EXTERNAL MODULE: ../node_modules/preact-router/dist/preact-router.es.js
-var preact_router_es = __webpack_require__("/QC5");
 
-// EXTERNAL MODULE: ../node_modules/preact-router/match.js
-var preact_router_match = __webpack_require__("sw5u");
-var match_default = /*#__PURE__*/__webpack_require__.n(preact_router_match);
+/***/ }),
 
-// EXTERNAL MODULE: ./components/Header/style.scss
-var Header_style = __webpack_require__("xrtm");
-var Header_style_default = /*#__PURE__*/__webpack_require__.n(Header_style);
+/***/ "EBDP":
+/***/ (function(module, exports, __webpack_require__) {
 
-// CONCATENATED MODULE: ./actions.js
-var SET_OUTER_COLOR = 'SET_OUTER_COLOR';
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 
-var SET_INNER_COLOR = 'SET_INNER_COLOR';
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
-var SET_TIME = 'SET_TIME';
+//! moment.js locale configuration
+//! locale : Czech [cs]
+//! author : petrbela : https://github.com/petrbela
 
-function setInnerColor(color) {
-	return {
-		type: SET_INNER_COLOR,
-		color: color
-	};
-}
+;(function (global, factory) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
+    'use strict';
 
-function setOuterColor(color) {
-	return {
-		type: SET_OUTER_COLOR,
-		color: color
-	};
-}
+    var months = 'leden_únor_březen_duben_květen_červen_červenec_srpen_září_říjen_listopad_prosinec'.split('_');
+    var monthsShort = 'led_úno_bře_dub_kvě_čvn_čvc_srp_zář_říj_lis_pro'.split('_');
+    function plural(n) {
+        return n > 1 && n < 5 && ~~(n / 10) !== 1;
+    }
+    function translate(number, withoutSuffix, key, isFuture) {
+        var result = number + ' ';
+        switch (key) {
+            case 's':
+                // a few seconds / in a few seconds / a few seconds ago
+                return withoutSuffix || isFuture ? 'pár sekund' : 'pár sekundami';
+            case 'ss':
+                // 9 seconds / in 9 seconds / 9 seconds ago
+                if (withoutSuffix || isFuture) {
+                    return result + (plural(number) ? 'sekundy' : 'sekund');
+                } else {
+                    return result + 'sekundami';
+                }
+                break;
+            case 'm':
+                // a minute / in a minute / a minute ago
+                return withoutSuffix ? 'minuta' : isFuture ? 'minutu' : 'minutou';
+            case 'mm':
+                // 9 minutes / in 9 minutes / 9 minutes ago
+                if (withoutSuffix || isFuture) {
+                    return result + (plural(number) ? 'minuty' : 'minut');
+                } else {
+                    return result + 'minutami';
+                }
+                break;
+            case 'h':
+                // an hour / in an hour / an hour ago
+                return withoutSuffix ? 'hodina' : isFuture ? 'hodinu' : 'hodinou';
+            case 'hh':
+                // 9 hours / in 9 hours / 9 hours ago
+                if (withoutSuffix || isFuture) {
+                    return result + (plural(number) ? 'hodiny' : 'hodin');
+                } else {
+                    return result + 'hodinami';
+                }
+                break;
+            case 'd':
+                // a day / in a day / a day ago
+                return withoutSuffix || isFuture ? 'den' : 'dnem';
+            case 'dd':
+                // 9 days / in 9 days / 9 days ago
+                if (withoutSuffix || isFuture) {
+                    return result + (plural(number) ? 'dny' : 'dní');
+                } else {
+                    return result + 'dny';
+                }
+                break;
+            case 'M':
+                // a month / in a month / a month ago
+                return withoutSuffix || isFuture ? 'měsíc' : 'měsícem';
+            case 'MM':
+                // 9 months / in 9 months / 9 months ago
+                if (withoutSuffix || isFuture) {
+                    return result + (plural(number) ? 'měsíce' : 'měsíců');
+                } else {
+                    return result + 'měsíci';
+                }
+                break;
+            case 'y':
+                // a year / in a year / a year ago
+                return withoutSuffix || isFuture ? 'rok' : 'rokem';
+            case 'yy':
+                // 9 years / in 9 years / 9 years ago
+                if (withoutSuffix || isFuture) {
+                    return result + (plural(number) ? 'roky' : 'let');
+                } else {
+                    return result + 'lety';
+                }
+                break;
+        }
+    }
 
-function setTime(time) {
-	return {
-		type: SET_TIME,
-		time: time
-	};
-}
-// CONCATENATED MODULE: ./reducers.js
-var reducers__extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+    var cs = moment.defineLocale('cs', {
+        months: months,
+        monthsShort: monthsShort,
+        monthsParse: function (months, monthsShort) {
+            var i,
+                _monthsParse = [];
+            for (i = 0; i < 12; i++) {
+                // use custom parser to solve problem with July (červenec)
+                _monthsParse[i] = new RegExp('^' + months[i] + '$|^' + monthsShort[i] + '$', 'i');
+            }
+            return _monthsParse;
+        }(months, monthsShort),
+        shortMonthsParse: function (monthsShort) {
+            var i,
+                _shortMonthsParse = [];
+            for (i = 0; i < 12; i++) {
+                _shortMonthsParse[i] = new RegExp('^' + monthsShort[i] + '$', 'i');
+            }
+            return _shortMonthsParse;
+        }(monthsShort),
+        longMonthsParse: function (months) {
+            var i,
+                _longMonthsParse = [];
+            for (i = 0; i < 12; i++) {
+                _longMonthsParse[i] = new RegExp('^' + months[i] + '$', 'i');
+            }
+            return _longMonthsParse;
+        }(months),
+        weekdays: 'neděle_pondělí_úterý_středa_čtvrtek_pátek_sobota'.split('_'),
+        weekdaysShort: 'ne_po_út_st_čt_pá_so'.split('_'),
+        weekdaysMin: 'ne_po_út_st_čt_pá_so'.split('_'),
+        longDateFormat: {
+            LT: 'H:mm',
+            LTS: 'H:mm:ss',
+            L: 'DD.MM.YYYY',
+            LL: 'D. MMMM YYYY',
+            LLL: 'D. MMMM YYYY H:mm',
+            LLLL: 'dddd D. MMMM YYYY H:mm',
+            l: 'D. M. YYYY'
+        },
+        calendar: {
+            sameDay: '[dnes v] LT',
+            nextDay: '[zítra v] LT',
+            nextWeek: function nextWeek() {
+                switch (this.day()) {
+                    case 0:
+                        return '[v neděli v] LT';
+                    case 1:
+                    case 2:
+                        return '[v] dddd [v] LT';
+                    case 3:
+                        return '[ve středu v] LT';
+                    case 4:
+                        return '[ve čtvrtek v] LT';
+                    case 5:
+                        return '[v pátek v] LT';
+                    case 6:
+                        return '[v sobotu v] LT';
+                }
+            },
+            lastDay: '[včera v] LT',
+            lastWeek: function lastWeek() {
+                switch (this.day()) {
+                    case 0:
+                        return '[minulou neděli v] LT';
+                    case 1:
+                    case 2:
+                        return '[minulé] dddd [v] LT';
+                    case 3:
+                        return '[minulou středu v] LT';
+                    case 4:
+                    case 5:
+                        return '[minulý] dddd [v] LT';
+                    case 6:
+                        return '[minulou sobotu v] LT';
+                }
+            },
+            sameElse: 'L'
+        },
+        relativeTime: {
+            future: 'za %s',
+            past: 'před %s',
+            s: translate,
+            ss: translate,
+            m: translate,
+            mm: translate,
+            h: translate,
+            hh: translate,
+            d: translate,
+            dd: translate,
+            M: translate,
+            MM: translate,
+            y: translate,
+            yy: translate
+        },
+        dayOfMonthOrdinalParse: /\d{1,2}\./,
+        ordinal: '%d.',
+        week: {
+            dow: 1, // Monday is the first day of the week.
+            doy: 4 // The week that contains Jan 4th is the first week of the year.
+        }
+    });
+
+    return cs;
+});
+
+/***/ }),
+
+/***/ "EFwr":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
 
 
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
 
-var reducers_initialState = {
-	outerColor: [245, 100, 50],
-	innerColor: [291, 100, 50],
-	time: new Date()
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _time = __webpack_require__("Yfr+");
+
+var initialState = {
+    value: +new Date()
 };
 
-function app() {
-	var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : reducers_initialState;
-	var action = arguments[1];
+function time() {
+    var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
+    var action = arguments[1];
 
-	switch (action.type) {
 
-		case SET_INNER_COLOR:
-			return reducers__extends({}, state, {
-				innerColor: action.color
-			});
+    switch (action.type) {
 
-		case SET_OUTER_COLOR:
-			return reducers__extends({}, state, {
-				outerColor: action.color
-			});
+        case _time.SET_TIME:
+            return _extends({}, state, { value: action.time });
 
-		case SET_TIME:
-			return reducers__extends({}, state, {
-				time: action.time
-			});
+        case _time.GET_TIME_REQUEST:
+            return _extends({}, state, {
+                isFetching: true
+            });
 
-		default:
-			return state;
-	}
+        case _time.GET_TIME_SUCCESS:
+            return _extends({}, state, {
+                isFetching: false,
+                lastUpdated: action.receivedAt
+            }, { value: action.time });
+
+        case _time.GET_TIME_FAILURE:
+            return _extends({}, state, {
+                isFetching: false
+            });
+
+        default:
+            return state;
+    }
 }
 
-/* harmony default export */ var reducers_0 = (app);
-// CONCATENATED MODULE: ./lib/hsl.js
-function hslToCss(hslArray) {
-	var hue = hslArray[0],
-	    sat = hslArray[1],
-	    lum = hslArray[2];
+exports.default = time;
+
+/***/ }),
+
+/***/ "EIlw":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+//! moment.js locale configuration
+//! locale : Arabic (Kuwait) [ar-kw]
+//! author : Nusret Parlak: https://github.com/nusretparlak
+
+;(function (global, factory) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
+    'use strict';
+
+    var arKw = moment.defineLocale('ar-kw', {
+        months: 'يناير_فبراير_مارس_أبريل_ماي_يونيو_يوليوز_غشت_شتنبر_أكتوبر_نونبر_دجنبر'.split('_'),
+        monthsShort: 'يناير_فبراير_مارس_أبريل_ماي_يونيو_يوليوز_غشت_شتنبر_أكتوبر_نونبر_دجنبر'.split('_'),
+        weekdays: 'الأحد_الإتنين_الثلاثاء_الأربعاء_الخميس_الجمعة_السبت'.split('_'),
+        weekdaysShort: 'احد_اتنين_ثلاثاء_اربعاء_خميس_جمعة_سبت'.split('_'),
+        weekdaysMin: 'ح_ن_ث_ر_خ_ج_س'.split('_'),
+        weekdaysParseExact: true,
+        longDateFormat: {
+            LT: 'HH:mm',
+            LTS: 'HH:mm:ss',
+            L: 'DD/MM/YYYY',
+            LL: 'D MMMM YYYY',
+            LLL: 'D MMMM YYYY HH:mm',
+            LLLL: 'dddd D MMMM YYYY HH:mm'
+        },
+        calendar: {
+            sameDay: '[اليوم على الساعة] LT',
+            nextDay: '[غدا على الساعة] LT',
+            nextWeek: 'dddd [على الساعة] LT',
+            lastDay: '[أمس على الساعة] LT',
+            lastWeek: 'dddd [على الساعة] LT',
+            sameElse: 'L'
+        },
+        relativeTime: {
+            future: 'في %s',
+            past: 'منذ %s',
+            s: 'ثوان',
+            ss: '%d ثانية',
+            m: 'دقيقة',
+            mm: '%d دقائق',
+            h: 'ساعة',
+            hh: '%d ساعات',
+            d: 'يوم',
+            dd: '%d أيام',
+            M: 'شهر',
+            MM: '%d أشهر',
+            y: 'سنة',
+            yy: '%d سنوات'
+        },
+        week: {
+            dow: 0, // Sunday is the first day of the week.
+            doy: 12 // The week that contains Jan 1st is the first week of the year.
+        }
+    });
+
+    return arKw;
+});
+
+/***/ }),
+
+/***/ "EgIa":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+//! moment.js locale configuration
+//! locale : Slovenian [sl]
+//! author : Robert Sedovšek : https://github.com/sedovsek
+
+;(function (global, factory) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
+    'use strict';
+
+    function processRelativeTime(number, withoutSuffix, key, isFuture) {
+        var result = number + ' ';
+        switch (key) {
+            case 's':
+                return withoutSuffix || isFuture ? 'nekaj sekund' : 'nekaj sekundami';
+            case 'ss':
+                if (number === 1) {
+                    result += withoutSuffix ? 'sekundo' : 'sekundi';
+                } else if (number === 2) {
+                    result += withoutSuffix || isFuture ? 'sekundi' : 'sekundah';
+                } else if (number < 5) {
+                    result += withoutSuffix || isFuture ? 'sekunde' : 'sekundah';
+                } else {
+                    result += withoutSuffix || isFuture ? 'sekund' : 'sekund';
+                }
+                return result;
+            case 'm':
+                return withoutSuffix ? 'ena minuta' : 'eno minuto';
+            case 'mm':
+                if (number === 1) {
+                    result += withoutSuffix ? 'minuta' : 'minuto';
+                } else if (number === 2) {
+                    result += withoutSuffix || isFuture ? 'minuti' : 'minutama';
+                } else if (number < 5) {
+                    result += withoutSuffix || isFuture ? 'minute' : 'minutami';
+                } else {
+                    result += withoutSuffix || isFuture ? 'minut' : 'minutami';
+                }
+                return result;
+            case 'h':
+                return withoutSuffix ? 'ena ura' : 'eno uro';
+            case 'hh':
+                if (number === 1) {
+                    result += withoutSuffix ? 'ura' : 'uro';
+                } else if (number === 2) {
+                    result += withoutSuffix || isFuture ? 'uri' : 'urama';
+                } else if (number < 5) {
+                    result += withoutSuffix || isFuture ? 'ure' : 'urami';
+                } else {
+                    result += withoutSuffix || isFuture ? 'ur' : 'urami';
+                }
+                return result;
+            case 'd':
+                return withoutSuffix || isFuture ? 'en dan' : 'enim dnem';
+            case 'dd':
+                if (number === 1) {
+                    result += withoutSuffix || isFuture ? 'dan' : 'dnem';
+                } else if (number === 2) {
+                    result += withoutSuffix || isFuture ? 'dni' : 'dnevoma';
+                } else {
+                    result += withoutSuffix || isFuture ? 'dni' : 'dnevi';
+                }
+                return result;
+            case 'M':
+                return withoutSuffix || isFuture ? 'en mesec' : 'enim mesecem';
+            case 'MM':
+                if (number === 1) {
+                    result += withoutSuffix || isFuture ? 'mesec' : 'mesecem';
+                } else if (number === 2) {
+                    result += withoutSuffix || isFuture ? 'meseca' : 'mesecema';
+                } else if (number < 5) {
+                    result += withoutSuffix || isFuture ? 'mesece' : 'meseci';
+                } else {
+                    result += withoutSuffix || isFuture ? 'mesecev' : 'meseci';
+                }
+                return result;
+            case 'y':
+                return withoutSuffix || isFuture ? 'eno leto' : 'enim letom';
+            case 'yy':
+                if (number === 1) {
+                    result += withoutSuffix || isFuture ? 'leto' : 'letom';
+                } else if (number === 2) {
+                    result += withoutSuffix || isFuture ? 'leti' : 'letoma';
+                } else if (number < 5) {
+                    result += withoutSuffix || isFuture ? 'leta' : 'leti';
+                } else {
+                    result += withoutSuffix || isFuture ? 'let' : 'leti';
+                }
+                return result;
+        }
+    }
+
+    var sl = moment.defineLocale('sl', {
+        months: 'januar_februar_marec_april_maj_junij_julij_avgust_september_oktober_november_december'.split('_'),
+        monthsShort: 'jan._feb._mar._apr._maj._jun._jul._avg._sep._okt._nov._dec.'.split('_'),
+        monthsParseExact: true,
+        weekdays: 'nedelja_ponedeljek_torek_sreda_četrtek_petek_sobota'.split('_'),
+        weekdaysShort: 'ned._pon._tor._sre._čet._pet._sob.'.split('_'),
+        weekdaysMin: 'ne_po_to_sr_če_pe_so'.split('_'),
+        weekdaysParseExact: true,
+        longDateFormat: {
+            LT: 'H:mm',
+            LTS: 'H:mm:ss',
+            L: 'DD.MM.YYYY',
+            LL: 'D. MMMM YYYY',
+            LLL: 'D. MMMM YYYY H:mm',
+            LLLL: 'dddd, D. MMMM YYYY H:mm'
+        },
+        calendar: {
+            sameDay: '[danes ob] LT',
+            nextDay: '[jutri ob] LT',
+
+            nextWeek: function nextWeek() {
+                switch (this.day()) {
+                    case 0:
+                        return '[v] [nedeljo] [ob] LT';
+                    case 3:
+                        return '[v] [sredo] [ob] LT';
+                    case 6:
+                        return '[v] [soboto] [ob] LT';
+                    case 1:
+                    case 2:
+                    case 4:
+                    case 5:
+                        return '[v] dddd [ob] LT';
+                }
+            },
+            lastDay: '[včeraj ob] LT',
+            lastWeek: function lastWeek() {
+                switch (this.day()) {
+                    case 0:
+                        return '[prejšnjo] [nedeljo] [ob] LT';
+                    case 3:
+                        return '[prejšnjo] [sredo] [ob] LT';
+                    case 6:
+                        return '[prejšnjo] [soboto] [ob] LT';
+                    case 1:
+                    case 2:
+                    case 4:
+                    case 5:
+                        return '[prejšnji] dddd [ob] LT';
+                }
+            },
+            sameElse: 'L'
+        },
+        relativeTime: {
+            future: 'čez %s',
+            past: 'pred %s',
+            s: processRelativeTime,
+            ss: processRelativeTime,
+            m: processRelativeTime,
+            mm: processRelativeTime,
+            h: processRelativeTime,
+            hh: processRelativeTime,
+            d: processRelativeTime,
+            dd: processRelativeTime,
+            M: processRelativeTime,
+            MM: processRelativeTime,
+            y: processRelativeTime,
+            yy: processRelativeTime
+        },
+        dayOfMonthOrdinalParse: /\d{1,2}\./,
+        ordinal: '%d.',
+        week: {
+            dow: 1, // Monday is the first day of the week.
+            doy: 7 // The week that contains Jan 1st is the first week of the year.
+        }
+    });
+
+    return sl;
+});
+
+/***/ }),
+
+/***/ "EhRq":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+//! moment.js locale configuration
+//! locale : Icelandic [is]
+//! author : Hinrik Örn Sigurðsson : https://github.com/hinrik
+
+;(function (global, factory) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
+    'use strict';
+
+    function plural(n) {
+        if (n % 100 === 11) {
+            return true;
+        } else if (n % 10 === 1) {
+            return false;
+        }
+        return true;
+    }
+    function translate(number, withoutSuffix, key, isFuture) {
+        var result = number + ' ';
+        switch (key) {
+            case 's':
+                return withoutSuffix || isFuture ? 'nokkrar sekúndur' : 'nokkrum sekúndum';
+            case 'ss':
+                if (plural(number)) {
+                    return result + (withoutSuffix || isFuture ? 'sekúndur' : 'sekúndum');
+                }
+                return result + 'sekúnda';
+            case 'm':
+                return withoutSuffix ? 'mínúta' : 'mínútu';
+            case 'mm':
+                if (plural(number)) {
+                    return result + (withoutSuffix || isFuture ? 'mínútur' : 'mínútum');
+                } else if (withoutSuffix) {
+                    return result + 'mínúta';
+                }
+                return result + 'mínútu';
+            case 'hh':
+                if (plural(number)) {
+                    return result + (withoutSuffix || isFuture ? 'klukkustundir' : 'klukkustundum');
+                }
+                return result + 'klukkustund';
+            case 'd':
+                if (withoutSuffix) {
+                    return 'dagur';
+                }
+                return isFuture ? 'dag' : 'degi';
+            case 'dd':
+                if (plural(number)) {
+                    if (withoutSuffix) {
+                        return result + 'dagar';
+                    }
+                    return result + (isFuture ? 'daga' : 'dögum');
+                } else if (withoutSuffix) {
+                    return result + 'dagur';
+                }
+                return result + (isFuture ? 'dag' : 'degi');
+            case 'M':
+                if (withoutSuffix) {
+                    return 'mánuður';
+                }
+                return isFuture ? 'mánuð' : 'mánuði';
+            case 'MM':
+                if (plural(number)) {
+                    if (withoutSuffix) {
+                        return result + 'mánuðir';
+                    }
+                    return result + (isFuture ? 'mánuði' : 'mánuðum');
+                } else if (withoutSuffix) {
+                    return result + 'mánuður';
+                }
+                return result + (isFuture ? 'mánuð' : 'mánuði');
+            case 'y':
+                return withoutSuffix || isFuture ? 'ár' : 'ári';
+            case 'yy':
+                if (plural(number)) {
+                    return result + (withoutSuffix || isFuture ? 'ár' : 'árum');
+                }
+                return result + (withoutSuffix || isFuture ? 'ár' : 'ári');
+        }
+    }
+
+    var is = moment.defineLocale('is', {
+        months: 'janúar_febrúar_mars_apríl_maí_júní_júlí_ágúst_september_október_nóvember_desember'.split('_'),
+        monthsShort: 'jan_feb_mar_apr_maí_jún_júl_ágú_sep_okt_nóv_des'.split('_'),
+        weekdays: 'sunnudagur_mánudagur_þriðjudagur_miðvikudagur_fimmtudagur_föstudagur_laugardagur'.split('_'),
+        weekdaysShort: 'sun_mán_þri_mið_fim_fös_lau'.split('_'),
+        weekdaysMin: 'Su_Má_Þr_Mi_Fi_Fö_La'.split('_'),
+        longDateFormat: {
+            LT: 'H:mm',
+            LTS: 'H:mm:ss',
+            L: 'DD.MM.YYYY',
+            LL: 'D. MMMM YYYY',
+            LLL: 'D. MMMM YYYY [kl.] H:mm',
+            LLLL: 'dddd, D. MMMM YYYY [kl.] H:mm'
+        },
+        calendar: {
+            sameDay: '[í dag kl.] LT',
+            nextDay: '[á morgun kl.] LT',
+            nextWeek: 'dddd [kl.] LT',
+            lastDay: '[í gær kl.] LT',
+            lastWeek: '[síðasta] dddd [kl.] LT',
+            sameElse: 'L'
+        },
+        relativeTime: {
+            future: 'eftir %s',
+            past: 'fyrir %s síðan',
+            s: translate,
+            ss: translate,
+            m: translate,
+            mm: translate,
+            h: 'klukkustund',
+            hh: translate,
+            d: translate,
+            dd: translate,
+            M: translate,
+            MM: translate,
+            y: translate,
+            yy: translate
+        },
+        dayOfMonthOrdinalParse: /\d{1,2}\./,
+        ordinal: '%d.',
+        week: {
+            dow: 1, // Monday is the first day of the week.
+            doy: 4 // The week that contains Jan 4th is the first week of the year.
+        }
+    });
+
+    return is;
+});
+
+/***/ }),
+
+/***/ "G/YP":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+//! moment.js locale configuration
+//! locale : Arabic (Lybia) [ar-ly]
+//! author : Ali Hmer: https://github.com/kikoanis
+
+;(function (global, factory) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
+    'use strict';
+
+    var symbolMap = {
+        '1': '1',
+        '2': '2',
+        '3': '3',
+        '4': '4',
+        '5': '5',
+        '6': '6',
+        '7': '7',
+        '8': '8',
+        '9': '9',
+        '0': '0'
+    };
+    var pluralForm = function pluralForm(n) {
+        return n === 0 ? 0 : n === 1 ? 1 : n === 2 ? 2 : n % 100 >= 3 && n % 100 <= 10 ? 3 : n % 100 >= 11 ? 4 : 5;
+    };
+    var plurals = {
+        s: ['أقل من ثانية', 'ثانية واحدة', ['ثانيتان', 'ثانيتين'], '%d ثوان', '%d ثانية', '%d ثانية'],
+        m: ['أقل من دقيقة', 'دقيقة واحدة', ['دقيقتان', 'دقيقتين'], '%d دقائق', '%d دقيقة', '%d دقيقة'],
+        h: ['أقل من ساعة', 'ساعة واحدة', ['ساعتان', 'ساعتين'], '%d ساعات', '%d ساعة', '%d ساعة'],
+        d: ['أقل من يوم', 'يوم واحد', ['يومان', 'يومين'], '%d أيام', '%d يومًا', '%d يوم'],
+        M: ['أقل من شهر', 'شهر واحد', ['شهران', 'شهرين'], '%d أشهر', '%d شهرا', '%d شهر'],
+        y: ['أقل من عام', 'عام واحد', ['عامان', 'عامين'], '%d أعوام', '%d عامًا', '%d عام']
+    };
+    var pluralize = function pluralize(u) {
+        return function (number, withoutSuffix, string, isFuture) {
+            var f = pluralForm(number),
+                str = plurals[u][pluralForm(number)];
+            if (f === 2) {
+                str = str[withoutSuffix ? 0 : 1];
+            }
+            return str.replace(/%d/i, number);
+        };
+    };
+    var months = ['يناير', 'فبراير', 'مارس', 'أبريل', 'مايو', 'يونيو', 'يوليو', 'أغسطس', 'سبتمبر', 'أكتوبر', 'نوفمبر', 'ديسمبر'];
+
+    var arLy = moment.defineLocale('ar-ly', {
+        months: months,
+        monthsShort: months,
+        weekdays: 'الأحد_الإثنين_الثلاثاء_الأربعاء_الخميس_الجمعة_السبت'.split('_'),
+        weekdaysShort: 'أحد_إثنين_ثلاثاء_أربعاء_خميس_جمعة_سبت'.split('_'),
+        weekdaysMin: 'ح_ن_ث_ر_خ_ج_س'.split('_'),
+        weekdaysParseExact: true,
+        longDateFormat: {
+            LT: 'HH:mm',
+            LTS: 'HH:mm:ss',
+            L: 'D/\u200FM/\u200FYYYY',
+            LL: 'D MMMM YYYY',
+            LLL: 'D MMMM YYYY HH:mm',
+            LLLL: 'dddd D MMMM YYYY HH:mm'
+        },
+        meridiemParse: /ص|م/,
+        isPM: function isPM(input) {
+            return 'م' === input;
+        },
+        meridiem: function meridiem(hour, minute, isLower) {
+            if (hour < 12) {
+                return 'ص';
+            } else {
+                return 'م';
+            }
+        },
+        calendar: {
+            sameDay: '[اليوم عند الساعة] LT',
+            nextDay: '[غدًا عند الساعة] LT',
+            nextWeek: 'dddd [عند الساعة] LT',
+            lastDay: '[أمس عند الساعة] LT',
+            lastWeek: 'dddd [عند الساعة] LT',
+            sameElse: 'L'
+        },
+        relativeTime: {
+            future: 'بعد %s',
+            past: 'منذ %s',
+            s: pluralize('s'),
+            ss: pluralize('s'),
+            m: pluralize('m'),
+            mm: pluralize('m'),
+            h: pluralize('h'),
+            hh: pluralize('h'),
+            d: pluralize('d'),
+            dd: pluralize('d'),
+            M: pluralize('M'),
+            MM: pluralize('M'),
+            y: pluralize('y'),
+            yy: pluralize('y')
+        },
+        preparse: function preparse(string) {
+            return string.replace(/،/g, ',');
+        },
+        postformat: function postformat(string) {
+            return string.replace(/\d/g, function (match) {
+                return symbolMap[match];
+            }).replace(/,/g, '،');
+        },
+        week: {
+            dow: 6, // Saturday is the first day of the week.
+            doy: 12 // The week that contains Jan 1st is the first week of the year.
+        }
+    });
+
+    return arLy;
+});
+
+/***/ }),
+
+/***/ "GuU2":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+//! moment.js locale configuration
+//! locale : Maltese (Malta) [mt]
+//! author : Alessandro Maruccia : https://github.com/alesma
+
+;(function (global, factory) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
+    'use strict';
+
+    var mt = moment.defineLocale('mt', {
+        months: 'Jannar_Frar_Marzu_April_Mejju_Ġunju_Lulju_Awwissu_Settembru_Ottubru_Novembru_Diċembru'.split('_'),
+        monthsShort: 'Jan_Fra_Mar_Apr_Mej_Ġun_Lul_Aww_Set_Ott_Nov_Diċ'.split('_'),
+        weekdays: 'Il-Ħadd_It-Tnejn_It-Tlieta_L-Erbgħa_Il-Ħamis_Il-Ġimgħa_Is-Sibt'.split('_'),
+        weekdaysShort: 'Ħad_Tne_Tli_Erb_Ħam_Ġim_Sib'.split('_'),
+        weekdaysMin: 'Ħa_Tn_Tl_Er_Ħa_Ġi_Si'.split('_'),
+        longDateFormat: {
+            LT: 'HH:mm',
+            LTS: 'HH:mm:ss',
+            L: 'DD/MM/YYYY',
+            LL: 'D MMMM YYYY',
+            LLL: 'D MMMM YYYY HH:mm',
+            LLLL: 'dddd, D MMMM YYYY HH:mm'
+        },
+        calendar: {
+            sameDay: '[Illum fil-]LT',
+            nextDay: '[Għada fil-]LT',
+            nextWeek: 'dddd [fil-]LT',
+            lastDay: '[Il-bieraħ fil-]LT',
+            lastWeek: 'dddd [li għadda] [fil-]LT',
+            sameElse: 'L'
+        },
+        relativeTime: {
+            future: 'f’ %s',
+            past: '%s ilu',
+            s: 'ftit sekondi',
+            ss: '%d sekondi',
+            m: 'minuta',
+            mm: '%d minuti',
+            h: 'siegħa',
+            hh: '%d siegħat',
+            d: 'ġurnata',
+            dd: '%d ġranet',
+            M: 'xahar',
+            MM: '%d xhur',
+            y: 'sena',
+            yy: '%d sni'
+        },
+        dayOfMonthOrdinalParse: /\d{1,2}º/,
+        ordinal: '%dº',
+        week: {
+            dow: 1, // Monday is the first day of the week.
+            doy: 4 // The week that contains Jan 4th is the first week of the year.
+        }
+    });
+
+    return mt;
+});
+
+/***/ }),
+
+/***/ "Gz4Y":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+//! moment.js locale configuration
+//! locale : Ukrainian [uk]
+//! author : zemlanin : https://github.com/zemlanin
+//! Author : Menelion Elensúle : https://github.com/Oire
+
+;(function (global, factory) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
+    'use strict';
+
+    function plural(word, num) {
+        var forms = word.split('_');
+        return num % 10 === 1 && num % 100 !== 11 ? forms[0] : num % 10 >= 2 && num % 10 <= 4 && (num % 100 < 10 || num % 100 >= 20) ? forms[1] : forms[2];
+    }
+    function relativeTimeWithPlural(number, withoutSuffix, key) {
+        var format = {
+            'ss': withoutSuffix ? 'секунда_секунди_секунд' : 'секунду_секунди_секунд',
+            'mm': withoutSuffix ? 'хвилина_хвилини_хвилин' : 'хвилину_хвилини_хвилин',
+            'hh': withoutSuffix ? 'година_години_годин' : 'годину_години_годин',
+            'dd': 'день_дні_днів',
+            'MM': 'місяць_місяці_місяців',
+            'yy': 'рік_роки_років'
+        };
+        if (key === 'm') {
+            return withoutSuffix ? 'хвилина' : 'хвилину';
+        } else if (key === 'h') {
+            return withoutSuffix ? 'година' : 'годину';
+        } else {
+            return number + ' ' + plural(format[key], +number);
+        }
+    }
+    function weekdaysCaseReplace(m, format) {
+        var weekdays = {
+            'nominative': 'неділя_понеділок_вівторок_середа_четвер_п’ятниця_субота'.split('_'),
+            'accusative': 'неділю_понеділок_вівторок_середу_четвер_п’ятницю_суботу'.split('_'),
+            'genitive': 'неділі_понеділка_вівторка_середи_четверга_п’ятниці_суботи'.split('_')
+        };
+
+        if (!m) {
+            return weekdays['nominative'];
+        }
+
+        var nounCase = /(\[[ВвУу]\]) ?dddd/.test(format) ? 'accusative' : /\[?(?:минулої|наступної)? ?\] ?dddd/.test(format) ? 'genitive' : 'nominative';
+        return weekdays[nounCase][m.day()];
+    }
+    function processHoursFunction(str) {
+        return function () {
+            return str + 'о' + (this.hours() === 11 ? 'б' : '') + '] LT';
+        };
+    }
+
+    var uk = moment.defineLocale('uk', {
+        months: {
+            'format': 'січня_лютого_березня_квітня_травня_червня_липня_серпня_вересня_жовтня_листопада_грудня'.split('_'),
+            'standalone': 'січень_лютий_березень_квітень_травень_червень_липень_серпень_вересень_жовтень_листопад_грудень'.split('_')
+        },
+        monthsShort: 'січ_лют_бер_квіт_трав_черв_лип_серп_вер_жовт_лист_груд'.split('_'),
+        weekdays: weekdaysCaseReplace,
+        weekdaysShort: 'нд_пн_вт_ср_чт_пт_сб'.split('_'),
+        weekdaysMin: 'нд_пн_вт_ср_чт_пт_сб'.split('_'),
+        longDateFormat: {
+            LT: 'HH:mm',
+            LTS: 'HH:mm:ss',
+            L: 'DD.MM.YYYY',
+            LL: 'D MMMM YYYY р.',
+            LLL: 'D MMMM YYYY р., HH:mm',
+            LLLL: 'dddd, D MMMM YYYY р., HH:mm'
+        },
+        calendar: {
+            sameDay: processHoursFunction('[Сьогодні '),
+            nextDay: processHoursFunction('[Завтра '),
+            lastDay: processHoursFunction('[Вчора '),
+            nextWeek: processHoursFunction('[У] dddd ['),
+            lastWeek: function lastWeek() {
+                switch (this.day()) {
+                    case 0:
+                    case 3:
+                    case 5:
+                    case 6:
+                        return processHoursFunction('[Минулої] dddd [').call(this);
+                    case 1:
+                    case 2:
+                    case 4:
+                        return processHoursFunction('[Минулого] dddd [').call(this);
+                }
+            },
+            sameElse: 'L'
+        },
+        relativeTime: {
+            future: 'за %s',
+            past: '%s тому',
+            s: 'декілька секунд',
+            ss: relativeTimeWithPlural,
+            m: relativeTimeWithPlural,
+            mm: relativeTimeWithPlural,
+            h: 'годину',
+            hh: relativeTimeWithPlural,
+            d: 'день',
+            dd: relativeTimeWithPlural,
+            M: 'місяць',
+            MM: relativeTimeWithPlural,
+            y: 'рік',
+            yy: relativeTimeWithPlural
+        },
+        // M. E.: those two are virtually unused but a user might want to implement them for his/her website for some reason
+        meridiemParse: /ночі|ранку|дня|вечора/,
+        isPM: function isPM(input) {
+            return (/^(дня|вечора)$/.test(input)
+            );
+        },
+        meridiem: function meridiem(hour, minute, isLower) {
+            if (hour < 4) {
+                return 'ночі';
+            } else if (hour < 12) {
+                return 'ранку';
+            } else if (hour < 17) {
+                return 'дня';
+            } else {
+                return 'вечора';
+            }
+        },
+        dayOfMonthOrdinalParse: /\d{1,2}-(й|го)/,
+        ordinal: function ordinal(number, period) {
+            switch (period) {
+                case 'M':
+                case 'd':
+                case 'DDD':
+                case 'w':
+                case 'W':
+                    return number + '-й';
+                case 'D':
+                    return number + '-го';
+                default:
+                    return number;
+            }
+        },
+        week: {
+            dow: 1, // Monday is the first day of the week.
+            doy: 7 // The week that contains Jan 1st is the first week of the year.
+        }
+    });
+
+    return uk;
+});
+
+/***/ }),
+
+/***/ "HMIw":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+//! moment.js locale configuration
+//! locale  :  Arabic (Tunisia) [ar-tn]
+//! author : Nader Toukabri : https://github.com/naderio
+
+;(function (global, factory) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
+    'use strict';
+
+    var arTn = moment.defineLocale('ar-tn', {
+        months: 'جانفي_فيفري_مارس_أفريل_ماي_جوان_جويلية_أوت_سبتمبر_أكتوبر_نوفمبر_ديسمبر'.split('_'),
+        monthsShort: 'جانفي_فيفري_مارس_أفريل_ماي_جوان_جويلية_أوت_سبتمبر_أكتوبر_نوفمبر_ديسمبر'.split('_'),
+        weekdays: 'الأحد_الإثنين_الثلاثاء_الأربعاء_الخميس_الجمعة_السبت'.split('_'),
+        weekdaysShort: 'أحد_إثنين_ثلاثاء_أربعاء_خميس_جمعة_سبت'.split('_'),
+        weekdaysMin: 'ح_ن_ث_ر_خ_ج_س'.split('_'),
+        weekdaysParseExact: true,
+        longDateFormat: {
+            LT: 'HH:mm',
+            LTS: 'HH:mm:ss',
+            L: 'DD/MM/YYYY',
+            LL: 'D MMMM YYYY',
+            LLL: 'D MMMM YYYY HH:mm',
+            LLLL: 'dddd D MMMM YYYY HH:mm'
+        },
+        calendar: {
+            sameDay: '[اليوم على الساعة] LT',
+            nextDay: '[غدا على الساعة] LT',
+            nextWeek: 'dddd [على الساعة] LT',
+            lastDay: '[أمس على الساعة] LT',
+            lastWeek: 'dddd [على الساعة] LT',
+            sameElse: 'L'
+        },
+        relativeTime: {
+            future: 'في %s',
+            past: 'منذ %s',
+            s: 'ثوان',
+            ss: '%d ثانية',
+            m: 'دقيقة',
+            mm: '%d دقائق',
+            h: 'ساعة',
+            hh: '%d ساعات',
+            d: 'يوم',
+            dd: '%d أيام',
+            M: 'شهر',
+            MM: '%d أشهر',
+            y: 'سنة',
+            yy: '%d سنوات'
+        },
+        week: {
+            dow: 1, // Monday is the first day of the week.
+            doy: 4 // The week that contains Jan 4th is the first week of the year.
+        }
+    });
+
+    return arTn;
+});
+
+/***/ }),
+
+/***/ "HQkZ":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
 
 
-	return "hsl(" + hue + ", " + sat + "%, " + lum + "%)";
-}
-// CONCATENATED MODULE: ./components/Header/index.js
-var _dec, _class;
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+exports.default = undefined;
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+var _preact = __webpack_require__("KM04");
+
+var _style = __webpack_require__("SlX7");
+
+var _style2 = _interopRequireDefault(_style);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -7743,1454 +7989,968 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+var stops = new Array(8).fill(0);
 
-
-
-
-
-
-
-
-
-
-var Header__ref = Object(preact_min["h"])(
-	'nav',
-	null,
-	Object(preact_min["h"])(
-		preact_router_match["Link"],
-		{ href: '/' },
-		'time'
-	),
-	Object(preact_min["h"])(
-		preact_router_match["Link"],
-		{ href: '/design' },
-		'design'
-	)
-);
-
-var Header_Header = (_dec = connect(reducers_0, actions_namespaceObject), _dec(_class = function (_Component) {
-	_inherits(Header, _Component);
-
-	function Header() {
-		_classCallCheck(this, Header);
-
-		return _possibleConstructorReturn(this, _Component.apply(this, arguments));
-	}
-
-	Header.prototype.render = function render(props) {
-		var headerStyle = '\n            background-image:\n            radial-gradient(ellipse at center bottom, hsla(0,0%,13%,0) 0%, hsla(0,0%,13%,.5) 54%, hsla(0,0%,13%,.9)),\n            linear-gradient(to right, ' + hslToCss(this.props.outerColor) + ', ' + hslToCss(this.props.innerColor) + ')';
-
-		return Object(preact_min["h"])(
-			'header',
-			{ 'class': Header_style_default.a.header, style: headerStyle },
-			Header__ref
-		);
-	};
-
-	return Header;
-}(preact_min["Component"])) || _class);
-
-// EXTERNAL MODULE: ./components/Dial/style.scss
-var Dial_style = __webpack_require__("XwqH");
-var Dial_style_default = /*#__PURE__*/__webpack_require__.n(Dial_style);
-
-// CONCATENATED MODULE: ./components/Dial/tools.js
-
-function isTouchEvent(event) {
-	var type = event.type;
-
-	return type === 'touchmove' || type === 'touchstart' || type === 'touchend';
-}
-
-/**
- *
- *
- * @param {any} radians
- * @returns
- */
-function deg(radians) {
-	return radians * 180 / Math.PI;
-}
-
-/**
- *
- *
- * @param {Object} {left, top, width, height, pageX, pageY}
- * @returns {Number}
- */
-function calculateTouchAngle(_ref) {
-	var left = _ref.left,
-	    top = _ref.top,
-	    width = _ref.width,
-	    height = _ref.height,
-	    pageX = _ref.pageX,
-	    pageY = _ref.pageY;
-
-	var centerX = Math.round(left + width / 2);
-	var centerY = Math.round(top + height / 2);
-	var A = pageX - centerX;
-	var B = centerY - pageY;
-	var C = Math.sqrt(Math.pow(A, 2) + Math.pow(B, 2));
-
-	var angle = 0;
-
-	if (A > 0) {
-		angle = deg(Math.asin(B * 1 / C));
-	} else {
-		angle = 180 - deg(Math.acos(A * -1 / C));
-	}
-
-	if (B < 0 && A < 0) {
-		angle = 360 - angle;
-	} else if (B < 0) {
-		angle = 360 + angle;
-	}
-
-	//console.log('calculateTouchAngle', angle);
-
-
-	return angle;
-}
-
-/**
- *
- *
- * @param {DOMEvent} event
- * @param {Function} callback
- */
-function getTouchAngle(event, callback) {
-	var currentTarget = event.currentTarget,
-	    pageX = event.pageX,
-	    pageY = event.pageY;
-
-	var _currentTarget$getBou = currentTarget.getBoundingClientRect(),
-	    top = _currentTarget$getBou.top,
-	    left = _currentTarget$getBou.left,
-	    width = _currentTarget$getBou.width,
-	    height = _currentTarget$getBou.height;
-
-	var offsetTop = top + window.scrollY;
-	var offsetLeft = left + window.scrollX;
-
-	if (isTouchEvent(event)) {
-		for (var _iterator = event.changedTouches, _isArray = Array.isArray(_iterator), _i = 0, _iterator = _isArray ? _iterator : _iterator[Symbol.iterator]();;) {
-			var _ref2;
-
-			if (_isArray) {
-				if (_i >= _iterator.length) break;
-				_ref2 = _iterator[_i++];
-			} else {
-				_i = _iterator.next();
-				if (_i.done) break;
-				_ref2 = _i.value;
-			}
-
-			var touch = _ref2;
-			var _pageX = touch.pageX,
-			    _pageY = touch.pageY;
-
-			var angle = calculateTouchAngle({
-				top: offsetTop, left: offsetLeft, width: width, height: height, pageX: _pageX, pageY: _pageY
-			});
-
-			callback(angle);
-		}
-	} else {
-		var _angle = calculateTouchAngle({
-			top: offsetTop, left: offsetLeft, width: width, height: height, pageX: pageX, pageY: pageY
-		});
-
-		callback(_angle);
-	}
-}
-
-/**
- *
- *
- * @param {Number} angle
- * @returns {Number}
- */
-function rotateAngle90(angle) {
-
-	if (angle < 0) {
-		angle = 360 + angle;
-	}
-
-	var rotated = angle + 90;
-
-	if (rotated > 360) {
-		rotated = rotated - 360;
-	}
-	if (rotated < 0) {
-		rotated = 360 + rotated;
-	}
-
-	return Math.floor(rotated);
-}
-
-/**
- *
- *
- * @param {any} angle
- * @returns
- */
-function rotateAngle90Back(angle) {
-	if (angle < 0) {
-		angle = 360 + angle;
-	}
-
-	var rotated = angle - 90;
-
-	if (rotated > 360) {
-		rotated = rotated - 360;
-	}
-	if (rotated < 0) {
-		rotated = 360 + rotated;
-	}
-
-	return Math.floor(rotated);
-}
-// CONCATENATED MODULE: ./components/Dial/index.js
-
-
-function Dial__classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function Dial__possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function Dial__inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-
-
-
-
-var Dial_Dial = function (_Component) {
-	Dial__inherits(Dial, _Component);
-
-	function Dial() {
-		Dial__classCallCheck(this, Dial);
-
-		return Dial__possibleConstructorReturn(this, _Component.apply(this, arguments));
-	}
-
-	Dial.prototype.componentWillMount = function componentWillMount() {
-		var value = this.props.value;
-
-
-		var startAngle = 0;
-		var angle = 0;
-
-		if (typeof value === 'number') {
-			angle = rotateAngle90Back(value);
-		}
-
-		this.setState({
-			startAngle: startAngle,
-			angle: angle,
-			setAngle: -1 * angle,
-			debug: this.props.test
-		});
-	};
-
-	Dial.prototype.componentDidMount = function componentDidMount() {
-		this.container.style.setProperty('--dialRotation', this.state.angle + 'deg');
-	};
-
-	Dial.prototype.shouldComponentUpdate = function shouldComponentUpdate(_ref, nextState) {
-		var value = _ref.value;
-
-		if (this.state.selecting) return false;
-
-		var oldValue = this.props.value;
-
-		if (oldValue !== value) {
-			this.setAngle(rotateAngle90Back(value));
-			return false;
-		}
-
-		return true;
-	};
-
-	Dial.prototype.getNewAngle = function getNewAngle(event, callback) {
-		var _this2 = this;
-
-		getTouchAngle(event, function (touchAngle) {
-			var _state = _this2.state,
-			    grabAngle = _state.grabAngle,
-			    setAngle = _state.setAngle;
-
-			var angleDiff = touchAngle - grabAngle;
-			var angle = -1 * (setAngle + angleDiff);
-
-			_this2.props.onChange(rotateAngle90(angle));
-
-			callback(angle);
-		});
-	};
-
-	Dial.prototype.setAngle = function setAngle(angle) {
-		if (angle === this.state.angle) return;
-
-		this.setState({
-			angle: angle
-		});
-
-		this.container.style.setProperty('--dialRotation', angle + 'deg');
-	};
-
-	Dial.prototype.selecting = function selecting(event) {
-		var _this3 = this;
-
-		event.preventDefault();
-
-		if (!this.state.selecting) return;
-
-		this.getNewAngle(event, function (angle) {
-			return _this3.setAngle(angle);
-		});
-	};
-
-	Dial.prototype.selectStart = function selectStart(e) {
-		var _this4 = this;
-
-		e.preventDefault();
-		getTouchAngle(e, function (grabAngle) {
-			_this4.setState({
-				grabAngle: grabAngle,
-				selecting: true
-			});
-		});
-	};
-
-	Dial.prototype.selectEnd = function selectEnd(e) {
-		var _this5 = this;
-
-		e.preventDefault();
-		this.getNewAngle(event, function (angle) {
-			var setAngle = -1 * angle;
-
-			_this5.setState({
-				setAngle: setAngle,
-				selecting: false
-			});
-		});
-	};
-
-	Dial.prototype.render = function render(props) {
-		var _this6 = this;
-
-		var className = [props.className, Dial_style_default.a.dial].join(' ');
-
-		return Object(preact_min["h"])(
-			'div',
-			{
-				ref: function ref(element) {
-					_this6.container = element;
-				},
-				'class': className,
-				onMouseDown: function onMouseDown(e) {
-					return _this6.selectStart(e);
-				},
-				onTouchStart: function onTouchStart(e) {
-					return _this6.selectStart(e);
-				},
-				onMouseMove: function onMouseMove(e) {
-					return _this6.selecting(e);
-				},
-				onTouchMove: function onTouchMove(e) {
-					return _this6.selecting(e);
-				},
-				onMouseUp: function onMouseUp(e) {
-					return _this6.selectEnd(e);
-				},
-				onTouchEnd: function onTouchEnd(e) {
-					return _this6.selectEnd(e);
-				}
-			},
-			props.children
-		);
-	};
-
-	return Dial;
-}(preact_min["Component"]);
-
-
-// EXTERNAL MODULE: ./components/TimePicker/style.scss
-var TimePicker_style = __webpack_require__("v+8J");
-var TimePicker_style_default = /*#__PURE__*/__webpack_require__.n(TimePicker_style);
-
-// EXTERNAL MODULE: ../node_modules/moment/moment.js
-var moment = __webpack_require__("a2/B");
-var moment_default = /*#__PURE__*/__webpack_require__.n(moment);
-
-// CONCATENATED MODULE: ./components/TimePicker/TimeInput.js
-
-
-function TimeInput__classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function TimeInput__possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function TimeInput__inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-
-
-
-
-var isArrowDown = function isArrowDown(e) {
-	var type = e.type,
-	    key = e.key;
-
-	return type === 'keydown' && key === 'ArrowDown';
-};
-
-var isArrowUp = function isArrowUp(e) {
-	var type = e.type,
-	    key = e.key;
-
-	return type === 'keydown' && key === 'ArrowUp';
-};
-
-var isChange = function isChange(e) {
-	var type = e.type;
-
-	return type === 'change';
-};
-
-var TimeInput__ref2 = Object(preact_min["h"])(
-	'span',
-	null,
-	':'
-);
-
-var TimeInput_TimeInput = function (_Component) {
-	TimeInput__inherits(TimeInput, _Component);
-
-	function TimeInput() {
-		TimeInput__classCallCheck(this, TimeInput);
-
-		return TimeInput__possibleConstructorReturn(this, _Component.apply(this, arguments));
-	}
-
-	TimeInput.prototype.updateTime = function updateTime(time) {
-		this.props.onChange(time);
-	};
-
-	TimeInput.prototype.onMinuteUpdate = function onMinuteUpdate(e) {
-
-		var value = parseInt(e.target.value, 10);
-
-		if (isArrowUp(e) && value + 1 < 60) {
-			this.updateTime(this.props.time.setMinutes(value + 1));
-		} else if (isArrowUp(e)) {
-			this.updateTime(this.props.time.setMinutes(0));
-		}
-
-		if (isArrowDown(e) && value - 1 >= 0) {
-			this.updateTime(this.props.time.setMinutes(value - 1));
-		} else if (isArrowDown(e)) {
-			this.updateTime(this.props.time.setMinutes(59));
-		}
-
-		if (isChange(e) && (value < 60 || value > 0)) {
-			this.updateTime(this.props.time.setMinutes(value));
-		}
-	};
-
-	TimeInput.prototype.onHourUpdate = function onHourUpdate(e) {
-
-		var value = parseInt(e.target.value, 10);
-
-		if (isArrowUp(e) && value + 1 < 12) {
-			this.updateTime(this.props.time.setHours(value + 1));
-		} else if (isArrowUp(e)) {
-			this.updateTime(this.props.time.setHours(0));
-		}
-
-		if (isArrowDown(e) && value - 1 >= 0) {
-			this.updateTime(this.props.time.setHours(value - 1));
-		} else if (isArrowDown(e)) {
-			this.updateTime(this.props.time.setHours(11));
-		}
-
-		if (isChange(e) && (value < 12 || value > 0)) {
-			this.updateTime(this.props.time.setHours(value));
-		}
-	};
-
-	TimeInput.prototype.render = function render(_ref, state) {
-		var _this2 = this;
-
-		var time = _ref.time;
-
-
-		var hour = moment_default()(time).format('HH');
-		var minute = moment_default()(time).format('mm');
-
-		return Object(preact_min["h"])(
-			'div',
-			{ 'class': TimePicker_style_default.a['time-selector__input'] },
-			Object(preact_min["h"])('input', {
-				type: 'text', min: '1', max: '12', steps: '1', value: hour,
-				onChange: function onChange(e) {
-					return _this2.onHourUpdate(e);
-				},
-				onKeyDown: function onKeyDown(e) {
-					return _this2.onHourUpdate(e);
-				}
-			}),
-			TimeInput__ref2,
-			Object(preact_min["h"])('input', {
-				type: 'text', min: '0', max: '59', steps: '1', value: minute,
-				onChange: function onChange(e) {
-					return _this2.onMinuteUpdate(e);
-				},
-				onKeyDown: function onKeyDown(e) {
-					return _this2.onMinuteUpdate(e);
-				}
-			})
-		);
-	};
-
-	return TimeInput;
-}(preact_min["Component"]);
-
-
-// CONCATENATED MODULE: ./components/TimePicker/index.js
-
-
-function TimePicker__classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function TimePicker__possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function TimePicker__inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-
-
-
-
-
-
-var degreesToMinutes = function degreesToMinutes(deg) {
-	return Math.floor(deg / (360 / 60));
-};
-
-var degreesToHours = function degreesToHours(deg) {
-	return Math.floor(deg / (360 / 12));
-};
-
-var minutesToDegrees = function minutesToDegrees(minutes) {
-	return minutes * (360 / 60);
-};
-
-var hoursToDegrees = function hoursToDegrees(hours) {
-	return hours * (360 / 12);
-};
-
-var TimePicker_TimePicker = function (_Component) {
-	TimePicker__inherits(TimePicker, _Component);
-
-	function TimePicker() {
-		TimePicker__classCallCheck(this, TimePicker);
-
-		return TimePicker__possibleConstructorReturn(this, _Component.apply(this, arguments));
-	}
-
-	TimePicker.prototype.componentWillMount = function componentWillMount() {
-		this.setState({
-			time: this.props.time
-		});
-	};
-
-	TimePicker.prototype.onMinuteDial = function onMinuteDial(deg) {
-		var minutes = degreesToMinutes(deg);
-		var time = new Date(this.state.time);
-
-		time.setMinutes(minutes);
-
-		this.setState({
-			time: time
-		});
-
-		this.props.onChange(time);
-	};
-
-	TimePicker.prototype.onHourDial = function onHourDial(deg) {
-		var hours = degreesToHours(deg);
-		var time = new Date(this.state.time);
-
-		time.setHours(hours);
-
-		this.setState({
-			time: time
-		});
-
-		this.props.onChange(time);
-	};
-
-	TimePicker.prototype.onTimeChange = function onTimeChange(time) {
-		this.props.onChange(time);
-	};
-
-	TimePicker.prototype.render = function render(_ref, _ref2) {
-		var _this2 = this;
-
-		var outerColor = _ref.outerColor,
-		    innerColor = _ref.innerColor,
-		    time = _ref.time;
-		var minuteSelecting = _ref2.minuteSelecting,
-		    hourSelecting = _ref2.hourSelecting;
-
-		var minuteColor = 'background-image: radial-gradient(' + hslToCss(outerColor) + ' 10%, transparent 70%);';
-		var hourColor = 'background-image: radial-gradient(' + hslToCss(innerColor) + ' 10%, transparent 70%);';
-		var minuteDial = minutesToDegrees(time.getMinutes());
-		var hourDial = hoursToDegrees(time.getHours());
-
-		return Object(preact_min["h"])(
-			'div',
-			{ 'class': TimePicker_style_default.a['time-selector'] },
-			Object(preact_min["h"])(TimeInput_TimeInput, { time: time, onChange: function onChange(e) {
-					return _this2.onTimeChange(e);
-				} }),
-			Object(preact_min["h"])(
-				Dial_Dial,
-				{
-					className: TimePicker_style_default.a['time-selector__minute'],
-					value: minuteDial,
-					onChange: function onChange(e) {
-						return _this2.onMinuteDial(e);
-					}
-				},
-				Object(preact_min["h"])('div', { style: minuteColor })
-			),
-			Object(preact_min["h"])(
-				Dial_Dial,
-				{
-					className: TimePicker_style_default.a['time-selector__hour'],
-					value: hourDial,
-					onChange: function onChange(e) {
-						return _this2.onHourDial(e);
-					}
-				},
-				Object(preact_min["h"])('div', { style: hourColor })
-			)
-		);
-	};
-
-	return TimePicker;
-}(preact_min["Component"]);
-
-
-// CONCATENATED MODULE: ./routes/time/index.js
-var time__dec, time__class;
-
-
-
-function time__classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function time__possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function time__inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-
-
-
-
-
-
-
-var time_Time = (time__dec = connect(reducers_0, actions_namespaceObject), time__dec(time__class = function (_Component) {
-	time__inherits(Time, _Component);
-
-	function Time() {
-		time__classCallCheck(this, Time);
-
-		return time__possibleConstructorReturn(this, _Component.apply(this, arguments));
-	}
-
-	Time.prototype.setTime = function setTime(time) {
-		this.props.setTime(new Date(time));
-	};
-
-	Time.prototype.render = function render(_ref, state) {
-		var _this2 = this;
-
-		var outerColor = _ref.outerColor,
-		    innerColor = _ref.innerColor,
-		    time = _ref.time;
-
-		return Object(preact_min["h"])(
-			'div',
-			{ 'class': 'page' },
-			Object(preact_min["h"])(TimePicker_TimePicker, { onChange: function onChange(e) {
-					return _this2.setTime(e);
-				}, time: time, outerColor: outerColor, innerColor: innerColor })
-		);
-	};
-
-	return Time;
-}(preact_min["Component"])) || time__class);
-
-// EXTERNAL MODULE: ./components/ColorPicker/style.scss
-var ColorPicker_style = __webpack_require__("SlX7");
-var ColorPicker_style_default = /*#__PURE__*/__webpack_require__.n(ColorPicker_style);
-
-// CONCATENATED MODULE: ./components/ColorPicker/Color.js
-
-
-
-
-var hsla = function hsla(index, a, size) {
-	return 'hsla(' + index * (360 / size) + ' ,100%, 50%, ' + a + ')';
-};
-
-function Color(_ref) {
-	var index = _ref.index,
-	    angle = _ref.angle,
-	    size = _ref.size;
-
-
-	var componentStyle = 'transform: translateY(-50%) rotate(' + angle + 'deg); ';
-	componentStyle += 'background-image: linear-gradient(180deg, ' + hsla(index, 0, size) + ', ' + hsla(index, 1, size) + ' 50%, ' + hsla(index, 0, size) + ');';
-
-	return Object(preact_min["h"])('div', { 'class': ColorPicker_style_default.a['spectrum-circle__color'], style: componentStyle });
-}
-// CONCATENATED MODULE: ./components/ColorPicker/SpectrumDecoration.js
-
-
-function SpectrumDecoration__classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function SpectrumDecoration__possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function SpectrumDecoration__inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-
-
-
-var SpectrumDecoration_stops = new Array(8).fill(0);
-
-var SpectrumDecoration_SpectrumDecoration = function (_Component) {
-	SpectrumDecoration__inherits(SpectrumDecoration, _Component);
+var SpectrumDecoration = function (_Component) {
+	_inherits(SpectrumDecoration, _Component);
 
 	function SpectrumDecoration() {
-		SpectrumDecoration__classCallCheck(this, SpectrumDecoration);
+		_classCallCheck(this, SpectrumDecoration);
 
-		return SpectrumDecoration__possibleConstructorReturn(this, _Component.apply(this, arguments));
+		return _possibleConstructorReturn(this, (SpectrumDecoration.__proto__ || Object.getPrototypeOf(SpectrumDecoration)).apply(this, arguments));
 	}
 
-	SpectrumDecoration.prototype.componentWillMount = function componentWillMount() {
-		this.setState({
-			stops: SpectrumDecoration_stops
-		});
-	};
+	_createClass(SpectrumDecoration, [{
+		key: 'componentWillMount',
+		value: function componentWillMount() {
+			this.setState({
+				stops: stops
+			});
+		}
+	}, {
+		key: 'render',
+		value: function render(props, _ref) {
+			var stops = _ref.stops;
 
-	SpectrumDecoration.prototype.render = function render(props, _ref) {
-		var stops = _ref.stops;
+			return (0, _preact.h)(
+				'div',
+				{ 'class': _style2.default['spectrum-circle__decoration'] },
+				stops.map(function (angle, index, stops) {
 
-		return Object(preact_min["h"])(
-			'div',
-			{ 'class': ColorPicker_style_default.a['spectrum-circle__decoration'] },
-			stops.map(function (angle, index, stops) {
+					var className = 'spectrum-circle__decoration--mark';
 
-				var className = 'spectrum-circle__decoration--mark';
+					if (index % 4 === 0) {
+						className = 'spectrum-circle__decoration--primary';
+					} else if (index % 2 === 0) {
+						className = 'spectrum-circle__decoration--secondary';
+					}
 
-				if (index % 4 === 0) {
-					className = 'spectrum-circle__decoration--primary';
-				} else if (index % 2 === 0) {
-					className = 'spectrum-circle__decoration--secondary';
-				}
+					var rotate = index * (45 / 2);
+					var decorStyle = 'transform: translate(-50%, -50%) rotate(' + rotate + 'deg);';
 
-				var rotate = index * (45 / 2);
-				var decorStyle = 'transform: translate(-50%, -50%) rotate(' + rotate + 'deg);';
-
-				return Object(preact_min["h"])('div', { 'class': ColorPicker_style_default.a[className], style: decorStyle });
-			})
-		);
-	};
+					return (0, _preact.h)('div', { 'class': _style2.default[className], style: decorStyle });
+				})
+			);
+		}
+	}]);
 
 	return SpectrumDecoration;
-}(preact_min["Component"]);
+}(_preact.Component);
+
+exports.default = SpectrumDecoration;
+
+/***/ }),
+
+/***/ "Hd19":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+//! moment.js locale configuration
+//! locale : Telugu [te]
+//! author : Krishna Chaitanya Thota : https://github.com/kcthota
+
+;(function (global, factory) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
+    'use strict';
+
+    var te = moment.defineLocale('te', {
+        months: 'జనవరి_ఫిబ్రవరి_మార్చి_ఏప్రిల్_మే_జూన్_జూలై_ఆగస్టు_సెప్టెంబర్_అక్టోబర్_నవంబర్_డిసెంబర్'.split('_'),
+        monthsShort: 'జన._ఫిబ్ర._మార్చి_ఏప్రి._మే_జూన్_జూలై_ఆగ._సెప్._అక్టో._నవ._డిసె.'.split('_'),
+        monthsParseExact: true,
+        weekdays: 'ఆదివారం_సోమవారం_మంగళవారం_బుధవారం_గురువారం_శుక్రవారం_శనివారం'.split('_'),
+        weekdaysShort: 'ఆది_సోమ_మంగళ_బుధ_గురు_శుక్ర_శని'.split('_'),
+        weekdaysMin: 'ఆ_సో_మం_బు_గు_శు_శ'.split('_'),
+        longDateFormat: {
+            LT: 'A h:mm',
+            LTS: 'A h:mm:ss',
+            L: 'DD/MM/YYYY',
+            LL: 'D MMMM YYYY',
+            LLL: 'D MMMM YYYY, A h:mm',
+            LLLL: 'dddd, D MMMM YYYY, A h:mm'
+        },
+        calendar: {
+            sameDay: '[నేడు] LT',
+            nextDay: '[రేపు] LT',
+            nextWeek: 'dddd, LT',
+            lastDay: '[నిన్న] LT',
+            lastWeek: '[గత] dddd, LT',
+            sameElse: 'L'
+        },
+        relativeTime: {
+            future: '%s లో',
+            past: '%s క్రితం',
+            s: 'కొన్ని క్షణాలు',
+            ss: '%d సెకన్లు',
+            m: 'ఒక నిమిషం',
+            mm: '%d నిమిషాలు',
+            h: 'ఒక గంట',
+            hh: '%d గంటలు',
+            d: 'ఒక రోజు',
+            dd: '%d రోజులు',
+            M: 'ఒక నెల',
+            MM: '%d నెలలు',
+            y: 'ఒక సంవత్సరం',
+            yy: '%d సంవత్సరాలు'
+        },
+        dayOfMonthOrdinalParse: /\d{1,2}వ/,
+        ordinal: '%dవ',
+        meridiemParse: /రాత్రి|ఉదయం|మధ్యాహ్నం|సాయంత్రం/,
+        meridiemHour: function meridiemHour(hour, meridiem) {
+            if (hour === 12) {
+                hour = 0;
+            }
+            if (meridiem === 'రాత్రి') {
+                return hour < 4 ? hour : hour + 12;
+            } else if (meridiem === 'ఉదయం') {
+                return hour;
+            } else if (meridiem === 'మధ్యాహ్నం') {
+                return hour >= 10 ? hour : hour + 12;
+            } else if (meridiem === 'సాయంత్రం') {
+                return hour + 12;
+            }
+        },
+        meridiem: function meridiem(hour, minute, isLower) {
+            if (hour < 4) {
+                return 'రాత్రి';
+            } else if (hour < 10) {
+                return 'ఉదయం';
+            } else if (hour < 17) {
+                return 'మధ్యాహ్నం';
+            } else if (hour < 20) {
+                return 'సాయంత్రం';
+            } else {
+                return 'రాత్రి';
+            }
+        },
+        week: {
+            dow: 0, // Sunday is the first day of the week.
+            doy: 6 // The week that contains Jan 1st is the first week of the year.
+        }
+    });
+
+    return te;
+});
+
+/***/ }),
+
+/***/ "Hejx":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
 
 
-// CONCATENATED MODULE: ./components/ColorPicker/Spectrum.js
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+exports.default = undefined;
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-function Spectrum__classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+var _preact = __webpack_require__("KM04");
 
-function Spectrum__possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+var _style = __webpack_require__("XwqH");
 
-function Spectrum__inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+var _style2 = _interopRequireDefault(_style);
 
+var _tools = __webpack_require__("CFlp");
 
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+var Dial = function (_Component) {
+	_inherits(Dial, _Component);
 
-var colors = new Array(64).fill(0);
+	function Dial() {
+		_classCallCheck(this, Dial);
 
-var _ref3 = Object(preact_min["h"])(SpectrumDecoration_SpectrumDecoration, null);
-
-var Spectrum_Spectrum = function (_Component) {
-	Spectrum__inherits(Spectrum, _Component);
-
-	function Spectrum() {
-		Spectrum__classCallCheck(this, Spectrum);
-
-		return Spectrum__possibleConstructorReturn(this, _Component.apply(this, arguments));
+		return _possibleConstructorReturn(this, (Dial.__proto__ || Object.getPrototypeOf(Dial)).apply(this, arguments));
 	}
 
-	Spectrum.prototype.componentWillMount = function componentWillMount() {
-		var angles = colors.map(function (a, index) {
-			return index * (360 / colors.length);
-		});
-
-		this.setState({
-			angles: angles
-		});
-	};
-
-	Spectrum.prototype.onHue = function onHue(deg) {
-		var hue = 360 - deg;
-		this.props.onChange(hue);
-	};
-
-	Spectrum.prototype.render = function render(_ref, _ref2) {
-		var _this2 = this;
-
-		var hue = _ref.hue;
-		var angles = _ref2.angles;
-
-		var dialValue = 360 - hue;
-
-		return Object(preact_min["h"])(
-			'div',
-			{
-				ref: function ref(element) {
-					_this2.container = element;
-				},
-				'class': ColorPicker_style_default.a.spectrum
-			},
-			Object(preact_min["h"])('div', { 'class': ColorPicker_style_default.a.spectrum__selector }),
-			Object(preact_min["h"])(
-				Dial_Dial,
-				{
-					className: ColorPicker_style_default.a['spectrum-circle'],
-					value: dialValue,
-					onChange: function onChange(e) {
-						return _this2.onHue(e);
-					}
-				},
-				Object(preact_min["h"])(
-					'div',
-					{ 'class': ColorPicker_style_default.a['spectrum-circle__inner'] },
-					angles.map(function (angle, index, angles) {
-						return Object(preact_min["h"])(Color, { angle: angle, index: index, size: angles.length });
-					})
-				),
-				_ref3
-			)
-		);
-	};
-
-	return Spectrum;
-}(preact_min["Component"]);
+	_createClass(Dial, [{
+		key: 'componentWillMount',
+		value: function componentWillMount() {
+			var value = this.props.value;
 
 
-// EXTERNAL MODULE: ./components/VerticalSlider/style.scss
-var VerticalSlider_style = __webpack_require__("igvm");
-var VerticalSlider_style_default = /*#__PURE__*/__webpack_require__.n(VerticalSlider_style);
+			var startAngle = 0;
+			var angle = 0;
 
-// CONCATENATED MODULE: ./components/VerticalSlider/tools.js
-function tools_isTouchEvent(event) {
-	var type = event.type;
-
-	return type === 'touchmove' || type === 'touchstart' || type === 'touchend';
-}
-
-/**
- *
- *
- * @param {DOMEvent} event
- * @returns
- */
-function getVerticalSliderLevel(event, callback) {
-	var currentTarget = event.currentTarget,
-	    pageY = event.pageY;
-
-	var _currentTarget$getBou = currentTarget.getBoundingClientRect(),
-	    top = _currentTarget$getBou.top,
-	    height = _currentTarget$getBou.height;
-
-	var offsetTop = top + window.scrollY;
-
-	var getValue = function getValue(_ref) {
-		var offsetTop = _ref.offsetTop,
-		    height = _ref.height,
-		    pageY = _ref.pageY;
-
-		var value = pageY - offsetTop;
-
-		if (value < 0) return 0;
-
-		if (pageY > offsetTop + height) return height;
-
-		return value;
-	};
-
-	if (tools_isTouchEvent(event)) {
-
-		for (var _iterator = event.changedTouches, _isArray = Array.isArray(_iterator), _i = 0, _iterator = _isArray ? _iterator : _iterator[Symbol.iterator]();;) {
-			var _ref2;
-
-			if (_isArray) {
-				if (_i >= _iterator.length) break;
-				_ref2 = _iterator[_i++];
-			} else {
-				_i = _iterator.next();
-				if (_i.done) break;
-				_ref2 = _i.value;
+			if (typeof value === 'number') {
+				angle = (0, _tools.rotateAngle90Back)(value);
 			}
 
-			var touch = _ref2;
-			var _pageY = touch.pageY;
+			this.setState({
+				startAngle: startAngle,
+				angle: angle,
+				setAngle: -1 * angle,
+				debug: this.props.test
+			});
+		}
+	}, {
+		key: 'componentDidMount',
+		value: function componentDidMount() {
+			this.container.style.setProperty('--dialRotation', this.state.angle + 'deg');
+		}
+	}, {
+		key: 'shouldComponentUpdate',
+		value: function shouldComponentUpdate(_ref, nextState) {
+			var value = _ref.value;
 
-			var value = getValue({
-				offsetTop: offsetTop, height: height, pageY: _pageY
+			if (this.state.selecting) return false;
+
+			var oldValue = this.props.value;
+
+			if (oldValue !== value) {
+				this.setAngle((0, _tools.rotateAngle90Back)(value));
+				return false;
+			}
+
+			return true;
+		}
+	}, {
+		key: 'getNewAngle',
+		value: function getNewAngle(event, callback) {
+			var _this2 = this;
+
+			(0, _tools.getTouchAngle)(event, function (touchAngle) {
+				var _state = _this2.state,
+				    grabAngle = _state.grabAngle,
+				    setAngle = _state.setAngle;
+
+				var angleDiff = touchAngle - grabAngle;
+				var angle = -1 * (setAngle + angleDiff);
+
+				_this2.props.onChange((0, _tools.rotateAngle90)(angle));
+
+				callback(angle);
+			});
+		}
+	}, {
+		key: 'setAngle',
+		value: function setAngle(angle) {
+			if (angle === this.state.angle) return;
+
+			this.setState({
+				angle: angle
 			});
 
-			callback(value);
+			this.container.style.setProperty('--dialRotation', angle + 'deg');
 		}
-	} else {
-		var _value = getValue({ offsetTop: offsetTop, height: height, pageY: pageY });
-		callback(_value);
-	}
+	}, {
+		key: 'selecting',
+		value: function selecting(event) {
+			var _this3 = this;
+
+			event.preventDefault();
+
+			if (!this.state.selecting) return;
+
+			this.getNewAngle(event, function (angle) {
+				return _this3.setAngle(angle);
+			});
+		}
+	}, {
+		key: 'selectStart',
+		value: function selectStart(e) {
+			var _this4 = this;
+
+			e.preventDefault();
+			(0, _tools.getTouchAngle)(e, function (grabAngle) {
+				_this4.setState({
+					grabAngle: grabAngle,
+					selecting: true
+				});
+			});
+		}
+	}, {
+		key: 'selectEnd',
+		value: function selectEnd(e) {
+			var _this5 = this;
+
+			e.preventDefault();
+			this.getNewAngle(event, function (angle) {
+				var setAngle = -1 * angle;
+
+				_this5.setState({
+					setAngle: setAngle,
+					selecting: false
+				});
+			});
+		}
+	}, {
+		key: 'render',
+		value: function render(props) {
+			var _this6 = this;
+
+			var className = [props.className, _style2.default.dial].join(' ');
+
+			return (0, _preact.h)(
+				'div',
+				{
+					ref: function ref(element) {
+						_this6.container = element;
+					},
+					'class': className,
+					onMouseDown: function onMouseDown(e) {
+						return _this6.selectStart(e);
+					},
+					onTouchStart: function onTouchStart(e) {
+						return _this6.selectStart(e);
+					},
+					onMouseMove: function onMouseMove(e) {
+						return _this6.selecting(e);
+					},
+					onTouchMove: function onTouchMove(e) {
+						return _this6.selecting(e);
+					},
+					onMouseUp: function onMouseUp(e) {
+						return _this6.selectEnd(e);
+					},
+					onTouchEnd: function onTouchEnd(e) {
+						return _this6.selectEnd(e);
+					}
+				},
+				props.children
+			);
+		}
+	}]);
+
+	return Dial;
+}(_preact.Component);
+
+exports.default = Dial;
+
+/***/ }),
+
+/***/ "HlNk":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+//! moment.js locale configuration
+//! locale : Azerbaijani [az]
+//! author : topchiyev : https://github.com/topchiyev
+
+;(function (global, factory) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
+    'use strict';
+
+    var suffixes = {
+        1: '-inci',
+        5: '-inci',
+        8: '-inci',
+        70: '-inci',
+        80: '-inci',
+        2: '-nci',
+        7: '-nci',
+        20: '-nci',
+        50: '-nci',
+        3: '-üncü',
+        4: '-üncü',
+        100: '-üncü',
+        6: '-ncı',
+        9: '-uncu',
+        10: '-uncu',
+        30: '-uncu',
+        60: '-ıncı',
+        90: '-ıncı'
+    };
+
+    var az = moment.defineLocale('az', {
+        months: 'yanvar_fevral_mart_aprel_may_iyun_iyul_avqust_sentyabr_oktyabr_noyabr_dekabr'.split('_'),
+        monthsShort: 'yan_fev_mar_apr_may_iyn_iyl_avq_sen_okt_noy_dek'.split('_'),
+        weekdays: 'Bazar_Bazar ertəsi_Çərşənbə axşamı_Çərşənbə_Cümə axşamı_Cümə_Şənbə'.split('_'),
+        weekdaysShort: 'Baz_BzE_ÇAx_Çər_CAx_Cüm_Şən'.split('_'),
+        weekdaysMin: 'Bz_BE_ÇA_Çə_CA_Cü_Şə'.split('_'),
+        weekdaysParseExact: true,
+        longDateFormat: {
+            LT: 'HH:mm',
+            LTS: 'HH:mm:ss',
+            L: 'DD.MM.YYYY',
+            LL: 'D MMMM YYYY',
+            LLL: 'D MMMM YYYY HH:mm',
+            LLLL: 'dddd, D MMMM YYYY HH:mm'
+        },
+        calendar: {
+            sameDay: '[bugün saat] LT',
+            nextDay: '[sabah saat] LT',
+            nextWeek: '[gələn həftə] dddd [saat] LT',
+            lastDay: '[dünən] LT',
+            lastWeek: '[keçən həftə] dddd [saat] LT',
+            sameElse: 'L'
+        },
+        relativeTime: {
+            future: '%s sonra',
+            past: '%s əvvəl',
+            s: 'birneçə saniyyə',
+            ss: '%d saniyə',
+            m: 'bir dəqiqə',
+            mm: '%d dəqiqə',
+            h: 'bir saat',
+            hh: '%d saat',
+            d: 'bir gün',
+            dd: '%d gün',
+            M: 'bir ay',
+            MM: '%d ay',
+            y: 'bir il',
+            yy: '%d il'
+        },
+        meridiemParse: /gecə|səhər|gündüz|axşam/,
+        isPM: function isPM(input) {
+            return (/^(gündüz|axşam)$/.test(input)
+            );
+        },
+        meridiem: function meridiem(hour, minute, isLower) {
+            if (hour < 4) {
+                return 'gecə';
+            } else if (hour < 12) {
+                return 'səhər';
+            } else if (hour < 17) {
+                return 'gündüz';
+            } else {
+                return 'axşam';
+            }
+        },
+        dayOfMonthOrdinalParse: /\d{1,2}-(ıncı|inci|nci|üncü|ncı|uncu)/,
+        ordinal: function ordinal(number) {
+            if (number === 0) {
+                // special case for zero
+                return number + '-ıncı';
+            }
+            var a = number % 10,
+                b = number % 100 - a,
+                c = number >= 100 ? 100 : null;
+            return number + (suffixes[a] || suffixes[b] || suffixes[c]);
+        },
+        week: {
+            dow: 1, // Monday is the first day of the week.
+            doy: 7 // The week that contains Jan 1st is the first week of the year.
+        }
+    });
+
+    return az;
+});
+
+/***/ }),
+
+/***/ "InRc":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _Symbol2 = __webpack_require__("Oi8n");
+
+var _Symbol3 = _interopRequireDefault(_Symbol2);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/** Used for built-in method references. */
+var objectProto = Object.prototype;
+
+/** Used to check objects for own properties. */
+var hasOwnProperty = objectProto.hasOwnProperty;
+
+/**
+ * Used to resolve the
+ * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
+ * of values.
+ */
+var nativeObjectToString = objectProto.toString;
+
+/** Built-in value references. */
+var symToStringTag = _Symbol3.default ? _Symbol3.default.toStringTag : undefined;
+
+/**
+ * A specialized version of `baseGetTag` which ignores `Symbol.toStringTag` values.
+ *
+ * @private
+ * @param {*} value The value to query.
+ * @returns {string} Returns the raw `toStringTag`.
+ */
+function getRawTag(value) {
+  var isOwn = hasOwnProperty.call(value, symToStringTag),
+      tag = value[symToStringTag];
+
+  try {
+    value[symToStringTag] = undefined;
+    var unmasked = true;
+  } catch (e) {}
+
+  var result = nativeObjectToString.call(value);
+  if (unmasked) {
+    if (isOwn) {
+      value[symToStringTag] = tag;
+    } else {
+      delete value[symToStringTag];
+    }
+  }
+  return result;
 }
-// CONCATENATED MODULE: ./components/VerticalSlider/index.js
 
-
-function VerticalSlider__classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function VerticalSlider__possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function VerticalSlider__inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-
-
-
-
-
-var VerticalSlider_VerticalSlider = function (_Component) {
-	VerticalSlider__inherits(VerticalSlider, _Component);
-
-	function VerticalSlider() {
-		VerticalSlider__classCallCheck(this, VerticalSlider);
-
-		return VerticalSlider__possibleConstructorReturn(this, _Component.apply(this, arguments));
-	}
-
-	VerticalSlider.prototype.componentDidMount = function componentDidMount() {
-		this.setLevel(this.percentToLevel(this.props.value));
-	};
-
-	VerticalSlider.prototype.shouldComponentUpdate = function shouldComponentUpdate(_ref, nextState) {
-		var value = _ref.value;
-
-		if (this.state.selecting) return false;
-
-		var oldValue = this.props.value;
-
-		if (oldValue !== value) {
-			this.setLevel(this.percentToLevel(value));
-			return false;
-		}
-
-		return true;
-	};
-
-	VerticalSlider.prototype.percentToLevel = function percentToLevel(percent) {
-		var _container$getBoundin = this.container.getBoundingClientRect(),
-		    height = _container$getBoundin.height;
-
-		return height - percent / 100 * height;
-	};
-
-	VerticalSlider.prototype.updateValue = function updateValue(value, height) {
-		var percentage = 100 - Math.floor(value / height * 100);
-		this.props.onChange(percentage);
-	};
-
-	VerticalSlider.prototype.updateLevel = function updateLevel(event, callback) {
-		var _this2 = this;
-
-		var _event$currentTarget$ = event.currentTarget.getBoundingClientRect(),
-		    height = _event$currentTarget$.height;
-
-		getVerticalSliderLevel(event, function (value) {
-			_this2.updateValue(value, height);
-			callback(value);
-		});
-	};
-
-	VerticalSlider.prototype.setLevel = function setLevel(level) {
-		if (level === this.state.level) return;
-
-		if (this.props.customLevel) {
-			this.container.querySelector('.' + this.props.customLevel).style.setProperty('--slideLevel', level + 'px');
-		} else {
-			this.container.style.setProperty('--slideLevel', level + 'px');
-		}
-
-		// TODO onresize
-
-		this.setState({
-			level: level
-		});
-	};
-
-	VerticalSlider.prototype.selectStart = function selectStart(e) {
-		var _this3 = this;
-
-		e.preventDefault();
-		this.setState({
-			selecting: true
-		});
-		this.updateLevel(event, function (level) {
-			return _this3.setLevel(level);
-		});
-	};
-
-	VerticalSlider.prototype.selecting = function selecting(event) {
-		var _this4 = this;
-
-		event.preventDefault();
-
-		if (!this.state.selecting) return;
-
-		this.updateLevel(event, function (level) {
-			return _this4.setLevel(level);
-		});
-	};
-
-	VerticalSlider.prototype.clicked = function clicked(event) {
-		var _this5 = this;
-
-		event.preventDefault();
-		this.updateLevel(event, function (level) {
-			return _this5.setLevel(level);
-		});
-	};
-
-	VerticalSlider.prototype.selectEnd = function selectEnd(e) {
-		e.preventDefault();
-		this.setState({
-			selecting: false
-		});
-	};
-
-	VerticalSlider.prototype.render = function render(props, state) {
-		var _this6 = this;
-
-		var className = [props.className, VerticalSlider_style_default.a['vertical-slider']];
-
-		if (props.customLevel) className.push(VerticalSlider_style_default.a['vertical-slider--custom-level']);
-
-		return Object(preact_min["h"])(
-			'div',
-			{
-				ref: function ref(element) {
-					_this6.container = element;
-				},
-				'class': className.join(' '),
-				style: props.style,
-				onClick: function onClick(e) {
-					return _this6.clicked(e);
-				},
-				onMouseDown: function onMouseDown(e) {
-					return _this6.selectStart(e);
-				},
-				onTouchStart: function onTouchStart(e) {
-					return _this6.selectStart(e);
-				},
-				onMouseMove: function onMouseMove(e) {
-					return _this6.selecting(e);
-				},
-				onTouchMove: function onTouchMove(e) {
-					return _this6.selecting(e);
-				},
-				onMouseUp: function onMouseUp(e) {
-					return _this6.selectEnd(e);
-				},
-				onTouchEnd: function onTouchEnd(e) {
-					return _this6.selectEnd(e);
-				}
-			},
-			props.children
-		);
-	};
-
-	return VerticalSlider;
-}(preact_min["Component"]);
-
-
-// CONCATENATED MODULE: ./components/ColorPicker/Saturation.js
-
-
-function Saturation__classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function Saturation__possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function Saturation__inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-
-
-
-
-var Saturation_Saturation = function (_Component) {
-	Saturation__inherits(Saturation, _Component);
-
-	function Saturation() {
-		Saturation__classCallCheck(this, Saturation);
-
-		return Saturation__possibleConstructorReturn(this, _Component.apply(this, arguments));
-	}
-
-	Saturation.prototype.updateSaturation = function updateSaturation(saturation) {
-		this.props.onChange(saturation);
-	};
-
-	Saturation.prototype.render = function render(_ref, state) {
-		var _this2 = this;
-
-		var hue = _ref.hue,
-		    value = _ref.value;
-
-		var gradient = 'background-image: linear-gradient(hsl(' + hue + ', 100%, 50%), hsl(' + hue + ', 0%, 50%));';
-
-		return Object(preact_min["h"])(
-			'div',
-			{ 'class': ColorPicker_style_default.a.colorpicker__saturation, style: gradient },
-			Object(preact_min["h"])(
-				VerticalSlider_VerticalSlider,
-				{
-					onChange: function onChange(e) {
-						return _this2.updateSaturation(e);
-					},
-					value: value,
-					customLevel: ColorPicker_style_default.a['colorpicker__saturation-level']
-				},
-				Object(preact_min["h"])('div', { 'class': ColorPicker_style_default.a['colorpicker__saturation-level'] })
-			)
-		);
-	};
-
-	return Saturation;
-}(preact_min["Component"]);
-
-
-// CONCATENATED MODULE: ./components/ColorPicker/Luminosity.js
-
-
-function Luminosity__classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function Luminosity__possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function Luminosity__inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-
-
-
-
-var Luminosity_Luminosity = function (_Component) {
-	Luminosity__inherits(Luminosity, _Component);
-
-	function Luminosity() {
-		Luminosity__classCallCheck(this, Luminosity);
-
-		return Luminosity__possibleConstructorReturn(this, _Component.apply(this, arguments));
-	}
-
-	Luminosity.prototype.updateLuminosity = function updateLuminosity(luminosity) {
-		this.props.onChange(luminosity);
-	};
-
-	Luminosity.prototype.render = function render(_ref, state) {
-		var _this2 = this;
-
-		var hue = _ref.hue,
-		    value = _ref.value;
-
-		var gradient = 'background-image: linear-gradient(hsl(' + hue + ', 100%, 100%), hsl(' + hue + ', 100%, 0%));';
-
-		return Object(preact_min["h"])(
-			'div',
-			{ 'class': ColorPicker_style_default.a.colorpicker__luminosity, style: gradient },
-			Object(preact_min["h"])(
-				VerticalSlider_VerticalSlider,
-				{
-					onChange: function onChange(e) {
-						return _this2.updateLuminosity(e);
-					},
-					value: value,
-					customLevel: ColorPicker_style_default.a['colorpicker__luminosity-level']
-				},
-				Object(preact_min["h"])('div', { 'class': ColorPicker_style_default.a['colorpicker__luminosity-level'] })
-			)
-		);
-	};
-
-	return Luminosity;
-}(preact_min["Component"]);
-
-
-// CONCATENATED MODULE: ./components/ColorPicker/index.js
-
-
-function ColorPicker__classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function ColorPicker__possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function ColorPicker__inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-
-
-
-
-
-
-
-var ColorPicker_ColorPicker = function (_Component) {
-	ColorPicker__inherits(ColorPicker, _Component);
-
-	function ColorPicker() {
-		ColorPicker__classCallCheck(this, ColorPicker);
-
-		return ColorPicker__possibleConstructorReturn(this, _Component.apply(this, arguments));
-	}
-
-	ColorPicker.prototype.componentWillMount = function componentWillMount() {
-		var _props$value = this.props.value,
-		    hue = _props$value[0],
-		    saturation = _props$value[1],
-		    luminosity = _props$value[2];
-
-
-		this.setState({
-			hue: hue,
-			saturation: saturation,
-			luminosity: luminosity
-		});
-	};
-
-	ColorPicker.prototype.updateColor = function updateColor() {
-		var _state = this.state,
-		    hue = _state.hue,
-		    saturation = _state.saturation,
-		    luminosity = _state.luminosity;
-
-		this.props.onChange([hue, saturation, luminosity]);
-	};
-
-	ColorPicker.prototype.onHueChange = function onHueChange(hue) {
-		this.setState({
-			hue: hue
-		});
-		this.updateColor();
-	};
-
-	ColorPicker.prototype.onSaturationChange = function onSaturationChange(saturation) {
-		this.setState({
-			saturation: saturation
-		});
-		this.updateColor();
-	};
-
-	ColorPicker.prototype.onLuminosityChange = function onLuminosityChange(luminosity) {
-		this.setState({
-			luminosity: luminosity
-		});
-		this.updateColor();
-	};
-
-	ColorPicker.prototype.render = function render(props, _ref) {
-		var _this2 = this;
-
-		var hue = _ref.hue,
-		    saturation = _ref.saturation,
-		    luminosity = _ref.luminosity;
-
-		return Object(preact_min["h"])(
-			'div',
-			{ 'class': ColorPicker_style_default.a.colorpicker },
-			Object(preact_min["h"])(Spectrum_Spectrum, { hue: hue, onChange: function onChange(e) {
-					return _this2.onHueChange(e);
-				} }),
-			Object(preact_min["h"])(Saturation_Saturation, { hue: hue, value: saturation, onChange: function onChange(e) {
-					return _this2.onSaturationChange(e);
-				} }),
-			Object(preact_min["h"])(Luminosity_Luminosity, { hue: hue, value: luminosity, onChange: function onChange(e) {
-					return _this2.onLuminosityChange(e);
-				} })
-		);
-	};
-
-	return ColorPicker;
-}(preact_min["Component"]);
-
-
-// CONCATENATED MODULE: ./routes/design/index.js
-var design__dec, design__class;
-
-
-
-function design__classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function design__possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function design__inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-
-
-
-
-
-
-
-var design_Design = (design__dec = connect(reducers_0, actions_namespaceObject), design__dec(design__class = function (_Component) {
-	design__inherits(Design, _Component);
-
-	function Design() {
-		design__classCallCheck(this, Design);
-
-		return design__possibleConstructorReturn(this, _Component.apply(this, arguments));
-	}
-
-	Design.prototype.setOuterColor = function setOuterColor(color) {
-		this.props.setOuterColor(color);
-	};
-
-	Design.prototype.setInnerColor = function setInnerColor(color) {
-		this.props.setInnerColor(color);
-	};
-
-	Design.prototype.render = function render(_ref, state) {
-		var _this2 = this;
-
-		var outerColor = _ref.outerColor,
-		    innerColor = _ref.innerColor;
-
-		return Object(preact_min["h"])(
-			'div',
-			{ 'class': 'page' },
-			Object(preact_min["h"])(ColorPicker_ColorPicker, { text: 'Outer color', onChange: function onChange(e) {
-					return _this2.setOuterColor(e);
-				}, value: outerColor }),
-			Object(preact_min["h"])(ColorPicker_ColorPicker, { text: 'Inner color', onChange: function onChange(e) {
-					return _this2.setInnerColor(e);
-				}, value: innerColor })
-		);
-	};
-
-	return Design;
-}(preact_min["Component"])) || design__class);
-
-// CONCATENATED MODULE: ./components/app.js
-
-
-function app__classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function app__possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function app__inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-
-
-
-
-
-
-
-var app__ref = Object(preact_min["h"])(Header_Header, { bgColor: '#673AB7' });
-
-var app__ref2 = Object(preact_min["h"])(time_Time, { path: '/' });
-
-var app__ref3 = Object(preact_min["h"])(design_Design, { path: '/design' });
-
-var app_App = function (_Component) {
-  app__inherits(App, _Component);
-
-  function App() {
-    var _temp, _this, _ret;
-
-    app__classCallCheck(this, App);
-
-    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
+exports.default = getRawTag;
+
+/***/ }),
+
+/***/ "Iumh":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+//! moment.js locale configuration
+//! locale : Luxembourgish [lb]
+//! author : mweimerskirch : https://github.com/mweimerskirch
+//! author : David Raison : https://github.com/kwisatz
+
+;(function (global, factory) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
+    'use strict';
+
+    function processRelativeTime(number, withoutSuffix, key, isFuture) {
+        var format = {
+            'm': ['eng Minutt', 'enger Minutt'],
+            'h': ['eng Stonn', 'enger Stonn'],
+            'd': ['een Dag', 'engem Dag'],
+            'M': ['ee Mount', 'engem Mount'],
+            'y': ['ee Joer', 'engem Joer']
+        };
+        return withoutSuffix ? format[key][0] : format[key][1];
+    }
+    function processFutureTime(string) {
+        var number = string.substr(0, string.indexOf(' '));
+        if (eifelerRegelAppliesToNumber(number)) {
+            return 'a ' + string;
+        }
+        return 'an ' + string;
+    }
+    function processPastTime(string) {
+        var number = string.substr(0, string.indexOf(' '));
+        if (eifelerRegelAppliesToNumber(number)) {
+            return 'viru ' + string;
+        }
+        return 'virun ' + string;
+    }
+    /**
+     * Returns true if the word before the given number loses the '-n' ending.
+     * e.g. 'an 10 Deeg' but 'a 5 Deeg'
+     *
+     * @param number {integer}
+     * @returns {boolean}
+     */
+    function eifelerRegelAppliesToNumber(number) {
+        number = parseInt(number, 10);
+        if (isNaN(number)) {
+            return false;
+        }
+        if (number < 0) {
+            // Negative Number --> always true
+            return true;
+        } else if (number < 10) {
+            // Only 1 digit
+            if (4 <= number && number <= 7) {
+                return true;
+            }
+            return false;
+        } else if (number < 100) {
+            // 2 digits
+            var lastDigit = number % 10,
+                firstDigit = number / 10;
+            if (lastDigit === 0) {
+                return eifelerRegelAppliesToNumber(firstDigit);
+            }
+            return eifelerRegelAppliesToNumber(lastDigit);
+        } else if (number < 10000) {
+            // 3 or 4 digits --> recursively check first digit
+            while (number >= 10) {
+                number = number / 10;
+            }
+            return eifelerRegelAppliesToNumber(number);
+        } else {
+            // Anything larger than 4 digits: recursively check first n-3 digits
+            number = number / 1000;
+            return eifelerRegelAppliesToNumber(number);
+        }
     }
 
-    return _ret = (_temp = (_this = app__possibleConstructorReturn(this, _Component.call.apply(_Component, [this].concat(args))), _this), _this.handleRoute = function (e) {
-      _this.currentUrl = e.url;
-    }, _temp), app__possibleConstructorReturn(_this, _ret);
-  }
+    var lb = moment.defineLocale('lb', {
+        months: 'Januar_Februar_Mäerz_Abrëll_Mee_Juni_Juli_August_September_Oktober_November_Dezember'.split('_'),
+        monthsShort: 'Jan._Febr._Mrz._Abr._Mee_Jun._Jul._Aug._Sept._Okt._Nov._Dez.'.split('_'),
+        monthsParseExact: true,
+        weekdays: 'Sonndeg_Méindeg_Dënschdeg_Mëttwoch_Donneschdeg_Freideg_Samschdeg'.split('_'),
+        weekdaysShort: 'So._Mé._Dë._Më._Do._Fr._Sa.'.split('_'),
+        weekdaysMin: 'So_Mé_Dë_Më_Do_Fr_Sa'.split('_'),
+        weekdaysParseExact: true,
+        longDateFormat: {
+            LT: 'H:mm [Auer]',
+            LTS: 'H:mm:ss [Auer]',
+            L: 'DD.MM.YYYY',
+            LL: 'D. MMMM YYYY',
+            LLL: 'D. MMMM YYYY H:mm [Auer]',
+            LLLL: 'dddd, D. MMMM YYYY H:mm [Auer]'
+        },
+        calendar: {
+            sameDay: '[Haut um] LT',
+            sameElse: 'L',
+            nextDay: '[Muer um] LT',
+            nextWeek: 'dddd [um] LT',
+            lastDay: '[Gëschter um] LT',
+            lastWeek: function lastWeek() {
+                // Different date string for 'Dënschdeg' (Tuesday) and 'Donneschdeg' (Thursday) due to phonological rule
+                switch (this.day()) {
+                    case 2:
+                    case 4:
+                        return '[Leschten] dddd [um] LT';
+                    default:
+                        return '[Leschte] dddd [um] LT';
+                }
+            }
+        },
+        relativeTime: {
+            future: processFutureTime,
+            past: processPastTime,
+            s: 'e puer Sekonnen',
+            ss: '%d Sekonnen',
+            m: processRelativeTime,
+            mm: '%d Minutten',
+            h: processRelativeTime,
+            hh: '%d Stonnen',
+            d: processRelativeTime,
+            dd: '%d Deeg',
+            M: processRelativeTime,
+            MM: '%d Méint',
+            y: processRelativeTime,
+            yy: '%d Joer'
+        },
+        dayOfMonthOrdinalParse: /\d{1,2}\./,
+        ordinal: '%d.',
+        week: {
+            dow: 1, // Monday is the first day of the week.
+            doy: 4 // The week that contains Jan 4th is the first week of the year.
+        }
+    });
 
-  /** Gets fired when the route changes.
-   *    @param {Object} event        "change" event from [preact-router](http://git.io/preact-router)
-   *    @param {string} event.url    The newly routed URL
-   */
+    return lb;
+});
+
+/***/ }),
+
+/***/ "J0UG":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+//! moment.js locale configuration
+//! locale : Afrikaans [af]
+//! author : Werner Mollentze : https://github.com/wernerm
+
+;(function (global, factory) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
+    'use strict';
+
+    var af = moment.defineLocale('af', {
+        months: 'Januarie_Februarie_Maart_April_Mei_Junie_Julie_Augustus_September_Oktober_November_Desember'.split('_'),
+        monthsShort: 'Jan_Feb_Mrt_Apr_Mei_Jun_Jul_Aug_Sep_Okt_Nov_Des'.split('_'),
+        weekdays: 'Sondag_Maandag_Dinsdag_Woensdag_Donderdag_Vrydag_Saterdag'.split('_'),
+        weekdaysShort: 'Son_Maa_Din_Woe_Don_Vry_Sat'.split('_'),
+        weekdaysMin: 'So_Ma_Di_Wo_Do_Vr_Sa'.split('_'),
+        meridiemParse: /vm|nm/i,
+        isPM: function isPM(input) {
+            return (/^nm$/i.test(input)
+            );
+        },
+        meridiem: function meridiem(hours, minutes, isLower) {
+            if (hours < 12) {
+                return isLower ? 'vm' : 'VM';
+            } else {
+                return isLower ? 'nm' : 'NM';
+            }
+        },
+        longDateFormat: {
+            LT: 'HH:mm',
+            LTS: 'HH:mm:ss',
+            L: 'DD/MM/YYYY',
+            LL: 'D MMMM YYYY',
+            LLL: 'D MMMM YYYY HH:mm',
+            LLLL: 'dddd, D MMMM YYYY HH:mm'
+        },
+        calendar: {
+            sameDay: '[Vandag om] LT',
+            nextDay: '[Môre om] LT',
+            nextWeek: 'dddd [om] LT',
+            lastDay: '[Gister om] LT',
+            lastWeek: '[Laas] dddd [om] LT',
+            sameElse: 'L'
+        },
+        relativeTime: {
+            future: 'oor %s',
+            past: '%s gelede',
+            s: '\'n paar sekondes',
+            ss: '%d sekondes',
+            m: '\'n minuut',
+            mm: '%d minute',
+            h: '\'n uur',
+            hh: '%d ure',
+            d: '\'n dag',
+            dd: '%d dae',
+            M: '\'n maand',
+            MM: '%d maande',
+            y: '\'n jaar',
+            yy: '%d jaar'
+        },
+        dayOfMonthOrdinalParse: /\d{1,2}(ste|de)/,
+        ordinal: function ordinal(number) {
+            return number + (number === 1 || number === 8 || number >= 20 ? 'ste' : 'de'); // Thanks to Joris Röling : https://github.com/jjupiter
+        },
+        week: {
+            dow: 1, // Maandag is die eerste dag van die week.
+            doy: 4 // Die week wat die 4de Januarie bevat is die eerste week van die jaar.
+        }
+    });
+
+    return af;
+});
+
+/***/ }),
+
+/***/ "Jg9m":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+//! moment.js locale configuration
+//! locale : Malay [ms]
+//! author : Weldan Jamili : https://github.com/weldan
+
+;(function (global, factory) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
+    'use strict';
+
+    var ms = moment.defineLocale('ms', {
+        months: 'Januari_Februari_Mac_April_Mei_Jun_Julai_Ogos_September_Oktober_November_Disember'.split('_'),
+        monthsShort: 'Jan_Feb_Mac_Apr_Mei_Jun_Jul_Ogs_Sep_Okt_Nov_Dis'.split('_'),
+        weekdays: 'Ahad_Isnin_Selasa_Rabu_Khamis_Jumaat_Sabtu'.split('_'),
+        weekdaysShort: 'Ahd_Isn_Sel_Rab_Kha_Jum_Sab'.split('_'),
+        weekdaysMin: 'Ah_Is_Sl_Rb_Km_Jm_Sb'.split('_'),
+        longDateFormat: {
+            LT: 'HH.mm',
+            LTS: 'HH.mm.ss',
+            L: 'DD/MM/YYYY',
+            LL: 'D MMMM YYYY',
+            LLL: 'D MMMM YYYY [pukul] HH.mm',
+            LLLL: 'dddd, D MMMM YYYY [pukul] HH.mm'
+        },
+        meridiemParse: /pagi|tengahari|petang|malam/,
+        meridiemHour: function meridiemHour(hour, meridiem) {
+            if (hour === 12) {
+                hour = 0;
+            }
+            if (meridiem === 'pagi') {
+                return hour;
+            } else if (meridiem === 'tengahari') {
+                return hour >= 11 ? hour : hour + 12;
+            } else if (meridiem === 'petang' || meridiem === 'malam') {
+                return hour + 12;
+            }
+        },
+        meridiem: function meridiem(hours, minutes, isLower) {
+            if (hours < 11) {
+                return 'pagi';
+            } else if (hours < 15) {
+                return 'tengahari';
+            } else if (hours < 19) {
+                return 'petang';
+            } else {
+                return 'malam';
+            }
+        },
+        calendar: {
+            sameDay: '[Hari ini pukul] LT',
+            nextDay: '[Esok pukul] LT',
+            nextWeek: 'dddd [pukul] LT',
+            lastDay: '[Kelmarin pukul] LT',
+            lastWeek: 'dddd [lepas pukul] LT',
+            sameElse: 'L'
+        },
+        relativeTime: {
+            future: 'dalam %s',
+            past: '%s yang lepas',
+            s: 'beberapa saat',
+            ss: '%d saat',
+            m: 'seminit',
+            mm: '%d minit',
+            h: 'sejam',
+            hh: '%d jam',
+            d: 'sehari',
+            dd: '%d hari',
+            M: 'sebulan',
+            MM: '%d bulan',
+            y: 'setahun',
+            yy: '%d tahun'
+        },
+        week: {
+            dow: 1, // Monday is the first day of the week.
+            doy: 7 // The week that contains Jan 1st is the first week of the year.
+        }
+    });
+
+    return ms;
+});
+
+/***/ }),
+
+/***/ "JkW7":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
 
 
-  App.prototype.render = function render() {
-    return Object(preact_min["h"])(
-      'div',
-      { id: 'app' },
-      app__ref,
-      Object(preact_min["h"])(
-        preact_router_es["Router"],
-        { onChange: this.handleRoute },
-        app__ref2,
-        app__ref3
-      )
-    );
-  };
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = Main;
 
-  return App;
-}(preact_min["Component"]);
+var _preact = __webpack_require__("KM04");
 
+__webpack_require__("yY49");
 
-// CONCATENATED MODULE: ./index.js
-/* harmony export (immutable) */ __webpack_exports__["default"] = Main;
+var _preactRedux = __webpack_require__("E/bI");
 
+var _app = __webpack_require__("qLaj");
 
+var _app2 = _interopRequireDefault(_app);
 
+var _store = __webpack_require__("vdRI");
 
+var _store2 = _interopRequireDefault(_store);
 
+var _actions = __webpack_require__("vyGZ");
 
+var _actions2 = _interopRequireDefault(_actions);
 
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+if (typeof window !== 'undefined') {
+    Promise.all([_store2.default.dispatch(_actions2.default.getColors()), _store2.default.dispatch(_actions2.default.getTime()), _store2.default.dispatch(_actions2.default.getDim())]);
+}
 
-var index_store = createStore_createStore(reducers_0);
-
-var index__ref = Object(preact_min["h"])(
-	'div',
-	{ id: 'outer' },
-	Object(preact_min["h"])(
-		'h1',
-		{ id: 'Q' },
-		'Q'
-	),
-	Object(preact_min["h"])(
-		preact_redux_esm_Provider,
-		{ store: index_store },
-		Object(preact_min["h"])(app_App, null)
-	)
+var _ref = (0, _preact.h)(
+    'div',
+    { id: 'outer' },
+    (0, _preact.h)(
+        'h1',
+        { id: 'Q' },
+        'Q'
+    ),
+    (0, _preact.h)(
+        _preactRedux.Provider,
+        { store: _store2.default },
+        (0, _preact.h)(_app2.default, null)
+    )
 );
 
 function Main() {
-	return index__ref;
+    return _ref;
+}
+
+/***/ }),
+
+/***/ "JkvP":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = compose;
+/**
+ * Composes single-argument functions from right to left. The rightmost
+ * function can take multiple arguments as it provides the signature for
+ * the resulting composite function.
+ *
+ * @param {...Function} funcs The functions to compose.
+ * @returns {Function} A function obtained by composing the argument functions
+ * from right to left. For example, compose(f, g, h) is identical to doing
+ * (...args) => f(g(h(...args))).
+ */
+
+function compose() {
+  for (var _len = arguments.length, funcs = Array(_len), _key = 0; _key < _len; _key++) {
+    funcs[_key] = arguments[_key];
+  }
+
+  if (funcs.length === 0) {
+    return function (arg) {
+      return arg;
+    };
+  }
+
+  if (funcs.length === 1) {
+    return funcs[0];
+  }
+
+  return funcs.reduce(function (a, b) {
+    return function () {
+      return a(b.apply(undefined, arguments));
+    };
+  });
 }
 
 /***/ }),
 
 /***/ "KM04":
 /***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 !function () {
   "use strict";
@@ -9234,7 +8994,7 @@ function Main() {
   }function c(e, t, n, o, r) {
     if ("className" === t && (t = "class"), "key" === t) ;else if ("ref" === t) n && n(null), o && o(e);else if ("class" !== t || r) {
       if ("style" === t) {
-        if (o && "string" != typeof o && "string" != typeof n || (e.style.cssText = o || ""), o && "object" == typeof o) {
+        if (o && "string" != typeof o && "string" != typeof n || (e.style.cssText = o || ""), o && "object" == (typeof o === "undefined" ? "undefined" : _typeof(o))) {
           if ("string" != typeof n) for (var i in n) {
             i in o || (e.style[i] = "");
           }for (var i in o) {
@@ -9395,13 +9155,21 @@ function Main() {
 /***/ "L6Cd":
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 //! moment.js locale configuration
 //! locale : Lao [lo]
 //! author : Ryan Hart : https://github.com/ryanhart2
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var lo = moment.defineLocale('lo', {
@@ -9468,13 +9236,21 @@ function Main() {
 /***/ "LRz5":
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 //! moment.js locale configuration
 //! locale : Nepalese [ne]
 //! author : suvash : https://github.com/suvash
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var symbolMap = {
@@ -9594,13 +9370,21 @@ function Main() {
 /***/ "Lpvo":
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 //! moment.js locale configuration
 //! locale : Maori [mi]
 //! author : John Corrigan <robbiecloset@gmail.com> : https://github.com/johnideal
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var mi = moment.defineLocale('mi', {
@@ -9658,16 +9442,61 @@ function Main() {
 
 /***/ }),
 
+/***/ "MpGN":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+exports.default = Color;
+
+var _preact = __webpack_require__("KM04");
+
+var _style = __webpack_require__("SlX7");
+
+var _style2 = _interopRequireDefault(_style);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var hsla = function hsla(index, a, size) {
+	return 'hsla(' + index * (360 / size) + ' ,100%, 50%, ' + a + ')';
+};
+
+function Color(_ref) {
+	var index = _ref.index,
+	    angle = _ref.angle,
+	    size = _ref.size;
+
+
+	var componentStyle = 'transform: translateY(-50%) rotate(' + angle + 'deg); ';
+	componentStyle += 'background-image: linear-gradient(180deg, ' + hsla(index, 0, size) + ', ' + hsla(index, 1, size) + ' 50%, ' + hsla(index, 0, size) + ');';
+
+	return (0, _preact.h)('div', { 'class': _style2.default['spectrum-circle__color'], style: componentStyle });
+}
+
+/***/ }),
+
 /***/ "NQix":
 /***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 //! moment.js locale configuration
 //! locale : Sindhi [sd]
 //! author : Narain Sagar : https://github.com/narainsagar
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var months = ['جنوري', 'فيبروري', 'مارچ', 'اپريل', 'مئي', 'جون', 'جولاءِ', 'آگسٽ', 'سيپٽمبر', 'آڪٽوبر', 'نومبر', 'ڊسمبر'];
@@ -9741,13 +9570,21 @@ function Main() {
 /***/ "Nof9":
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 //! moment.js locale configuration
 //! locale : Central Atlas Tamazight [tzm]
 //! author : Abdel Said : https://github.com/abdelsaid
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var tzm = moment.defineLocale('tzm', {
@@ -9799,16 +9636,47 @@ function Main() {
 
 /***/ }),
 
+/***/ "Oi8n":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _root = __webpack_require__("ygki");
+
+var _root2 = _interopRequireDefault(_root);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/** Built-in value references. */
+var _Symbol = _root2.default.Symbol;
+
+exports.default = _Symbol;
+
+/***/ }),
+
 /***/ "P1iN":
 /***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 //! moment.js locale configuration
 //! locale : Portuguese [pt]
 //! author : Jefferson : https://github.com/jalex79
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var pt = moment.defineLocale('pt', {
@@ -9866,16 +9734,149 @@ function Main() {
 
 /***/ }),
 
+/***/ "PgWW":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+exports.default = undefined;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _preact = __webpack_require__("KM04");
+
+var _style = __webpack_require__("SlX7");
+
+var _style2 = _interopRequireDefault(_style);
+
+var _Dial = __webpack_require__("Hejx");
+
+var _Dial2 = _interopRequireDefault(_Dial);
+
+var _Color = __webpack_require__("MpGN");
+
+var _Color2 = _interopRequireDefault(_Color);
+
+var _SpectrumDecoration = __webpack_require__("HQkZ");
+
+var _SpectrumDecoration2 = _interopRequireDefault(_SpectrumDecoration);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var colors = new Array(64).fill(0);
+
+var _ref3 = (0, _preact.h)(_SpectrumDecoration2.default, null);
+
+var Spectrum = function (_Component) {
+	_inherits(Spectrum, _Component);
+
+	function Spectrum() {
+		_classCallCheck(this, Spectrum);
+
+		return _possibleConstructorReturn(this, (Spectrum.__proto__ || Object.getPrototypeOf(Spectrum)).apply(this, arguments));
+	}
+
+	_createClass(Spectrum, [{
+		key: 'componentWillMount',
+		value: function componentWillMount() {
+			var angles = colors.map(function (a, index) {
+				return index * (360 / colors.length);
+			});
+
+			this.setState({
+				angles: angles
+			});
+		}
+	}, {
+		key: 'onHue',
+		value: function onHue(deg) {
+			var hue = 360 - deg;
+			this.props.onChange(hue);
+		}
+	}, {
+		key: 'render',
+		value: function render(_ref, _ref2) {
+			var _this2 = this;
+
+			var hue = _ref.hue;
+			var angles = _ref2.angles;
+
+			var dialValue = 360 - hue;
+
+			return (0, _preact.h)(
+				'div',
+				{
+					ref: function ref(element) {
+						_this2.container = element;
+					},
+					'class': _style2.default.spectrum
+				},
+				(0, _preact.h)('div', { 'class': _style2.default.spectrum__selector }),
+				(0, _preact.h)(
+					_Dial2.default,
+					{
+						className: _style2.default['spectrum-circle'],
+						value: dialValue,
+						onChange: function onChange(e) {
+							return _this2.onHue(e);
+						}
+					},
+					(0, _preact.h)(
+						'div',
+						{ 'class': _style2.default['spectrum-circle__inner'] },
+						angles.map(function (angle, index, angles) {
+							return (0, _preact.h)(_Color2.default, { angle: angle, index: index, size: angles.length });
+						})
+					),
+					_ref3
+				)
+			);
+		}
+	}]);
+
+	return Spectrum;
+}(_preact.Component);
+
+exports.default = Spectrum;
+
+/***/ }),
+
+/***/ "QSCZ":
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+module.exports = {"dim":"dim__1y79-","dim-toggle":"dim-toggle__2lGAg","dim-from":"dim-from__pgcjW","dim-to":"dim-to__kjTvO","dim-level":"dim-level__2S_VX","dim-from__decoration":"dim-from__decoration__1RaaU","dim-time__decoration-point":"dim-time__decoration-point__2lxiH","dim-to__decoration":"dim-to__decoration__3QkjU","dim-time__decoration":"dim-time__decoration__2yb2I","dim-numeric":"dim-numeric__3rWDq"};
+
+/***/ }),
+
 /***/ "QgBj":
 /***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 //! moment.js locale configuration
 //! locale : Spanish [es]
 //! author : Julio Napurí : https://github.com/julionc
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var monthsShortDot = 'ene._feb._mar._abr._may._jun._jul._ago._sep._oct._nov._dic.'.split('_');
@@ -9964,14 +9965,22 @@ function Main() {
 /***/ "R1TQ":
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 //! moment.js locale configuration
 //! locale : Estonian [et]
 //! author : Henry Kehlmann : https://github.com/madhenry
 //! improvements : Illimar Tambek : https://github.com/ragulka
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     function processRelativeTime(number, withoutSuffix, key, isFuture) {
@@ -10048,13 +10057,21 @@ function Main() {
 /***/ "R68T":
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 //! moment.js locale configuration
 //! locale : Gujarati [gu]
 //! author : Kaushik Thanki : https://github.com/Kaushik1987
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var symbolMap = {
@@ -10175,6 +10192,11 @@ function Main() {
 /***/ "R7ko":
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 //! moment.js locale configuration
 //! locale : German (Austria) [de-at]
 //! author : lluchs : https://github.com/lluchs
@@ -10183,8 +10205,11 @@ function Main() {
 //! author : Mikolaj Dadela : https://github.com/mik01aj
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     function processRelativeTime(number, withoutSuffix, key, isFuture) {
@@ -10257,13 +10282,21 @@ function Main() {
 /***/ "RV8r":
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 //! moment.js locale configuration
 //! locale : Kannada [kn]
 //! author : Rajeev Naik : https://github.com/rajeevnaikte
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var symbolMap = {
@@ -10386,13 +10419,21 @@ function Main() {
 /***/ "RaVB":
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 //! moment.js locale configuration
 //! locale : English (Australia) [en-au]
 //! author : Jared Morse : https://github.com/jarcoal
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var enAu = moment.defineLocale('en-au', {
@@ -10450,16 +10491,87 @@ function Main() {
 
 /***/ }),
 
+/***/ "RetW":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+exports.default = bindActionCreators;
+function bindActionCreator(actionCreator, dispatch) {
+  return function () {
+    return dispatch(actionCreator.apply(undefined, arguments));
+  };
+}
+
+/**
+ * Turns an object whose values are action creators, into an object with the
+ * same keys, but with every function wrapped into a `dispatch` call so they
+ * may be invoked directly. This is just a convenience method, as you can call
+ * `store.dispatch(MyActionCreators.doSomething())` yourself just fine.
+ *
+ * For convenience, you can also pass a single function as the first argument,
+ * and get a function in return.
+ *
+ * @param {Function|Object} actionCreators An object whose values are action
+ * creator functions. One handy way to obtain it is to use ES6 `import * as`
+ * syntax. You may also pass a single function.
+ *
+ * @param {Function} dispatch The `dispatch` function available on your Redux
+ * store.
+ *
+ * @returns {Function|Object} The object mimicking the original object, but with
+ * every action creator wrapped into the `dispatch` call. If you passed a
+ * function as `actionCreators`, the return value will also be a single
+ * function.
+ */
+function bindActionCreators(actionCreators, dispatch) {
+  if (typeof actionCreators === 'function') {
+    return bindActionCreator(actionCreators, dispatch);
+  }
+
+  if ((typeof actionCreators === 'undefined' ? 'undefined' : _typeof(actionCreators)) !== 'object' || actionCreators === null) {
+    throw new Error('bindActionCreators expected an object or a function, instead received ' + (actionCreators === null ? 'null' : typeof actionCreators === 'undefined' ? 'undefined' : _typeof(actionCreators)) + '. ' + 'Did you write "import ActionCreators from" instead of "import * as ActionCreators from"?');
+  }
+
+  var keys = Object.keys(actionCreators);
+  var boundActionCreators = {};
+  for (var i = 0; i < keys.length; i++) {
+    var key = keys[i];
+    var actionCreator = actionCreators[key];
+    if (typeof actionCreator === 'function') {
+      boundActionCreators[key] = bindActionCreator(actionCreator, dispatch);
+    }
+  }
+  return boundActionCreators;
+}
+
+/***/ }),
+
 /***/ "Rum7":
 /***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 //! moment.js locale configuration
 //! locale : Swahili [sw]
 //! author : Fahad Kassim : https://github.com/fadsel
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var sw = moment.defineLocale('sw', {
@@ -10515,13 +10627,21 @@ function Main() {
 /***/ "S0Eq":
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 //! moment.js locale configuration
 //! locale : Tamil [ta]
 //! author : Arjunkumar Krishnamoorthy : https://github.com/tk120404
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var symbolMap = {
@@ -10648,13 +10768,21 @@ function Main() {
 /***/ "SOHb":
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 //! moment.js locale configuration
 //! locale : Arabic (Algeria) [ar-dz]
 //! author : Noureddine LOUAHEDJ : https://github.com/noureddineme
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var arDz = moment.defineLocale('ar-dz', {
@@ -10718,13 +10846,21 @@ module.exports = {"colorpicker":"colorpicker__qUf75","spectrum":"spectrum__IohIt
 /***/ "U8JX":
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 //! moment.js locale configuration
 //! locale : Danish [da]
 //! author : Ulrik Nielsen : https://github.com/mrbase
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var da = moment.defineLocale('da', {
@@ -10778,16 +10914,68 @@ module.exports = {"colorpicker":"colorpicker__qUf75","spectrum":"spectrum__IohIt
 
 /***/ }),
 
+/***/ "UKR9":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+/**
+ * Checks if `value` is object-like. A value is object-like if it's not `null`
+ * and has a `typeof` result of "object".
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is object-like, else `false`.
+ * @example
+ *
+ * _.isObjectLike({});
+ * // => true
+ *
+ * _.isObjectLike([1, 2, 3]);
+ * // => true
+ *
+ * _.isObjectLike(_.noop);
+ * // => false
+ *
+ * _.isObjectLike(null);
+ * // => false
+ */
+function isObjectLike(value) {
+  return value != null && (typeof value === 'undefined' ? 'undefined' : _typeof(value)) == 'object';
+}
+
+exports.default = isObjectLike;
+
+/***/ }),
+
 /***/ "UL+2":
 /***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 //! moment.js locale configuration
 //! locale : French (Canada) [fr-ca]
 //! author : Jonathan Abourbih : https://github.com/jonbca
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var frCa = moment.defineLocale('fr-ca', {
@@ -10858,13 +11046,21 @@ module.exports = {"colorpicker":"colorpicker__qUf75","spectrum":"spectrum__IohIt
 /***/ "ULyk":
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 //! moment.js locale configuration
 //! locale : Catalan [ca]
 //! author : Juan G. Hurtado : https://github.com/juanghurtado
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var ca = moment.defineLocale('ca', {
@@ -10946,13 +11142,21 @@ module.exports = {"colorpicker":"colorpicker__qUf75","spectrum":"spectrum__IohIt
 /***/ "W90N":
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 //! moment.js locale configuration
 //! locale : Serbian [sr]
 //! author : Milan Janačković<milanjanackovic@gmail.com> : https://github.com/milan-j
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var translator = {
@@ -11052,13 +11256,21 @@ module.exports = {"colorpicker":"colorpicker__qUf75","spectrum":"spectrum__IohIt
 /***/ "WCPy":
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 //! moment.js locale configuration
 //! locale : Punjabi (India) [pa-in]
 //! author : Harpreet Singh : https://github.com/harpreetkhalsagtbit
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var symbolMap = {
@@ -11179,14 +11391,22 @@ module.exports = {"colorpicker":"colorpicker__qUf75","spectrum":"spectrum__IohIt
 /***/ "WlHu":
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 //! moment.js locale configuration
 //! locale : Chinese (Taiwan) [zh-tw]
 //! author : Ben : https://github.com/ben-lin
 //! author : Chris Lam : https://github.com/hehachris
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var zhTw = moment.defineLocale('zh-tw', {
@@ -11286,13 +11506,21 @@ module.exports = {"colorpicker":"colorpicker__qUf75","spectrum":"spectrum__IohIt
 /***/ "X5QB":
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 //! moment.js locale configuration
 //! locale : Bulgarian [bg]
 //! author : Krasen Borisov : https://github.com/kraz
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var bg = moment.defineLocale('bg', {
@@ -11379,13 +11607,21 @@ module.exports = {"colorpicker":"colorpicker__qUf75","spectrum":"spectrum__IohIt
 /***/ "XJth":
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 //! moment.js locale configuration
 //! locale : Bambara [bm]
 //! author : Estelle Comment : https://github.com/estellecomment
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     // Language contact person : Abdoufata Kane : https://github.com/abdoufata
@@ -11442,13 +11678,21 @@ module.exports = {"colorpicker":"colorpicker__qUf75","spectrum":"spectrum__IohIt
 /***/ "XWPg":
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 //! moment.js locale configuration
 //! locale : German (Switzerland) [de-ch]
 //! author : sschueller : https://github.com/sschueller
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     // based on: https://www.bk.admin.ch/dokumentation/sprachen/04915/05016/index.html?lang=de#
@@ -11528,16 +11772,118 @@ module.exports = {"dial":"dial__NvzKF"};
 
 /***/ }),
 
+/***/ "Yfr+":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.GET_TIME_FAILURE = exports.GET_TIME_SUCCESS = exports.GET_TIME_REQUEST = exports.GET_TIME = exports.PUT_TIME_FAILURE = exports.PUT_TIME_SUCCESS = exports.PUT_TIME_REQUEST = exports.SET_TIME = undefined;
+exports.getTimeRequest = getTimeRequest;
+exports.getTimeSuccess = getTimeSuccess;
+exports.getTimeFailure = getTimeFailure;
+exports.getTime = getTime;
+exports.putTimeRequest = putTimeRequest;
+exports.putTimeSuccess = putTimeSuccess;
+exports.putTimeFailure = putTimeFailure;
+exports.setTime = setTime;
+
+var _api = __webpack_require__("14kT");
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var TIME_API_URL = '/api/datetime';
+
+var SET_TIME = exports.SET_TIME = 'SET_TIME';
+var PUT_TIME_REQUEST = exports.PUT_TIME_REQUEST = 'PUT_TIME_REQUEST';
+var PUT_TIME_SUCCESS = exports.PUT_TIME_SUCCESS = 'PUT_TIME_SUCCESS';
+var PUT_TIME_FAILURE = exports.PUT_TIME_FAILURE = 'PUT_TIME_FAILURE';
+var GET_TIME = exports.GET_TIME = 'GET_TIME';
+var GET_TIME_REQUEST = exports.GET_TIME_REQUEST = 'GET_TIME_REQUEST';
+var GET_TIME_SUCCESS = exports.GET_TIME_SUCCESS = 'GET_TIME_SUCCESS';
+var GET_TIME_FAILURE = exports.GET_TIME_FAILURE = 'GET_TIME_FAILURE';
+
+function getTimeRequest() {
+    return {
+        type: GET_TIME_REQUEST
+    };
+}
+
+function getTimeSuccess(json) {
+    return {
+        type: GET_TIME_SUCCESS,
+        time: json.time,
+        receivedAt: Date.now()
+    };
+}
+
+function getTimeFailure() {
+    return {
+        type: GET_TIME_FAILURE,
+        receivedAt: Date.now()
+    };
+}
+
+function getTime() {
+    return _defineProperty({
+        type: GET_TIME
+    }, _api.API_GET, {
+        actions: [getTimeRequest, getTimeSuccess, getTimeFailure],
+        endPoint: TIME_API_URL
+    });
+}
+
+function putTimeRequest() {
+    return {
+        type: PUT_TIME_REQUEST
+    };
+}
+
+function putTimeSuccess(json) {
+    return {
+        type: PUT_TIME_SUCCESS
+    };
+}
+
+function putTimeFailure() {
+    return {
+        type: PUT_TIME_FAILURE
+    };
+}
+function setTime(time) {
+    return _defineProperty({
+        type: SET_TIME,
+        time: time
+    }, _api.API_PUT, {
+        dataKey: 'time',
+        actions: [putTimeRequest, putTimeSuccess, putTimeFailure],
+        endPoint: TIME_API_URL
+    });
+}
+
+/***/ }),
+
 /***/ "YqHU":
 /***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 //! moment.js locale configuration
 //! locale : Kazakh [kk]
 //! authors : Nurlan Rakhimzhanov : https://github.com/nurlan
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var suffixes = {
@@ -11618,8 +11964,146 @@ module.exports = {"dial":"dial__NvzKF"};
 
 /***/ }),
 
+/***/ "ZJnk":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = undefined;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _dec, _class;
+
+var _preact = __webpack_require__("KM04");
+
+var _match = __webpack_require__("sw5u");
+
+var _style = __webpack_require__("xrtm");
+
+var _style2 = _interopRequireDefault(_style);
+
+var _preactRedux = __webpack_require__("E/bI");
+
+var _actions = __webpack_require__("vyGZ");
+
+var _actions2 = _interopRequireDefault(_actions);
+
+var _reducers = __webpack_require__("2D3x");
+
+var _reducers2 = _interopRequireDefault(_reducers);
+
+var _hsl = __webpack_require__("7I26");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var _ref = (0, _preact.h)(
+    'label',
+    { 'for': 'menu-open' },
+    (0, _preact.h)(
+        'span',
+        null,
+        'menu'
+    )
+);
+
+var _ref2 = (0, _preact.h)(
+    'ul',
+    null,
+    (0, _preact.h)(
+        'li',
+        null,
+        (0, _preact.h)(
+            _match.Link,
+            { href: '/' },
+            'time'
+        )
+    ),
+    (0, _preact.h)(
+        'li',
+        null,
+        (0, _preact.h)(
+            _match.Link,
+            { href: '/dim' },
+            'dim'
+        )
+    ),
+    (0, _preact.h)(
+        'li',
+        null,
+        (0, _preact.h)(
+            _match.Link,
+            { href: '/design' },
+            'design'
+        )
+    )
+);
+
+var Header = (_dec = (0, _preactRedux.connect)(_reducers2.default, _actions2.default), _dec(_class = function (_Component) {
+    _inherits(Header, _Component);
+
+    function Header() {
+        _classCallCheck(this, Header);
+
+        return _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).apply(this, arguments));
+    }
+
+    _createClass(Header, [{
+        key: 'menuToggle',
+        value: function menuToggle(e) {
+            if (e.currentTarget.checked) {
+                document.querySelector('body').className += ' menu-open';
+            } else {
+                var cl = document.querySelector('body').className;
+                document.querySelector('body').className = cl.replace(' menu-open', '');
+            }
+        }
+    }, {
+        key: 'render',
+        value: function render(props) {
+            var _this2 = this;
+
+            var headerStyle = '\n            background-image:\n            radial-gradient(ellipse at center bottom, hsla(0,0%,13%,0) 0%, hsla(0,0%,13%,.5) 54%, hsla(0,0%,13%,.9)),\n            linear-gradient(to right, ' + (0, _hsl.hslToCss)(props.colors.outer) + ', ' + (0, _hsl.hslToCss)(props.colors.inner) + ')';
+
+            return (0, _preact.h)(
+                'header',
+                { 'class': _style2.default.header, style: headerStyle },
+                (0, _preact.h)(
+                    'nav',
+                    null,
+                    (0, _preact.h)('input', { type: 'checkbox', id: 'menu-open', onChange: function onChange(e) {
+                            return _this2.menuToggle(e);
+                        } }),
+                    _ref,
+                    _ref2
+                )
+            );
+        }
+    }]);
+
+    return Header;
+}(_preact.Component)) || _class);
+exports.default = Header;
+
+/***/ }),
+
 /***/ "ZLbk":
 /***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 //! moment.js locale configuration
 //! locale : Tetun Dili (East Timor) [tet]
@@ -11627,8 +12111,11 @@ module.exports = {"dial":"dial__NvzKF"};
 //! author : Onorio De J. Afonso : https://github.com/marobo
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var tet = moment.defineLocale('tet', {
@@ -11689,15 +12176,24 @@ module.exports = {"dial":"dial__NvzKF"};
 /***/ "a2/B":
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(module) {var require;//! moment.js
+"use strict";
+/* WEBPACK VAR INJECTION */(function(module) {var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;var require;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+//! moment.js
 //! version : 2.20.1
 //! authors : Tim Wood, Iskren Chernev, Moment.js contributors
 //! license : MIT
 //! momentjs.com
 
 ;(function (global, factory) {
-     true ? module.exports = factory() : typeof define === 'function' && define.amd ? define(factory) : global.moment = factory();
-})(this, function () {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' ? module.exports = factory() :  true ? !(__WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.call(exports, __webpack_require__, exports, module)) :
+				__WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : global.moment = factory();
+})(undefined, function () {
     'use strict';
 
     var hookCallback;
@@ -11985,7 +12481,7 @@ module.exports = {"dial":"dial__NvzKF"};
                 var arg;
                 for (var i = 0; i < arguments.length; i++) {
                     arg = '';
-                    if (typeof arguments[i] === 'object') {
+                    if (_typeof(arguments[i]) === 'object') {
                         arg += '\n[' + i + '] ';
                         for (var key in arguments[0]) {
                             arg += key + ': ' + arguments[0][key] + ', ';
@@ -12505,7 +13001,7 @@ module.exports = {"dial":"dial__NvzKF"};
     }
 
     function stringSet(units, value) {
-        if (typeof units === 'object') {
+        if ((typeof units === 'undefined' ? 'undefined' : _typeof(units)) === 'object') {
             units = normalizeObjectUnits(units);
             var prioritized = getPrioritizedUnits(units);
             for (var i = 0; i < prioritized.length; i++) {
@@ -14667,7 +15163,7 @@ module.exports = {"dial":"dial__NvzKF"};
         } else if (duration == null) {
             // checks for null or undefined
             duration = {};
-        } else if (typeof duration === 'object' && ('from' in duration || 'to' in duration)) {
+        } else if ((typeof duration === 'undefined' ? 'undefined' : _typeof(duration)) === 'object' && ('from' in duration || 'to' in duration)) {
             diffRes = momentsDifference(createLocal(duration.from), createLocal(duration.to));
 
             duration = {};
@@ -16121,13 +16617,21 @@ module.exports = {"dial":"dial__NvzKF"};
 /***/ "adRA":
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 //! moment.js locale configuration
 //! locale : Breton [br]
 //! author : Jean-Baptiste Le Duigou : https://github.com/jbleduigou
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     function relativeTimeWithMutation(number, withoutSuffix, key) {
@@ -16232,13 +16736,21 @@ module.exports = {"dial":"dial__NvzKF"};
 /***/ "anXx":
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 //! moment.js locale configuration
 //! locale : Frisian [fy]
 //! author : Robin van der Vliet : https://github.com/robin0van0der0v
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var monthsShortWithDots = 'jan._feb._mrt._apr._mai_jun._jul._aug._sep._okt._nov._des.'.split('_');
@@ -16307,16 +16819,331 @@ module.exports = {"dial":"dial__NvzKF"};
 
 /***/ }),
 
+/***/ "apcp":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = combineReducers;
+
+var _createStore = __webpack_require__("xuP/");
+
+var _isPlainObject = __webpack_require__("9TS5");
+
+var _isPlainObject2 = _interopRequireDefault(_isPlainObject);
+
+var _warning = __webpack_require__("qrbs");
+
+var _warning2 = _interopRequireDefault(_warning);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function getUndefinedStateErrorMessage(key, action) {
+  var actionType = action && action.type;
+  var actionName = actionType && '"' + actionType.toString() + '"' || 'an action';
+
+  return 'Given action ' + actionName + ', reducer "' + key + '" returned undefined. ' + 'To ignore an action, you must explicitly return the previous state. ' + 'If you want this reducer to hold no value, you can return null instead of undefined.';
+}
+
+function getUnexpectedStateShapeWarningMessage(inputState, reducers, action, unexpectedKeyCache) {
+  var reducerKeys = Object.keys(reducers);
+  var argumentName = action && action.type === _createStore.ActionTypes.INIT ? 'preloadedState argument passed to createStore' : 'previous state received by the reducer';
+
+  if (reducerKeys.length === 0) {
+    return 'Store does not have a valid reducer. Make sure the argument passed ' + 'to combineReducers is an object whose values are reducers.';
+  }
+
+  if (!(0, _isPlainObject2.default)(inputState)) {
+    return 'The ' + argumentName + ' has unexpected type of "' + {}.toString.call(inputState).match(/\s([a-z|A-Z]+)/)[1] + '". Expected argument to be an object with the following ' + ('keys: "' + reducerKeys.join('", "') + '"');
+  }
+
+  var unexpectedKeys = Object.keys(inputState).filter(function (key) {
+    return !reducers.hasOwnProperty(key) && !unexpectedKeyCache[key];
+  });
+
+  unexpectedKeys.forEach(function (key) {
+    unexpectedKeyCache[key] = true;
+  });
+
+  if (unexpectedKeys.length > 0) {
+    return 'Unexpected ' + (unexpectedKeys.length > 1 ? 'keys' : 'key') + ' ' + ('"' + unexpectedKeys.join('", "') + '" found in ' + argumentName + '. ') + 'Expected to find one of the known reducer keys instead: ' + ('"' + reducerKeys.join('", "') + '". Unexpected keys will be ignored.');
+  }
+}
+
+function assertReducerShape(reducers) {
+  Object.keys(reducers).forEach(function (key) {
+    var reducer = reducers[key];
+    var initialState = reducer(undefined, { type: _createStore.ActionTypes.INIT });
+
+    if (typeof initialState === 'undefined') {
+      throw new Error('Reducer "' + key + '" returned undefined during initialization. ' + 'If the state passed to the reducer is undefined, you must ' + 'explicitly return the initial state. The initial state may ' + 'not be undefined. If you don\'t want to set a value for this reducer, ' + 'you can use null instead of undefined.');
+    }
+
+    var type = '@@redux/PROBE_UNKNOWN_ACTION_' + Math.random().toString(36).substring(7).split('').join('.');
+    if (typeof reducer(undefined, { type: type }) === 'undefined') {
+      throw new Error('Reducer "' + key + '" returned undefined when probed with a random type. ' + ('Don\'t try to handle ' + _createStore.ActionTypes.INIT + ' or other actions in "redux/*" ') + 'namespace. They are considered private. Instead, you must return the ' + 'current state for any unknown actions, unless it is undefined, ' + 'in which case you must return the initial state, regardless of the ' + 'action type. The initial state may not be undefined, but can be null.');
+    }
+  });
+}
+
+/**
+ * Turns an object whose values are different reducer functions, into a single
+ * reducer function. It will call every child reducer, and gather their results
+ * into a single state object, whose keys correspond to the keys of the passed
+ * reducer functions.
+ *
+ * @param {Object} reducers An object whose values correspond to different
+ * reducer functions that need to be combined into one. One handy way to obtain
+ * it is to use ES6 `import * as reducers` syntax. The reducers may never return
+ * undefined for any action. Instead, they should return their initial state
+ * if the state passed to them was undefined, and the current state for any
+ * unrecognized action.
+ *
+ * @returns {Function} A reducer function that invokes every reducer inside the
+ * passed object, and builds a state object with the same shape.
+ */
+function combineReducers(reducers) {
+  var reducerKeys = Object.keys(reducers);
+  var finalReducers = {};
+  for (var i = 0; i < reducerKeys.length; i++) {
+    var key = reducerKeys[i];
+
+    if (false) {
+      if (typeof reducers[key] === 'undefined') {
+        (0, _warning2.default)('No reducer provided for key "' + key + '"');
+      }
+    }
+
+    if (typeof reducers[key] === 'function') {
+      finalReducers[key] = reducers[key];
+    }
+  }
+  var finalReducerKeys = Object.keys(finalReducers);
+
+  var unexpectedKeyCache = void 0;
+  if (false) {
+    unexpectedKeyCache = {};
+  }
+
+  var shapeAssertionError = void 0;
+  try {
+    assertReducerShape(finalReducers);
+  } catch (e) {
+    shapeAssertionError = e;
+  }
+
+  return function combination() {
+    var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+    var action = arguments[1];
+
+    if (shapeAssertionError) {
+      throw shapeAssertionError;
+    }
+
+    if (false) {
+      var warningMessage = getUnexpectedStateShapeWarningMessage(state, finalReducers, action, unexpectedKeyCache);
+      if (warningMessage) {
+        (0, _warning2.default)(warningMessage);
+      }
+    }
+
+    var hasChanged = false;
+    var nextState = {};
+    for (var _i = 0; _i < finalReducerKeys.length; _i++) {
+      var _key = finalReducerKeys[_i];
+      var reducer = finalReducers[_key];
+      var previousStateForKey = state[_key];
+      var nextStateForKey = reducer(previousStateForKey, action);
+      if (typeof nextStateForKey === 'undefined') {
+        var errorMessage = getUndefinedStateErrorMessage(_key, action);
+        throw new Error(errorMessage);
+      }
+      nextState[_key] = nextStateForKey;
+      hasChanged = hasChanged || nextStateForKey !== previousStateForKey;
+    }
+    return hasChanged ? nextState : state;
+  };
+}
+
+/***/ }),
+
+/***/ "azcv":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.GET_DIM_FAILURE = exports.GET_DIM_SUCCESS = exports.GET_DIM = exports.PUT_DIM_FAILURE = exports.PUT_DIM_SUCCESS = exports.SET_DIM = undefined;
+exports.getDimSuccess = getDimSuccess;
+exports.getDimFailure = getDimFailure;
+exports.getDim = getDim;
+exports.putDimSuccess = putDimSuccess;
+exports.putDimFailure = putDimFailure;
+exports.setDim = setDim;
+
+var _api = __webpack_require__("14kT");
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var DIM_API_URL = '/api/dim';
+
+var SET_DIM = exports.SET_DIM = 'SET_DIM';
+var PUT_DIM_SUCCESS = exports.PUT_DIM_SUCCESS = 'PUT_DIM_SUCCESS';
+var PUT_DIM_FAILURE = exports.PUT_DIM_FAILURE = 'PUT_CDIM_FAILURE';
+var GET_DIM = exports.GET_DIM = 'GET_DIM';
+var GET_DIM_SUCCESS = exports.GET_DIM_SUCCESS = 'GET_DIM_SUCCESS';
+var GET_DIM_FAILURE = exports.GET_DIM_FAILURE = 'GET_DIM_FAILURE';
+
+function getDimSuccess(json) {
+    return {
+        type: GET_DIM_SUCCESS,
+        dim: json.dim,
+        receivedAt: Date.now()
+    };
+}
+
+function getDimFailure(error) {
+    console.error(error);
+    return {
+        type: GET_DIM_FAILURE,
+        receivedAt: Date.now()
+    };
+}
+
+function getDim() {
+    return _defineProperty({
+        type: GET_DIM
+    }, _api.API_GET, {
+        actions: [null, getDimSuccess, getDimFailure],
+        endPoint: DIM_API_URL
+    });
+}
+
+function putDimSuccess() {
+    return {
+        type: PUT_DIM_SUCCESS
+    };
+}
+
+function putDimFailure(error) {
+    console.error(error);
+    return {
+        type: PUT_DIM_FAILURE
+    };
+}
+
+function setDim(dim) {
+    return _defineProperty({
+        type: SET_DIM,
+        dim: dim
+    }, _api.API_PUT, {
+        dataKey: 'dim',
+        actions: [null, putDimSuccess, putDimFailure],
+        endPoint: DIM_API_URL
+    });
+}
+
+/***/ }),
+
+/***/ "bOZn":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = applyMiddleware;
+
+var _compose = __webpack_require__("JkvP");
+
+var _compose2 = _interopRequireDefault(_compose);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var _extends = Object.assign || function (target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i];for (var key in source) {
+      if (Object.prototype.hasOwnProperty.call(source, key)) {
+        target[key] = source[key];
+      }
+    }
+  }return target;
+};
+
+/**
+ * Creates a store enhancer that applies middleware to the dispatch method
+ * of the Redux store. This is handy for a variety of tasks, such as expressing
+ * asynchronous actions in a concise manner, or logging every action payload.
+ *
+ * See `redux-thunk` package as an example of the Redux middleware.
+ *
+ * Because middleware is potentially asynchronous, this should be the first
+ * store enhancer in the composition chain.
+ *
+ * Note that each middleware will be given the `dispatch` and `getState` functions
+ * as named arguments.
+ *
+ * @param {...Function} middlewares The middleware chain to be applied.
+ * @returns {Function} A store enhancer applying the middleware.
+ */
+function applyMiddleware() {
+  for (var _len = arguments.length, middlewares = Array(_len), _key = 0; _key < _len; _key++) {
+    middlewares[_key] = arguments[_key];
+  }
+
+  return function (createStore) {
+    return function (reducer, preloadedState, enhancer) {
+      var store = createStore(reducer, preloadedState, enhancer);
+      var _dispatch = store.dispatch;
+      var chain = [];
+
+      var middlewareAPI = {
+        getState: store.getState,
+        dispatch: function dispatch(action) {
+          return _dispatch(action);
+        }
+      };
+      chain = middlewares.map(function (middleware) {
+        return middleware(middlewareAPI);
+      });
+      _dispatch = _compose2.default.apply(undefined, chain)(store.dispatch);
+
+      return _extends({}, store, {
+        dispatch: _dispatch
+      });
+    };
+  };
+}
+
+/***/ }),
+
 /***/ "cujr":
 /***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 //! moment.js locale configuration
 //! locale : Portuguese (Brazil) [pt-br]
 //! author : Caio Ribeiro Pereira : https://github.com/caio-ribeiro-pereira
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var ptBr = moment.defineLocale('pt-br', {
@@ -16373,13 +17200,21 @@ module.exports = {"dial":"dial__NvzKF"};
 /***/ "cwrv":
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 //! moment.js locale configuration
 //! locale : Armenian [hy-am]
 //! author : Armendarabyan : https://github.com/armendarabyan
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var hyAm = moment.defineLocale('hy-am', {
@@ -16472,13 +17307,21 @@ module.exports = {"dial":"dial__NvzKF"};
 /***/ "e3g9":
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 //! moment.js locale configuration
 //! locale : Macedonian [mk]
 //! author : Borislav Mickov : https://github.com/B0k0
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var mk = moment.defineLocale('mk', {
@@ -16565,14 +17408,22 @@ module.exports = {"dial":"dial__NvzKF"};
 /***/ "eI5Z":
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 //! moment.js locale configuration
 //! locale : Indonesian [id]
 //! author : Mohammad Satrio Utomo : https://github.com/tyok
 //! reference: http://id.wikisource.org/wiki/Pedoman_Umum_Ejaan_Bahasa_Indonesia_yang_Disempurnakan
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var id = moment.defineLocale('id', {
@@ -16651,13 +17502,21 @@ module.exports = {"dial":"dial__NvzKF"};
 /***/ "eLh+":
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 //! moment.js locale configuration
 //! locale : Serbian Cyrillic [sr-cyrl]
 //! author : Milan Janačković<milanjanackovic@gmail.com> : https://github.com/milan-j
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var translator = {
@@ -16757,13 +17616,21 @@ module.exports = {"dial":"dial__NvzKF"};
 /***/ "eftj":
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 //! moment.js locale configuration
 //! locale : Kyrgyz [ky]
 //! author : Chyngyz Arystan uulu : https://github.com/chyngyz
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var suffixes = {
@@ -16847,13 +17714,21 @@ module.exports = {"dial":"dial__NvzKF"};
 /***/ "eyXp":
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 //! moment.js locale configuration
 //! locale : French (Switzerland) [fr-ch]
 //! author : Gaspard Bucher : https://github.com/gaspard
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var frCh = moment.defineLocale('fr-ch', {
@@ -16928,6 +17803,9 @@ module.exports = {"dial":"dial__NvzKF"};
 /***/ "f6ML":
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+
+
 module.exports = __webpack_require__("sNCo");
 
 /***/ }),
@@ -16935,13 +17813,21 @@ module.exports = __webpack_require__("sNCo");
 /***/ "f8Bd":
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 //! moment.js locale configuration
 //! locale : Georgian [ka]
 //! author : Irakli Janiashvili : https://github.com/irakli-janiashvili
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var ka = moment.defineLocale('ka', {
@@ -17023,8 +17909,68 @@ module.exports = __webpack_require__("sNCo");
 
 /***/ }),
 
+/***/ "fpuT":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.compose = exports.applyMiddleware = exports.bindActionCreators = exports.combineReducers = exports.createStore = undefined;
+
+var _createStore = __webpack_require__("xuP/");
+
+var _createStore2 = _interopRequireDefault(_createStore);
+
+var _combineReducers = __webpack_require__("apcp");
+
+var _combineReducers2 = _interopRequireDefault(_combineReducers);
+
+var _bindActionCreators = __webpack_require__("RetW");
+
+var _bindActionCreators2 = _interopRequireDefault(_bindActionCreators);
+
+var _applyMiddleware = __webpack_require__("bOZn");
+
+var _applyMiddleware2 = _interopRequireDefault(_applyMiddleware);
+
+var _compose = __webpack_require__("JkvP");
+
+var _compose2 = _interopRequireDefault(_compose);
+
+var _warning = __webpack_require__("qrbs");
+
+var _warning2 = _interopRequireDefault(_warning);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/*
+* This is a dummy function to check if the function name has been altered by minification.
+* If the function has been minified and NODE_ENV !== 'production', warn the user.
+*/
+function isCrushed() {}
+
+if (false) {
+  (0, _warning2.default)('You are currently using minified code outside of NODE_ENV === \'production\'. ' + 'This means that you are running a slower development build of Redux. ' + 'You can use loose-envify (https://github.com/zertosh/loose-envify) for browserify ' + 'or DefinePlugin for webpack (http://stackoverflow.com/questions/30030031) ' + 'to ensure you have the correct code for your production build.');
+}
+
+exports.createStore = _createStore2.default;
+exports.combineReducers = _combineReducers2.default;
+exports.bindActionCreators = _bindActionCreators2.default;
+exports.applyMiddleware = _applyMiddleware2.default;
+exports.compose = _compose2.default;
+
+/***/ }),
+
 /***/ "fwQ6":
 /***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 //! moment.js locale configuration
 //! locale : German [de]
@@ -17033,8 +17979,11 @@ module.exports = __webpack_require__("sNCo");
 //! author : Mikolaj Dadela : https://github.com/mik01aj
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     function processRelativeTime(number, withoutSuffix, key, isFuture) {
@@ -17365,8 +18314,310 @@ webpackContext.id = "gh3w";
 
 /***/ }),
 
+/***/ "hK05":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = undefined;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _dec, _class;
+
+var _preact = __webpack_require__("KM04");
+
+var _preactRedux = __webpack_require__("E/bI");
+
+var _colors = __webpack_require__("6X+5");
+
+var actions = _interopRequireWildcard(_colors);
+
+var _reducers = __webpack_require__("2D3x");
+
+var _reducers2 = _interopRequireDefault(_reducers);
+
+var _ColorPicker = __webpack_require__("kXTc");
+
+var _ColorPicker2 = _interopRequireDefault(_ColorPicker);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Design = (_dec = (0, _preactRedux.connect)(_reducers2.default, actions), _dec(_class = function (_Component) {
+    _inherits(Design, _Component);
+
+    function Design() {
+        _classCallCheck(this, Design);
+
+        return _possibleConstructorReturn(this, (Design.__proto__ || Object.getPrototypeOf(Design)).apply(this, arguments));
+    }
+
+    _createClass(Design, [{
+        key: 'setOuterColor',
+        value: function setOuterColor(outer) {
+            var inner = this.props.colors.inner;
+            this.props.setColors({
+                inner: inner,
+                outer: outer
+            });
+        }
+    }, {
+        key: 'setInnerColor',
+        value: function setInnerColor(inner) {
+            var outer = this.props.colors.outer;
+            this.props.setColors({
+                inner: inner,
+                outer: outer
+            });
+        }
+    }, {
+        key: 'render',
+        value: function render(_ref, state) {
+            var _this2 = this;
+
+            var colors = _ref.colors;
+
+            return (0, _preact.h)(
+                'div',
+                { 'class': 'page' },
+                (0, _preact.h)(_ColorPicker2.default, { text: 'Outer color', onChange: function onChange(e) {
+                        return _this2.setOuterColor(e);
+                    }, value: colors.outer }),
+                (0, _preact.h)(_ColorPicker2.default, { text: 'Inner color', onChange: function onChange(e) {
+                        return _this2.setInnerColor(e);
+                    }, value: colors.inner })
+            );
+        }
+    }]);
+
+    return Design;
+}(_preact.Component)) || _class);
+exports.default = Design;
+
+/***/ }),
+
+/***/ "hNPe":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = undefined;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _preact = __webpack_require__("KM04");
+
+var _style = __webpack_require__("nZg4");
+
+var _style2 = _interopRequireDefault(_style);
+
+var _tools = __webpack_require__("tQAz");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var VerticalSlider = function (_Component) {
+    _inherits(VerticalSlider, _Component);
+
+    function VerticalSlider() {
+        _classCallCheck(this, VerticalSlider);
+
+        return _possibleConstructorReturn(this, (VerticalSlider.__proto__ || Object.getPrototypeOf(VerticalSlider)).apply(this, arguments));
+    }
+
+    _createClass(VerticalSlider, [{
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            this.setLevel(this.percentToLevel(this.props.value));
+        }
+    }, {
+        key: 'shouldComponentUpdate',
+        value: function shouldComponentUpdate(_ref, nextState) {
+            var value = _ref.value;
+
+            if (this.state.selecting) return false;
+
+            var oldValue = this.props.value;
+
+            if (oldValue !== value) {
+                this.setLevel(this.percentToLevel(value));
+                return false;
+            }
+
+            return true;
+        }
+    }, {
+        key: 'percentToLevel',
+        value: function percentToLevel(percent) {
+            var _container$getBoundin = this.container.getBoundingClientRect(),
+                width = _container$getBoundin.width;
+
+            return percent / 100 * width;
+        }
+    }, {
+        key: 'updateValue',
+        value: function updateValue(value, width) {
+            var percentage = Math.floor(value / width * 100);
+            this.props.onChange(percentage);
+        }
+    }, {
+        key: 'updateLevel',
+        value: function updateLevel(event, callback) {
+            var _this2 = this;
+
+            var _event$currentTarget$ = event.currentTarget.getBoundingClientRect(),
+                width = _event$currentTarget$.width;
+
+            (0, _tools.getHorizontalSliderLevel)(event, function (value) {
+                _this2.updateValue(value, width);
+                callback(value);
+            });
+        }
+    }, {
+        key: 'setLevel',
+        value: function setLevel(level) {
+            if (level === this.state.level) return;
+
+            if (this.props.customLevel) {
+                this.container.querySelector('.' + this.props.customLevel).style.setProperty('--slideLevel', level + 'px');
+            } else {
+                this.container.style.setProperty('--slideLevel', level + 'px');
+            }
+
+            // TODO onresize
+
+            this.setState({
+                level: level
+            });
+        }
+    }, {
+        key: 'selectStart',
+        value: function selectStart(e) {
+            var _this3 = this;
+
+            e.preventDefault();
+            if (this.props.disabled) return;
+
+            this.setState({
+                selecting: true
+            });
+            this.updateLevel(event, function (level) {
+                return _this3.setLevel(level);
+            });
+        }
+    }, {
+        key: 'selecting',
+        value: function selecting(event) {
+            var _this4 = this;
+
+            event.preventDefault();
+            if (this.props.disabled) return;
+
+            if (!this.state.selecting) return;
+
+            this.updateLevel(event, function (level) {
+                return _this4.setLevel(level);
+            });
+        }
+    }, {
+        key: 'clicked',
+        value: function clicked(event) {
+            var _this5 = this;
+
+            if (this.props.disabled) return;
+            event.preventDefault();
+            this.updateLevel(event, function (level) {
+                return _this5.setLevel(level);
+            });
+        }
+    }, {
+        key: 'selectEnd',
+        value: function selectEnd(e) {
+            if (this.props.disabled) return;
+            e.preventDefault();
+            this.setState({
+                selecting: false
+            });
+        }
+    }, {
+        key: 'render',
+        value: function render(props, state) {
+            var _this6 = this;
+
+            var className = [props.className, _style2.default['horizontal-slider']];
+
+            if (props.customLevel) className.push(_style2.default['horizontal-slider--custom-level']);
+
+            return (0, _preact.h)(
+                'div',
+                {
+                    disabled: props.disabled,
+                    ref: function ref(element) {
+                        _this6.container = element;
+                    },
+                    'class': className.join(' '),
+                    onClick: function onClick(e) {
+                        return _this6.clicked(e);
+                    },
+                    onMouseDown: function onMouseDown(e) {
+                        return _this6.selectStart(e);
+                    },
+                    onTouchStart: function onTouchStart(e) {
+                        return _this6.selectStart(e);
+                    },
+                    onMouseMove: function onMouseMove(e) {
+                        return _this6.selecting(e);
+                    },
+                    onTouchMove: function onTouchMove(e) {
+                        return _this6.selecting(e);
+                    },
+                    onMouseUp: function onMouseUp(e) {
+                        return _this6.selectEnd(e);
+                    },
+                    onTouchEnd: function onTouchEnd(e) {
+                        return _this6.selectEnd(e);
+                    }
+                },
+                props.children
+            );
+        }
+    }]);
+
+    return VerticalSlider;
+}(_preact.Component);
+
+exports.default = VerticalSlider;
+
+/***/ }),
+
 /***/ "ha01":
 /***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 //! moment.js locale configuration
 //! locale : Talossan [tzl]
@@ -17374,8 +18625,11 @@ webpackContext.id = "gh3w";
 //! author : Iustì Canun
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     // After the year there should be a slash and the amount of years since December 26, 1979 in Roman numerals.
@@ -17461,8 +18715,62 @@ webpackContext.id = "gh3w";
 
 /***/ }),
 
+/***/ "i/8a":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+function createThunkMiddleware(extraArgument) {
+  return function (_ref) {
+    var dispatch = _ref.dispatch,
+        getState = _ref.getState;
+    return function (next) {
+      return function (action) {
+        if (typeof action === 'function') {
+          return action(dispatch, getState, extraArgument);
+        }
+
+        return next(action);
+      };
+    };
+  };
+}
+
+var thunk = createThunkMiddleware();
+thunk.withExtraArgument = createThunkMiddleware;
+
+exports['default'] = thunk;
+
+/***/ }),
+
+/***/ "i/J7":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+/** Detect free variable `global` from Node.js. */
+var freeGlobal = (typeof global === 'undefined' ? 'undefined' : _typeof(global)) == 'object' && global && global.Object === Object && global;
+
+exports.default = freeGlobal;
+
+/***/ }),
+
 /***/ "iBmU":
 /***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 //! moment.js locale configuration
 //! locale : Belarusian [be]
@@ -17471,8 +18779,11 @@ webpackContext.id = "gh3w";
 //! Author : Menelion Elensúle : https://github.com/Oire
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     function plural(word, num) {
@@ -17597,6 +18908,86 @@ webpackContext.id = "gh3w";
 
 /***/ }),
 
+/***/ "iYwr":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+exports.default = undefined;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _preact = __webpack_require__("KM04");
+
+var _style = __webpack_require__("SlX7");
+
+var _style2 = _interopRequireDefault(_style);
+
+var _VerticalSlider = __webpack_require__("4DzJ");
+
+var _VerticalSlider2 = _interopRequireDefault(_VerticalSlider);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Luminosity = function (_Component) {
+	_inherits(Luminosity, _Component);
+
+	function Luminosity() {
+		_classCallCheck(this, Luminosity);
+
+		return _possibleConstructorReturn(this, (Luminosity.__proto__ || Object.getPrototypeOf(Luminosity)).apply(this, arguments));
+	}
+
+	_createClass(Luminosity, [{
+		key: 'updateLuminosity',
+		value: function updateLuminosity(luminosity) {
+			this.props.onChange(luminosity);
+		}
+	}, {
+		key: 'render',
+		value: function render(_ref, state) {
+			var _this2 = this;
+
+			var hue = _ref.hue,
+			    value = _ref.value;
+
+			var gradient = 'background-image: linear-gradient(hsl(' + hue + ', 100%, 100%), hsl(' + hue + ', 100%, 0%));';
+
+			return (0, _preact.h)(
+				'div',
+				{ 'class': _style2.default.colorpicker__luminosity, style: gradient },
+				(0, _preact.h)(
+					_VerticalSlider2.default,
+					{
+						onChange: function onChange(e) {
+							return _this2.updateLuminosity(e);
+						},
+						value: value,
+						customLevel: _style2.default['colorpicker__luminosity-level']
+					},
+					(0, _preact.h)('div', { 'class': _style2.default['colorpicker__luminosity-level'] })
+				)
+			);
+		}
+	}]);
+
+	return Luminosity;
+}(_preact.Component);
+
+exports.default = Luminosity;
+
+/***/ }),
+
 /***/ "igvm":
 /***/ (function(module, exports) {
 
@@ -17608,14 +18999,22 @@ module.exports = {"vertical-slider":"vertical-slider__1ZfFM","vertical-slider--c
 /***/ "j+tz":
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 //! moment.js locale configuration
 //! locale : Arabic (Morocco) [ar-ma]
 //! author : ElFadili Yassine : https://github.com/ElFadiliY
 //! author : Abdel Said : https://github.com/abdelsaid
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var arMa = moment.defineLocale('ar-ma', {
@@ -17671,14 +19070,22 @@ module.exports = {"vertical-slider":"vertical-slider__1ZfFM","vertical-slider--c
 /***/ "jbFW":
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 //! moment.js locale configuration
 //! locale : Romanian [ro]
 //! author : Vlad Gurdiga : https://github.com/gurdiga
 //! author : Valentin Agachi : https://github.com/avaly
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     function relativeTimeWithPlural(number, withoutSuffix, key) {
@@ -17750,13 +19157,21 @@ module.exports = {"vertical-slider":"vertical-slider__1ZfFM","vertical-slider--c
 /***/ "kKHs":
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 //! moment.js locale configuration
 //! locale : English (United Kingdom) [en-gb]
 //! author : Chris Gedrim : https://github.com/chrisgedrim
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var enGb = moment.defineLocale('en-gb', {
@@ -17814,8 +19229,141 @@ module.exports = {"vertical-slider":"vertical-slider__1ZfFM","vertical-slider--c
 
 /***/ }),
 
+/***/ "kXTc":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+exports.default = undefined;
+
+var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _preact = __webpack_require__("KM04");
+
+var _style = __webpack_require__("SlX7");
+
+var _style2 = _interopRequireDefault(_style);
+
+var _Spectrum = __webpack_require__("PgWW");
+
+var _Spectrum2 = _interopRequireDefault(_Spectrum);
+
+var _Saturation = __webpack_require__("1cxe");
+
+var _Saturation2 = _interopRequireDefault(_Saturation);
+
+var _Luminosity = __webpack_require__("iYwr");
+
+var _Luminosity2 = _interopRequireDefault(_Luminosity);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var ColorPicker = function (_Component) {
+	_inherits(ColorPicker, _Component);
+
+	function ColorPicker() {
+		_classCallCheck(this, ColorPicker);
+
+		return _possibleConstructorReturn(this, (ColorPicker.__proto__ || Object.getPrototypeOf(ColorPicker)).apply(this, arguments));
+	}
+
+	_createClass(ColorPicker, [{
+		key: 'componentWillMount',
+		value: function componentWillMount() {
+			var _props$value = _slicedToArray(this.props.value, 3),
+			    hue = _props$value[0],
+			    saturation = _props$value[1],
+			    luminosity = _props$value[2];
+
+			this.setState({
+				hue: hue,
+				saturation: saturation,
+				luminosity: luminosity
+			});
+		}
+	}, {
+		key: 'updateColor',
+		value: function updateColor() {
+			var _state = this.state,
+			    hue = _state.hue,
+			    saturation = _state.saturation,
+			    luminosity = _state.luminosity;
+
+			this.props.onChange([hue, saturation, luminosity]);
+		}
+	}, {
+		key: 'onHueChange',
+		value: function onHueChange(hue) {
+			this.setState({
+				hue: hue
+			});
+			this.updateColor();
+		}
+	}, {
+		key: 'onSaturationChange',
+		value: function onSaturationChange(saturation) {
+			this.setState({
+				saturation: saturation
+			});
+			this.updateColor();
+		}
+	}, {
+		key: 'onLuminosityChange',
+		value: function onLuminosityChange(luminosity) {
+			this.setState({
+				luminosity: luminosity
+			});
+			this.updateColor();
+		}
+	}, {
+		key: 'render',
+		value: function render(props, _ref) {
+			var _this2 = this;
+
+			var hue = _ref.hue,
+			    saturation = _ref.saturation,
+			    luminosity = _ref.luminosity;
+
+			return (0, _preact.h)(
+				'div',
+				{ 'class': _style2.default.colorpicker },
+				(0, _preact.h)(_Spectrum2.default, { hue: hue, onChange: function onChange(e) {
+						return _this2.onHueChange(e);
+					} }),
+				(0, _preact.h)(_Saturation2.default, { hue: hue, value: saturation, onChange: function onChange(e) {
+						return _this2.onSaturationChange(e);
+					} }),
+				(0, _preact.h)(_Luminosity2.default, { hue: hue, value: luminosity, onChange: function onChange(e) {
+						return _this2.onLuminosityChange(e);
+					} })
+			);
+		}
+	}]);
+
+	return ColorPicker;
+}(_preact.Component);
+
+exports.default = ColorPicker;
+
+/***/ }),
+
 /***/ "l262":
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
 
 module.exports = function (module) {
 	if (!module.webpackPolyfill) {
@@ -17845,14 +19393,22 @@ module.exports = function (module) {
 /***/ "lJ2Y":
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 //! moment.js locale configuration
 //! locale : Italian [it]
 //! author : Lorenzo : https://github.com/aliem
 //! author: Mattia Larentis: https://github.com/nostalgiaz
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var it = moment.defineLocale('it', {
@@ -17918,13 +19474,21 @@ module.exports = function (module) {
 /***/ "lomv":
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 //! moment.js locale configuration
 //! locale : Finnish [fi]
 //! author : Tarmo Aidantausta : https://github.com/bleadof
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var numbersPast = 'nolla yksi kaksi kolme neljä viisi kuusi seitsemän kahdeksan yhdeksän'.split(' ');
@@ -18027,13 +19591,21 @@ module.exports = function (module) {
 /***/ "mn6i":
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 //! moment.js locale configuration
 //! locale : Greek [el]
 //! author : Aggelos Karalias : https://github.com/mehiel
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     function isFunction(input) {
@@ -18128,16 +19700,32 @@ module.exports = function (module) {
 
 /***/ }),
 
+/***/ "nZg4":
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+module.exports = {"horizontal-slider":"horizontal-slider__2vYoy","horizontal-slider--custom-level":"horizontal-slider--custom-level__3nv6m"};
+
+/***/ }),
+
 /***/ "of7D":
 /***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 //! moment.js locale configuration
 //! locale : Persian [fa]
 //! author : Ebrahim Byagowi : https://github.com/ebraminio
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var symbolMap = {
@@ -18242,13 +19830,21 @@ module.exports = function (module) {
 /***/ "pUJL":
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 //! moment.js locale configuration
 //! locale : Japanese [ja]
 //! author : LI Long : https://github.com/baryon
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var ja = moment.defineLocale('ja', {
@@ -18325,6 +19921,11 @@ module.exports = function (module) {
 /***/ "pUp6":
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 //! moment.js locale configuration
 //! locale : Burmese [my]
 //! author : Squar team, mysquar.com
@@ -18332,8 +19933,11 @@ module.exports = function (module) {
 //! author : Tin Aung Lin : https://github.com/thanyawzinmin
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var symbolMap = {
@@ -18424,14 +20028,22 @@ module.exports = function (module) {
 /***/ "pdQq":
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 //! moment.js locale configuration
 //! locale : Javanese [jv]
 //! author : Rony Lantip : https://github.com/lantip
 //! reference: http://jv.wikipedia.org/wiki/Basa_Jawa
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var jv = moment.defineLocale('jv', {
@@ -18507,16 +20119,131 @@ module.exports = function (module) {
 
 /***/ }),
 
+/***/ "qLaj":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = undefined;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _preact = __webpack_require__("KM04");
+
+var _preactRouter = __webpack_require__("/QC5");
+
+var _Header = __webpack_require__("ZJnk");
+
+var _Header2 = _interopRequireDefault(_Header);
+
+var _time = __webpack_require__("rj1t");
+
+var _time2 = _interopRequireDefault(_time);
+
+var _design = __webpack_require__("hK05");
+
+var _design2 = _interopRequireDefault(_design);
+
+var _dim = __webpack_require__("sxQ0");
+
+var _dim2 = _interopRequireDefault(_dim);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var _ref2 = (0, _preact.h)(_Header2.default, { bgColor: '#673AB7' });
+
+var _ref3 = (0, _preact.h)(_time2.default, { path: '/' });
+
+var _ref4 = (0, _preact.h)(_design2.default, { path: '/design' });
+
+var _ref5 = (0, _preact.h)(_dim2.default, { path: '/dim' });
+
+var App = function (_Component) {
+    _inherits(App, _Component);
+
+    function App() {
+        var _ref;
+
+        var _temp, _this, _ret;
+
+        _classCallCheck(this, App);
+
+        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+            args[_key] = arguments[_key];
+        }
+
+        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = App.__proto__ || Object.getPrototypeOf(App)).call.apply(_ref, [this].concat(args))), _this), _this.handleRoute = function (e) {
+            _this.currentUrl = e.url;
+        }, _temp), _possibleConstructorReturn(_this, _ret);
+    }
+
+    /** Gets fired when the route changes.
+     *    @param {Object} event        "change" event from [preact-router](http://git.io/preact-router)
+     *    @param {string} event.url    The newly routed URL
+     */
+
+
+    _createClass(App, [{
+        key: 'render',
+        value: function render() {
+            return (0, _preact.h)(
+                'div',
+                { id: 'app' },
+                _ref2,
+                (0, _preact.h)(
+                    _preactRouter.Router,
+                    { onChange: this.handleRoute },
+                    _ref3,
+                    _ref4,
+                    _ref5
+                )
+            );
+        }
+    }]);
+
+    return App;
+}(_preact.Component);
+
+exports.default = App;
+
+/***/ }),
+
+/***/ "qSHC":
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+module.exports = {"toggle":"toggle__3oMIf"};
+
+/***/ }),
+
 /***/ "qToQ":
 /***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 //! moment.js locale configuration
 //! locale : Maldivian [dv]
 //! author : Jawish Hameed : https://github.com/jawish
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var months = ['ޖެނުއަރީ', 'ފެބްރުއަރީ', 'މާރިޗު', 'އޭޕްރީލު', 'މޭ', 'ޖޫން', 'ޖުލައި', 'އޯގަސްޓު', 'ސެޕްޓެމްބަރު', 'އޮކްޓޯބަރު', 'ނޮވެމްބަރު', 'ޑިސެމްބަރު'];
@@ -18592,14 +20319,22 @@ module.exports = function (module) {
 /***/ "qW43":
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 //! moment.js locale configuration
 //! locale : Dutch (Belgium) [nl-be]
 //! author : Joris Röling : https://github.com/jorisroling
 //! author : Jacob Middag : https://github.com/middagj
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var monthsShortWithDots = 'jan._feb._mrt._apr._mei_jun._jul._aug._sep._okt._nov._dec.'.split('_');
@@ -18680,6 +20415,120 @@ module.exports = function (module) {
 
 /***/ }),
 
+/***/ "qrbs":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = warning;
+/**
+ * Prints a warning in the console if it exists.
+ *
+ * @param {String} message The warning message.
+ * @returns {void}
+ */
+function warning(message) {
+  /* eslint-disable no-console */
+  if (typeof console !== 'undefined' && typeof console.error === 'function') {
+    console.error(message);
+  }
+  /* eslint-enable no-console */
+  try {
+    // This error was thrown as a convenience so that if you enable
+    // "break on all exceptions" in your console,
+    // it would pause the execution at this line.
+    throw new Error(message);
+    /* eslint-disable no-empty */
+  } catch (e) {}
+  /* eslint-enable no-empty */
+}
+
+/***/ }),
+
+/***/ "rj1t":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = undefined;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _dec, _class;
+
+var _preact = __webpack_require__("KM04");
+
+var _preactRedux = __webpack_require__("E/bI");
+
+var _time = __webpack_require__("Yfr+");
+
+var actions = _interopRequireWildcard(_time);
+
+var _reducers = __webpack_require__("2D3x");
+
+var _reducers2 = _interopRequireDefault(_reducers);
+
+var _TimePicker = __webpack_require__("xGaw");
+
+var _TimePicker2 = _interopRequireDefault(_TimePicker);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Time = (_dec = (0, _preactRedux.connect)(_reducers2.default, actions), _dec(_class = function (_Component) {
+    _inherits(Time, _Component);
+
+    function Time() {
+        _classCallCheck(this, Time);
+
+        return _possibleConstructorReturn(this, (Time.__proto__ || Object.getPrototypeOf(Time)).apply(this, arguments));
+    }
+
+    _createClass(Time, [{
+        key: 'onChange',
+        value: function onChange(time) {
+            this.props.setTime(+new Date(time));
+        }
+    }, {
+        key: 'render',
+        value: function render(_ref, state) {
+            var _this2 = this;
+
+            var colors = _ref.colors,
+                time = _ref.time;
+
+            var dateTime = new Date(time.value);
+            return (0, _preact.h)(
+                'div',
+                { 'class': 'page' },
+                (0, _preact.h)(_TimePicker2.default, { onChange: function onChange(e) {
+                        return _this2.onChange(e);
+                    }, time: dateTime, outerColor: colors.outer, innerColor: colors.inner })
+            );
+        }
+    }]);
+
+    return Time;
+}(_preact.Component)) || _class);
+exports.default = Time;
+
+/***/ }),
+
 /***/ "rkyF":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18713,13 +20562,21 @@ function symbolObservablePonyfill(root) {
 /***/ "ro+U":
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 //! moment.js locale configuration
 //! locale : English (New Zealand) [en-nz]
 //! author : Luke McGregor : https://github.com/lukemcgregor
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var enNz = moment.defineLocale('en-nz', {
@@ -18780,13 +20637,21 @@ function symbolObservablePonyfill(root) {
 /***/ "rr7+":
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 //! moment.js locale configuration
 //! locale : Montenegrin [me]
 //! author : Miodrag Nikač <miodrag@restartit.me> : https://github.com/miodragnikac
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var translator = {
@@ -18887,13 +20752,21 @@ function symbolObservablePonyfill(root) {
 /***/ "ryJQ":
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 //! moment.js locale configuration
 //! locale : Uzbek Latin [uz-latn]
 //! author : Rasulbek Mirzayev : github.com/Rasulbeeek
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var uzLatn = moment.defineLocale('uz-latn', {
@@ -18945,6 +20818,91 @@ function symbolObservablePonyfill(root) {
 
 /***/ }),
 
+/***/ "sEgX":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+exports.getVerticalSliderLevel = getVerticalSliderLevel;
+function isTouchEvent(event) {
+	var type = event.type;
+
+	return type === 'touchmove' || type === 'touchstart' || type === 'touchend';
+}
+
+/**
+ *
+ *
+ * @param {DOMEvent} event
+ * @returns
+ */
+function getVerticalSliderLevel(event, callback) {
+	var currentTarget = event.currentTarget,
+	    pageY = event.pageY;
+
+	var _currentTarget$getBou = currentTarget.getBoundingClientRect(),
+	    top = _currentTarget$getBou.top,
+	    height = _currentTarget$getBou.height;
+
+	var offsetTop = top + window.scrollY;
+
+	var getValue = function getValue(_ref) {
+		var offsetTop = _ref.offsetTop,
+		    height = _ref.height,
+		    pageY = _ref.pageY;
+
+		var value = pageY - offsetTop;
+
+		if (value < 0) return 0;
+
+		if (pageY > offsetTop + height) return height;
+
+		return value;
+	};
+
+	if (isTouchEvent(event)) {
+		var _iteratorNormalCompletion = true;
+		var _didIteratorError = false;
+		var _iteratorError = undefined;
+
+		try {
+
+			for (var _iterator = event.changedTouches[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+				var touch = _step.value;
+				var _pageY = touch.pageY;
+
+				var value = getValue({
+					offsetTop: offsetTop, height: height, pageY: _pageY
+				});
+
+				callback(value);
+			}
+		} catch (err) {
+			_didIteratorError = true;
+			_iteratorError = err;
+		} finally {
+			try {
+				if (!_iteratorNormalCompletion && _iterator.return) {
+					_iterator.return();
+				}
+			} finally {
+				if (_didIteratorError) {
+					throw _iteratorError;
+				}
+			}
+		}
+	} else {
+		var _value = getValue({ offsetTop: offsetTop, height: height, pageY: pageY });
+		callback(_value);
+	}
+}
+
+/***/ }),
+
 /***/ "sNCo":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18983,11 +20941,62 @@ exports['default'] = result;
 
 /***/ }),
 
+/***/ "svpX":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _Symbol2 = __webpack_require__("Oi8n");
+
+var _Symbol3 = _interopRequireDefault(_Symbol2);
+
+var _getRawTag = __webpack_require__("InRc");
+
+var _getRawTag2 = _interopRequireDefault(_getRawTag);
+
+var _objectToString = __webpack_require__("+iwg");
+
+var _objectToString2 = _interopRequireDefault(_objectToString);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/** `Object#toString` result references. */
+var nullTag = '[object Null]',
+    undefinedTag = '[object Undefined]';
+
+/** Built-in value references. */
+var symToStringTag = _Symbol3.default ? _Symbol3.default.toStringTag : undefined;
+
+/**
+ * The base implementation of `getTag` without fallbacks for buggy environments.
+ *
+ * @private
+ * @param {*} value The value to query.
+ * @returns {string} Returns the `toStringTag`.
+ */
+function baseGetTag(value) {
+  if (value == null) {
+    return value === undefined ? undefinedTag : nullTag;
+  }
+  return symToStringTag && symToStringTag in Object(value) ? (0, _getRawTag2.default)(value) : (0, _objectToString2.default)(value);
+}
+
+exports.default = baseGetTag;
+
+/***/ }),
+
 /***/ "sw5u":
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 Object.defineProperty(exports, "__esModule", {
 	value: true
@@ -19023,12 +21032,12 @@ function _classCallCheck(instance, Constructor) {
 function _possibleConstructorReturn(self, call) {
 	if (!self) {
 		throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-	}return call && (typeof call === "object" || typeof call === "function") ? call : self;
+	}return call && ((typeof call === 'undefined' ? 'undefined' : _typeof(call)) === "object" || typeof call === "function") ? call : self;
 }
 
 function _inherits(subClass, superClass) {
 	if (typeof superClass !== "function" && superClass !== null) {
-		throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
+		throw new TypeError("Super expression must either be null or a function, not " + (typeof superClass === 'undefined' ? 'undefined' : _typeof(superClass)));
 	}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
 }
 
@@ -19090,16 +21099,314 @@ Match.Link = Link;
 
 /***/ }),
 
+/***/ "sxQ0":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = undefined;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _dec, _class;
+
+var _preact = __webpack_require__("KM04");
+
+var _preactRedux = __webpack_require__("E/bI");
+
+var _style = __webpack_require__("QSCZ");
+
+var _style2 = _interopRequireDefault(_style);
+
+var _dim = __webpack_require__("azcv");
+
+var actions = _interopRequireWildcard(_dim);
+
+var _reducers = __webpack_require__("2D3x");
+
+var _reducers2 = _interopRequireDefault(_reducers);
+
+var _VerticalSlider = __webpack_require__("4DzJ");
+
+var _VerticalSlider2 = _interopRequireDefault(_VerticalSlider);
+
+var _HorizontalSlider = __webpack_require__("hNPe");
+
+var _HorizontalSlider2 = _interopRequireDefault(_HorizontalSlider);
+
+var _Toggle = __webpack_require__("2+yi");
+
+var _Toggle2 = _interopRequireDefault(_Toggle);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var _ref2 = (0, _preact.h)(
+    'span',
+    null,
+    'to'
+);
+
+var Dim = (_dec = (0, _preactRedux.connect)(_reducers2.default, actions), _dec(_class = function (_Component) {
+    _inherits(Dim, _Component);
+
+    function Dim() {
+        _classCallCheck(this, Dim);
+
+        return _possibleConstructorReturn(this, (Dim.__proto__ || Object.getPrototypeOf(Dim)).apply(this, arguments));
+    }
+
+    _createClass(Dim, [{
+        key: 'componentWillMount',
+        value: function componentWillMount() {
+            var _props$dim = this.props.dim,
+                from = _props$dim.from,
+                to = _props$dim.to,
+                level = _props$dim.level,
+                active = _props$dim.active;
+
+
+            from = Math.floor(100 / 24 * from);
+            to = Math.floor(100 / 24 * to);
+
+            this.setState({
+                from: from, to: to, level: level, active: active
+            });
+        }
+    }, {
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            var _dimLevelElement$getB = this.dimLevelElement.getBoundingClientRect(),
+                width = _dimLevelElement$getB.width,
+                height = _dimLevelElement$getB.height;
+
+            var angle = deg(Math.atan(height / width));
+            this.dimLevelElement.style.setProperty('--dimLevelGradientAngle', angle + 'deg');
+        }
+    }, {
+        key: 'update',
+        value: function update() {
+            var _state = this.state,
+                from = _state.from,
+                to = _state.to,
+                level = _state.level,
+                active = _state.active;
+
+
+            from = Math.floor(24 / 100 * from);
+            to = Math.floor(24 / 100 * to);
+
+            this.props.setDim({
+                from: from, to: to, level: level, active: active
+            });
+        }
+    }, {
+        key: 'fromChange',
+        value: function fromChange(from) {
+            this.setState({
+                from: from
+            });
+            this.update();
+        }
+    }, {
+        key: 'toChange',
+        value: function toChange(to) {
+            this.setState({
+                to: to
+            });
+            this.update();
+        }
+    }, {
+        key: 'dimChange',
+        value: function dimChange(level) {
+            this.setState({
+                level: level
+            });
+            this.update();
+        }
+    }, {
+        key: 'toggle',
+        value: function toggle(active) {
+            this.setState({
+                active: active
+            });
+            this.update();
+        }
+    }, {
+        key: 'render',
+        value: function render(props, _ref) {
+            var _this2 = this;
+
+            var from = _ref.from,
+                to = _ref.to,
+                level = _ref.level,
+                active = _ref.active;
+            var _props$dim2 = props.dim,
+                toHours = _props$dim2.to,
+                fromHours = _props$dim2.from;
+
+
+            return (0, _preact.h)(
+                'div',
+                { 'class': 'page' },
+                (0, _preact.h)(
+                    'div',
+                    { 'class': _style2.default['dim'] },
+                    (0, _preact.h)(_Toggle2.default, { 'class': _style2.default['dim-toggle'], value: active, onChange: function onChange(e) {
+                            return _this2.toggle(e);
+                        } }),
+                    (0, _preact.h)(DimFrom, { from: from, disabled: !active, onChange: function onChange(e) {
+                            return _this2.fromChange(e);
+                        } }),
+                    (0, _preact.h)(DimTo, { to: to, disabled: !active, onChange: function onChange(e) {
+                            return _this2.toChange(e);
+                        } }),
+                    (0, _preact.h)(
+                        'div',
+                        { 'class': _style2.default['dim-numeric'], disabled: !active },
+                        (0, _preact.h)('input', {
+                            type: 'text', min: '1', max: '12', steps: '1', value: fromHours,
+                            onChange: function onChange(e) {
+                                return _this2.fromChange(e);
+                            },
+                            onKeyDown: function onKeyDown(e) {
+                                return _this2.fromChange(e);
+                            },
+                            disabled: !active
+                        }),
+                        _ref2,
+                        (0, _preact.h)('input', {
+                            type: 'text', min: '0', max: '59', steps: '1', value: toHours,
+                            onChange: function onChange(e) {
+                                return _this2.toChange(e);
+                            },
+                            onKeyDown: function onKeyDown(e) {
+                                return _this2.toChange(e);
+                            },
+                            disabled: !active
+                        })
+                    ),
+                    (0, _preact.h)(
+                        'div',
+                        {
+                            'class': _style2.default['dim-level'],
+                            disabled: !active,
+                            ref: function ref(e) {
+                                _this2.dimLevelElement = e;
+                            }
+                        },
+                        (0, _preact.h)(_HorizontalSlider2.default, {
+                            className: _style2.default['dim-level__slider'],
+                            onChange: function onChange(e) {
+                                return _this2.dimChange(e);
+                            },
+                            value: level,
+                            disabled: !active
+                        })
+                    )
+                )
+            );
+        }
+    }]);
+
+    return Dim;
+}(_preact.Component)) || _class);
+exports.default = Dim;
+
+
+function DimTimeDecoration(props) {
+    var decoration = new Array(9).fill(0);
+
+    return (0, _preact.h)(
+        'div',
+        { 'class': [_style2.default['dim-time__decoration'], props.class].join(' ') },
+        decoration.map(function (z, i) {
+            return (0, _preact.h)('div', { 'class': _style2.default['dim-time__decoration-point'] });
+        })
+    );
+}
+
+function DimFrom(_ref3) {
+    var from = _ref3.from,
+        disabled = _ref3.disabled,
+        _onChange = _ref3.onChange;
+
+    return (0, _preact.h)(
+        'div',
+        { 'class': _style2.default['dim-from'], disabled: disabled },
+        (0, _preact.h)(
+            _VerticalSlider2.default,
+            {
+                className: _style2.default['dim-from__slider'],
+                onChange: function onChange(e) {
+                    return _onChange(e);
+                },
+                value: from,
+                disabled: disabled
+            },
+            (0, _preact.h)(DimTimeDecoration, { 'class': _style2.default['dim-from__decoration'] })
+        )
+    );
+}
+
+function DimTo(_ref4) {
+    var to = _ref4.to,
+        disabled = _ref4.disabled,
+        _onChange2 = _ref4.onChange;
+
+    return (0, _preact.h)(
+        'div',
+        { 'class': _style2.default['dim-to'], disabled: disabled },
+        (0, _preact.h)(
+            _VerticalSlider2.default,
+            {
+                className: _style2.default['dim-to__slider'],
+                onChange: function onChange(e) {
+                    return _onChange2(e);
+                },
+                value: to,
+                disabled: disabled
+            },
+            (0, _preact.h)(DimTimeDecoration, { 'class': _style2.default['dim-to__decoration'] })
+        )
+    );
+}
+
+function deg(radians) {
+    return radians * 180 / Math.PI;
+}
+
+/***/ }),
+
 /***/ "t1oD":
 /***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 //! moment.js locale configuration
 //! locale : Polish [pl]
 //! author : Rafal Hirsz : https://github.com/evoL
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var monthsNominative = 'styczeń_luty_marzec_kwiecień_maj_czerwiec_lipiec_sierpień_wrzesień_październik_listopad_grudzień'.split('_');
@@ -19219,8 +21526,96 @@ Match.Link = Link;
 
 /***/ }),
 
+/***/ "tQAz":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+exports.getHorizontalSliderLevel = getHorizontalSliderLevel;
+function isTouchEvent(event) {
+	var type = event.type;
+
+	return type === 'touchmove' || type === 'touchstart' || type === 'touchend';
+}
+
+/**
+ *
+ *
+ * @param {DOMEvent} event
+ * @returns
+ */
+function getHorizontalSliderLevel(event, callback) {
+	var currentTarget = event.currentTarget,
+	    pageX = event.pageX;
+
+	var _currentTarget$getBou = currentTarget.getBoundingClientRect(),
+	    left = _currentTarget$getBou.left,
+	    width = _currentTarget$getBou.width;
+
+	var offsetLeft = left + window.scrollX;
+
+	var getValue = function getValue(_ref) {
+		var offsetLeft = _ref.offsetLeft,
+		    width = _ref.width,
+		    pageX = _ref.pageX;
+
+		var value = pageX - offsetLeft;
+
+		if (value < 0) return 0;
+
+		if (pageX > offsetLeft + width) return width;
+
+		return value;
+	};
+
+	if (isTouchEvent(event)) {
+		var _iteratorNormalCompletion = true;
+		var _didIteratorError = false;
+		var _iteratorError = undefined;
+
+		try {
+
+			for (var _iterator = event.changedTouches[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+				var touch = _step.value;
+				var _pageX = touch.pageX;
+
+				var value = getValue({ offsetLeft: offsetLeft, width: width, pageX: _pageX });
+
+				callback(value);
+			}
+		} catch (err) {
+			_didIteratorError = true;
+			_iteratorError = err;
+		} finally {
+			try {
+				if (!_iteratorNormalCompletion && _iterator.return) {
+					_iterator.return();
+				}
+			} finally {
+				if (_didIteratorError) {
+					throw _iteratorError;
+				}
+			}
+		}
+	} else {
+		var _value = getValue({ offsetLeft: offsetLeft, width: width, pageX: pageX });
+		callback(_value);
+	}
+}
+
+/***/ }),
+
 /***/ "tQmj":
 /***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 //! moment.js locale configuration
 //! locale : Malay [ms-my]
@@ -19228,8 +21623,11 @@ Match.Link = Link;
 //! author : Weldan Jamili : https://github.com/weldan
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var msMy = moment.defineLocale('ms-my', {
@@ -19308,14 +21706,22 @@ Match.Link = Link;
 /***/ "tzrV":
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 //! moment.js locale configuration
 //! locale : Norwegian Bokmål [nb]
 //! authors : Espen Hovlandsdal : https://github.com/rexxars
 //!           Sigurd Gartmann : https://github.com/sigurdga
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var nb = moment.defineLocale('nb', {
@@ -19371,16 +21777,51 @@ Match.Link = Link;
 
 /***/ }),
 
+/***/ "u9EY":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+/**
+ * Creates a unary function that invokes `func` with its argument transformed.
+ *
+ * @private
+ * @param {Function} func The function to wrap.
+ * @param {Function} transform The argument transform.
+ * @returns {Function} Returns the new function.
+ */
+function overArg(func, transform) {
+  return function (arg) {
+    return func(transform(arg));
+  };
+}
+
+exports.default = overArg;
+
+/***/ }),
+
 /***/ "uCop":
 /***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 //! moment.js locale configuration
 //! locale : Konkani Latin script [gom-latn]
 //! author : The Discoverer : https://github.com/WikiDiscoverer
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     function processRelativeTime(number, withoutSuffix, key, isFuture) {
@@ -19500,13 +21941,21 @@ Match.Link = Link;
 /***/ "ux7g":
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 //! moment.js locale configuration
 //! locale : Tagalog (Philippines) [tl-ph]
 //! author : Dan Hagman : https://github.com/hagmandan
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var tlPh = moment.defineLocale('tl-ph', {
@@ -19570,8 +22019,27 @@ module.exports = {"time-selector":"time-selector__2j7_U","time-selector__minute"
 
 /***/ }),
 
+/***/ "vdRI":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+if (true) {
+  module.exports = __webpack_require__("4NOc");
+} else {
+  module.exports = require('./store.dev');
+}
+
+/***/ }),
+
 /***/ "vnXZ":
 /***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 //! moment.js locale configuration
 //! locale : Korean [ko]
@@ -19579,8 +22047,11 @@ module.exports = {"time-selector":"time-selector__2j7_U","time-selector__minute"
 //! author : Jeeeyul Lee <jeeeyul@gmail.com>
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var ko = moment.defineLocale('ko', {
@@ -19655,8 +22126,43 @@ module.exports = {"time-selector":"time-selector__2j7_U","time-selector__minute"
 
 /***/ }),
 
+/***/ "vyGZ":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _colors = __webpack_require__("6X+5");
+
+var colors = _interopRequireWildcard(_colors);
+
+var _time = __webpack_require__("Yfr+");
+
+var time = _interopRequireWildcard(_time);
+
+var _dim = __webpack_require__("azcv");
+
+var dim = _interopRequireWildcard(_dim);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+exports.default = _extends({}, colors, time, dim);
+
+/***/ }),
+
 /***/ "wLaM":
 /***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 //! moment.js locale configuration
 //! locale : Chinese (Hong Kong) [zh-hk]
@@ -19665,8 +22171,11 @@ module.exports = {"time-selector":"time-selector__2j7_U","time-selector__minute"
 //! author : Konstantin : https://github.com/skfd
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var zhHk = moment.defineLocale('zh-hk', {
@@ -19766,13 +22275,21 @@ module.exports = {"time-selector":"time-selector__2j7_U","time-selector__minute"
 /***/ "wRWs":
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 //! moment.js locale configuration
 //! locale : Galician [gl]
 //! author : Juan G. Hurtado : https://github.com/juanghurtado
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var gl = moment.defineLocale('gl', {
@@ -19846,13 +22363,21 @@ module.exports = {"time-selector":"time-selector__2j7_U","time-selector__minute"
 /***/ "xC4Z":
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 //! moment.js locale configuration
 //! locale : Chuvash [cv]
 //! author : Anatoly Mironov : https://github.com/mirontoli
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var cv = moment.defineLocale('cv', {
@@ -19909,6 +22434,216 @@ module.exports = {"time-selector":"time-selector__2j7_U","time-selector__minute"
 
 /***/ }),
 
+/***/ "xGaw":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = undefined;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _preact = __webpack_require__("KM04");
+
+var _Dial = __webpack_require__("Hejx");
+
+var _Dial2 = _interopRequireDefault(_Dial);
+
+var _style = __webpack_require__("v+8J");
+
+var _style2 = _interopRequireDefault(_style);
+
+var _hsl = __webpack_require__("7I26");
+
+var _TimeInput = __webpack_require__("4xuc");
+
+var _TimeInput2 = _interopRequireDefault(_TimeInput);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var degreesToMinutes = function degreesToMinutes(deg) {
+    return Math.floor(deg / (360 / 60));
+};
+
+var degreesToHours = function degreesToHours(deg) {
+    return Math.floor(deg / (360 / 12));
+};
+
+var minutesToDegrees = function minutesToDegrees(minutes) {
+    return minutes * (360 / 60);
+};
+
+var hoursToDegrees = function hoursToDegrees(hours) {
+    return hours * (360 / 12);
+};
+
+var TimePicker = function (_Component) {
+    _inherits(TimePicker, _Component);
+
+    function TimePicker() {
+        _classCallCheck(this, TimePicker);
+
+        return _possibleConstructorReturn(this, (TimePicker.__proto__ || Object.getPrototypeOf(TimePicker)).apply(this, arguments));
+    }
+
+    _createClass(TimePicker, [{
+        key: 'componentWillMount',
+        value: function componentWillMount() {
+            this.setState({
+                time: this.props.time
+            });
+        }
+    }, {
+        key: 'onMinuteDial',
+        value: function onMinuteDial(deg) {
+            var minutes = degreesToMinutes(deg);
+            var time = new Date(this.state.time);
+
+            time.setMinutes(minutes);
+
+            this.setState({
+                time: time
+            });
+
+            this.props.onChange(time);
+        }
+    }, {
+        key: 'onHourDial',
+        value: function onHourDial(deg) {
+            var hours = degreesToHours(deg);
+            var time = new Date(this.state.time);
+
+            time.setHours(hours);
+
+            this.setState({
+                time: time
+            });
+
+            this.props.onChange(time);
+        }
+    }, {
+        key: 'onTimeChange',
+        value: function onTimeChange(time) {
+            this.props.onChange(time);
+        }
+    }, {
+        key: 'render',
+        value: function render(_ref) {
+            var _this2 = this;
+
+            var outerColor = _ref.outerColor,
+                innerColor = _ref.innerColor,
+                time = _ref.time;
+
+            var minuteColor = 'background-image: radial-gradient(' + (0, _hsl.hslToCss)(outerColor) + ' 10%, transparent 70%);';
+            var hourColor = 'background-image: radial-gradient(' + (0, _hsl.hslToCss)(innerColor) + ' 10%, transparent 70%);';
+            var minuteDial = minutesToDegrees(time.getMinutes());
+            var hourDial = hoursToDegrees(time.getHours());
+
+            return (0, _preact.h)(
+                'div',
+                { 'class': _style2.default['time-selector'] },
+                (0, _preact.h)(_TimeInput2.default, { time: time, onChange: function onChange(e) {
+                        return _this2.onTimeChange(e);
+                    } }),
+                (0, _preact.h)(
+                    _Dial2.default,
+                    {
+                        className: _style2.default['time-selector__minute'],
+                        value: minuteDial,
+                        onChange: function onChange(e) {
+                            return _this2.onMinuteDial(e);
+                        }
+                    },
+                    (0, _preact.h)('div', { style: minuteColor })
+                ),
+                (0, _preact.h)(
+                    _Dial2.default,
+                    {
+                        className: _style2.default['time-selector__hour'],
+                        value: hourDial,
+                        onChange: function onChange(e) {
+                            return _this2.onHourDial(e);
+                        }
+                    },
+                    (0, _preact.h)('div', { style: hourColor })
+                )
+            );
+        }
+    }]);
+
+    return TimePicker;
+}(_preact.Component);
+
+exports.default = TimePicker;
+
+/***/ }),
+
+/***/ "xdjd":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _colors = __webpack_require__("6X+5");
+
+var initialState = {
+    isFetching: false,
+    outer: [245, 100, 50],
+    inner: [291, 100, 50]
+};
+
+function colors() {
+    var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
+    var action = arguments[1];
+
+
+    switch (action.type) {
+
+        case _colors.SET_COLORS:
+            return _extends({}, state, action.colors);
+
+        case _colors.GET_COLORS_REQUEST:
+            return _extends({}, state, {
+                isFetching: true
+            });
+
+        case _colors.GET_COLORS_SUCCESS:
+            return _extends({}, state, {
+                isFetching: false,
+                lastUpdated: action.receivedAt
+            }, action.colors);
+
+        case _colors.GET_COLORS_FAILURE:
+            return _extends({}, state, {
+                isFetching: false
+            });
+
+        default:
+            return state;
+    }
+}
+
+exports.default = colors;
+
+/***/ }),
+
 /***/ "xrtm":
 /***/ (function(module, exports) {
 
@@ -19917,8 +22652,286 @@ module.exports = {"header":"header__2uRHS","active":"active__1I1w1"};
 
 /***/ }),
 
+/***/ "xuP/":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.ActionTypes = undefined;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+exports.default = createStore;
+
+var _isPlainObject = __webpack_require__("9TS5");
+
+var _isPlainObject2 = _interopRequireDefault(_isPlainObject);
+
+var _symbolObservable = __webpack_require__("f6ML");
+
+var _symbolObservable2 = _interopRequireDefault(_symbolObservable);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/**
+ * These are private action types reserved by Redux.
+ * For any unknown actions, you must return the current state.
+ * If the current state is undefined, you must return the initial state.
+ * Do not reference these action types directly in your code.
+ */
+var ActionTypes = exports.ActionTypes = {
+  INIT: '@@redux/INIT'
+
+  /**
+   * Creates a Redux store that holds the state tree.
+   * The only way to change the data in the store is to call `dispatch()` on it.
+   *
+   * There should only be a single store in your app. To specify how different
+   * parts of the state tree respond to actions, you may combine several reducers
+   * into a single reducer function by using `combineReducers`.
+   *
+   * @param {Function} reducer A function that returns the next state tree, given
+   * the current state tree and the action to handle.
+   *
+   * @param {any} [preloadedState] The initial state. You may optionally specify it
+   * to hydrate the state from the server in universal apps, or to restore a
+   * previously serialized user session.
+   * If you use `combineReducers` to produce the root reducer function, this must be
+   * an object with the same shape as `combineReducers` keys.
+   *
+   * @param {Function} [enhancer] The store enhancer. You may optionally specify it
+   * to enhance the store with third-party capabilities such as middleware,
+   * time travel, persistence, etc. The only store enhancer that ships with Redux
+   * is `applyMiddleware()`.
+   *
+   * @returns {Store} A Redux store that lets you read the state, dispatch actions
+   * and subscribe to changes.
+   */
+};function createStore(reducer, preloadedState, enhancer) {
+  var _ref2;
+
+  if (typeof preloadedState === 'function' && typeof enhancer === 'undefined') {
+    enhancer = preloadedState;
+    preloadedState = undefined;
+  }
+
+  if (typeof enhancer !== 'undefined') {
+    if (typeof enhancer !== 'function') {
+      throw new Error('Expected the enhancer to be a function.');
+    }
+
+    return enhancer(createStore)(reducer, preloadedState);
+  }
+
+  if (typeof reducer !== 'function') {
+    throw new Error('Expected the reducer to be a function.');
+  }
+
+  var currentReducer = reducer;
+  var currentState = preloadedState;
+  var currentListeners = [];
+  var nextListeners = currentListeners;
+  var isDispatching = false;
+
+  function ensureCanMutateNextListeners() {
+    if (nextListeners === currentListeners) {
+      nextListeners = currentListeners.slice();
+    }
+  }
+
+  /**
+   * Reads the state tree managed by the store.
+   *
+   * @returns {any} The current state tree of your application.
+   */
+  function getState() {
+    return currentState;
+  }
+
+  /**
+   * Adds a change listener. It will be called any time an action is dispatched,
+   * and some part of the state tree may potentially have changed. You may then
+   * call `getState()` to read the current state tree inside the callback.
+   *
+   * You may call `dispatch()` from a change listener, with the following
+   * caveats:
+   *
+   * 1. The subscriptions are snapshotted just before every `dispatch()` call.
+   * If you subscribe or unsubscribe while the listeners are being invoked, this
+   * will not have any effect on the `dispatch()` that is currently in progress.
+   * However, the next `dispatch()` call, whether nested or not, will use a more
+   * recent snapshot of the subscription list.
+   *
+   * 2. The listener should not expect to see all state changes, as the state
+   * might have been updated multiple times during a nested `dispatch()` before
+   * the listener is called. It is, however, guaranteed that all subscribers
+   * registered before the `dispatch()` started will be called with the latest
+   * state by the time it exits.
+   *
+   * @param {Function} listener A callback to be invoked on every dispatch.
+   * @returns {Function} A function to remove this change listener.
+   */
+  function subscribe(listener) {
+    if (typeof listener !== 'function') {
+      throw new Error('Expected listener to be a function.');
+    }
+
+    var isSubscribed = true;
+
+    ensureCanMutateNextListeners();
+    nextListeners.push(listener);
+
+    return function unsubscribe() {
+      if (!isSubscribed) {
+        return;
+      }
+
+      isSubscribed = false;
+
+      ensureCanMutateNextListeners();
+      var index = nextListeners.indexOf(listener);
+      nextListeners.splice(index, 1);
+    };
+  }
+
+  /**
+   * Dispatches an action. It is the only way to trigger a state change.
+   *
+   * The `reducer` function, used to create the store, will be called with the
+   * current state tree and the given `action`. Its return value will
+   * be considered the **next** state of the tree, and the change listeners
+   * will be notified.
+   *
+   * The base implementation only supports plain object actions. If you want to
+   * dispatch a Promise, an Observable, a thunk, or something else, you need to
+   * wrap your store creating function into the corresponding middleware. For
+   * example, see the documentation for the `redux-thunk` package. Even the
+   * middleware will eventually dispatch plain object actions using this method.
+   *
+   * @param {Object} action A plain object representing “what changed”. It is
+   * a good idea to keep actions serializable so you can record and replay user
+   * sessions, or use the time travelling `redux-devtools`. An action must have
+   * a `type` property which may not be `undefined`. It is a good idea to use
+   * string constants for action types.
+   *
+   * @returns {Object} For convenience, the same action object you dispatched.
+   *
+   * Note that, if you use a custom middleware, it may wrap `dispatch()` to
+   * return something else (for example, a Promise you can await).
+   */
+  function dispatch(action) {
+    if (!(0, _isPlainObject2.default)(action)) {
+      throw new Error('Actions must be plain objects. ' + 'Use custom middleware for async actions.');
+    }
+
+    if (typeof action.type === 'undefined') {
+      throw new Error('Actions may not have an undefined "type" property. ' + 'Have you misspelled a constant?');
+    }
+
+    if (isDispatching) {
+      throw new Error('Reducers may not dispatch actions.');
+    }
+
+    try {
+      isDispatching = true;
+      currentState = currentReducer(currentState, action);
+    } finally {
+      isDispatching = false;
+    }
+
+    var listeners = currentListeners = nextListeners;
+    for (var i = 0; i < listeners.length; i++) {
+      var listener = listeners[i];
+      listener();
+    }
+
+    return action;
+  }
+
+  /**
+   * Replaces the reducer currently used by the store to calculate the state.
+   *
+   * You might need this if your app implements code splitting and you want to
+   * load some of the reducers dynamically. You might also need this if you
+   * implement a hot reloading mechanism for Redux.
+   *
+   * @param {Function} nextReducer The reducer for the store to use instead.
+   * @returns {void}
+   */
+  function replaceReducer(nextReducer) {
+    if (typeof nextReducer !== 'function') {
+      throw new Error('Expected the nextReducer to be a function.');
+    }
+
+    currentReducer = nextReducer;
+    dispatch({ type: ActionTypes.INIT });
+  }
+
+  /**
+   * Interoperability point for observable/reactive libraries.
+   * @returns {observable} A minimal observable of state changes.
+   * For more information, see the observable proposal:
+   * https://github.com/tc39/proposal-observable
+   */
+  function observable() {
+    var _ref;
+
+    var outerSubscribe = subscribe;
+    return _ref = {
+      /**
+       * The minimal observable subscription method.
+       * @param {Object} observer Any object that can be used as an observer.
+       * The observer object should have a `next` method.
+       * @returns {subscription} An object with an `unsubscribe` method that can
+       * be used to unsubscribe the observable from the store, and prevent further
+       * emission of values from the observable.
+       */
+      subscribe: function subscribe(observer) {
+        if ((typeof observer === 'undefined' ? 'undefined' : _typeof(observer)) !== 'object') {
+          throw new TypeError('Expected the observer to be an object.');
+        }
+
+        function observeState() {
+          if (observer.next) {
+            observer.next(getState());
+          }
+        }
+
+        observeState();
+        var unsubscribe = outerSubscribe(observeState);
+        return { unsubscribe: unsubscribe };
+      }
+    }, _ref[_symbolObservable2.default] = function () {
+      return this;
+    }, _ref;
+  }
+
+  // When a store is created, an "INIT" action is dispatched so that every
+  // reducer returns their initial state. This effectively populates
+  // the initial state tree.
+  dispatch({ type: ActionTypes.INIT });
+
+  return _ref2 = {
+    dispatch: dispatch,
+    subscribe: subscribe,
+    getState: getState,
+    replaceReducer: replaceReducer
+  }, _ref2[_symbolObservable2.default] = observable, _ref2;
+}
+
+/***/ }),
+
 /***/ "yDpn":
 /***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 //! moment.js locale configuration
 //! locale : Slovak [sk]
@@ -19926,8 +22939,11 @@ module.exports = {"header":"header__2uRHS","active":"active__1I1w1"};
 //! based on work of petrbela : https://github.com/petrbela
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var months = 'január_február_marec_apríl_máj_jún_júl_august_september_október_november_december'.split('_');
@@ -20096,16 +23112,52 @@ module.exports = {"header":"header__2uRHS","active":"active__1I1w1"};
 
 /***/ }),
 
+/***/ "ygki":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+var _freeGlobal = __webpack_require__("i/J7");
+
+var _freeGlobal2 = _interopRequireDefault(_freeGlobal);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/** Detect free variable `self`. */
+var freeSelf = (typeof self === 'undefined' ? 'undefined' : _typeof(self)) == 'object' && self && self.Object === Object && self;
+
+/** Used as a reference to the global object. */
+var root = _freeGlobal2.default || freeSelf || Function('return this')();
+
+exports.default = root;
+
+/***/ }),
+
 /***/ "yheM":
 /***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 //! moment.js locale configuration
 //! locale : Basque [eu]
 //! author : Eneko Illarramendi : https://github.com/eillarra
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var eu = moment.defineLocale('eu', {
@@ -20168,13 +23220,21 @@ module.exports = {"header":"header__2uRHS","active":"active__1I1w1"};
 /***/ "zDie":
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 //! moment.js locale configuration
 //! locale : Tibetan [bo]
 //! author : Thupten N. Chakrishar : https://github.com/vajradog
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var symbolMap = {
@@ -20288,13 +23348,21 @@ module.exports = {"header":"header__2uRHS","active":"active__1I1w1"};
 /***/ "zp5f":
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 //! moment.js locale configuration
 //! locale : Northern Sami [se]
 //! authors : Bård Rolstad Henriksen : https://github.com/karamell
 
 ;(function (global, factory) {
-     true ? factory(__webpack_require__("a2/B")) : typeof define === 'function' && define.amd ? define(['../moment'], factory) : factory(global.moment);
-})(this, function (moment) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' && "function" === 'function' ? factory(__webpack_require__("a2/B")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__("a2/B")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global.moment);
+})(undefined, function (moment) {
     'use strict';
 
     var se = moment.defineLocale('se', {
